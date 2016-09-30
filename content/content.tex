@@ -1,0 +1,210 @@
+\chapter{Introduction}
+
+\section{Motivation}
+
+In 2012 by winning the Imagenet Large Scale Visual Recognition Challenge 2012 convolutional neural network gained a big rise in popularity. 
+Now they are becoming popular for their powerful abstraction mechanism in the fields of image and video classification and description and speech recognition. 
+This can be contributed to compositional structure in which the world can be perceived and to their ability to extract high level features on spatial and/or temporal conditioned data.
+
+Generating discriminative high level features extractors allows the system to dynamically adapt to the input data and work on various kinds of data. 
+In addition the features extractors do not need to have any semantic representation and can be more complex to the manually build feature extractors. 
+This also removes the labor-intensive and time consuming task of manually building feature extractors.
+Consequently they recently got adapted to solve robotic problems like grasp planning, drone navigation and autonomous driving. 
+
+One precursor of those are the deep belief networks (DBNs), which are built up of restricted boltzmann machines (RBMs). 
+DBNs have shown excellent performance on image classification tasks in the early 2000s.
+
+Compared to classical CNNs, DBNs allow recurrent connections and are trained in an unsupervised manner and do not need labeled data. 
+They have been described as  “probably the most biologically plausible learning algorithm for deep architectures we currently know”. 
+DBNs can be used as generative model as well, which means they can sample data according to a learned distribution, e.g. find the most probable completion for a partially erased image.
+
+Adding convolution to DBNs increased the performance of DBNs on image classification tasks, caught up to state of the art results and made the system more similar to the primate visual cortex than a standard RBM. 
+
+All those approaches use scalar values between neurons at discrete time slices to propagate information. 
+This proposes some difficulties and is not biologically plausible, since biological neuron interleave linear and nonlinear operations, they communicate by stochastic binary values and are not synchronized. 
+Spiking neural networks (SNNs), designed to simulate the communication between neurons with action potentials/ spikes, work in continuous time by design and do not suffer from the aforementioned limitations.
+
+\section{Problem Statement}
+
+To our best knowledge, up to today, there exists no system which utilizes the benefits of all those approaches. 
+The main objective of this thesis is to realize such a spiking network, which integrates convolution and can be easily trained utilizing the RBM learning algorithm, to extract high level features. 
+Two approaches are described. 
+The first approach trains convolutional RBMs on discretized input data, to build up a DBN which is then converted to a SNN. 
+The next approach directly works on continuous (event-driven) input-data and realizes a STDP learning algorithm with shared weights to train spiking convolutinal RBMs directly. 
+Both approaches will learn to extract high level features, which can be further used to classify an object or directly generate a grasp id. 
+
+\section{The Human Brain Project}
+
+Heiko:
+
+This thesis is under the scope of the research of the SP10 (sub-project 10) of the Human Brain
+Project. The Human Brain Project is an European Commission Future and Emerging Technologies Flagship and a large ten-year research project which aims to create a collaborative research infrastructure across national borders to progress the knowledge in neuroscience, computational neuroscience, medicine, scientific computation, and robotics. In the project over 120
+institution from across Europe collaborate in 12 sub-projects.
+
+The sub-project 10 of the Human Brain Project develops the Neurorobotics Platform which
+permits researchers to simulate robotic experiments with regard to neurorobotics. Apart from the
+platform, research is focused on the development of applications in robotics based on insights
+from neuroscience. One focus of the research group at the FZI Karlsruhe is the development of
+computational models for neurobiological inspired robotic grasping.
+
+
+\section{Overview}
+
+This thesis describes the approach and implementation of a spiking convolutional deep belief networks to extract high level features on continuous visual input. The thesis is structures as follows:
+
+Chapter 2 introduces sine background information, which is used in chapter 3 to describe state-of-the-art research used in this thesis. Chapter 4 will describe the different approaches to build such a spiking convolutional deep belief networks. In chapter 5 the different implementation steps and the architecture will be described. Chapter 6 outlines and compares the performance of the networks. Chatper 7 will conclude the gathered insight of this thesis, state its limitations and give suggestions for further improvements and research.  
+
+\chapter{Background}
+
+\section{Probabilistic Graphical Models}
+
+Neural networks can be seen as graphs
+
+Using PGMs can be used to infer properties of some Neural Nets
+
+PGMs are used to structure a model of the input and can be used for different task:
+Density estimation,
+Denoising,
+Missing value imputation,
+Sampling.
+
+
+\subsection{Bayesian network}
+
+Bayesian networks or belief networks are directed acyclic graphs, in which random variables are represented by nodes and their causal dependencies are represented by (directed) edges/connections. 
+
+If theres an connection from Node Xi to Xj then Xi is referred to as a parent of Xj and, similarly, Xj is referred to as the child of Xi.
+
+In addition to the DAG structure, which is often considered as the “qualitative” part of the model, one needs to specify the “quantitative” parameters of the model. 
+The parameters are described in a manner which is consistent with a Markovian property, where the conditional probability distribution (CPD) at each node depends only on its parents. 
+FORMULARS
+
+A BN reflects a simple conditional independence statement. Namely that each variable is independent of its nondescendents in the graph given the state of its parents. 
+This property is used to reduce, sometimes significantly, the number of parameters that are required to characterize the JPD of the variables. 
+This reduction provides an efficient way to compute the posterior probabilities given the evidence.
+Such a reduction provides great benefits from inference, learning (parameter estimation),
+and computational perspective.
+
+GRAPH EXAMPLE
+
+Given some observed variables, the bayes net can be used to infer the most likely states of the other hidden variables. 
+This process of computing the posterior distribution of variables given evidence is called probabilistic inference.
+A Bayesian network can thus be considered a mechanism for automatically applying Bayes' theorem to complex problems, which is defined through the “qualitative” and  “quantitative” parameters of the net.
+
+\subsection{Markov Random Field}
+
+In contrast to Bayesian networks, Markov random fields are undirected graphical models, in which random variables are represented by nodes and edges/ connections indicate conditional dependencies.
+
+For all cliques in the graph a "Clique Potential" / "Likelihood" can be given, which indicates how likely it is for the variables in the clique to take given values.
+
+A clique in a graph is a group of nodes which are in themselves fully connected, i.e. each node has each other node of the graph a as direct neighbour. 
+
+The clique potentials can be used to calculate an unnormalized probability distribution p(x) FORMULAR
+
+EXAMPLE
+
+\subsection{Energy-Based Models}
+
+One way to model the unnormalized probability distribution p(x) is to use an Energy function E(x): Formular
+
+This results in an energy-base model (EBM). 
+
+Since exp(a)*exp(b) = exp(a+b) , where a and b are the Energy of a subgraph/clique and the Energy of the complete graph is the sum of all cliques, it is apparent that EBMs are a sub cathegory of MRF.  
+
+Because exp(z) > 0 , there is probability of each state if greater than zero. 
+
+\subsection{Sampling}
+
+Sampling is concerned with the selection of a subset of individuals from within a statistical population to estimate characteristics of the whole population.
+
+Sampling provides a flexible way to approximate many sums and integrals at reduced cost, which could only have been calculated using costly operations or were intractable altogether.  
+
+Graphical models also facilitate the task of drawing samples from a model.
+
+\paragraph{Ancestral Sampling} For directed graphical models is that a simple and efficient procedure called ancestral sampling can produce a sample from the joint distribution represented by the model. 
+The basic idea is to sort the variables xi in the graph into a topological ordering,so that for all i and j, j is greater than i if xi is a parent of xj. The variables can then be sampled in this order.
+
+ The topological sorting operation guarantees that the conditional distributions are valid and one can sample from them in order.
+
+\paragraph{Markov Chain Monte Carlo} If pmodel(x) is represented by an undirected model, Markov Chain Monte Carlo methods can be used. 
+MCMC methods interpret the model as a Markov chain, and work best, when no state gets zero probability assigned be the model.
+
+The basic idea is to begin a state x with some arbitrary value. 
+Then for a (infinite) time x is repeatedly randomly updated using the by the model given transition distribution T(x,x). 
+Eventually x becomes a fair sample from p(x)/ from the stationary distribution of the Markov chain.
+
+To get more than one sample, one can run more Markov chains in parallel, each initialized with a random starting state. 
+Another method is to run just one Markov chain, run it form some burn in/ mixing time, which allows the Markov chain to reach its equilibrium, and than take samples at different timesteps.
+Those approaches need the Markov chain to reach its equilibrium distribution, which is usually done, by letting it run for some burn in time.
+But there is no guaranty, that the Markov chain has settled in the given timespan.    
+Another problem with the second approach is, that since it can be hard to escape probable states, and when not run for an infinite timespan, more likely states can be over represented and less likely states under represented, if they did not occur or over represented if they did occur and the number of samples it not big enough to scale the estimate.  
+
+\paragraph{Gibbs sampling} Gibbs sampling is a commonly used MCMC algorithm. The basic idea in Gibbs sampling to perform the transition from one state to another in accordance with T(x,x) is, to select a single variable xi and sample it conditioned on its neighbours. 
+Several variables can be sampled at the same time as long as they are conditionally independent given all of their neighbours.
+
+\section{Neural Networks}
+
+In this section at first the neuroscience foundations of Neural Networks will be explained.
+After that different models will be described, starting with models working at discrete time steps and then describing models, which work in continuous time. 
+
+\subsection{Natural}
+\subsubsection{Brain}
+\subsubsection{Neuron}
+\subsubsection{Learning}
+
+\subsection{Time discrete}
+\subsubsection{Perceptron}
+\paragraph{Model}
+\paragraph{Perceptron Learning}
+\paragraph{Decision Fuction}
+\subsubsection{Mutlilayer-Perceptron}
+\paragraph{Model architecture}
+\paragraph{Activation functions}
+\paragraph{Backpropagation}
+\subsubsection{Convolutinal Neural Networks}
+\paragraph{Convolution}
+\paragraph{Architecture}
+\paragraph{Training}
+\subsubsection{Hopfield Nets}
+\paragraph{Model}
+\paragraph{Properties / Advantages / Disadvantages}
+\subsubsection{Boltzmann Machines}
+\paragraph{Model}
+\paragraph{RBMs}
+\paragraph{CD-Training}
+\subsubsection{Deep Belief Networks}
+\paragraph{Stacking Up RBMs}
+\paragraph{Fine-tuning}
+
+\subsection{Continuous}
+\subsubsection{Neuron Models}
+\paragraph{LIF}
+\paragraph{Hodgkin-Huxley}
+\paragraph{Poisson}
+\subsubsection{Neural Coding}
+\subsubsection{Learning}
+\paragraph{STDP}
+\paragraph{Symetric STDP}
+
+
+
+\chapter{Related Work}
+\section{Convolutional RBM}
+\section{Sampling in SNNs}
+\section{NN -> SNN conversion}
+\section{eCD and Sampling Machines}
+
+
+\chapter{Approach}
+\section{Conversion}
+\subsection{Conv DBNs}
+\subsection{Conversion}
+
+\section{eCD}
+\subsection{Convolution}
+\subsection{DBNs}
+
+\chapter{Implementation}
+\chapter{Experiments\&Results}
+
+\chapter{Conclusion and Outlook}
