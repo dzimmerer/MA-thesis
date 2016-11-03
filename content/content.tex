@@ -58,15 +58,28 @@ Chapter 2 introduces sine background information, which is used in chapter 3 to 
 
 \section{Probabilistic Graphical Models}
 
-Neural networks can be seen as graphs
+Probabilistic graphical models (PGMs) or structured probabilistic models can be used to describe, formalize and model neural learning architectures.
 
-Using PGMs can be used to infer properties of some Neural Nets
+Having captured the basic probabilistic structure of data makes a lot of data-related task feasible, such as:
+\begin{itemize}
 
-PGMs are used to structure a model of the input and can be used for different task:
-Density estimation,
-Denoising,
-Missing value imputation,
-Sampling.
+\item Density estimation: Assigning a data sample $x$ an estimate of its true probability density $p(x)$ (e.g. indicating unusual data).
+
+\item Denoising: Given a perturbed or noisy input $\widetilde{x}$,  estimating the original data sample $x$
+
+\item Missing value imputation: Given a partial input sample of $x$, it returns the most probable completion of the mission values to return $x$ ( e.g. inferring a label of data sample).
+
+\item Sampling: Generating data samples $x$ drawn from the data distribution $p(x)$. 
+
+\end{itemize}  
+
+PGMs facilitate the process of modeling the probability distribution by using graphs to describe the probability distribution over the interactions of its random variables (RVs).
+
+Each node in the graph represents a RV and each edge between to RVs a direct interaction.
+
+This allows a less complex description of the density with basic factors over interacting RVs instead of modelling the density over all RVs. 
+
+PGMs can be be divided into two basic categories, models with directed graphs and model with undirected graphs.
 
 
 \subsection{Bayesian network}

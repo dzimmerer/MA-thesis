@@ -6,6 +6,10 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{vmargin}          % Adjust margins in a simple way
 \usepackage{tikz}
+\usepackage{subcaption}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode} 
 
 % Toggle the following two lines to switch between english and german layout
 \usepackage[english]{babel} % Neue deutsche Rechtschreibung und Silbentrennung.
@@ -23,6 +27,7 @@
 
 
 \makeatletter
+
 \def\tagform@#1{\maketag@@@{\ignorespaces [#1]\unskip\@@italiccorr}}	% Anpassung der Formelnummerierung
 \makeatother
 
@@ -78,7 +83,17 @@
 \pagestyle{scrheadings}
 \pagenumbering{arabic}
 
-\include{content/content}
+%\include{content/content}
+
+\include{content/intro}
+\include{content/backgrnd}
+\include{content/soa}
+\include{content/appro}
+\include{content/impl}
+\include{content/exp}
+\include{content/concl}
+
+
 
 \pagestyle{scrplain}
 \appendix

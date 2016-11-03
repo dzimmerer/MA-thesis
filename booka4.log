@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  24 OCT 2016 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  3 NOV 2016 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -927,6 +927,63 @@ Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen178
 \PaperHeight=\dimen179
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen180
+\captionmargin@=\dimen181
+\captionwidth=\dimen182
+\caption@tempdima=\dimen183
+\caption@indent=\dimen184
+\caption@parindent=\dimen185
+\caption@hangindent=\dimen186
+)
+Package caption Info: KOMA-Script document class.
+\c@ContinuedFloat=\count132
+)
+\c@subfigure=\count133
+\c@subtable=\count134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count135
+\float@exts=\toks38
+\float@box=\box42
+\@float@everytoks=\toks39
+\@floatcapt=\box43
+)
+\@float@every@algorithm=\toks40
+\c@algorithm=\count136
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count137
+\c@ALG@rem=\count138
+\c@ALG@nested=\count139
+\ALG@tlm=\skip90
+\ALG@thistlm=\skip91
+\c@ALG@Lnr=\count140
+\c@ALG@blocknr=\count141
+\c@ALG@storecount=\count142
+\c@ALG@tmpcounter=\count143
+\ALG@tmplength=\skip92
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2014/09/25 3.9l The Babel package
 
@@ -935,8 +992,8 @@ Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2014/09/25 3.9l Babel common definitions
-\babel@savecnt=\count132
-\U@D=\dimen180
+\babel@savecnt=\count144
+\U@D=\dimen187
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -994,16 +1051,16 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen181
-\Hy@linkcounter=\count133
-\Hy@pagecounter=\count134
+\@linkdim=\dimen188
+\Hy@linkcounter=\count145
+\Hy@pagecounter=\count146
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count135
+\Hy@SavedSpaceFactor=\count147
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1023,17 +1080,17 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count136
+\c@Hy@tempcnt=\count148
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen182
-\Fld@menulength=\count137
-\Field@Width=\dimen183
-\Fld@charsize=\dimen184
+\XeTeXLinkMargin=\dimen189
+\Fld@menulength=\count149
+\Field@Width=\dimen190
+\Fld@charsize=\dimen191
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -1043,24 +1100,24 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count138
-\c@Item=\count139
-\c@Hfootnote=\count140
+\Hy@abspage=\count150
+\c@Item=\count151
+\c@Hfootnote=\count152
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count141
-\c@bookmark@seq@number=\count142
+\Fld@listcount=\count153
+\c@bookmark@seq@number=\count154
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip90
+\Hy@SectionHShift=\skip93
 )
 \@indexfile=\write4
 \openout4 = `booka4.idx'.
@@ -1068,41 +1125,207 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 Writing index file booka4.idx
 (./booka4.aux (./preface/kit_titlepage.aux) (./preface/titlepage.aux)
-(./preface/affirmation.aux) (./content/content.aux) (./content/appendix.aux))
+(./preface/affirmation.aux) (./content/intro.aux) (./content/backgrnd.aux
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+) (./content/soa.aux
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+) (./content/appro.aux
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub1' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+) (./content/impl.aux) (./content/exp.aux
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+
+LaTeX Warning: Label `fig:test' multiply defined.
+
+) (./content/concl.aux) (./content/appendix.aux))
 \openout1 = `booka4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
-\scratchdimen=\dimen185
-\scratchbox=\box42
-\nofMPsegments=\count144
-\nofMParguments=\count145
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count146
-\MPscratchDim=\dimen186
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
-\everyMPtoPDFconversion=\toks39
+\scratchcounter=\count155
+\scratchdimen=\dimen192
+\scratchbox=\box44
+\nofMPsegments=\count156
+\nofMParguments=\count157
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count158
+\MPscratchDim=\dimen193
+\MPnumerator=\count159
+\makeMPintoPDFobject=\count160
+\everyMPtoPDFconversion=\toks42
 )
 
 Package scrpage2 Warning: seems you are using a constant headheight.
@@ -1162,8 +1385,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring OFF on input line 59.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box45
+Package hyperref Info: Link coloring OFF on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1171,11 +1398,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count161
 )
-LaTeX Info: Redefining \ref on input line 59.
-LaTeX Info: Redefining \pageref on input line 59.
-LaTeX Info: Redefining \nameref on input line 59.
+LaTeX Info: Redefining \ref on input line 64.
+LaTeX Info: Redefining \pageref on input line 64.
+LaTeX Info: Redefining \nameref on input line 64.
 
 (./booka4.out) (./booka4.out)
 \@outlinefile=\write5
@@ -1184,7 +1411,7 @@ LaTeX Info: Redefining \nameref on input line 59.
 \openout2 = `preface/kit_titlepage.aux'.
 
  (./preface/kit_titlepage.tex
-<graphics/kitlogo_en_rgb.pdf, id=183, 196.46399pt x 90.77916pt>
+<graphics/kitlogo_en_rgb.pdf, id=212, 196.46399pt x 90.77916pt>
 File: graphics/kitlogo_en_rgb.pdf Graphic file (type pdf)
 
 <use graphics/kitlogo_en_rgb.pdf>
@@ -1253,7 +1480,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--12
 
  []
 
-<graphics/not-the-final-title.png, id=197, 1027.84pt x 770.88pt>
+<graphics/not-the-final-title.png, id=226, 1027.84pt x 770.88pt>
 File: graphics/not-the-final-title.png Graphic file (type png)
 
 <use graphics/not-the-final-title.png>
@@ -1267,7 +1494,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
 
-<graphics/FZI-Logo.pdf, id=198, 248.93pt x 417.56pt>
+<graphics/FZI-Logo.pdf, id=227, 248.93pt x 417.56pt>
 File: graphics/FZI-Logo.pdf Graphic file (type pdf)
 
 <use graphics/FZI-Logo.pdf>
@@ -1313,7 +1540,7 @@ Package scrpage2 Warning: you've used pagestyle ``headings''.
 (scrpage2)                You should not use this pagestyle with a
 (scrpage2)                scrpage2-pagestyle!
 (scrpage2)                You should use pagestyle ``useheadings'' instead
-(scrpage2)                 on input line 66.
+(scrpage2)                 on input line 71.
 
 [5
 
@@ -1333,17 +1560,32 @@ Package scrpage2 Warning: you've used pagestyle ``headings''.
 (scrpage2)                You should not use this pagestyle with a
 (scrpage2)                scrpage2-pagestyle!
 (scrpage2)                You should use pagestyle ``useheadings'' instead
-(scrpage2)                 on input line 77.
+(scrpage2)                 on input line 86.
 
 [7])
 \tf@toc=\write6
 \openout6 = `booka4.toc'.
 
  [8]
-\openout2 = `content/content.aux'.
+\openout2 = `content/intro.aux'.
 
- (./content/content.tex
+ (./content/intro.tex
 Chapter 1.
+
+Class scrbook Warning: \float@addtolists detected!
+(scrbook)              Implementation of \float@addtolist became
+(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrbook)              has been replaced by more several more flexible
+(scrbook)              features of package `tocbasic`.
+(scrbook)              Since Version 3.12 support for deprecated
+(scrbook)              \float@addtolist interface has been
+(scrbook)              restricted to only some of the KOMA-Script
+(scrbook)              features and been removed from others.
+(scrbook)              Loading of package `scrhack' may help to
+(scrbook)              avoid this warning, if you are using a
+(scrbook)              a package that still implements the
+(scrbook)              deprecated \float@addtolist interface .
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1358,16 +1600,30 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 
-]
+])
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [2]
-Chapter 2.
+\openout2 = `content/backgrnd.aux'.
 
-Overfull \hbox (5.02287pt too wide) in paragraph at lines 74--75
+ (./content/backgrnd.tex
+Chapter 2.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 10.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+
+Overfull \hbox (5.02287pt too wide) in paragraph at lines 31--32
 \T1/ptm/m/n/10.95 rep-re-sented by nodes and their causal de-pen-den-cies are r
 ep-re-sented by (di-rected) edges/connections. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+
  []
 
 
@@ -1376,138 +1632,684 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 [3
 
-]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[4]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+] <imgs/bayesnet1.png, id=326, 105.193pt x 129.283pt>
+File: imgs/bayesnet1.png Graphic file (type png)
+
+<use imgs/bayesnet1.png>
+Package pdftex.def Info: imgs/bayesnet1.png used on input line 51.
+(pdftex.def)             Requested size: 84.63277pt x 104.01833pt.
+
+<imgs/bayesnet2.png, id=328, 293.1401pt x 179.42897pt>
+File: imgs/bayesnet2.png Graphic file (type png)
+
+<use imgs/bayesnet2.png>
+Package pdftex.def Info: imgs/bayesnet2.png used on input line 57.
+(pdftex.def)             Requested size: 126.94699pt x 77.70325pt.
+
+<imgs/bayesnet3.png, id=329, 147.78809pt x 61.47104pt>
+File: imgs/bayesnet3.png Graphic file (type png)
+
+<use imgs/bayesnet3.png>
+Package pdftex.def Info: imgs/bayesnet3.png used on input line 63.
+(pdftex.def)             Requested size: 98.73679pt x 41.06999pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[][][]|\T1/ptm/m/n/10 Con-di-tional prob-a-bil-ity
+ []
 
 
-[5]
+Underfull \hbox (badness 1077) in paragraph at lines 64--64
+\OML/ztmcm/m/it/10 p\OT1/ztmcm/m/n/10 (\OML/ztmcm/m/it/10 c\OMS/ztmcm/m/n/10 j\
+OML/ztmcm/m/it/10 a; b\OT1/ztmcm/m/n/10 )$ \T1/ptm/m/n/10 given by a func-tion
+ []
+
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 212.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 73.
 
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
-
-[6]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+ []
 
 
-[7]
-Overfull \hbox (10.56293pt too wide) in paragraph at lines 284--285
-[]\T1/ptm/m/n/10.95 Each layer com-bines mul-ti-ple per-cep-trons to map a mult
-i-dimensional in-put to a multi-dimensional
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
+
  []
 
 
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[8]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+[4 <./imgs/bayesnet1.png> <./imgs/bayesnet2.png> <./imgs/bayesnet3.png>]
+<imgs/markovnet1.png, id=340, 415.75551pt x 506.72069pt>
+File: imgs/markovnet1.png Graphic file (type png)
 
+<use imgs/markovnet1.png>
+Package pdftex.def Info: imgs/markovnet1.png used on input line 114.
+(pdftex.def)             Requested size: 106.85788pt x 130.23654pt.
 
-[9]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+<imgs/markovnet2.png, id=341, 514.01022pt x 506.72069pt>
+File: imgs/markovnet2.png Graphic file (type png)
 
-
-[10]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[11]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[12]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[13]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[14]
-Chapter 3.
+<use imgs/markovnet2.png>
+Package pdftex.def Info: imgs/markovnet2.png used on input line 120.
+(pdftex.def)             Requested size: 106.85788pt x 105.33974pt.
 
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[15
-
-]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[16]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[17]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[18
-
-]
-Chapter 4.
+[5 <./imgs/markovnet1.png> <./imgs/markovnet2.png>]
+<imgs/sampling.png, id=348, 598.235pt x 381.425pt>
+File: imgs/sampling.png Graphic file (type png)
+ <use imgs/sampling.png>
+Package pdftex.def Info: imgs/sampling.png used on input line 162.
+(pdftex.def)             Requested size: 170.97pt x 109.00989pt.
 
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[19]
+[6 <./imgs/sampling.png>] <imgs/brain.png, id=358, 361.35pt x 336.4293pt>
+File: imgs/brain.png Graphic file (type png)
+
+<use imgs/brain.png>
+Package pdftex.def Info: imgs/brain.png used on input line 204.
+(pdftex.def)             Requested size: 170.97pt x 159.17928pt.
+
+Overfull \hbox (3.21613pt too wide) in paragraph at lines 209--210
+[]\T1/ptm/m/n/10.95 It is to con-tribute for tasks as learn-ing, mem-ory, self-
+control, plan-ing, rea-son-ing, ab-stract thought,
+ []
+
+
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[20]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[21]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[22]
-Chapter 5.
+[7] <imgs/neuron.png, id=365, 687.78304pt x 395.40828pt>
+File: imgs/neuron.png Graphic file (type png)
+ <use imgs/neuron.png>
+Package pdftex.def Info: imgs/neuron.png used on input line 244.
+(pdftex.def)             Requested size: 256.46152pt x 147.43909pt.
 
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[23
-
-]
+[8 <./imgs/brain.png>]
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[24]
+[9 <./imgs/neuron.png>] <imgs/percept.png, id=379, 615.0478pt x 231.86626pt>
+File: imgs/percept.png Graphic file (type png)
+
+<use imgs/percept.png>
+Package pdftex.def Info: imgs/percept.png used on input line 309.
+(pdftex.def)             Requested size: 341.94652pt x 128.91017pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[10 <./imgs/percept.png>]
+<imgs/percept_discr.png, id=388, 525.37854pt x 430.29724pt>
+File: imgs/percept_discr.png Graphic file (type png)
+
+<use imgs/percept_discr.png>
+Package pdftex.def Info: imgs/percept_discr.png used on input line 352.
+(pdftex.def)             Requested size: 170.97pt x 140.02878pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 353.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[11 <./imgs/percept_discr.png>]
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[12] <imgs/mlp.jpeg, id=412, 793.96625pt x 389.455pt>
+File: imgs/mlp.jpeg Graphic file (type jpg)
+ <use imgs/mlp.jpeg>
+Package pdftex.def Info: imgs/mlp.jpeg used on input line 419.
+(pdftex.def)             Requested size: 256.46152pt x 125.79883pt.
+
+<imgs/act_fun.png, id=413, 564.60938pt x 376.40625pt>
+File: imgs/act_fun.png Graphic file (type png)
+ <use imgs/act_fun.png>
+Package pdftex.def Info: imgs/act_fun.png used on input line 442.
+(pdftex.def)             Requested size: 341.94652pt x 227.96483pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[13 <./imgs/mlp.jpeg>]
+Underfull \vbox (badness 5817) has occurred while \output is active []
+
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[14 <./imgs/act_fun.png>]
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[15] <imgs/convolution.png, id=434, 1369.115pt x 467.346pt>
+File: imgs/convolution.png Graphic file (type png)
+
+<use imgs/convolution.png>
+Package pdftex.def Info: imgs/convolution.png used on input line 565.
+(pdftex.def)             Requested size: 341.94652pt x 116.7221pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[16 <./imgs/convolution.png>]
+<imgs/cnn_architecture.jpg, id=442, 1002.84775pt x 367.99551pt>
+File: imgs/cnn_architecture.jpg Graphic file (type jpg)
+
+<use imgs/cnn_architecture.jpg>
+Package pdftex.def Info: imgs/cnn_architecture.jpg used on input line 618.
+(pdftex.def)             Requested size: 341.94652pt x 125.47618pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[17 <./imgs/cnn_architecture.jpg>]
+<imgs/hopfield.png, id=451, 292.84406pt x 310.15875pt>
+File: imgs/hopfield.png Graphic file (type png)
+ <use imgs/hopfield.png>
+Package pdftex.def Info: imgs/hopfield.png used on input line 673.
+(pdftex.def)             Requested size: 213.71576pt x 226.36194pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[18]
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[19 <./imgs/hopfield.png>] <imgs/bm.png, id=468, 128.6406pt x 125.9907pt>
+File: imgs/bm.png Graphic file (type png)
+
+<use imgs/bm.png>
+Package pdftex.def Info: imgs/bm.png used on input line 738.
+(pdftex.def)             Requested size: 213.71576pt x 209.33675pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[20 <./imgs/bm.png>]
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[21] <imgs/rbm.png, id=481, 155.6214pt x 87.2058pt>
+File: imgs/rbm.png Graphic file (type png)
+ <use imgs/rbm.png>
+Package pdftex.def Info: imgs/rbm.png used on input line 806.
+(pdftex.def)             Requested size: 213.71576pt x 119.76793pt.
+
+<imgs/cd.png, id=482, 1081.03876pt x 403.5075pt>
+File: imgs/cd.png Graphic file (type png)
+ <use imgs/cd.png>
+Package pdftex.def Info: imgs/cd.png used on input line 828.
+(pdftex.def)             Requested size: 341.94652pt x 127.63504pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[22 <./imgs/rbm.png>]
+<imgs/dbn_stacking.png, id=495, 577.34798pt x 238.40793pt>
+File: imgs/dbn_stacking.png Graphic file (type png)
+
+<use imgs/dbn_stacking.png>
+Package pdftex.def Info: imgs/dbn_stacking.png used on input line 860.
+(pdftex.def)             Requested size: 341.94652pt x 141.20149pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[23 <./imgs/cd.png> <./imgs/dbn_stacking.png>]
+<imgs/lif.png, id=507, 419.0036pt x 351.38173pt>
+File: imgs/lif.png Graphic file (type png)
+ <use imgs/lif.png>
+Package pdftex.def Info: imgs/lif.png used on input line 895.
+(pdftex.def)             Requested size: 256.46152pt x 215.07172pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[24 <./imgs/lif.png>] <imgs/hode_hux.png, id=518, 358.10191pt x 338.92139pt>
+File: imgs/hode_hux.png Graphic file (type png)
+
+<use imgs/hode_hux.png>
+Package pdftex.def Info: imgs/hode_hux.png used on input line 945.
+(pdftex.def)             Requested size: 256.46152pt x 242.72514pt.
+
+Underfull \vbox (badness 6741) has occurred while \output is active []
+
+
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [25]
+Underfull \vbox (badness 6094) has occurred while \output is active []
+
+
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[26
+[26 <./imgs/hode_hux.png>]
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[27] <imgs/orn_uhl_process.png, id=538, 434.43202pt x 201.85759pt>
+File: imgs/orn_uhl_process.png Graphic file (type png)
+
+<use imgs/orn_uhl_process.png>
+Package pdftex.def Info: imgs/orn_uhl_process.png used on input line 1021.
+(pdftex.def)             Requested size: 256.46152pt x 119.16885pt.
+
+<imgs/hcs.png, id=539, 436.05606pt x 191.05862pt>
+File: imgs/hcs.png Graphic file (type png)
+ <use imgs/hcs.png>
+Package pdftex.def Info: imgs/hcs.png used on input line 1030.
+(pdftex.def)             Requested size: 256.46152pt x 112.37376pt.
+
+<imgs/psp_kernel.png, id=540, 440.11618pt x 348.05896pt>
+File: imgs/psp_kernel.png Graphic file (type png)
+
+<use imgs/psp_kernel.png>
+Package pdftex.def Info: imgs/psp_kernel.png used on input line 1050.
+(pdftex.def)             Requested size: 256.46152pt x 202.825pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[28 <./imgs/orn_uhl_process.png> <./imgs/hcs.png>]
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[29 <./imgs/psp_kernel.png>]
+<imgs/stdp_curves.jpg, id=557, 213.6783pt x 189.1065pt>
+File: imgs/stdp_curves.jpg Graphic file (type jpg)
+
+<use imgs/stdp_curves.jpg>
+Package pdftex.def Info: imgs/stdp_curves.jpg used on input line 1115.
+(pdftex.def)             Requested size: 256.46152pt x 226.99014pt.
+)
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[30 <./imgs/stdp_curves.jpg>]
+\openout2 = `content/soa.aux'.
+
+ (./content/soa.tex
+Chapter 3.
+<imgs/crbm_padding1.png, id=565, 2007.5pt x 2128.95375pt>
+File: imgs/crbm_padding1.png Graphic file (type png)
+
+<use imgs/crbm_padding1.png>
+Package pdftex.def Info: imgs/crbm_padding1.png used on input line 50.
+(pdftex.def)             Requested size: 102.58499pt x 108.76036pt.
+
+<imgs/kernel_flip.png, id=566, 285.065pt x 138.116pt>
+File: imgs/kernel_flip.png Graphic file (type png)
+
+<use imgs/kernel_flip.png>
+Package pdftex.def Info: imgs/kernel_flip.png used on input line 56.
+(pdftex.def)             Requested size: 102.58499pt x 49.70274pt.
+
+<imgs/crbm_padding2.png, id=567, 2007.5pt x 2248.4pt>
+File: imgs/crbm_padding2.png Graphic file (type png)
+
+<use imgs/crbm_padding2.png>
+Package pdftex.def Info: imgs/crbm_padding2.png used on input line 62.
+(pdftex.def)             Requested size: 102.58499pt x 114.86243pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[31
+
+
+
+ <./imgs/crbm_padding1.png> <./imgs/kernel_flip.png> <./imgs/crbm_padding2.png>
+] <imgs/prob_max_pool.png, id=576, 452.29652pt x 274.95828pt>
+File: imgs/prob_max_pool.png Graphic file (type png)
+
+<use imgs/prob_max_pool.png>
+Package pdftex.def Info: imgs/prob_max_pool.png used on input line 81.
+(pdftex.def)             Requested size: 170.97pt x 103.93561pt.
+
+<imgs/snn_sample1.png, id=577, 387.33472pt x 249.2069pt>
+File: imgs/snn_sample1.png Graphic file (type png)
+
+<use imgs/snn_sample1.png>
+Package pdftex.def Info: imgs/snn_sample1.png used on input line 108.
+(pdftex.def)             Requested size: 170.97pt x 110.0012pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[32 <./imgs/prob_max_pool.png>]
+<imgs/snn_sample2.png, id=583, 328.8691pt x 340.58276pt>
+File: imgs/snn_sample2.png Graphic file (type png)
+
+<use imgs/snn_sample2.png>
+Package pdftex.def Info: imgs/snn_sample2.png used on input line 130.
+(pdftex.def)             Requested size: 170.97pt x 177.06247pt.
+
+<imgs/snn_sample3.png, id=584, 390.58281pt x 162.81517pt>
+File: imgs/snn_sample3.png Graphic file (type png)
+
+<use imgs/snn_sample3.png>
+Package pdftex.def Info: imgs/snn_sample3.png used on input line 146.
+(pdftex.def)             Requested size: 170.97325pt x 71.2687pt.
+
+<imgs/snn_sample4.png, id=585, 433.62pt x 209.33379pt>
+File: imgs/snn_sample4.png Graphic file (type png)
+
+<use imgs/snn_sample4.png>
+Package pdftex.def Info: imgs/snn_sample4.png used on input line 152.
+(pdftex.def)             Requested size: 170.97325pt x 82.54059pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[33 <./imgs/snn_sample1.png> <./imgs/snn_sample2.png>]
+<imgs/snn_sample5.png, id=592, 332.92921pt x 214.31793pt>
+File: imgs/snn_sample5.png Graphic file (type png)
+
+<use imgs/snn_sample5.png>
+Package pdftex.def Info: imgs/snn_sample5.png used on input line 165.
+(pdftex.def)             Requested size: 170.97pt x 110.05939pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--178
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[34 <./imgs/snn_sample3.png> <./imgs/snn_sample4.png> <./imgs/snn_sample5.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--200
+
+ []
+
+<imgs/cnn_snn_conv1.jpg, id=599, 769.7973pt x 208.5031pt>
+File: imgs/cnn_snn_conv1.jpg Graphic file (type jpg)
+
+<use imgs/cnn_snn_conv1.jpg>
+Package pdftex.def Info: imgs/cnn_snn_conv1.jpg used on input line 213.
+(pdftex.def)             Requested size: 192.34286pt x 52.097pt.
+
+<imgs/cnn_snn_conv2.jpg, id=600, 771.42134pt x 241.73068pt>
+File: imgs/cnn_snn_conv2.jpg Graphic file (type jpg)
+
+<use imgs/cnn_snn_conv2.jpg>
+Package pdftex.def Info: imgs/cnn_snn_conv2.jpg used on input line 219.
+(pdftex.def)             Requested size: 192.34286pt x 60.27022pt.
+
+Underfull \vbox (badness 1755) has occurred while \output is active []
+
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[35 <./imgs/cnn_snn_conv1.jpg> <./imgs/cnn_snn_conv2.jpg>]
+<imgs/evtCD.png, id=608, 453.10854pt x 202.68828pt>
+File: imgs/evtCD.png Graphic file (type png)
+ <use imgs/evtCD.png>
+Package pdftex.def Info: imgs/evtCD.png used on input line 238.
+(pdftex.def)             Requested size: 170.97pt x 76.4811pt.
+
+<imgs/eCD2.png, id=609, 658.55023pt x 167.79932pt>
+File: imgs/eCD2.png Graphic file (type png)
+ <use imgs/eCD2.png>
+Package pdftex.def Info: imgs/eCD2.png used on input line 263.
+(pdftex.def)             Requested size: 341.94652pt x 87.12811pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[36 <./imgs/evtCD.png>] <imgs/eCD11.png, id=617, 203.962pt x 203.962pt>
+File: imgs/eCD11.png Graphic file (type png)
+
+<use imgs/eCD11.png>
+Package pdftex.def Info: imgs/eCD11.png used on input line 279.
+(pdftex.def)             Requested size: 128.23076pt x 128.2353pt.
+)
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[37 <./imgs/eCD2.png> <./imgs/eCD11.png>]
+\openout2 = `content/appro.aux'.
+
+ (./content/appro.tex
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[38
+
+
 
 ]
+Chapter 4.
+<imgs/recpt_field1.png, id=631, 159.797pt x 134.101pt>
+File: imgs/recpt_field1.png Graphic file (type png)
+
+<use imgs/recpt_field1.png>
+Package pdftex.def Info: imgs/recpt_field1.png used on input line 26.
+(pdftex.def)             Requested size: 170.97325pt x 143.49278pt.
+
+<imgs/recpt_field2.png, id=632, 150.964pt x 134.904pt>
+File: imgs/recpt_field2.png Graphic file (type png)
+
+<use imgs/recpt_field2.png>
+Package pdftex.def Info: imgs/recpt_field2.png used on input line 32.
+(pdftex.def)             Requested size: 170.97325pt x 152.7938pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[39 <./imgs/recpt_field1.png> <./imgs/recpt_field2.png>]
+<imgs/dbn_mnist.png, id=640, 284.06125pt x 224.84pt>
+File: imgs/dbn_mnist.png Graphic file (type png)
+ <use imgs/dbn_mnist.png>
+Package pdftex.def Info: imgs/dbn_mnist.png used on input line 70.
+(pdftex.def)             Requested size: 170.97pt x 135.33044pt.
+
+<imgs/convert_cnn.png, id=641, 199.144pt x 221.628pt>
+File: imgs/convert_cnn.png Graphic file (type png)
+
+<use imgs/convert_cnn.png>
+Package pdftex.def Info: imgs/convert_cnn.png used on input line 86.
+(pdftex.def)             Requested size: 128.23076pt x 142.70717pt.
+
+<imgs/convert_dbn.png, id=642, 296.307pt x 221.628pt>
+File: imgs/convert_dbn.png Graphic file (type png)
+
+<use imgs/convert_dbn.png>
+Package pdftex.def Info: imgs/convert_dbn.png used on input line 92.
+(pdftex.def)             Requested size: 170.97325pt x 127.88487pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[40 <./imgs/dbn_mnist.png>]
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[41 <./imgs/convert_cnn.png> <./imgs/convert_dbn.png>]
+<imgs/coba_lif_act.png, id=661, 578.16pt x 433.62pt>
+File: imgs/coba_lif_act.png Graphic file (type png)
+
+<use imgs/coba_lif_act.png>
+Package pdftex.def Info: imgs/coba_lif_act.png used on input line 132.
+(pdftex.def)             Requested size: 170.97325pt x 128.22777pt.
+
+<imgs/coba_lif_sigmoid.png, id=662, 578.16pt x 433.62pt>
+File: imgs/coba_lif_sigmoid.png Graphic file (type png)
+
+<use imgs/coba_lif_sigmoid.png>
+Package pdftex.def Info: imgs/coba_lif_sigmoid.png used on input line 138.
+(pdftex.def)             Requested size: 170.97325pt x 128.22777pt.
+
+<imgs/coba_lif_bm2.png, id=663, 578.16pt x 433.62pt>
+File: imgs/coba_lif_bm2.png Graphic file (type png)
+
+<use imgs/coba_lif_bm2.png>
+Package pdftex.def Info: imgs/coba_lif_bm2.png used on input line 144.
+(pdftex.def)             Requested size: 170.97325pt x 128.22777pt.
+
+<imgs/cuba_lif_act.png, id=664, 578.16pt x 433.62pt>
+File: imgs/cuba_lif_act.png Graphic file (type png)
+
+<use imgs/cuba_lif_act.png>
+Package pdftex.def Info: imgs/cuba_lif_act.png used on input line 169.
+(pdftex.def)             Requested size: 170.97325pt x 128.22777pt.
+
+<imgs/cuba_lif_sigmoid.png, id=665, 578.16pt x 433.62pt>
+File: imgs/cuba_lif_sigmoid.png Graphic file (type png)
+
+<use imgs/cuba_lif_sigmoid.png>
+Package pdftex.def Info: imgs/cuba_lif_sigmoid.png used on input line 175.
+(pdftex.def)             Requested size: 170.97325pt x 128.22777pt.
+
+<imgs/cuba_lif_bm.png, id=666, 1730.8665pt x 900.4842pt>
+File: imgs/cuba_lif_bm.png Graphic file (type png)
+
+<use imgs/cuba_lif_bm.png>
+Package pdftex.def Info: imgs/cuba_lif_bm.png used on input line 181.
+(pdftex.def)             Requested size: 170.97325pt x 88.94073pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[42 <./imgs/coba_lif_act.png> <./imgs/coba_lif_sigmoid.png> <./imgs/coba_lif_bm
+2.png>]
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[43 <./imgs/cuba_lif_act.png> <./imgs/cuba_lif_sigmoid.png> <./imgs/cuba_lif_bm
+.png>] <imgs/eCD_5phases.png, id=684, 338.866pt x 256.96pt>
+File: imgs/eCD_5phases.png Graphic file (type png)
+
+<use imgs/eCD_5phases.png>
+Package pdftex.def Info: imgs/eCD_5phases.png used on input line 229.
+(pdftex.def)             Requested size: 170.97pt x 129.64418pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[44 <./imgs/eCD_5phases.png>]
+<imgs/lateral_inhib.png, id=696, 241.9827pt x 225.1169pt>
+File: imgs/lateral_inhib.png Graphic file (type png)
+
+<use imgs/lateral_inhib.png>
+Package pdftex.def Info: imgs/lateral_inhib.png used on input line 264.
+(pdftex.def)             Requested size: 170.97pt x 159.06122pt.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[45 <./imgs/lateral_inhib.png>]
+<imgs/spike_dbn.png, id=704, 231.264pt x 331.639pt>
+File: imgs/spike_dbn.png Graphic file (type png)
+ <use imgs/spike_dbn.png>
+Package pdftex.def Info: imgs/spike_dbn.png used on input line 290.
+(pdftex.def)             Requested size: 170.97pt x 245.18636pt.
+)
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[46 <./imgs/spike_dbn.png>]
+\openout2 = `content/impl.aux'.
+
+ (./content/impl.tex
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--15
+
+ []
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 17.
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[47
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[48]
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[49])
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[50]
+\openout2 = `content/exp.aux'.
+
+ (./content/exp.tex
 Chapter 6.
+<imgs/1x4_ds.png, id=731, 285.065pt x 32.12pt>
+File: imgs/1x4_ds.png Graphic file (type png)
+ <use imgs/1x4_ds.png>
+Package pdftex.def Info: imgs/1x4_ds.png used on input line 14.
+(pdftex.def)             Requested size: 299.20076pt x 33.71275pt.
+
+<imgs/mnist.png, id=732, 42.1575pt x 31.61812pt>
+File: imgs/mnist.png Graphic file (type png)
+ <use imgs/mnist.png>
+Package pdftex.def Info: imgs/mnist.png used on input line 41.
+(pdftex.def)             Requested size: 299.20076pt x 224.40616pt.
 
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[27]
+[51
+
+
+
+ <./imgs/1x4_ds.png>])
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[28]
+[52 <./imgs/mnist.png>]
+\openout2 = `content/concl.aux'.
+
+ (./content/concl.tex
 Chapter 7.
 )
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[29
+[53
+
+
 
 ]
 \openout2 = `content/appendix.aux'.
@@ -1516,7 +2318,7 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[30
+[54
 
 
 
@@ -1526,11 +2328,11 @@ Appendix A.
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[31]
+[55]
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[32
+[56
 
 
 ] (./booka4.tdo)
@@ -1541,15 +2343,28 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[33]
+[57]
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[34
+[58
 
 ]
 Appendix B.
-(./booka4.lof)
+(./booka4.lof
+Overfull \hbox (6.0914pt too wide) in paragraph at lines 14--14
+ [][] [][]\T1/ptm/m/n/10.95 Typical ar-chi-tec-ture of a con-vo-lu-tional neu-r
+al net-work with two convolution-pooling 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.9671pt too high) has occurred while \output is active []
+
+
+[59])
 \tf@lof=\write8
 \openout8 = `booka4.lof'.
 
@@ -1557,13 +2372,7 @@ Appendix B.
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[35]
-Overfull \vbox (2.9671pt too high) has occurred while \output is active []
-
-
-[36
-
-]
+[60]
 Appendix C.
 (./booka4.lot)
 \tf@lot=\write9
@@ -1573,11 +2382,13 @@ Appendix C.
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[37]
+[61
+
+]
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[38
+[62
 
 ]
 Appendix D.
@@ -1585,53 +2396,55 @@ Appendix D.
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[39])
+[63])
 No file booka4.ind.
 
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[40]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 96.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 96.
+[64]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (./booka4.aux (./preface/kit_titlepage.aux) (./preface/titlepage.aux)
-(./preface/affirmation.aux) (./content/content.aux) (./content/appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 96.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 96.
+(./preface/affirmation.aux) (./content/intro.aux) (./content/backgrnd.aux)
+(./content/soa.aux) (./content/appro.aux) (./content/impl.aux)
+(./content/exp.aux) (./content/concl.aux) (./content/appendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 111.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 111.
+Package rerunfilecheck Info: File `booka4.out' has not changed.
+(rerunfilecheck)             Checksum: 38D719321172E30834AD69C5AB1FA501;3480.
 
 
-Package rerunfilecheck Warning: File `booka4.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: Checksums for `booka4.out':
-(rerunfilecheck)             Before: 31AE338C38C069ECCA068F626ACEC4D5;2796
-(rerunfilecheck)             After:  AC145EEEEDA2C492B718A9CA1D538EF7;3071.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 96.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
  ) 
 Here is how much of TeX's memory you used:
- 20756 strings out of 493105
- 372486 string characters out of 6137071
- 490678 words of memory out of 5000000
- 23582 multiletter control sequences out of 15000+600000
- 89826 words of font info for 136 fonts, out of 8000000 for 9000
+ 22903 strings out of 493105
+ 409541 string characters out of 6137071
+ 531116 words of memory out of 5000000
+ 25474 multiletter control sequences out of 15000+600000
+ 117524 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,12n,66p,581b,579s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
-fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
-tmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on booka4.pdf (48 pages, 346349 bytes).
+ 73i,17n,106p,779b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on booka4.pdf (72 pages, 3077317 bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 517 compressed objects within 6 object streams
- 156 named destinations out of 1000 (max. 500000)
- 380 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 988 PDF objects out of 1000 (max. 8388607)
+ 806 compressed objects within 9 object streams
+ 264 named destinations out of 1000 (max. 500000)
+ 711 words of extra memory for PDF output out of 10000 (max. 10000000)
 

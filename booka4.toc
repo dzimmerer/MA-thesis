@@ -7,85 +7,98 @@
 \contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Probabilistic Graphical Models}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Bayesian network}{3}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Markov Random Field}{3}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Energy-Based Models}{4}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Sampling}{4}{subsection.2.1.4}
-\contentsline {paragraph}{\nonumberline Ancestral Sampling}{4}{section*.3}
-\contentsline {paragraph}{\nonumberline Markov Chain Monte Carlo}{4}{section*.4}
-\contentsline {paragraph}{\nonumberline Gibbs sampling}{5}{section*.5}
-\contentsline {section}{\numberline {2.2}Neural Networks}{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Natural}{5}{subsection.2.2.1}
-\contentsline {subsubsection}{\nonumberline Brain}{5}{section*.6}
-\contentsline {subsubsection}{\nonumberline Neuron}{5}{section*.7}
-\contentsline {subsubsection}{\nonumberline Learning}{6}{section*.8}
-\contentsline {paragraph}{\nonumberline Synaptic Plasticity}{6}{section*.9}
-\contentsline {paragraph}{\nonumberline "What fires together, wires together"}{7}{section*.10}
-\contentsline {subsection}{\numberline {2.2.2}Time discrete}{7}{subsection.2.2.2}
-\contentsline {subsubsection}{\nonumberline Perceptron}{7}{section*.11}
-\contentsline {paragraph}{\nonumberline Model}{7}{section*.12}
-\contentsline {paragraph}{\nonumberline Decision Function}{7}{section*.13}
-\contentsline {paragraph}{\nonumberline Perceptron Learning}{7}{section*.14}
-\contentsline {subsubsection}{\nonumberline Mutlilayer-Perceptron}{8}{section*.15}
-\contentsline {paragraph}{\nonumberline Model architecture}{8}{section*.16}
-\contentsline {paragraph}{\nonumberline Activation functions}{8}{section*.17}
-\contentsline {paragraph}{\nonumberline Error functions}{8}{section*.18}
-\contentsline {paragraph}{\nonumberline Backpropagation}{8}{section*.19}
-\contentsline {subsubsection}{\nonumberline Convolutinal Neural Networks}{9}{section*.20}
-\contentsline {paragraph}{\nonumberline Convolution}{9}{section*.21}
-\contentsline {paragraph}{\nonumberline Architecture}{9}{section*.22}
-\contentsline {paragraph}{\nonumberline Training}{9}{section*.23}
-\contentsline {subsubsection}{\nonumberline Hopfield Nets}{9}{section*.24}
-\contentsline {paragraph}{\nonumberline Model}{10}{section*.25}
-\contentsline {paragraph}{\nonumberline Properties / Advantages / Disadvantages}{10}{section*.26}
-\contentsline {subsubsection}{\nonumberline Boltzmann Machines}{10}{section*.27}
-\contentsline {paragraph}{\nonumberline Model}{10}{section*.28}
-\contentsline {paragraph}{\nonumberline Learning Rule}{11}{section*.29}
-\contentsline {paragraph}{\nonumberline RBMs}{11}{section*.30}
-\contentsline {paragraph}{\nonumberline CD-Training}{11}{section*.31}
-\contentsline {subsubsection}{\nonumberline Deep Belief Networks}{11}{section*.32}
-\contentsline {paragraph}{\nonumberline Stacking Up RBMs}{11}{section*.33}
-\contentsline {paragraph}{\nonumberline Fine-tuning}{11}{section*.34}
-\contentsline {subsection}{\numberline {2.2.3}Continuous}{12}{subsection.2.2.3}
-\contentsline {subsubsection}{\nonumberline Neuron Models}{12}{section*.35}
-\contentsline {paragraph}{\nonumberline LIF}{12}{section*.36}
-\contentsline {paragraph}{\nonumberline Hodgkin-Huxley}{12}{section*.37}
-\contentsline {paragraph}{\nonumberline Poisson}{13}{section*.38}
-\contentsline {subsubsection}{\nonumberline Neural Coding}{13}{section*.39}
-\contentsline {subsubsection}{\nonumberline Learning}{13}{section*.40}
-\contentsline {paragraph}{\nonumberline STDP}{14}{section*.41}
-\contentsline {paragraph}{\nonumberline Symetric STDP}{14}{section*.42}
-\contentsline {chapter}{\numberline {3}Related Work}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Convolutional RBM}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Sampling in SNNs}{15}{section.3.2}
-\contentsline {section}{\numberline {3.3}NN -> SNN conversion}{16}{section.3.3}
-\contentsline {section}{\numberline {3.4}eCD and Sampling Machines}{16}{section.3.4}
-\contentsline {chapter}{\numberline {4}Approach}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Conversion}{19}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Conv DBNs}{19}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Conversion}{19}{subsection.4.1.2}
-\contentsline {paragraph}{\nonumberline Conversion as CNN}{19}{section*.43}
-\contentsline {paragraph}{\nonumberline Conversion with COBA LIF}{20}{section*.44}
-\contentsline {paragraph}{\nonumberline Conversion with CUBA LIF}{20}{section*.45}
-\contentsline {section}{\numberline {4.2}eCD}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Convolution}{21}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}DBMs}{22}{subsection.4.2.2}
-\contentsline {chapter}{\numberline {5}Implementation}{23}{chapter.5}
-\contentsline {section}{\numberline {5.1}Discrete DBNs}{23}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conversion}{24}{section.5.2}
-\contentsline {section}{\numberline {5.3}eCD}{24}{section.5.3}
-\contentsline {chapter}{\numberline {6}Experiments\&Results}{27}{chapter.6}
-\contentsline {section}{\numberline {6.1}Datasets}{27}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}1x4 Dataset}{27}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Strip Dataset}{27}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}MNIST}{27}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Experiments}{27}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Convolution vs no Convolution}{28}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Lateral connections}{28}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Hidden sparsity/ learning the data distribution}{28}{subsection.6.2.3}
-\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{29}{chapter.7}
-\contentsline {section}{\numberline {7.1}Biological plausibility}{29}{section.7.1}
-\contentsline {chapter}{\numberline {A}Some appendix}{31}{appendix.A}
-\contentsline {section}{\numberline {A.1}(if needed)}{31}{section.A.1}
-\contentsline {chapter}{\numberline {B}List of Figures}{35}{appendix.B}
-\contentsline {chapter}{\numberline {C}List of Tables}{37}{appendix.C}
-\contentsline {chapter}{\numberline {D}Bibliography}{39}{appendix.D}
+\contentsline {subsection}{\numberline {2.1.2}Markov Random Field}{4}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Energy-Based Models}{5}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Sampling}{6}{subsection.2.1.4}
+\contentsline {paragraph}{\nonumberline Ancestral Sampling}{6}{section*.6}
+\contentsline {paragraph}{\nonumberline Markov Chain Monte Carlo}{6}{section*.7}
+\contentsline {paragraph}{\nonumberline Gibbs sampling}{7}{section*.8}
+\contentsline {section}{\numberline {2.2}Neural Networks}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Natural}{7}{subsection.2.2.1}
+\contentsline {subsubsection}{\nonumberline Brain}{7}{section*.9}
+\contentsline {subsubsection}{\nonumberline Neuron}{8}{section*.11}
+\contentsline {subsubsection}{\nonumberline Learning}{9}{section*.13}
+\contentsline {paragraph}{\nonumberline Synaptic Plasticity}{9}{section*.14}
+\contentsline {paragraph}{\nonumberline "What fires together, wires together"}{10}{section*.15}
+\contentsline {subsection}{\numberline {2.2.2}Artificial neural networks}{10}{subsection.2.2.2}
+\contentsline {subsubsection}{\nonumberline Perceptron}{10}{section*.16}
+\contentsline {paragraph}{\nonumberline Model}{10}{section*.17}
+\contentsline {paragraph}{\nonumberline Decision Function}{11}{section*.19}
+\contentsline {paragraph}{\nonumberline Perceptron Learning}{11}{section*.21}
+\contentsline {subsubsection}{\nonumberline Mutlilayer-Perceptron}{12}{section*.22}
+\contentsline {paragraph}{\nonumberline Model architecture}{12}{section*.23}
+\contentsline {paragraph}{\nonumberline Activation functions}{13}{section*.25}
+\contentsline {paragraph}{\nonumberline Error functions}{13}{section*.27}
+\contentsline {paragraph}{\nonumberline Backpropagation}{14}{section*.28}
+\contentsline {subsubsection}{\nonumberline Convolutinal Neural Networks}{15}{section*.29}
+\contentsline {paragraph}{\nonumberline Convolution}{15}{section*.30}
+\contentsline {paragraph}{\nonumberline Convolution Layers}{16}{section*.32}
+\contentsline {paragraph}{\nonumberline Architecture}{17}{section*.33}
+\contentsline {paragraph}{\nonumberline Training}{17}{section*.35}
+\contentsline {subsubsection}{\nonumberline Hopfield Nets}{18}{section*.36}
+\contentsline {paragraph}{\nonumberline Model}{18}{section*.37}
+\contentsline {paragraph}{\nonumberline Properties}{18}{section*.39}
+\contentsline {subsubsection}{\nonumberline Boltzmann Machines}{19}{section*.40}
+\contentsline {paragraph}{\nonumberline Model}{19}{section*.41}
+\contentsline {paragraph}{\nonumberline Learning Rule}{20}{section*.43}
+\contentsline {paragraph}{\nonumberline RBMs}{21}{section*.44}
+\contentsline {paragraph}{\nonumberline CD-l Training}{22}{section*.46}
+\contentsline {paragraph}{\nonumberline Persistent CD}{22}{section*.48}
+\contentsline {subsubsection}{\nonumberline Deep Belief Networks}{22}{section*.49}
+\contentsline {paragraph}{\nonumberline Training}{23}{section*.50}
+\contentsline {paragraph}{\nonumberline Fine-tuning}{23}{section*.52}
+\contentsline {subsection}{\numberline {2.2.3}Spiking neural networks}{24}{subsection.2.2.3}
+\contentsline {subsubsection}{\nonumberline Neuron Models}{24}{section*.53}
+\contentsline {paragraph}{\nonumberline LIF}{24}{section*.54}
+\contentsline {paragraph}{\nonumberline Hodgkin-Huxley}{25}{section*.56}
+\contentsline {paragraph}{\nonumberline Poisson}{26}{section*.58}
+\contentsline {subsubsection}{\nonumberline Synapses}{27}{section*.59}
+\contentsline {paragraph}{\nonumberline Current-based synaptic interaction}{27}{section*.60}
+\contentsline {paragraph}{\nonumberline Conductance-based synaptic interaction}{27}{section*.61}
+\contentsline {subparagraph}{\nonumberline High conductance state}{27}{section*.62}
+\contentsline {paragraph}{\nonumberline Kernel function}{28}{section*.65}
+\contentsline {subsubsection}{\nonumberline Neural Coding}{29}{section*.67}
+\contentsline {subsubsection}{\nonumberline Learning}{29}{section*.68}
+\contentsline {paragraph}{\nonumberline Spike time depended plasticity}{29}{section*.69}
+\contentsline {paragraph}{\nonumberline Long-term potentiation}{30}{section*.70}
+\contentsline {paragraph}{\nonumberline Long-term depression}{30}{section*.71}
+\contentsline {chapter}{\numberline {3}Related Work}{31}{chapter.3}
+\contentsline {section}{\numberline {3.1}Convolutional RBM}{31}{section.3.1}
+\contentsline {section}{\numberline {3.2}Sampling in SNNs}{32}{section.3.2}
+\contentsline {section}{\numberline {3.3}Artificial to spiking neural network conversion}{34}{section.3.3}
+\contentsline {section}{\numberline {3.4}eCD and Sampling Machines}{36}{section.3.4}
+\contentsline {chapter}{\numberline {4}Approach}{39}{chapter.4}
+\contentsline {section}{\numberline {4.1}Convolutional architecture in spiking neural network}{39}{section.4.1}
+\contentsline {section}{\numberline {4.2}Conversion}{40}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Conv DBNs}{40}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Conversion}{41}{subsection.4.2.2}
+\contentsline {paragraph}{\nonumberline Conversion as CNN}{41}{section*.86}
+\contentsline {paragraph}{\nonumberline Conversion with conductance-based LIF}{41}{section*.87}
+\contentsline {paragraph}{\nonumberline Conversion with current-based LIF}{42}{section*.89}
+\contentsline {section}{\numberline {4.3}eCD}{43}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Convolution}{44}{subsection.4.3.1}
+\contentsline {paragraph}{\nonumberline Lateral inhibition}{45}{section*.92}
+\contentsline {subsection}{\numberline {4.3.2}Spiking DBNs}{45}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Implementation}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Analog DBNs}{47}{section.5.1}
+\contentsline {section}{\numberline {5.2}Conversion}{48}{section.5.2}
+\contentsline {section}{\numberline {5.3}eCD}{49}{section.5.3}
+\contentsline {chapter}{\numberline {6}Experiments\&Results}{51}{chapter.6}
+\contentsline {section}{\numberline {6.1}Datasets}{51}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}1x4 Dataset}{51}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Strip Dataset}{51}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}MNIST}{51}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Experiments}{51}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Computational Constrains}{52}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Conversion comparison}{52}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Convolution vs no Convolution}{52}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Lateral connections}{52}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}Hidden sparsity/ learning the data distribution}{52}{subsection.6.2.5}
+\contentsline {subsection}{\numberline {6.2.6}Same number of samples}{52}{subsection.6.2.6}
+\contentsline {chapter}{\numberline {7}Conclusion and Outlook}{53}{chapter.7}
+\contentsline {section}{\numberline {7.1}Biological plausibility}{53}{section.7.1}
+\contentsline {chapter}{\numberline {A}Some appendix}{55}{appendix.A}
+\contentsline {section}{\numberline {A.1}(if needed)}{55}{section.A.1}
+\contentsline {chapter}{\numberline {B}List of Figures}{59}{appendix.B}
+\contentsline {chapter}{\numberline {C}List of Tables}{61}{appendix.C}
+\contentsline {chapter}{\numberline {D}Bibliography}{63}{appendix.D}

@@ -1,0 +1,31 @@
+\chapter{Conclusion and Outlook}
+
+\section{Biological plausibility}
+
+Studies by Hubel and Wiesel suggest, certain neurons respond so similar features at different position of in visible field.
+
+This suggest similar synaptic weights. 
+
+One explanation of this could be shared weights similar to CNNs. 
+
+Since the weight updates in the brain are primarily believed to be local, there is no know principle to keep weights between different neurons in the brain synchronized.
+
+So while the trained structure, with receptive fields and similar weights is quite plausible, the training procedure here is not.
+
+A more plausible way in the brain to get similar weights, is due to the similarity of the inputs, e.g. if two repcetive fields get quite similar input, their weights will probably converge to the same target values.  
+
+While this requires all receptive fields to be presented with the whole data, presenting each field with some part of the data but updating all fields with a combined update can be more computational effective. 
+This could be a principle CNN utilize to get biological plausible result, while performing completely biological plausible updates.
+
+Another biological not completely plausible part of our presented system are the bidirectional synapses.
+
+This in turn could be easily translated to two directional synapses, with some weight synchronization. While in this case local updates are sufficient, to keep the weights similar (e.g. applying a similar learning rule to both weights), and research on discrete NNs has shown some automatic weight synchronization in Autoencoders (Bengio), where is no biological proof.
+
+The STDP flag determining either completely positive or negative does not appear to be plausible as well.
+
+Even so this system has many constrains, it might could be counted among one of the more biological plausible deep learning architectures.     
+
+
+
+
+ 
