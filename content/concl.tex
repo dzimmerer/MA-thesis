@@ -1,31 +1,73 @@
 \chapter{Conclusion and Outlook}
 
-\section{Biological plausibility}
+In this thesis we demonstrated how to train and build a spiking network to generate discriminative higher level features on event-based data.
+Although many systems for discrete data have been proposed, event-based systems are still mostly neglected.
+Systems working on event-based data with highly distributed computational units can lower the power performance, the response-time and show more biologically plausible performance.  
+Two different approaches with a focus on biological resemblance to build an event-based system were shown.
+The first system trains a probabilistic graphical model, a deep belief network, on visual input by using the contrastive divergence algorithm to approximate some data distribution and stacking up Boltzmann machines.
+This probabilistic model get transferred equivalent variations of spiking neural networks.
+We showed the similarities between the deep belief network and the spiking neural network and evaluated and compared their performance on a classification task.   
+The second system directly trains a spiking neural network using a version of spike time depended plasticity to simulate the contrastive divergence algorithm. By training consecutive parts of the network layerwise, a more complex system was build. Due to the computational complexity, we only evaluated the performance on a small visual stripe dataset. We showed how lateral inhibitory connections allow more discriminative features and allow a classification accuracy of 100 $\%$ on the dataset.
+At last we compare those two approaches and show how the event-based approach is able to generate more discriminative features and learns faster than the other approach.  
+
+\subsubsection{Biological plausibility}
 
 Studies by Hubel and Wiesel suggest, certain neurons respond so similar features at different position of in visible field.
-
-This suggest similar synaptic weights. 
-
+This suggest similar, but due to contortions in the cornea most probably not exactly the same, synaptic weights. 
 One explanation of this could be shared weights similar to CNNs. 
-
 Since the weight updates in the brain are primarily believed to be local, there is no know principle to keep weights between different neurons in the brain synchronized.
-
 So while the trained structure, with receptive fields and similar weights is quite plausible, the training procedure here is not.
-
 A more plausible way in the brain to get similar weights, is due to the similarity of the inputs, e.g. if two repcetive fields get quite similar input, their weights will probably converge to the same target values.  
-
 While this requires all receptive fields to be presented with the whole data, presenting each field with some part of the data but updating all fields with a combined update can be more computational effective. 
 This could be a principle CNN utilize to get biological plausible result, while performing completely biological plausible updates.
 
 Another biological not completely plausible part of our presented system are the bidirectional synapses.
-
-This in turn could be easily translated to two directional synapses, with some weight synchronization. While in this case local updates are sufficient, to keep the weights similar (e.g. applying a similar learning rule to both weights), and research on discrete NNs has shown some automatic weight synchronization in Autoencoders (Bengio), where is no biological proof.
-
+This in turn could be easily translated to two directional synapses, with some weight synchronization. 
+While in this case local updates are sufficient, to keep the weights similar (e.g. applying a similar learning rule to both weights), and research on discrete NNs has shown some automatic weight synchronization in Autoencoders (Bengio), where is no biological proof.
 The STDP flag determining either completely positive or negative does not appear to be plausible as well.
 
 Even so this system has many constrains, it might could be counted among one of the more biological plausible deep learning architectures.     
 
+\section{Future work}
 
+While this system shows promising results on small dataset, there is still a lot of space for improvement on the performance and biological plausibility level.
 
+\subsection{Neuromorphic Hardware}
 
+One of the biggest constrains of the here proposed frameworks, is the simulation speed of neural simulations.
+One way the training could be speed up, is to perform the simulations on dedicated Neuromorphic hardware. 
+There exists a few platforms which could be used, each having different advantages and disadvantages.
+
+\paragraph{SpiNNakker} is a massively-parallel computer architecture which can use up to 1 million ARM processores to simulate up to 1 billion neurons. 
+In addition it can be interfaced with PyNN. 
+While implementing a custom STDP rule is quite feasible although having only integer weights, but keeping weights synchronized either for symmetric connections as well as convolution, poses a bigger problem and it's complexity exceeds this thesis.
+
+\paragraph{Spikey} emulates spiking neural networks with conductance based leaky integrate-and-fire neurons and synapses implemented in analog microelectronics.
+It can simulate 384 neurons and 256 incoming synapses in each neuron, resulting in a total 98304 synapses.
+It can also be interfaced with PyNN.
+This can allow approximately 10000-fold faster computations than biological real-time.
+But due to the weights, which are implemented directly in hardware and the noisy and less fault tolerant analog electronics this poses difficulties for a "phased" custom STDP mechanism and weight-sharing. 
+
+\subsection{Biological plausible learning}
+
+Another direction which poses great potential for further research is tackling, the current restrictions on the biological plausibility.  
+
+One of the primary problems is the division in learning phases.
+This is currently an active topic for research and there are different algorithms proposed, which loosen the contrains on explicit positive and negative learning phases.
+There are two approaches which appear in particular promising, which either only learn with a LTP variant as long as data is completely presented and the distribution converges towards the data distribution or learn after the input has only been nudged towards the real data input.
+These approaches show similarities to some STDP meachanism, but to our best knowledge have not been implemented in spiking networks.
+
+These approaches might also help with the problem of cascaded learning of different layers.
+With the contrastive divergence a good estimate of the data and model distribution are needed and thus for arbitrary Boltzmann machines potentially infinite sampling has to be performed.
+This leads to only simple and shallow Boltzmann machine structures which are used.
+Due to the break up of hard sampling phases, this allows a simple transition to arbitrary Boltzmann machines.
+Thus researching on joint layer learning algorithms shows great promise as well.
+
+Another constrain are the synchronized weights.
+On going research points to the idea, that the synchronization might not be so important.
+Lillycrap et al showed that a linear system was still able to be trained with using backpropagation, even if the feedback weights were chosen randomly and kept constant.
+In addition research on autoencoders showed another kind of weight synchronization, where even without tied weight autoencoders often end up with symmetric weights.
+It would be interesting to see how such mechanisms perform in spiking neural networks and if they can be transferred to local learning with STDP.
+
+Eventually it would be interesting to see if a biological plausible system integrating the relaxed phases without shared weights could be realized and simulated in real time.
  

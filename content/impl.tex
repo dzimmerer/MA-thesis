@@ -63,7 +63,15 @@ We train the RBM for a given number of epochs, with a batch size smaller than th
 To build up the DBN each RBM was trained greedily.
 After training one RBM the entire dataset was converted by doing one upwards pass in the trained RBM and using the activation of the hidden units as the new input data for the next RBM.
 
-$PSEUDO code$
+\begin{algorithm}
+\caption{build DBN}
+\begin{algorithmic}
+\For{$i$  in $\#$ \textit{layers}} 
+\State Train $\text{RBM}_i$ on dataset $\text{ds}_i$
+\State convert dataset: $\text{ds}_{i+1} = upward_i(\text{ds}_i)$ 
+\EndFor
+\end{algorithmic}
+\end{algorithm}
 
 Up to this time no label information is used to train any RBM, thus the learned features up to this point are trained purely unsupervised.
 The last layer, the classification layer, consists of a fully connected RBM trained on the input data of the converted data set concatenated with a one-hot encoding of the label.
@@ -128,8 +136,6 @@ This will unlearn the model distribution.
 
 \end{itemize}
 
-
-$IMAGE$
 
 The weight synchronization is set at discrete time points, after $n$ training samples.
 This is performed by taking the mean over all the weights, which are to be the shared.

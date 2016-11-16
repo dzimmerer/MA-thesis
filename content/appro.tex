@@ -24,15 +24,17 @@ In this case the top layer activation of receptive fields with the same weights 
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/recpt_field1.png}
-  		\caption{A subfigure}
+  		\caption{A singe receptive field over 4 neurons}
   		\label{fig:sub1}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/recpt_field2.png}
-  		\caption{A subfigure}
+  		\caption{Four receptive fields with shared weights.}
   		\label{fig:sub2}
 	\end{subfigure}
+	\caption{Receptive fields over 4 neurons. In (a) the top layer neuron (red), is only connected to a some neurons in close vicinity to each other. In (b) four receptive fields are next to each other with a stride of two and shared weights. The top layer neurons have a similar topology as their receptive fields. Such a structure can give similar results to conventional more dimensional convolution. }
+	\label{fig:receptfields}
 \end{figure}
 
 
@@ -68,8 +70,8 @@ Out approach is similar to the approach of Hinton.
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/dbn_mnist.png} 
-    \caption{A figure.}
-	\label{fig:test}
+    \caption{A common structure of a deep belief network, build up of RBMs used for classification. The first layers transform the input data/ pixel image and can extract features and the top layer RBM is used for association the data with the correct label.}
+	\label{fig:dbnmnist}
 \end{figure}
 
 To evaluate the final performance, we input a data sample without a label into the DBN and let the top layer sample a label prediction by performing Gibbs sampling steps.
@@ -84,15 +86,17 @@ For the conversion we have three different variations
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.6\linewidth]{imgs/convert_cnn.png}
-  		\caption{A subfigure}
+  		\caption{Structure of a spiking CNN with LIF neurons.}
   		\label{fig:sub1}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/convert_dbn.png}
-  		\caption{A subfigure}
+  		\caption{Structure of a spiking DBN with LIF neurons.}
   		\label{fig:sub2}
-	\end{subfigure}
+  	\end{subfigure}
+	\caption{Different converted structures of a CNN and a DBN. The CNN is converted to a spiking network, by simply using simple LIF neurons (white) (a). In the DBN (b) the LIF neurons are put in a high conductance state (black), by inserting high frequency poisson noise. The weights are scaled accordingly to fit the activations of the neurons.}
+	\label{fig:converted}
 \end{figure}
 
 
@@ -130,21 +134,24 @@ The PSP are chosen to have an alpha shape in stead of rectangular PSP, which as 
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/coba_lif_act.png}
-  		\caption{A subfigure}
+  		\caption{Firing of a HCS COBA LIF neuron.}
   		\label{fig:sub1}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/coba_lif_sigmoid.png}
-  		\caption{A subfigure}
+  		\caption{Input output transfer function of a HCS COBA LIF neuron.}
   		\label{fig:sub2}
 	\end{subfigure}
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/coba_lif_bm2.png}
-  		\caption{A subfigure}
+  		\caption{omparison between a HCS COBA LIF neuron sampling and the true distribution in a RBM.}
   		\label{fig:sub2}
 	\end{subfigure}
+	\caption{Properties of a conductance based LIF neuron, put into a high conductance state with high frequency input noise. The neuron fires with a probability of $0.5$ given no additional input (a). With input the input output transfer function approximates a sigmoid function (b). A network with such neurons is able to sample in a Boltzmann distribution similar to original distribution (c). }
+	\label{fig:cobahcs}
+
 \end{figure}
   
 The DBN is converted by simply converting each layer to a layer of COBA LIFs with poisson noise, and the connections are transformed to synapses with the weights scaled to achieve a action function similar to the sigmoid function.
@@ -167,21 +174,23 @@ By adding high frequency poisson noise, a sigmoid shaped input-rate output-rate 
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/cuba_lif_act.png}
-  		\caption{A subfigure}
+  		\caption{Firing of a HCS CUBA LIF neuron.}
   		\label{fig:sub1}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/cuba_lif_sigmoid.png}
-  		\caption{A subfigure}
+  		\caption{Input output transfer function of a HCS CUBA LIF neuron.}
   		\label{fig:sub2}
 	\end{subfigure}
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/cuba_lif_bm.png}
-  		\caption{A subfigure}
+  		\caption{Comparison between a HCS CUBA LIF neuron sampling and the true distribution in a RBM.}
   		\label{fig:sub2}
 	\end{subfigure}
+	\caption{Properties of a current based LIF neuron, put into a simulated high conductance state by high frequency input noise and a artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).}
+	\label{fig:cubahcs}
 \end{figure}
 The DBN conversion is similar to the COBA case, where the COBA neurons are now replaced by the adapted CUBA LIFs.
 
@@ -227,11 +236,10 @@ The original division into four training phases poses similarites to pCD since t
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/eCD_5phases.png} 
-    \caption{A figure.}
-	\label{fig:test}
+    \caption{The five phases for a data sample in the adapted eCD algorithm. }
+	\label{fig:ecd5}
 \end{figure}
 
-$STDP CURVE$
 
 \subsection{Convolution}
 
@@ -262,8 +270,8 @@ This removes one advantage of RBMs since the hidden layers are no longer indepen
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/lateral_inhib.png} 
-    \caption{A figure.}
-	\label{fig:test}
+    \caption{A (restricted) Boltzmann machine with lateral inhibition in the top layer.}
+	\label{fig:bminhib}
 \end{figure}
 
 
@@ -288,7 +296,7 @@ An approach similar to Salakhutdinovs DBMs with doubling the weights and composi
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/spike_dbn.png} 
-    \caption{A figure.}
-	\label{fig:test}
+    \caption{The structure of a deep belief network trained with eCD. The DBN conists of single Boltzmann machines stacked on top of each others. In contrast to analog DBNs, the Boltzmann machines are still bidirection connected, and two Boltzmann machines are stacked up by forwarding the activations of the hidden layer in the bottom RBM to the visible layer in the top RBM.}
+	\label{fig:spikedbn}
 \end{figure}
 
