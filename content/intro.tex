@@ -2,36 +2,36 @@
 
 \section{Motivation}
 
-In 2012 by winning the Imagenet Large Scale Visual Recognition Challenge 2012 convolutional neural network gained a big rise in popularity. 
-Now they are becoming popular for their powerful abstraction mechanism in the fields of image and video classification and description and speech recognition. 
-This can be contributed to compositional structure in which the world can be perceived and to their ability to extract high level features on spatial and/or temporal conditioned data.
+By winning the Imagenet Large Scale Visual Recognition Challenge in 2012, convolutional neural networks gained a big rise in popularity. 
+Their powerful abstraction mechanism made them one of the most used algorithms in the fields of image and video classification and description and speech recognition. 
+This can be primarily contributed to their ability to extract high level features on spatial and/or temporal conditioned data and the compositional structure in information of the world.
 
-Generating discriminative high level features extractors allows the system to dynamically adapt to the input data and work on various kinds of data. 
-In addition the features extractors do not need to have any semantic representation and can be more complex to the manually build feature extractors. 
+Creating discriminative high level features extractors allows the system to dynamically adapt to the input data and work on various kinds of data. 
+In addition the features extractors do not need to have any semantic, human interpretable representation and can be more complex than manually built feature extractors. 
 This also removes the labor-intensive and time consuming task of manually building feature extractors.
 Consequently they recently got adapted to solve robotic problems like grasp planning, drone navigation and autonomous driving. 
 
-One precursor of those are the deep belief networks (DBNs), which are built up of restricted boltzmann machines (RBMs). 
+One precursor of those are the deep belief networks (DBNs), which are built up of restricted Boltzmann machines (RBMs). 
 DBNs have shown excellent performance on image classification tasks in the early 2000s.
 
-Compared to classical CNNs, DBNs allow recurrent connections and are trained in an unsupervised manner and do not need labeled data. 
-They have been described as  “probably the most biologically plausible learning algorithm for deep architectures we currently know”. 
+Compared to classical CNNs, DBNs allow recurrent connections and can be trained unsupervised. 
+They have been described as  "probably the most biologically plausible learning algorithm for deep architectures we currently know”. 
 DBNs can be used as generative model as well, which means they can sample data according to a learned distribution, e.g. find the most probable completion for a partially erased image.
 
-Adding convolution to DBNs increased the performance of DBNs on image classification tasks, caught up to state of the art results and made the system more similar to the primate visual cortex than a standard RBM. 
+Adding convolution to DBNs increased the performance of DBNs on image classification tasks, caught up with the state of the art results and made the system more similar to the primate visual cortex than a standard DBN. 
 
 All those approaches use scalar values between neurons at discrete time slices to propagate information. 
-This proposes some difficulties and is not biologically plausible, since biological neuron interleave linear and nonlinear operations, they communicate by stochastic binary values and are not synchronized. 
-Spiking neural networks (SNNs), designed to simulate the communication between neurons with action potentials/ spikes, work in continuous time by design and do not suffer from the aforementioned limitations.
+While being well suited for GPUs, they are very not biologically plausible, since biological neuron interleave linear and non-linear operations, they communicate by stochastic binary values and are not synchronized. 
+Spiking neural networks (SNNs), designed to simulate the communication between neurons with spikes, work in continuous time by design and do not suffer from the aforementioned limitations of classical artificial neural networks.
 
 \section{Problem Statement}
 
-To our best knowledge, up to today, there exists no system which utilizes the benefits of all those approaches. 
-The main objective of this thesis is to realize such a spiking network, which integrates convolution and can be easily trained utilizing the RBM learning algorithm, to extract high level features. 
-Two approaches are described. 
+To our best knowledge, up to today, there exists no system which utilizes the benefits of a convolutional architecture, spiking neural networks and deep belief networks altogether . 
+The main objective of this thesis is to realize such a spiking network, which integrates convolution and can be easily trained utilizing an RBM learning algorithm, to extract high level features. 
+Two approaches are explored. 
 The first approach trains convolutional RBMs on discretized input data, to build up a DBN which is then converted to a SNN. 
-The next approach directly works on continuous (event-driven) input-data and realizes a STDP learning algorithm with shared weights to train spiking convolutinal RBMs directly. 
-Both approaches will learn to extract high level features, which can be further used to classify an object or directly generate a grasp id. 
+The second approach learn from continuous, event-driven input-data and adopts the synaptic weights with a plasticity rule with shared weights to train spiking convolutional RBMs directly. 
+Both approaches will learn to extract high level features, which can be further used to classify an object. 
 
 \section{The Human Brain Project}
 
@@ -52,4 +52,8 @@ computational models for neurobiological inspired robotic grasping.
 
 This thesis describes the approach and implementation of a spiking convolutional deep belief networks to extract high level features on continuous visual input. The thesis is structures as follows:
 
-Chapter 2 introduces sine background information, which is used in chapter 3 to describe state-of-the-art research used in this thesis. Chapter 4 will describe the different approaches to build such a spiking convolutional deep belief networks. In chapter 5 the different implementation steps and the architecture will be described. Chapter 6 outlines and compares the performance of the networks. Chatper 7 will conclude the gathered insight of this thesis, state its limitations and give suggestions for further improvements and research.  
+Chapter 2 introduces some background information, which is used in chapter 3 to describe state-of-the-art research used in this thesis. 
+Chapter 4 will describe the different approaches to build such a spiking convolutional deep belief networks. 
+In chapter 5 the different implementation steps and  architecture will be described. 
+Chapter 6 outlines and compares the performance of the networks. 
+Chapter 7 will conclude the gathered insight of this thesis, state its limitations and give suggestions for further improvements and research.  

@@ -46,9 +46,7 @@ One complete Gibbs sampling step consists of on upwards and a consecutive downwa
 \end{algorithmic}
 \end{algorithm}
 
-The free energy of the model is calculated according to equation (@TODO ref).
-
-Each RBM is trained with the $k$-CD update rule, therefore after performing one Gibbs sampling step to get the distribution of the data $\textbf{V}_0, \textbf{H}_0$  (positive phase), we perform $k-1$ additional Gibbs sampling steps to get an estimate of the model distribution $\textbf{V}_k, \textbf{H}_k$  (negative phase).
+Each RBM is trained with the CD-$k$ update rule, therefore after performing one Gibbs sampling step to get the distribution of the data $\textbf{V}_0, \textbf{H}_0$  (positive phase), we perform $k-1$ additional Gibbs sampling steps to get an estimate of the model distribution $\textbf{V}_k, \textbf{H}_k$  (negative phase).
 
 As error function we define the difference between the free energy of the positive phase and the negative phase.
 \[
@@ -82,8 +80,8 @@ The last layer, the classification layer, consists of a fully connected RBM trai
 
 To simulate the converted DBNs we use the pyNN framework with Nest as spiking network simulator.
 To simulate the CNN and DBN we use current and conductance based LIF neurons, respectively.
-Each unit is injected with high frequency Possion distributed excitatory and inhibitory input spikes with the frequency $\lambda_{noise}$ and the synaptic weights $w_{n+}$ and $w_{n-}$ respectively.
-The parameters for the models can be seen in Table x( @TODO table).
+Each unit is injected with high frequency Possion distributed excitatory and inhibitory input spikes with the frequency $\lambda_{noise}= 5000 \text{Hz}$ and synaptic weights $w_{n+}$ and $w_{n-}$ respectively.
+%The parameters for the models can be seen in Table x( @TODO table).
 
 A unit in the DBN is represented by a neuron, a layer by a neuron population.
 For the connections static synapses with the scaled original weights were used. 
@@ -152,7 +150,7 @@ Therefore the a connection with a strong synaptic weight is established from the
 The original input data is still fed to the bottom RBM while the activations of hidden layer in previous RBM act as training data for the top RBM.
 
 
-At test time the network is run for a fixed timespan $t_{test}$ with the test data is fed to the bottom RBM .
+At test time the network is run for a fixed timespan $t_{test}$ with the test data fed to the bottom RBM.
 There is no external input forwarded the label layer while the number of spikes in the label are counted.
 The neuron with the most spikes represents the predicted label.  
 

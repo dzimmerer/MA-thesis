@@ -24,7 +24,7 @@
 \BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Conv DBNs}{section.4.2}% 24
 \BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Conversion}{section.4.2}% 25
 \BOOKMARK [1][-]{section.4.3}{4.3 eCD}{chapter.4}% 26
-\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Convolution}{section.4.3}% 27
+\BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Convolution in eCD}{section.4.3}% 27
 \BOOKMARK [2][-]{subsection.4.3.2}{4.3.2 Spiking DBNs}{section.4.3}% 28
 \BOOKMARK [0][]{chapter.5}{5 Implementation}{}% 29
 \BOOKMARK [1][-]{section.5.1}{5.1 Analog DBNs}{chapter.5}% 30
@@ -32,21 +32,19 @@
 \BOOKMARK [1][-]{section.5.3}{5.3 eCD}{chapter.5}% 32
 \BOOKMARK [0][]{chapter.6}{6 Experiments\046Results}{}% 33
 \BOOKMARK [1][-]{section.6.1}{6.1 Datasets}{chapter.6}% 34
-\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 1x4 Dataset}{section.6.1}% 35
-\BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 Stripe Dataset}{section.6.1}% 36
-\BOOKMARK [2][-]{subsection.6.1.3}{6.1.3 MNIST}{section.6.1}% 37
-\BOOKMARK [2][-]{subsection.6.1.4}{6.1.4 Poker-DVS}{section.6.1}% 38
-\BOOKMARK [1][-]{section.6.2}{6.2 Experiments}{chapter.6}% 39
-\BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 Computational Constrains}{section.6.2}% 40
-\BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 Conversion}{section.6.2}% 41
-\BOOKMARK [2][-]{subsection.6.2.3}{6.2.3 eCD}{section.6.2}% 42
-\BOOKMARK [2][-]{subsection.6.2.4}{6.2.4 Conversion vs online}{section.6.2}% 43
-\BOOKMARK [0][]{chapter.7}{7 Conclusion and Outlook}{}% 44
-\BOOKMARK [1][-]{section.7.1}{7.1 Future work}{chapter.7}% 45
-\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Neuromorphic Hardware}{section.7.1}% 46
-\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Biological plausible learning}{section.7.1}% 47
-\BOOKMARK [0][]{appendix.A}{A Some appendix}{}% 48
-\BOOKMARK [1][-]{section.A.1}{A.1 \(if needed\)}{appendix.A}% 49
-\BOOKMARK [0][]{appendix.B}{B List of Figures}{}% 50
-\BOOKMARK [0][]{appendix.C}{C List of Tables}{}% 51
-\BOOKMARK [0][]{appendix.D}{D Bibliography}{}% 52
+\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 Stripe Dataset}{section.6.1}% 35
+\BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 MNIST}{section.6.1}% 36
+\BOOKMARK [2][-]{subsection.6.1.3}{6.1.3 Poker-DVS}{section.6.1}% 37
+\BOOKMARK [1][-]{section.6.2}{6.2 Experiments}{chapter.6}% 38
+\BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 Computational Constrains}{section.6.2}% 39
+\BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 Conversion}{section.6.2}% 40
+\BOOKMARK [2][-]{subsection.6.2.3}{6.2.3 eCD}{section.6.2}% 41
+\BOOKMARK [2][-]{subsection.6.2.4}{6.2.4 Conversion vs online}{section.6.2}% 42
+\BOOKMARK [0][]{chapter.7}{7 Conclusion and Outlook}{}% 43
+\BOOKMARK [1][-]{section.7.1}{7.1 Future work}{chapter.7}% 44
+\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Neuromorphic Hardware}{section.7.1}% 45
+\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Biological plausible learning}{section.7.1}% 46
+\BOOKMARK [0][]{appendix.A}{A Appendix}{}% 47
+\BOOKMARK [0][]{appendix.B}{B List of Figures}{}% 48
+\BOOKMARK [0][]{appendix.C}{C List of Tables}{}% 49
+\BOOKMARK [0][]{appendix.D}{D Bibliography}{}% 50

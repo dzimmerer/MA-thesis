@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  16 NOV 2016 09:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  20 NOV 2016 18:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,9 +734,9 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -748,13 +748,14 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no q in font nullfont!
-Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no l in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -1215,12 +1216,6 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -1228,6 +1223,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no W in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -1341,9 +1337,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 10.
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -1671,24 +1665,6 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no . in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 15--16
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 T
-      his suggest similar, but due to contortions in the cornea most probabl...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -1784,23 +1760,6 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 17--18
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 O
-      ne explanation of this could be shared weights similar to CNNs.
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no O in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -1855,24 +1814,6 @@ Missing character: There is no N in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 19--20
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 S
-      ince the weight updates in the brain are primarily believed to be loca...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no S in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -1947,6 +1888,7 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -2015,24 +1957,6 @@ Missing character: There is no z in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no . in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 21--22
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 S
-      o while the trained structure, with receptive fields and similar weigh...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no S in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
@@ -2143,24 +2067,6 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 23--24
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 A
-       more plausible way in the brain to get similar weights, is due to the...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no A in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -2251,9 +2157,9 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no p in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no v in font nullfont!
@@ -2301,13 +2207,25 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no b in font nullfont!
+Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -2339,24 +2257,6 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 25--26
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 W
-      hile this requires all receptive fields to be presented with the whole...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no W in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -2412,10 +2312,13 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no h in font nullfont!
+Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
 Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -2557,6 +2460,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no C in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no N in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -2610,6 +2514,9 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no m in font nullfont!
@@ -2648,7 +2555,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 27--29
+Overfull \hbox (20.0pt too wide) in paragraph at lines 15--23
 []
  []
 
@@ -2659,7 +2566,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 A
+l.24 A
       nother biological not completely plausible part of our presented syste...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -2756,24 +2663,6 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 30--31
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 T
-      his in turn could be easily translated to two directional synapses, wi...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -3088,24 +2977,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no . in font nullfont!
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 32--34
-[]
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 T
-      he STDP flag determining either completely positive or negative does n...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -3196,7 +3067,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 35--36
+Overfull \hbox (20.0pt too wide) in paragraph at lines 24--28
 []
  []
 
@@ -3207,7 +3078,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.37 E
+l.29 E
       ven so this system has many constrains, it might could be counted amon...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -3331,12 +3202,12 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 37--38
+Overfull \hbox (20.0pt too wide) in paragraph at lines 29--30
 []
  []
 
 ! Undefined control sequence.
-l.39 \section
+l.31 \section
              {Future work}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3351,7 +3222,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 \section{F
+l.31 \section{F
                uture work}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3367,7 +3238,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 39--40
+Overfull \hbox (20.0pt too wide) in paragraph at lines 31--32
 []
  []
 
@@ -3378,7 +3249,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 W
+l.33 W
       hile this system shows promising results on small dataset, there is st...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -3520,12 +3391,12 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 41--42
+Overfull \hbox (20.0pt too wide) in paragraph at lines 33--34
 []
  []
 
 ! Undefined control sequence.
-l.43 \subsection
+l.35 \subsection
                 {Neuromorphic Hardware}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3540,7 +3411,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.43 \subsection{N
+l.35 \subsection{N
                   euromorphic Hardware}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3566,7 +3437,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 43--44
+Overfull \hbox (20.0pt too wide) in paragraph at lines 35--36
 []
  []
 
@@ -3577,7 +3448,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.45 O
+l.37 O
       ne of the biggest constrains of the here proposed frameworks, is the s...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -3853,12 +3724,12 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 45--48
+Overfull \hbox (20.0pt too wide) in paragraph at lines 37--40
 []
  []
 
 ! Undefined control sequence.
-l.49 \paragraph
+l.41 \paragraph
                {SpiNNakker} is a massively-parallel computer architecture wh...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3873,7 +3744,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.49 \paragraph{S
+l.41 \paragraph{S
                  piNNakker} is a massively-parallel computer architecture wh...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -3965,7 +3836,6 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -4203,20 +4073,20 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no b in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ' in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no m in font nullfont!
@@ -4246,12 +4116,12 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 49--52
+Overfull \hbox (20.0pt too wide) in paragraph at lines 41--44
 []
  []
 
 ! Undefined control sequence.
-l.53 \paragraph
+l.45 \paragraph
                {Spikey} emulates spiking neural networks with conductance ba...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4266,7 +4136,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53 \paragraph{S
+l.45 \paragraph{S
                  pikey} emulates spiking neural networks with conductance ba...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -4713,16 +4583,14 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
 Missing character: There is no c in font nullfont!
-Missing character: There is no u in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no f in font nullfont!
@@ -4775,12 +4643,12 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 53--58
+Overfull \hbox (20.0pt too wide) in paragraph at lines 45--50
 []
  []
 
 ! Undefined control sequence.
-l.59 \subsection
+l.51 \subsection
                 {Biological plausible learning}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4795,7 +4663,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \subsection{B
+l.51 \subsection{B
                   iological plausible learning}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4828,7 +4696,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 59--60
+Overfull \hbox (20.0pt too wide) in paragraph at lines 51--52
 []
  []
 
@@ -4839,7 +4707,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 A
+l.53 A
       nother direction which poses great potential for further research is t...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -4965,7 +4833,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 61--62
+Overfull \hbox (20.0pt too wide) in paragraph at lines 53--54
 []
  []
 
@@ -4976,7 +4844,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.63 O
+l.55 O
       ne of the primary problems is the division in learning phases.
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5129,11 +4997,13 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -5458,7 +5328,6 @@ Missing character: There is no D in font nullfont!
 Missing character: There is no P in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -5529,7 +5398,7 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 63--67
+Overfull \hbox (20.0pt too wide) in paragraph at lines 55--59
 []
  []
 
@@ -5540,7 +5409,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 T
+l.60 T
       hese approaches might also help with the problem of cascaded learning ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -6015,7 +5884,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 68--73
+Overfull \hbox (20.0pt too wide) in paragraph at lines 60--65
 []
  []
 
@@ -6026,7 +5895,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74 A
+l.66 A
       nother constrain are the synchronized weights.
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6554,7 +6423,7 @@ Missing character: There is no D in font nullfont!
 Missing character: There is no P in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 74--79
+Overfull \hbox (20.0pt too wide) in paragraph at lines 66--71
 []
  []
 
@@ -6565,7 +6434,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 E
+l.72 E
       ventually it would be interesting to see if a biological plausible sys...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -6720,7 +6589,7 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 80--81
+Overfull \hbox (20.0pt too wide) in paragraph at lines 72--73
 []
  []
 
@@ -6734,9 +6603,9 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 80--81
 Here is how much of TeX's memory you used:
  7 strings out of 493105
  161 string characters out of 6137071
- 54508 words of memory out of 5000000
+ 53508 words of memory out of 5000000
  3572 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,1n,12p,524b,56s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 18i,1n,12p,516b,56s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
