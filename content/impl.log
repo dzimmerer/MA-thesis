@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  20 NOV 2016 21:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  21 NOV 2016 21:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -90,7 +90,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.6 T
-     he DBNs were implemented in the Theano-Framework, to utilize the comput...
+     he DBNs were implemented in the Theano-Framework \cite{2016arXiv1605026...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -138,6 +138,24 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{2016arXiv160502688full}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.6 ...ano-Framework \cite{2016arXiv160502688full}
+                                                  , to utilize the computati...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `2016arXiv160502688full' on page  undefined on input li
+ne 6.
+
+Missing character: There is no ] in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -242,11 +260,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no R in font nullfont!
 Missing character: There is no B in font nullfont!
 Missing character: There is no M in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no R in font nullfont!
-Missing character: There is no E in font nullfont!
-Missing character: There is no F in font nullfont!
-Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -586,6 +599,11 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 6--15
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 6--15
 []
  []
 
@@ -3237,6 +3255,41 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{10.3389/neuro.11.011.2008}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.81 ...simulator \cite{10.3389/neuro.11.011.2008}
+                                                  \cite{Gewaltig:NEST}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `10.3389/neuro.11.011.2008' on page  undefined on input
+ line 81.
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{Gewaltig:NEST}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.81 ...389/neuro.11.011.2008}\cite{Gewaltig:NEST}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Gewaltig:NEST' on page  undefined on input line 81.
+
+Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -3464,6 +3517,11 @@ Missing character: There is no . in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 81--85
 []
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 81--85
+[][]
  []
 
 
@@ -4443,10 +4501,68 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{10.3389/neuro.11.011.2008}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.101 ...periments\cite{10.3389/neuro.11.011.2008}
+                                                  \cite{Gewaltig:NEST}\cite{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `10.3389/neuro.11.011.2008' on page  undefined on input
+ line 101.
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{Gewaltig:NEST}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.101 ...89/neuro.11.011.2008}\cite{Gewaltig:NEST}
+                                                  \cite{10.3389/neuro.11.005...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Gewaltig:NEST' on page  undefined on input line 101.
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+\citation{10.3389/neuro.11.005.2008}
+! Undefined control sequence.
+<write> ...: Citation `\@citeb ' on page \thepage 
+                                                  \space undefined\on@line .
+l.101 ...tig:NEST}\cite{10.3389/neuro.11.005.2008}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `10.3389/neuro.11.005.2008' on page  undefined on input
+ line 101.
+
+Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 101--102
 []
+ []
+
+
+Overfull \hbox (16.29158pt too wide) in paragraph at lines 101--102
+[][][] 
  []
 
 
@@ -7692,11 +7808,11 @@ Overfull \hbox (17.72124pt too wide) in paragraph at lines 153--156
 
  
 Here is how much of TeX's memory you used:
- 21 strings out of 493105
- 287 string characters out of 6137071
+ 25 strings out of 493105
+ 380 string characters out of 6137071
  58508 words of memory out of 5000000
- 3582 multiletter control sequences out of 15000+600000
+ 3586 multiletter control sequences out of 15000+600000
  4294 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,5n,12p,352b,113s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 20i,5n,26p,403b,113s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

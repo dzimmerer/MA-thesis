@@ -12,10 +12,10 @@ At last we compare those two approaches and show how the event-based approach is
 
 \subsubsection{Biological plausibility}
 
-Studies by Hubel and Wiesel suggest, certain neurons respond so similar features at different position of in visible field.
+Studies by Hubel and Wiesel suggest, certain neurons respond so similar features at different position of in visible field \cite{Hubel1959}.
 This suggest similar, but due to contortions in the cornea most probably not exactly the same, synaptic weights. 
 One explanation of this could be shared weights similar to CNNs. 
-Since the weight updates in the brain are primarily believed to be local, there is no known principle to keep weights between different neurons in the brain synchronized.
+Since the weight updates in the brain are primarily believed to be local, there is no known principle to keep weights between different neurons in the brain synchronized \cite{DBLP:journals/corr/ScellierB16}.
 So while the trained structure, with receptive fields and similar weights is quite plausible, the training procedure here is not.
 A more plausible way in the brain to get similar weights, is due to the similarity of the inputs, e.g. if two receptive fields get quite similar input, their weights will with a high probability converge to the same target values.  
 While this requires all receptive fields to be presented with the complete data, presenting each field with some part of the data but updating all fields with a combined update can be more computational effective. 
@@ -23,7 +23,7 @@ This could be a principle CNNs utilize to get biological plausible result, while
 
 Another biological not completely plausible part of our presented system are the bidirectional synapses.
 This in turn could be easily translated to two directional synapses, with some weight synchronization. 
-While in this case local updates are sufficient, to keep the weights similar (e.g. applying a similar learning rule to both weights), and research on discrete NNs has shown some automatic weight synchronization in Autoencoders (Bengio), where is no biological proof.
+While in this case local updates are sufficient, to keep the weights similar (e.g. applying a similar learning rule to both weights), and research on discrete NNs has shown some automatic weight synchronization in Autoencoders \cite{vincent2010stacked}, there is no biological proof.
 The STDP flag determining either completely positive or negative does not appear to be plausible as well.
 
 Even so this system has many constrains, it might could be counted among one of the more biological plausible deep learning architectures.     
@@ -38,11 +38,11 @@ One of the biggest constrains of the here proposed frameworks, is the simulation
 One way the training could be speed up, is to perform the simulations on dedicated Neuromorphic hardware. 
 There exists a few platforms which could be used, each having different advantages and disadvantages.
 
-\paragraph{SpiNNakker} is a massively-parallel computer architecture which can use up to 1 million ARM processors to simulate up to 1 billion neurons. 
+\paragraph{SpiNNakker} is a massively-parallel computer architecture which can use up to 1 million ARM processors to simulate up to 1 billion neurons \cite{jin2008efficient}. 
 In addition it can be interfaced with PyNN. 
 While implementing a custom STDP rule is quite feasible although having only integer weights, but keeping weights synchronized either for symmetric connections as well as convolution, poses a bigger challenge whose complexity exceeds this thesis.
 
-\paragraph{Spikey} emulates spiking neural networks with conductance based leaky integrate-and-fire neurons and synapses implemented in analog microelectronics.
+\paragraph{Spikey} emulates spiking neural networks with conductance based leaky integrate-and-fire neurons and synapses implemented in analog microelectronics \cite{Pfeil1311}.
 It can simulate 384 neurons and 256 incoming synapses in each neuron, resulting in a total 98304 synapses.
 It can also be interfaced with PyNN.
 This can allow approximately 10000-fold faster computations than biological real-time.
@@ -54,7 +54,7 @@ Another direction which poses great potential for further research is tackling, 
 
 One of the primary problems is the division in learning phases.
 This is currently an active topic for research and there are different algorithms proposed, which loosen the constraints on explicit positive and negative learning phases.
-There are two approaches which appear in particular promising, which either only learn with a LTP variant as long as data is completely presented and the distribution converges towards the data distribution or learn after the input has only been nudged towards the real data input.
+There are two approaches which appear in particular promising, which either only learn with a LTP variant as long as data is completely presented and the distribution converges towards the data distribution or learn after the input has only been nudged towards the real data input\cite{DBLP:journals/corr/ScellierB16}\cite{Scellier2016a}.
 These approaches show similarities to some STDP mechanism, but to our best knowledge have not been implemented in spiking networks.
 
 These approaches might also help with the problem of cascaded learning of different layers.
@@ -65,8 +65,8 @@ Thus researching on joint layer learning algorithms shows great promise as well.
 
 Another constrain are the synchronized weights.
 On going research points to the idea, that the synchronization might not be so important.
-Lillycrap et al showed that a linear system was still able to be trained with using backpropagation, even if the feedback weights were chosen randomly and kept constant.
-In addition research on autoencoders showed another kind of weight synchronization, where even without tied weight autoencoders often end up with symmetric weights.
+Lillicrap et al. showed that a linear system was still able to be trained with using backpropagation, even if the feedback weights were chosen randomly and kept constant \cite{Lillicrap2014}.
+In addition research on autoencoders showed another kind of weight synchronization, where even without tied weight autoencoders often end up with symmetric weights\cite{vincent2010stacked}.
 It would be interesting to see how such mechanisms perform in spiking neural networks and if they can be transferred to local learning with STDP.
 
 Eventually it would be interesting to see if a biological plausible system integrating the relaxed phases without shared weights could be realized and simulated in real time.

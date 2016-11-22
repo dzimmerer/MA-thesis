@@ -21,7 +21,7 @@
 \BOOKMARK [0][]{chapter.4}{4 Approach}{}% 21
 \BOOKMARK [1][-]{section.4.1}{4.1 Convolutional architecture in spiking neural network}{chapter.4}% 22
 \BOOKMARK [1][-]{section.4.2}{4.2 Conversion}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Conv DBNs}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Convolutional DBNs}{section.4.2}% 24
 \BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Conversion}{section.4.2}% 25
 \BOOKMARK [1][-]{section.4.3}{4.3 eCD}{chapter.4}% 26
 \BOOKMARK [2][-]{subsection.4.3.1}{4.3.1 Convolution in eCD}{section.4.3}% 27

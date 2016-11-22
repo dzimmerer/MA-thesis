@@ -3,8 +3,8 @@
 
 \section{Analog DBNs}
 
-The DBNs were implemented in the Theano-Framework, to utilize the computational power of the GPU.
-The implementation of the singe RBMs is adapted from the official Theano RBM (REF).
+The DBNs were implemented in the Theano-Framework \cite{2016arXiv160502688full}, to utilize the computational power of the GPU.
+The implementation of the singe RBMs is adapted from the official Theano RBM.
 \\
 \\
 An upward pass in performed as follows:
@@ -78,7 +78,7 @@ The last layer, the classification layer, consists of a fully connected RBM trai
 
 \section{Conversion}
 
-To simulate the converted DBNs we use the pyNN framework with Nest as spiking network simulator.
+To simulate the converted DBNs we use the pyNN framework with Nest as spiking network simulator \cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}.
 To simulate the CNN and DBN we use current and conductance based LIF neurons, respectively.
 Each unit is injected with high frequency Possion distributed excitatory and inhibitory input spikes with the frequency $\lambda_{noise}= 5000 \text{Hz}$ and synaptic weights $w_{n+}$ and $w_{n-}$ respectively.
 %The parameters for the models can be seen in Table x( @TODO table).
@@ -98,7 +98,7 @@ y_{pred} = argmax_i \; a_i
 
 \section{eCD}
 
-The eCD learning was implemented in PyNN with Nest with simulated STDP weight updated at discrete time steps outside the simulation, as well as Brian simulator with event-based online STDP weight updates, but due to the simulation speed we chose Brian for most of our experiments.
+The eCD learning was implemented in PyNN with Nest with simulated STDP weight updated at discrete time steps outside the simulation, as well as Brian simulator with event-based online STDP weight updates, but due to the simulation speed we chose Brian for most of our experiments\cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}\cite{10.3389/neuro.11.005.2008}.
 
 As neuron type LIF neurons with high frequency input noise were chosen.
 

@@ -2,26 +2,26 @@
 
 \section{Motivation}
 
-By winning the Imagenet Large Scale Visual Recognition Challenge in 2012, convolutional neural networks gained a big rise in popularity. 
-Their powerful abstraction mechanism made them one of the most used algorithms in the fields of image and video classification and description and speech recognition. 
+By winning the Imagenet Large Scale Visual Recognition Challenge in 2012, convolutional neural networks gained a big rise in popularity \cite{NIPS2012_4824}. 
+Their powerful abstraction mechanism made them one of the most used algorithms in the fields of image and video classification and description and speech recognition \cite{szegedy2015going}\cite{karpathy2014large}\cite{abdel2014convolutional}\cite{LeCun2015}. 
 This can be primarily contributed to their ability to extract high level features on spatial and/or temporal conditioned data and the compositional structure in information of the world.
 
 Creating discriminative high level features extractors allows the system to dynamically adapt to the input data and work on various kinds of data. 
 In addition the features extractors do not need to have any semantic, human interpretable representation and can be more complex than manually built feature extractors. 
 This also removes the labor-intensive and time consuming task of manually building feature extractors.
-Consequently they recently got adapted to solve robotic problems like grasp planning, drone navigation and autonomous driving. 
+Consequently they recently got adapted to solve robotic problems like grasp planning, drone navigation and autonomous driving\cite{giusti2016machine}\cite{levine2016learning}\cite{chen2015deepdriving}. 
 
 One precursor of those are the deep belief networks (DBNs), which are built up of restricted Boltzmann machines (RBMs). 
-DBNs have shown excellent performance on image classification tasks in the early 2000s.
+DBNs have shown excellent performance on image classification tasks in the early 2000s \cite{hinton2006fast}\cite{lee2009convolutional}.
 
 Compared to classical CNNs, DBNs allow recurrent connections and can be trained unsupervised. 
-They have been described as  "probably the most biologically plausible learning algorithm for deep architectures we currently know”. 
+They have been described as  "probably the most biologically plausible learning algorithm for deep architectures we currently know” \cite{bengio2015towards}. 
 DBNs can be used as generative model as well, which means they can sample data according to a learned distribution, e.g. find the most probable completion for a partially erased image.
 
-Adding convolution to DBNs increased the performance of DBNs on image classification tasks, caught up with the state of the art results and made the system more similar to the primate visual cortex than a standard DBN. 
+Adding convolution to DBNs increased the performance of DBNs on image classification tasks, caught up with the state of the art results and made the system more similar to the primate visual cortex than a standard DBN \cite{lee2009convolutional}. 
 
 All those approaches use scalar values between neurons at discrete time slices to propagate information. 
-While being well suited for GPUs, they are very not biologically plausible, since biological neuron interleave linear and non-linear operations, they communicate by stochastic binary values and are not synchronized. 
+While being well suited for GPUs, they are very not biologically plausible, since biological neuron interleave linear and non-linear operations, they communicate by stochastic binary values and are not synchronized \cite{bengio2015towards}. 
 Spiking neural networks (SNNs), designed to simulate the communication between neurons with spikes, work in continuous time by design and do not suffer from the aforementioned limitations of classical artificial neural networks.
 
 \section{Problem Statement}

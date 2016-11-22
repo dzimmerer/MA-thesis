@@ -6,7 +6,7 @@
 \begin{table}[]
 \caption{Current-based LIF neuron parameters used for the converted CNN}
 \centering
-\label{my-label}
+\label{cnnlifparam}
 \begin{tabular}{|ll|}
 \hline
 Resting potential    		& -65 mV 		    \\
@@ -22,7 +22,7 @@ Spike threshold     		& -50.0 mV          \\\hline
 \begin{table}[]
 \caption{Current-based LIF neuron parameters used for the converted DBN}
 \centering
-\label{my-label}
+\label{cubalifparam}
 \begin{tabular}{|ll|}
 \hline
 Resting potential    		& -65 mV 		    \\
@@ -39,7 +39,7 @@ Spike threshold     		& -52.0 mV          \\\hline
 \begin{table}[]
 \caption{Conductance-based LIF neuron parameters used for the converted DBN}
 \centering
-\label{my-label}
+\label{cobalifparam}
 \begin{tabular}{|ll|}
 \hline
 Resting potential    			& -65 mV 		    \\
@@ -77,7 +77,7 @@ Excitatory reversal potential  & -0.0 mV 	               \\\hline
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption{Spikes in a hidden layer of a spiking RBM with lateral inhibition. As the lateral inhibition increases, the activity becomes more sparse. In the case with big inhibitory weights, there are a few neurons dominating the activity allowing only a few different states of the network and thus poor mode switching in a training step. In a network with small inhibitory weights, there is sparse activity, but the the network visits many different states in a simulation step and shows sufficient mode mixing. }
-	\label{fig:stripes}
+	\label{fig:dbnmixing}
 \end{figure}
    
  \begin{figure}[h!]
@@ -120,7 +120,7 @@ Excitatory reversal potential  & -0.0 mV 	               \\\hline
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption{Activity in the visible layer of the top RBM in a DBNs with different architectures. The first two architectures model separate RBM layers which are stacked by one-on-one forward connections from the hidden layer of the bottom RBM to the visible layer of the top RBM, while in the last architecture, the RBMs are directly stacked, i.e. the hidden layer of the bottom RBM is the visible layer of the top RBM. While in the top two architectures, there are hardly any differences and the input is modelled correctly, due to top down influences the output of the bottom RBM gets distorted by activity in the hidden layer of the top RBM.}
-	\label{fig:stripes}
+	\label{fig:spikingdbnarch}
 \end{figure}
 
 
@@ -175,6 +175,6 @@ Excitatory reversal potential  & -0.0 mV 	               \\\hline
 	\end{subfigure}	
 	
 	\caption{Weights development for eCD with synchronous weight updates. The first column shows the development. After the positive the weights increased a lot, which leads to a high decrement during the negative which leads to a "dying out" of the spikes, which is visualized in the second column. Using an increased positive phase with a higher learning rate, does not solve the problem and leads to a division of the weights into a few very positive weights and many negative weights. In contrast to this a "normal" weight distribution without any weight synchronization in presented in the last column. }
-	\label{fig:stripes}
+	\label{fig:ecdnest}
 \end{figure}
 

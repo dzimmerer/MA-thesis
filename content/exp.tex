@@ -9,9 +9,9 @@ The dataset size is primarily limited by the computational resources, such as me
 
 We generate a $10 \times 10$ pixel noisy stripe dataset, with three different oriented stripes, horizontal, diagonal, vertical. 
 This could represent an object similar to a pen recorded with a event-based camera, and result in an grasp id.
-In the easiest version of this dataset, the stripes always occur on the same places, with some random noise.
-An more complex version of the datasets contains the stripes randomly distributed across the whole image.
-The dataset can be either binary or continuous.
+In the easiest version of this dataset, the stripes always occur on the same places, with some random noise (see Fig. \ref{fig:stripes1}).
+An more complex version of the datasets contains the stripes randomly distributed across the whole image(see Fig. \ref{fig:stripes2}).
+The dataset can be either binary or continuous(see Fig. \ref{fig:stripes3} \& \ref{fig:stripes4}).
 
 
 \begin{figure}[h!]
@@ -20,25 +20,25 @@ The dataset can be either binary or continuous.
   		\centering
   		\includegraphics[width=.9\linewidth]{imgs/stripes1.png}
   		\caption{Samples from the unshifted binary stripe dataset.}
-  		\label{fig:sub1}
+  		\label{fig:stripes1}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.49\textwidth}
   		\centering
   		\includegraphics[width=.9\linewidth]{imgs/stripes2.png}
   		\caption{Samples from the  shifted binary stripe dataset.}
-  		\label{fig:sub2}
+  		\label{fig:stripes2}
 	\end{subfigure}
 	\begin{subfigure}[t]{.49\textwidth}
   		\centering
   		\includegraphics[width=.9\linewidth]{imgs/stripes3.png}
   		\caption{Samples from the unshifted continuous stripe dataset.}
-  		\label{fig:sub2}
+  		\label{fig:stripes3}
 	\end{subfigure}
 	\begin{subfigure}[t]{.49\textwidth}
   		\centering
   		\includegraphics[width=.9\linewidth]{imgs/stripes4.png}
   		\caption{Samples from the shifted continuous stripe dataset.}
-  		\label{fig:sub2}
+  		\label{fig:stripes4}
 	\end{subfigure}
 	\caption{Samples from the stripe dataset. }
 	\label{fig:stripes}
@@ -47,8 +47,9 @@ The dataset can be either binary or continuous.
 
 \subsection{MNIST}
 
-We also evaluate the models on the MNIST dataset. 
+We also evaluate the models on the MNIST dataset \cite{lecun-mnisthandwrittendigit-2010}. 
 The MNIST dataset consists of 60000 28x28 pixel gray images of handwritten numbers 0-9.
+Samples of the dataset are given in Figure \ref{fig:mnist}.
 
 \begin{figure}[h!]
 	\centering
@@ -60,18 +61,18 @@ The MNIST dataset consists of 60000 28x28 pixel gray images of handwritten numbe
 
 \subsection{Poker-DVS}
 
-Another dataset used in this thesis is the Poker DVS dataset.
+Another dataset used in this thesis is the Poker DVS dataset \cite{serrano2013128}.
 The Dataset consists of 131 poker pip symbols extracted from 3 separate DVS recordings, while quickly browsing poker cards.
 From the $128 \times 128$ recorded image, a $32 \times 32$ pixel patch, containing the symbol is extracted.
 As a compromise between computational and classification performance, we down sample the patches to a size of $16 \times 16$ pixels and only consider spikes in the first $8000 \mu s$, due to the constricted learning time per sample.
-The resulting dataset is visualized as a accumulation over time in Fig X.
+The resulting dataset is visualized as a accumulation over time in Figure \ref{fig:pokerdvs}.
  
     
 \begin{figure}[h!]
 	\centering
     	\includegraphics[width=0.6\textwidth]{imgs/poker_ds.png} 
     \caption{Visualization of samples from the Poker-DVS dataset.}
-	\label{fig:mnist}
+	\label{fig:pokerdvs}
 \end{figure}
 
 
@@ -108,12 +109,12 @@ Specialized neuromorphic hardware could speed up the computations and allow the 
 At first we compare the three different converted DBNs.
 Therefore a analogue DBN was trained on the MINST dataset.
 The dataset was split into 50.000 training images and 10.000 images for testing.
-The DBN consists of three RBMs (similar to Fig x), where the first RBM is convolutional with 20 $1 \times 16 \times 16$ filters. 
+The DBN consists of three RBMs (similar to Fig. \ref{fig:dbnmnist}), where the first RBM is convolutional with 20 $1 \times 16 \times 16$ filters. 
 The second RBM has 15 $20 \times 10 \times 10$ filters. 
 The third RBM , which can also be seen as the association layer of the DBN, is fully connected and uses the output of the second RBM as well as the labels as input data.  
 Each RBM is trained for $5$ epochs with CD-$2$ over the whole dataset with a learning rate of $0.1$ and a weight decay of $0.0003$.
 
-The resulting features of the first layer are visualized in Fig x.
+The resulting features of the first layer are visualized in Fig \ref{fig:rbmw}.
 
 \begin{figure}
 	\centering
@@ -134,10 +135,10 @@ The input rate of the images are converted to Poisson spike-trains, with a maxim
 Each input sample is simulated for $500 \text{ms}$, but we'll inspect how the simulated timespan effects the output.
 Since the simulation time of one sample can take more the 1 minute, we evaluate all approaches on the same randomly drawn subset of the test set consisting of $100$ samples.
 
-A visual inspection of the activations can be seen in Fig x. 
+A visual inspection of the activations can be seen in Fig \ref{fig:convacts}. 
 It is quite apparent, that all approaches capture the basic activation characteristics. 
 While the conversion as a DBN is able to simulate the activation probabilities more closely to the original DBN, the spiking CNN show similar performance by a more deterministic behaviour replicating only the essential activation structure.
-To quantify those differences we calculate the Kullback-Leibler divergence between the activation, as seen in Table x.
+To quantify those differences we calculate the Kullback-Leibler divergence between the activation, which indicates the similarity of two distributions (the lower the value, the more similar are the distributions), as seen in Table \ref{tab:kldiv}.
 
 %TODO different sorting (layer wise)
 
@@ -145,7 +146,7 @@ To quantify those differences we calculate the Kullback-Leibler divergence betwe
 \begin{table}[]
 \centering
 \caption{Kullback-Leibler divergence between the activations in the feature maps.}
-\label{my-label}
+\label{tab:kldiv}
 \begin{tabular}{|l|l|l|l|}
 \hline
 Layer & CNN   & COBA LIF DBN & CUBA LIF DBN \\ \hline
@@ -161,7 +162,7 @@ Layer & CNN   & COBA LIF DBN & CUBA LIF DBN \\ \hline
 \begin{table}[]
 \centering
 \caption{Classification performances of the converted spiking DBNs to a the analog DBN on a subset of 100 samples.}
-\label{my-label}
+\label{tab:convperf}
 \begin{tabular}{|l|l|l|}
 \hline
 	 				& Classification Accuracy    & Average runtime per sample \\ \hline
@@ -276,7 +277,7 @@ CUBA LIF DBN     	& 0.93 & 30.6 s                 \\\hline
   		\label{fig:sub2}
 	\end{subfigure}	
 	\caption{Activations in the features maps in a classical convolutional RBM. }
-	\label{fig:stripes}
+	\label{fig:convacts}
 \end{figure}
 
 
@@ -304,8 +305,8 @@ CUBA LIF DBN     	& 0.93 & 30.6 s                 \\\hline
 	\end{subfigure}%
 	
 	
-	\caption{Misclassifications of the spiking DBNs. Often $9$ and $4$ are mixed up. The first three are classified as a $9$, the third one is classified as a $4$. The images all share a lot of features with the suggested class and the correct class was always the second most probable.}
-	\label{fig:stripes}
+	\caption{Misclassifications of the spiking DBNs. Often $9$ and $4$ are mixed up. The first three are classified as a $9$, the fourth one is classified as a $4$. The images all share a lot of features with the suggested class and the correct class was always the second most probable.}
+	\label{fig:mismnisthum}
 \end{figure}
 
 
@@ -454,17 +455,51 @@ CUBA LIF DBN     	& 0.93 & 30.6 s                 \\\hline
 %	\label{fig:stripes}
 %\end{figure}
 
-The performance on the sub dataset can be seen in Table x.
+The performance on the partial dataset can be seen in Table \ref{tab:convperf}.
 It is apparent, that all show similar performance. Interestingly the spiking DBN sometimes shows better performance than the RBM.
-Most misclassifications can be from a human perspective been categorized as "reasonable" mistakes (as seen in Fig x) and hint, that further fine-tuning the DBN could resolve some misclassifications.
+Most misclassifications can be from a human perspective been categorized as "reasonable" mistakes (as seen in Fig. \ref{fig:mismnisthum}) and hint, that further fine-tuning the DBN could resolve some misclassifications.
 
-Another factor is the simulated runtime for each sample. It is quite apparent from table x (Table: CNN vs CUBA , simulated time , performance, run time  ) that a longer classification time benefits the performance. But due to it's more deterministic nature the CNN approach shows less variations as the simulation time changes. 
+Another factor is the simulated runtime for each sample. It is quite apparent from Table \ref{tab:pervovert}, that a longer classification time benefits the performance.
+
+
+\begin{table}[]
+\centering
+\caption{Classification performances of the converted spiking DBNs with different simulated runtimes.}
+\label{tab:pervovert}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+	 				& \multicolumn{2}{|l|}{CNN}   & \multicolumn{2}{|l|}{CUBA LIF DBN} \\ \hline
+Simulated time		 				& Classification Accuracy    & Execution time & Classification Accuracy    & runtime \\ \hline
+50 ms    	& 0.69 & 7.8 s 		& 0.81 & 8.1 s               \\
+100 ms     	& 0.77 & 9.2 s  	& 0.89 & 10.5 s              \\
+200 ms    	& 0.76 & 13.1 s   & 0.89 & 14.6 s             \\
+300 ms    	& 0.75 & 15.1 s   & 0.91 & 18.5 s             \\
+500 ms     	& 0.83 & 24.2 s    & 0.93 & 30.6 s             \\\hline
+\end{tabular}
+\end{table}
 
 \subsection{eCD}
 
 To get an intuitive insight into the eCD algorithm, we visualize the positive and negative phase for the stripe dataset.
-It is apparent, that in the positive phase a sample from the data distribution is learned and in the negative phase the model distribution is unlearned.
-As the training progresses and the model distribution approximates the data distribution more closely the weight updates become smaller (figure). 
+It is apparent, that in the positive phase a sample from the data distribution is learned and in the negative phase the model distribution is unlearned (see Fig. \ref{fig:ecdstrlearn}).
+As the training progresses and the model distribution approximates the data distribution more closely the weight updates become smaller (see Fig. \ref{fig:ecdwdiff}). 
+The eCD-parameters chosen for our experiments are given in Table \ref{tab:ecdrunparam}.
+
+\begin{table}[]
+\caption{eCD-parameters for the experiments}
+\centering
+\label{tab:ecdrunparam}
+\begin{tabular}{|ll|}
+\hline
+$t_{burn-in}$    	& 14 ms 		    \\
+$t_{learn}$    		& 56 ms 		     \\
+$t_{flush}$    		& 28 ms		             \\
+Learn-rate     		& 1.0 		                 \\
+Weight-decay    	& 0.001		              \\
+Weight synchronization after $n$ samples     	& 1		              \\\hline
+\end{tabular}
+\end{table}
+
 
 \begin{figure}[h!]
 	\centering
@@ -515,14 +550,14 @@ As the training progresses and the model distribution approximates the data dist
   		\label{fig:sub1}
 	\end{subfigure}%
 	\caption{Positive phase and negative phase of a diagonal stripe with 4 filters. In the first 4 images the stripe is learned, while during the last 4 images the model distribution is unlearned.}
-	\label{fig:stripes}
+	\label{fig:ecdstrlearn}
 \end{figure}
 
 \begin{figure}
 	\centering
     	\includegraphics[width=0.5\textwidth]{imgs/inspect/wdiff.png} 
     \caption{Accumulated weight change for each training sample. As more samples are presented and the weights specialize, the total weight updates decrease.}
-	\label{fig:rbmw}
+	\label{fig:ecdwdiff}
 \end{figure}
 
 
@@ -530,6 +565,7 @@ As the training progresses and the model distribution approximates the data dist
 \subsubsection{Learning the data distribution}
 
 To evaluate how good the model distribution matches the data distribution, we compare the input sample to the reconstruction obtained after the removing the input and letting the system settle towards it's model distribution.
+This is visualized in Figure \ref{fig:posnegstrec} and \ref{fig:actdevstr}.
 In the beginning of the training the model distribution and thus the reconstruction is approximately random.
 As the training progresses, the reconstruction matches the original input image more closely and thus the model distribution shifts towards the data distribution.
 
@@ -578,10 +614,10 @@ As the training progresses, the reconstruction matches the original input image 
   		\label{fig:sub1}
 	\end{subfigure}%
 	\caption{Positive phase and negative phase of a diagonal stripe with 4 filters. In the first 4 images the stripe is learned, while during the last 4 images the model distribution is unlearned.}
-	\label{fig:stripes}
+	\label{fig:posnegstrec}
 \end{figure}
 
-In Addition the weights/ filters become more specialized, thus resulting in a sparse activation of the hidden layer as visualized in Figure x (start, end, curve).  
+In Addition the weights/ filters become more specialized, thus resulting in a sparse activation of the hidden layer as shown in Figure \ref{fig:actdevstr}.  
 \\\\\\\\
 \begin{figure}[h!]
 	\centering
@@ -604,7 +640,7 @@ In Addition the weights/ filters become more specialized, thus resulting in a sp
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption{Activations in the features maps in a as DBN converted RBM with current based LIF neurons. }
-	\label{fig:stripes}
+	\label{fig:actdevstr}
 \end{figure}
 
 
@@ -612,7 +648,7 @@ In Addition the weights/ filters become more specialized, thus resulting in a sp
 
 An important addition to the convolution spiking RBM, are the lateral inhibitory connections in the hidden layer. 
 Each neuron in the hidden layer at position $i,j$ in feature map $k$ is connected to other neurons in all other feature maps $K \ k$ at the approximately same position $i', j'$ with $ |i'-i| \le 2 , |j' - j| \le 2 $.   
-This results in faster training and more discriminative features and better results.
+This results in faster training and more discriminative features and better results (see Fig. \ref{fig:latconstr} for the learned weights of both approaches).
 
 \begin{figure}[h!]
 	\centering
@@ -629,7 +665,7 @@ This results in faster training and more discriminative features and better resu
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption{$5 \times 5$ convolution filter matrices with and without lateral inhibitory connections in the top RBM layer on the stripe dataset. Whereas the filters without lateral connections look more similar the filters with lateral connections are more different and discriminative.}
-	\label{fig:stripes}
+	\label{fig:latconstr}
 \end{figure}
 
 \subsubsection{Convolution vs no Convolution}
@@ -642,7 +678,7 @@ For the DBN without convolution, this results in two fully connected RBMs, where
 
 Both DBNs are trained with 100 samples for the first layer and 500 samples with labels for the second layer, since it has more free parameters.
 
-The resulting weights are visualized in Fig. X
+The resulting weights are visualized in Fig. \ref{fig:wwoconwconv}.
 
 \begin{figure}[h!]
 	\centering
@@ -659,7 +695,7 @@ The resulting weights are visualized in Fig. X
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption{Weight of the first layers of the DBNs with and without convolutions.}
-	\label{fig:stripes}
+	\label{fig:wwoconwconv}
 \end{figure}
 
 
@@ -672,28 +708,29 @@ While the DBN without convolutions reaches its top performance of $60 \%$ after 
 
 We also evaluate how the simulation time for one time step changes as the network complexity increases.
 A network on the $10 \times 10$ pixel stripe dataset is run for 1 learning step and the time is measured.
-As we increase the number of hidden units, the runtime increases more or less linearly (see Fig X).
+As we increase the number of hidden units, the runtime increases more or less linearly (see Fig \ref{fig:simtime}).
 
 \begin{figure}[h!]
 	\centering
     	\includegraphics[width=0.65\textwidth]{imgs/runtime-1.png} 
     \caption{The runtime of a learning step in dependence on the size of the Network.}
-	\label{fig:rbmw}
+	\label{fig:simtime}
 \end{figure}
 
 
 \subsubsection{Performance on the stripe dataset}
 
 Due to the training time, we train the a DBN on the stripe dataset. 
-The DBN consists of two layers, with the first layer consisting of a convolutional RBM with $20$ $7 \times 7$ filters and the second layer being fully connected with $20$ hidden units.
+The DBN consists of two layers, with the first layer consisting of a convolutional RBM with $20$ $7 \times 7$ filters and the second layer being fully connected with $20$ hidden units (see Fig \ref{fig:dbnstrarch} for the abstract architecture).
 The first layer is trained with $1000$ samples without labels.
 The weights of the first layer are then keep fixed and the second layer is trained over $500$ samples with their corresponding labels.
+The development of the of the weights in the first layer can be seen in Figure \ref{fig:stripesdbnw}.
 
 \begin{figure}[h!]
 	\centering
     	\includegraphics[width=0.7\textwidth]{imgs/dbn_stripe.png} 
     \caption{Abstract architecture of the DBN for the stripe dataset.}
-	\label{fig:rbmw}
+	\label{fig:dbnstrarch}
 \end{figure}
 
 
@@ -730,7 +767,7 @@ The weights of the first layer are then keep fixed and the second layer is train
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption{$5 \times 5$ convolution filter matrices development during training with $1000$ samples.}
-	\label{fig:stripes}
+	\label{fig:stripesdbnw}
 \end{figure}
 
 
@@ -763,7 +800,7 @@ The weights of the first layer are then keep fixed and the second layer is train
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption{Activations/ spikes in the layers of the first RBM during training. As the training progresses, the activations become more sparse. The hidden layer learns new representations for the data. The model distribution approximates the data distribution, resulting in a nearly perfect reconstruction of the input data.}
-	\label{fig:stripes}
+	\label{fig:stripesspl1}
 \end{figure}
 
 
@@ -809,9 +846,10 @@ The weights of the first layer are then keep fixed and the second layer is train
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption{Activations/ spikes in the layers of the second RBM during training. As the training progresses, the activations become more sparse. The hidden layer learns new 20 dimensional representations for the data. The model distribution approximates the data distribution, resulting in a nearly perfect reconstruction of the input data, especially of the label.}
-	\label{fig:stripes}
+	\label{fig:stripesspl2}
 \end{figure}
 
+Another indicator of the training progress is given by the spikes as seen in Figure \ref{fig:stripesspl1} \& \ref{fig:stripesspl2}.
 The resulting spiking DBN show shows a performance of $100 \%$ classification accuracy on the test set. 
 
 
@@ -819,25 +857,25 @@ The resulting spiking DBN show shows a performance of $100 \%$ classification ac
 
 For the Poker-DVS dataset, a DBN with two layers, a convolutional and an association layer, is used.
 The convolutional RBM is defined by $10$ $14 \times 14$ convolution filters.
-The association RBM layer has 10 hidden units.
+The association RBM layer has 10 hidden units (see Fig. \ref{fig:pokerdbnarch} for the architecture).
 Each layer is trained with $200$ samples drawn randomly from the training set.
-The resulting filters can be seen in Fig X.
-To evaluate the extracted features, we show a reconstruction and completion of the input data (see Fig X and Y) and the classification performance. 
-The trained DBN reaches a peak performance of $90 \%$ on the training set (see Fig X).
+The resulting filters can be seen in Fig \ref{fig:pokerw}.
+To evaluate the extracted features, we show a reconstruction and completion of the input data (see Fig \ref{fig:pokerrecon} \& \ref{fig:pokercompl}) and the classification performance. 
+The trained DBN reaches a peak performance of $90 \%$ on the training set (see Fig \ref{fig:poker_err}).
 
 
 \begin{figure}[h!]
 	\centering
     	\includegraphics[width=0.7\textwidth]{imgs/poker/dbn_poker.png} 
     \caption{Abstract architecture of the DBN for the poker dataset.}
-	\label{fig:rbmw}
+	\label{fig:pokerdbnarch}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
     	\includegraphics[width=0.7\textwidth]{imgs/poker/w2.png} 
     \caption{Visualization of the convolution filters of the first layer RBM.}
-	\label{fig:rbmw}
+	\label{fig:pokerw}
 \end{figure}
 
 \begin{figure}[h!]
@@ -904,7 +942,7 @@ The trained DBN reaches a peak performance of $90 \%$ on the training set (see F
   		\label{fig:sub1}
 	\end{subfigure}%
 	\caption{Positive phase and negative phase in the first layer of the DBN of after training on the Poker-DVS dataset. The reconstruction of each class is nearly perfect indicating, the DBN has learned the basic structure of the data.}
-	\label{fig:stripes}
+	\label{fig:pokerrecon}
 \end{figure}
 
 
@@ -954,8 +992,10 @@ The trained DBN reaches a peak performance of $90 \%$ on the training set (see F
   		\label{fig:sub1}
 	\end{subfigure}%
 	\caption{Completion of partially fed input data. In the first two columns the bottom $4$ rows and in the last two columns the $7$ bottom rows in the image data were omitted. After training, the DBN was able to reconstruct some of the missing input data an complete the input data.}
-	\label{fig:stripes}
+	\label{fig:pokercompl}
 \end{figure}
+
+
 \subsection{Conversion vs online}
 
 At last we compare the converted DBN with a directly trained spiking DBN.
@@ -969,7 +1009,7 @@ The first layer of the DBN is trained unsupervised on $100$ samples from the str
 The analog RBM is trained with a batch size of one to get a similar learning behaviour as the spiking DBN. 
 The learning rates are chose to show similar weight alterations in each step and to show best classification performance after being presented with 500 data samples.
 
-The resulting convolutional filters are visualized in Fig X 
+The resulting convolutional filters are visualized in Fig \ref{fig:convvsnoconv}. 
 
  \begin{figure}[h!]
 	\centering
@@ -986,7 +1026,7 @@ The resulting convolutional filters are visualized in Fig X
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption{Convolutional filters of the first layers of the analog and spiking convolutional DBNs after 100 training samples. The weights of the spiking DBN appear to be more discriminative.}
-	\label{fig:stripes}
+	\label{fig:convvsnoconv}
 \end{figure}
 
 It is apparent, that the weights of the first layer in the spiking DBN are more discriminative compared to the analog DBN.
