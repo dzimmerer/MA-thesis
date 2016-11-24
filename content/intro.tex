@@ -1,6 +1,6 @@
 \chapter{Introduction}
 
-\section{Motivation}
+\section{Motivation} \label{c:motiv}
 
 By winning the Imagenet Large Scale Visual Recognition Challenge in 2012, convolutional neural networks gained a big rise in popularity \cite{NIPS2012_4824}. 
 Their powerful abstraction mechanism made them one of the most used algorithms in the fields of image and video classification and description and speech recognition \cite{szegedy2015going}\cite{karpathy2014large}\cite{abdel2014convolutional}\cite{LeCun2015}. 
@@ -24,7 +24,7 @@ All those approaches use scalar values between neurons at discrete time slices t
 While being well suited for GPUs, they are very not biologically plausible, since biological neuron interleave linear and non-linear operations, they communicate by stochastic binary values and are not synchronized \cite{bengio2015towards}. 
 Spiking neural networks (SNNs), designed to simulate the communication between neurons with spikes, work in continuous time by design and do not suffer from the aforementioned limitations of classical artificial neural networks.
 
-\section{Problem Statement}
+\section{Problem Statement} \label{c:probstate}
 
 To our best knowledge, up to today, there exists no system which utilizes the benefits of a convolutional architecture, spiking neural networks and deep belief networks altogether . 
 The main objective of this thesis is to realize such a spiking network, which integrates convolution and can be easily trained utilizing an RBM learning algorithm, to extract high level features. 
@@ -33,7 +33,7 @@ The first approach trains convolutional RBMs on discretized input data, to build
 The second approach learn from continuous, event-driven input-data and adopts the synaptic weights with a plasticity rule with shared weights to train spiking convolutional RBMs directly. 
 Both approaches will learn to extract high level features, which can be further used to classify an object. 
 
-\section{The Human Brain Project}
+\section{The Human Brain Project} \label{c:thehbp}
 
 Heiko:
 
@@ -48,12 +48,12 @@ from neuroscience. One focus of the research group at the FZI Karlsruhe is the d
 computational models for neurobiological inspired robotic grasping.
 
 
-\section{Overview}
+\section{Overview} \label{c:overw}
 
 This thesis describes the approach and implementation of a spiking convolutional deep belief networks to extract high level features on continuous visual input. The thesis is structures as follows:
 
-Chapter 2 introduces some background information, which is used in chapter 3 to describe state-of-the-art research used in this thesis. 
-Chapter 4 will describe the different approaches to build such a spiking convolutional deep belief networks. 
-In chapter 5 the different implementation steps and  architecture will be described. 
-Chapter 6 outlines and compares the performance of the networks. 
-Chapter 7 will conclude the gathered insight of this thesis, state its limitations and give suggestions for further improvements and research.  
+Chapter \ref{c:backgrnd} introduces some background information, which is used in Chapter \ref{c:relwork} to describe state-of-the-art research used in this thesis. 
+Chapter \ref{c:approach} will describe the different approaches to build such a spiking convolutional deep belief networks. 
+In Chapter \ref{c:impl} the different implementation steps and  architecture will be described. 
+Chapter \ref{c:expres} outlines and compares the performance of the networks. 
+Chapter  \ref{c:conclusion} will conclude the gathered insight of this thesis, state its limitations and give suggestions for further improvements and research.  

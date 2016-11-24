@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  22 NOV 2016 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  24 NOV 2016 09:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,7 +8,7 @@ LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 ! Undefined control sequence.
 l.1 \chapter
-            {Approach}
+            {Approach} \label{c:approach}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -23,7 +23,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1 \chapter{A
-              pproach}
+              pproach} \label{c:approach}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -37,7 +37,7 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no h in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
-[] 
+[]
  []
 
 
@@ -441,21 +441,34 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.8 I
-     n chapter 6, we will then evaluate and compare the performance of both ...
+     n Chapter \ref{c:expres}, we will then evaluate and compare the perform...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Missing character: There is no I in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no C in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no 6 in font nullfont!
+! Undefined control sequence.
+<write> ... Reference `c:expres' on page \thepage 
+                                                  \space undefined\on@line .
+l.8 In Chapter \ref{c:expres}
+                             , we will then evaluate and compare the perform...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:expres' on page  undefined on input line 8.
+
 Missing character: There is no , in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -521,9 +534,14 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 8--9
 []
  []
 
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 8--9
+[]
+ []
+
 ! Undefined control sequence.
 l.10 \section
-             {Convolutional architecture in spiking neural network}
+             {Convolutional architecture in spiking neural network} \label{c...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -538,7 +556,8 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.10 \section{C
-               onvolutional architecture in spiking neural network}
+               onvolutional architecture in spiking neural network} \label{c...
+
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -2528,7 +2547,7 @@ Overfull \hbox (224.44487pt too wide) in paragraph at lines 26--41
 
 ! Undefined control sequence.
 l.45 \section
-             {Conversion}
+             {Conversion} \label{c:convappro}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2543,7 +2562,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.45 \section{C
-               onversion}
+               onversion} \label{c:convappro}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -2559,7 +2578,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 45--46
-[] 
+[]
  []
 
 
@@ -2700,7 +2719,7 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 l.54 \subsection
-                {Convolutional DBNs}
+                {Convolutional DBNs} \label{c:convdbns}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2910,16 +2929,27 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no x in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+! Undefined control sequence.
+<write> ...Reference `c:convrbm' on page \thepage 
+                                                  \space undefined\on@line .
+l.58 ...D, as described in Chapter \ref{c:convrbm}
+                                                  , for a certain number of ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:convrbm' on page  undefined on input line 58.
+
 Missing character: There is no , in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no o in font nullfont!
@@ -3097,6 +3127,11 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no : in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 58--60
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 58--60
 []
  []
 
@@ -3955,16 +3990,27 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 1 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+! Undefined control sequence.
+<write> ...g: Reference `c:pgms' on page \thepage 
+                                                  \space undefined\on@line .
+l.78 ...data (as mentioned in Chapter \ref{c:pgms}
+                                                  ).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:pgms' on page  undefined on input line 78.
+
 Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
@@ -3972,9 +4018,14 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 78--79
 []
  []
 
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 78--79
+[] 
+ []
+
 ! Undefined control sequence.
 l.81 \subsection
-                {Conversion}
+                {Conversion} \label{c:conversionappr}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3993,7 +4044,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 81--82
-[] 
+[]
  []
 
 Missing character: There is no F in font nullfont!
@@ -4689,7 +4740,7 @@ Overfull \hbox (232.51283pt too wide) in paragraph at lines 87--102
 
 ! Undefined control sequence.
 l.104 \paragraph
-                {Conversion as CNN}
+                {Conversion as CNN}  \label{c:convascnn}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -6013,7 +6064,7 @@ Overfull \hbox (10.86105pt too wide) in paragraph at lines 115--117
 
 ! Undefined control sequence.
 l.119 \paragraph
-                {Conversion with conductance-based LIF}
+                {Conversion with conductance-based LIF} \label{c:convascoba}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -6385,20 +6436,36 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 2 in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+! Undefined control sequence.
+<write> ...rence `c:snnsampling' on page \thepage 
+                                                  \space undefined\on@line .
+l.123 ... described in Chapter \ref{c:snnsampling}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:snnsampling' on page  undefined on input line 123.
+
 Missing character: There is no . in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 121--124
 []
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 121--124
+[] 
  []
 
 Missing character: There is no F in font nullfont!
@@ -6961,9 +7028,27 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 2 in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+! Undefined control sequence.
+<write> ...rence `c:snnsampling' on page \thepage 
+                                                  \space undefined\on@line .
+l.129 ... described in Chapter \ref{c:snnsampling}
+                                                   may introduce some discre...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:snnsampling' on page  undefined on input line 129.
+
 Missing character: There is no m in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
@@ -7099,6 +7184,11 @@ Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 129--130
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 129--130
 []
  []
 
@@ -8297,7 +8387,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 158--159
 
 ! Undefined control sequence.
 l.161 \paragraph
-                {Conversion with current-based LIF}
+                {Conversion with current-based LIF} \label{c:convascuba}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -9733,7 +9823,7 @@ Overfull \hbox (10.86105pt too wide) in paragraph at lines 170--192
 
 ! Undefined control sequence.
 l.193 \section
-              {eCD}
+              {eCD} \label{c:ecdappr}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -9745,7 +9835,7 @@ Missing character: There is no C in font nullfont!
 Missing character: There is no D in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 193--194
-[] 
+[]
  []
 
 Missing character: There is no A in font nullfont!
@@ -10018,9 +10108,27 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 2 in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+! Undefined control sequence.
+<write> ...ng: Reference `c:ecd' on page \thepage 
+                                                  \space undefined\on@line .
+l.198 ...ing rule described in Chapter \ref{c:ecd}
+                                                   is used, by extending the...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:ecd' on page  undefined on input line 198.
+
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -10124,6 +10232,11 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 197--200
 
 
 Overfull \hbox (5.43053pt too wide) in paragraph at lines 197--200
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 197--200
 []
  []
 
@@ -11250,7 +11363,7 @@ Overfull \hbox (318.91977pt too wide) in paragraph at lines 233--237
 
 ! Undefined control sequence.
 l.239 \subsection
-                 {Convolution in eCD}
+                 {Convolution in eCD} \label{c:ecdconv}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -12035,9 +12148,31 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no x in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+! Undefined control sequence.
+<write> ...Reference `c:convrbm' on page \thepage 
+                                                  \space undefined\on@line .
+l.258 ...update rule as in Chapter \ref{c:convrbm}
+                                                  .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:convrbm' on page  undefined on input line 258.
+
 Missing character: There is no . in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no h in font nullfont!
@@ -12179,9 +12314,14 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 258--260
 []
  []
 
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 258--260
+[]
+ []
+
 ! Undefined control sequence.
 l.261 \paragraph
-                {Lateral inhibition}
+                {Lateral inhibition} \label{c:latinhib}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -12653,16 +12793,27 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no C in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no 7 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no x in font nullfont!
+! Undefined control sequence.
+<write> ...rence `c:latinhibexp' on page \thepage 
+                                                  \space undefined\on@line .
+l.263 ...nt modes (see Chapter \ref{c:latinhibexp}
+                                                   and Fig. \ref{fig:dbnmixi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:latinhibexp' on page  undefined on input line 263.
+
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -12673,7 +12824,7 @@ Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 <write> ...rence `fig:dbnmixing' on page \thepage 
                                                   \space undefined\on@line .
-l.263 ... chapter 7.x and Fig. \ref{fig:dbnmixing}
+l.263 ...latinhibexp} and Fig. \ref{fig:dbnmixing}
                                                    ).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -12693,6 +12844,11 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 261--264
 
 
 Overfull \hbox (5.43053pt too wide) in paragraph at lines 261--264
+[]
+ []
+
+
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 261--264
 []
  []
 
@@ -13302,7 +13458,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 276--277
 
 ! Undefined control sequence.
 l.278 \subsection
-                 {Spiking DBNs}
+                 {Spiking DBNs} \label{c:spikingdbn}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -14490,11 +14646,11 @@ Overfull \hbox (1571.25957pt too wide) in paragraph at lines 291--295
 
  
 Here is how much of TeX's memory you used:
- 45 strings out of 493105
- 633 string characters out of 6137071
+ 51 strings out of 493105
+ 699 string characters out of 6137071
  63508 words of memory out of 5000000
- 3609 multiletter control sequences out of 15000+600000
+ 3615 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,3n,21p,462b,89s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 19i,3n,21p,462b,89s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

@@ -1,10 +1,10 @@
-\chapter{Implementation}
+\chapter{Implementation} \label{c:impl}
 
 
-\section{Analog DBNs}
+\section{Analog DBNs} \label{c:dbnimpl}
 
 The DBNs were implemented in the Theano-Framework \cite{2016arXiv160502688full}, to utilize the computational power of the GPU.
-The implementation of the singe RBMs is adapted from the official Theano RBM.
+The implementation of the singe RBMs is adapted from the official Theano RBM \cite{theanoRBM}.
 \\
 \\
 An upward pass in performed as follows:
@@ -76,7 +76,7 @@ The last layer, the classification layer, consists of a fully connected RBM trai
 
 
 
-\section{Conversion}
+\section{Conversion} \label{c:conversionimpl}
 
 To simulate the converted DBNs we use the pyNN framework with Nest as spiking network simulator \cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}.
 To simulate the CNN and DBN we use current and conductance based LIF neurons, respectively.
@@ -96,12 +96,11 @@ y_{pred} = argmax_i \; a_i
 \]
 
 
-\section{eCD}
+\section{eCD} \label{c:ecdimpl}
 
 The eCD learning was implemented in PyNN with Nest with simulated STDP weight updated at discrete time steps outside the simulation, as well as Brian simulator with event-based online STDP weight updates, but due to the simulation speed we chose Brian for most of our experiments\cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}\cite{10.3389/neuro.11.005.2008}.
 
 As neuron type LIF neurons with high frequency input noise were chosen.
-
 Each input element $x_i \in \textbf{x}$ of a data sample $\textbf{x}$ gets transformed to Poisson distributed spikes train, with the rate $\lambda$ proportional to the input value $\lambda \propto x_i$. 
 
 Each RBM consist of a visible and hidden layer. 
@@ -110,7 +109,6 @@ If needed a second neuron population representing the label input $\textbf{y}$, 
 The hidden layer is an neuron population of the size  $ k = \textit{number of filters} \times (\textit{input height} - \textit{filter height} + 1) \times (\textit{input width} - \textit{filter width} + 1)$.
 
 The data population is sparsely connected to the hidden layer with synchronized weights implementing the convolution, while the label population is fully connected to the hidden layer.
-
 In the hidden layer we connect a neuron to other neurons in a square around same position in different feature maps with a inhibitory synapse with a fixed negative weight.
 
 The training of the spiking RBM is performed with the adapted eCD algorithm (see 4.3).

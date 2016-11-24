@@ -6,9 +6,13 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
+\newlabel{c:approach}{{4}{43}{Approach}{chapter.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Convolutional architecture in spiking neural network}{43}{section.4.1}}
+\newlabel{c:spikingconvarch}{{4.1}{43}{Convolutional architecture in spiking neural network}{section.4.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Conversion}{43}{section.4.2}}
+\newlabel{c:convappro}{{4.2}{43}{Conversion}{section.4.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Convolutional DBNs}{43}{subsection.4.2.1}}
+\newlabel{c:convdbns}{{4.2.1}{43}{Convolutional DBNs}{subsection.4.2.1}{}}
 \citation{hinton2006fast}
 \newlabel{fig:receptfields1}{{4.1a}{44}{A singe receptive field over 4 neurons\relax }{figure.caption.83}{}}
 \newlabel{sub@fig:receptfields1}{{a}{44}{A singe receptive field over 4 neurons\relax }{figure.caption.83}{}}
@@ -28,7 +32,10 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Different converted structures of a CNN and a DBN. The CNN is converted to a spiking network, by simply using simple LIF neurons (white) (a). In the DBN (b) the LIF neurons are put in a high conductance state (black), by inserting high frequency Poisson noise. The weights are scaled accordingly to fit the activations of the neurons.\relax }}{45}{figure.caption.85}}
 \newlabel{fig:converted}{{4.3}{45}{Different converted structures of a CNN and a DBN. The CNN is converted to a spiking network, by simply using simple LIF neurons (white) (a). In the DBN (b) the LIF neurons are put in a high conductance state (black), by inserting high frequency Poisson noise. The weights are scaled accordingly to fit the activations of the neurons.\relax }{figure.caption.85}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Conversion}{45}{subsection.4.2.2}}
+\newlabel{c:conversionappr}{{4.2.2}{45}{Conversion}{subsection.4.2.2}{}}
+\newlabel{c:convascnn}{{4.2.2}{45}{Conversion as CNN}{section*.86}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Conversion as CNN}{45}{section*.86}}
+\newlabel{c:convascoba}{{4.2.2}{45}{Conversion with conductance-based LIF}{section*.87}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Conversion with conductance-based LIF}{45}{section*.87}}
 \newlabel{fig:cobahcs1}{{4.4a}{46}{Firing of a HCS COBA LIF neuron.\relax }{figure.caption.88}{}}
 \newlabel{sub@fig:cobahcs1}{{a}{46}{Firing of a HCS COBA LIF neuron.\relax }{figure.caption.88}{}}
@@ -47,19 +54,24 @@
 \newlabel{sub@fig:sub2}{{c}{47}{Comparison between a HCS CUBA LIF neuron sampling and the true distribution in a RBM.\relax }{figure.caption.90}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Properties of a current based LIF neuron, put into a simulated high conductance state by high frequency input noise and a artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).\relax }}{47}{figure.caption.90}}
 \newlabel{fig:cubahcs}{{4.5}{47}{Properties of a current based LIF neuron, put into a simulated high conductance state by high frequency input noise and a artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).\relax }{figure.caption.90}{}}
+\newlabel{c:convascuba}{{4.2.2}{47}{Conversion with current-based LIF}{section*.89}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Conversion with current-based LIF}{47}{section*.89}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}eCD}{47}{section.4.3}}
+\newlabel{c:ecdappr}{{4.3}{47}{eCD}{section.4.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Convolution in eCD}{48}{subsection.4.3.1}}
+\newlabel{c:ecdconv}{{4.3.1}{48}{Convolution in eCD}{subsection.4.3.1}{}}
 \citation{King2013}
 \citation{NorouziM2009}
 \citation{LeCun}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces The five phases for a data sample in the adapted eCD algorithm. \relax }}{49}{figure.caption.91}}
 \newlabel{fig:ecd5}{{4.6}{49}{The five phases for a data sample in the adapted eCD algorithm. \relax }{figure.caption.91}{}}
+\newlabel{c:latinhib}{{4.3.1}{49}{Lateral inhibition}{section*.92}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Lateral inhibition}{49}{section*.92}}
 \citation{salakhutdinov2009deep}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces A (restricted) Boltzmann machine with lateral inhibition in the top layer.\relax }}{50}{figure.caption.93}}
 \newlabel{fig:bminhib}{{4.7}{50}{A (restricted) Boltzmann machine with lateral inhibition in the top layer.\relax }{figure.caption.93}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Spiking DBNs}{50}{subsection.4.3.2}}
+\newlabel{c:spikingdbn}{{4.3.2}{50}{Spiking DBNs}{subsection.4.3.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces The structure of a deep belief network trained with eCD. The DBN consists of single Boltzmann machines stacked on top of each others. In contrast to analog DBNs, the Boltzmann machines are still bidirection connected, and two Boltzmann machines are stacked up by forwarding the activations of the hidden layer in the bottom RBM to the visible layer in the top RBM.\relax }}{51}{figure.caption.94}}
 \newlabel{fig:spikedbn}{{4.8}{51}{The structure of a deep belief network trained with eCD. The DBN consists of single Boltzmann machines stacked on top of each others. In contrast to analog DBNs, the Boltzmann machines are still bidirection connected, and two Boltzmann machines are stacked up by forwarding the activations of the hidden layer in the bottom RBM to the visible layer in the top RBM.\relax }{figure.caption.94}{}}
 \@setckpt{content/appro}{

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  21 NOV 2016 21:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  24 NOV 2016 08:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,7 +8,7 @@ LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 ! Undefined control sequence.
 l.1 \chapter
-            {Conclusion and Outlook}
+            {Conclusion and Outlook} \label{c:conclusion}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -23,7 +23,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1 \chapter{C
-              onclusion and Outlook}
+              onclusion and Outlook} \label{c:conclusion}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1501,7 +1501,7 @@ Overfull \hbox (8.33336pt too wide) in paragraph at lines 3--12
 
 ! Undefined control sequence.
 l.13 \subsubsection
-                   {Biological plausibility}
+                   {Biological plausibility} \label{c:bioplau}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1516,7 +1516,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.13 \subsubsection{B
-                     iological plausibility}
+                     iological plausibility} \label{c:bioplau}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3268,7 +3268,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 29--30
 
 ! Undefined control sequence.
 l.31 \section
-             {Future work}
+             {Future work} \label{c:future}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3283,7 +3283,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.31 \section{F
-               uture work}
+               uture work} \label{c:future}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3457,7 +3457,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 33--34
 
 ! Undefined control sequence.
 l.35 \subsection
-                {Neuromorphic Hardware}
+                {Neuromorphic Hardware} \label{c:neuhard}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3472,7 +3472,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.35 \subsection{N
-                  euromorphic Hardware}
+                  euromorphic Hardware} \label{c:neuhard}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3790,7 +3790,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 37--40
 
 ! Undefined control sequence.
 l.41 \paragraph
-               {SpiNNakker} is a massively-parallel computer architecture wh...
+               {SpiNNakker} \label{c:spinnakker}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3805,8 +3805,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.41 \paragraph{S
-                 piNNakker} is a massively-parallel computer architecture wh...
-
+                 piNNakker} \label{c:spinnakker}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3931,7 +3930,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.41 ... 1 billion neurons \cite{jin2008efficient}
+l.42 ... 1 billion neurons \cite{jin2008efficient}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3940,7 +3939,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `jin2008efficient' on page  undefined on input line 41.
+LaTeX Warning: Citation `jin2008efficient' on page  undefined on input line 42.
 
 
 Missing character: There is no ] in font nullfont!
@@ -4194,18 +4193,18 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 41--44
+Overfull \hbox (20.0pt too wide) in paragraph at lines 41--45
 []
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 41--44
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 41--45
 []
  []
 
 ! Undefined control sequence.
-l.45 \paragraph
-               {Spikey} emulates spiking neural networks with conductance ba...
+l.46 \paragraph
+               {Spikey} \label{c:spikey}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4219,9 +4218,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.45 \paragraph{S
-                 pikey} emulates spiking neural networks with conductance ba...
-
+l.46 \paragraph{S
+                 pikey} \label{c:spikey}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4361,7 +4359,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.45 ...n analog microelectronics \cite{Pfeil1311}
+l.47 ...n analog microelectronics \cite{Pfeil1311}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4370,7 +4368,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `Pfeil1311' on page  undefined on input line 45.
+LaTeX Warning: Citation `Pfeil1311' on page  undefined on input line 47.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -4743,18 +4741,18 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 45--50
+Overfull \hbox (20.0pt too wide) in paragraph at lines 46--52
 []
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 45--50
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 46--52
 []
  []
 
 ! Undefined control sequence.
-l.51 \subsection
-                {Biological plausible learning}
+l.53 \subsection
+                {Biological plausible learning} \label{c:biofuture}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4768,8 +4766,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 \subsection{B
-                  iological plausible learning}
+l.53 \subsection{B
+                  iological plausible learning} \label{c:biofuture}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4801,7 +4799,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 51--52
+Overfull \hbox (20.0pt too wide) in paragraph at lines 53--54
 []
  []
 
@@ -4812,7 +4810,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53 A
+l.55 A
       nother direction which poses great potential for further research is t...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -4938,7 +4936,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 53--54
+Overfull \hbox (20.0pt too wide) in paragraph at lines 55--56
 []
  []
 
@@ -4949,7 +4947,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55 O
+l.57 O
       ne of the primary problems is the division in learning phases.
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5394,7 +5392,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.57 ...input\cite{DBLP:journals/corr/ScellierB16}
+l.59 ...input\cite{DBLP:journals/corr/ScellierB16}
                                                   \cite{Scellier2016a}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5404,7 +5402,7 @@ and I'll forget about whatever was undefined.
 
 
 LaTeX Warning: Citation `DBLP:journals/corr/ScellierB16' on page  undefined on 
-input line 57.
+input line 59.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no [ in font nullfont!
@@ -5412,7 +5410,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.57 ...nals/corr/ScellierB16}\cite{Scellier2016a}
+l.59 ...nals/corr/ScellierB16}\cite{Scellier2016a}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5421,7 +5419,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `Scellier2016a' on page  undefined on input line 57.
+LaTeX Warning: Citation `Scellier2016a' on page  undefined on input line 59.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -5538,12 +5536,12 @@ Missing character: There is no k in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 55--59
+Overfull \hbox (20.0pt too wide) in paragraph at lines 57--61
 []
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 55--59
+Overfull \hbox (10.86105pt too wide) in paragraph at lines 57--61
 [][]
  []
 
@@ -5554,7 +5552,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 T
+l.62 T
       hese approaches might also help with the problem of cascaded learning ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -6029,7 +6027,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 60--65
+Overfull \hbox (20.0pt too wide) in paragraph at lines 62--67
 []
  []
 
@@ -6040,7 +6038,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66 A
+l.68 A
       nother constrain are the synchronized weights.
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -6309,7 +6307,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.68 ...mly and kept constant \cite{Lillicrap2014}
+l.70 ...mly and kept constant \cite{Lillicrap2014}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6318,7 +6316,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `Lillicrap2014' on page  undefined on input line 68.
+LaTeX Warning: Citation `Lillicrap2014' on page  undefined on input line 70.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -6468,7 +6466,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.69 ...symmetric weights\cite{vincent2010stacked}
+l.71 ...symmetric weights\cite{vincent2010stacked}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6477,8 +6475,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `vincent2010stacked' on page  undefined on input line 6
-9.
+LaTeX Warning: Citation `vincent2010stacked' on page  undefined on input line 7
+1.
 
 Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
@@ -6604,17 +6602,17 @@ Missing character: There is no D in font nullfont!
 Missing character: There is no P in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 66--71
+Overfull \hbox (20.0pt too wide) in paragraph at lines 68--73
 []
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 66--71
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 68--73
 []
  []
 
 
-Overfull \hbox (5.43053pt too wide) in paragraph at lines 66--71
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 68--73
 []
  []
 
@@ -6625,7 +6623,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.72 E
+l.74 E
       ventually it would be interesting to see if a biological plausible sys...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -6780,7 +6778,7 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 72--73
+Overfull \hbox (20.0pt too wide) in paragraph at lines 74--75
 []
  []
 

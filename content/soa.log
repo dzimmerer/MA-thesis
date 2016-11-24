@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  22 NOV 2016 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  24 NOV 2016 08:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,7 +8,7 @@ LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 ! Undefined control sequence.
 l.1 \chapter
-            {Related Work}
+            {Related Work} \label{c:relwork}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -23,7 +23,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.1 \chapter{R
-              elated Work}
+              elated Work} \label{c:relwork}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -260,7 +260,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 3--5
 
 ! Undefined control sequence.
 l.6 \section
-            {Convolutional RBM}
+            {Convolutional RBM} \label{c:convrbm}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -275,7 +275,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.6 \section{C
-              onvolutional RBM}
+              onvolutional RBM} \label{c:convrbm}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3082,7 +3082,7 @@ Overfull \hbox (318.34576pt too wide) in paragraph at lines 93--97
 
 ! Undefined control sequence.
 l.99 \section
-             {Sampling in SNNs}
+             {Sampling in SNNs} \label{c:snnsampling}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3097,7 +3097,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.99 \section{S
-               ampling in SNNs}
+               ampling in SNNs} \label{c:snnsampling}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -7956,7 +7956,7 @@ Overfull \hbox (5.43053pt too wide) in paragraph at lines 196--200
 
 ! Undefined control sequence.
 l.201 \section
-              {Artificial to spiking neural network conversion}
+              {Artificial to spiking neural network conversion} \label{c:nnc...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -7971,7 +7971,8 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.201 \section{A
-                rtificial to spiking neural network conversion}
+                rtificial to spiking neural network conversion} \label{c:nnc...
+
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -10192,7 +10193,7 @@ Overfull \hbox (5.43053pt too wide) in paragraph at lines 225--240
 
 ! Undefined control sequence.
 l.241 \section
-              {eCD and Sampling Machines}
+              {eCD and Sampling Machines} \label{c:ecd}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -12051,7 +12052,32 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1
+! Undefined control sequence.
+<write> \newlabel{c:relwork}{{}{\thepage 
+                                         }}
+l.276 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{c:relwork}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{c:convrbm}{{}{\thepage 
+                                         }}
+l.276 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{c:convrbm}{{}{}}
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 ! Undefined control sequence.
 <write> \newlabel{fig:convrbmsub1}{{}{\thepage 
                                                }}
@@ -12112,6 +12138,18 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 \newlabel{fig:probmaxpool}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{c:snnsampling}{{}{\thepage 
+                                             }}
+l.276 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{c:snnsampling}{{}{}}
 ! Undefined control sequence.
 <write> \newlabel{fig:snnsamp1}{{}{\thepage 
                                             }}
@@ -12209,6 +12247,18 @@ and I'll forget about whatever was undefined.
 
 \newlabel{fig:snnsamp4}{{}{}}
 ! Undefined control sequence.
+<write> \newlabel{c:nnconversion}{{}{\thepage 
+                                              }}
+l.276 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{c:nnconversion}{{}{}}
+! Undefined control sequence.
 <write> \newlabel{fig:sub1}{{}{\thepage 
                                         }}
 l.276 
@@ -12244,6 +12294,18 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 \newlabel{fig:csnnconv}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{c:ecd}{{}{\thepage 
+                                     }}
+l.276 
+      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{c:ecd}{{}{}}
 ! Undefined control sequence.
 <write> \newlabel{fig:evtCD}{{}{\thepage 
                                          }}

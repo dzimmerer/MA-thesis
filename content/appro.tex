@@ -1,13 +1,13 @@
-\chapter{Approach}
+\chapter{Approach} \label{c:approach}
 
 In this section after describing the general convolutional architecture in spiking neural network, to find the best performing spiking convolutional DBN, we discuss two different approaches to build these.
 
 The first one is the more classical one, where a in discrete time trained DBN is transferred to spiking neural networks.
 The second approach trains the RBMs event based with STDP directly as spiking neural networks. 
 
-In chapter 6, we will then evaluate and compare the performance of both approaches.
+In Chapter \ref{c:expres}, we will then evaluate and compare the performance of both approaches.
 
-\section{Convolutional architecture in spiking neural network}
+\section{Convolutional architecture in spiking neural network} \label{c:spikingconvarch}
 
 We implement a convolutional layer with receptive fields and shared weights between two neuron populations. 
 Each population has a similar three dimensional topology as in "normal" CNNs with the number of neurons given by $n_{ \text{neurons}} = \text{channels} \times \text{height} \times \text{width}$.
@@ -42,7 +42,7 @@ By using more neurons with different set of shared weights over the same recepti
 
 
 
-\section{Conversion}
+\section{Conversion} \label{c:convappro}
 
 The conversion approach can be roughly described in two steps:
 \begin{enumerate}
@@ -51,11 +51,11 @@ The conversion approach can be roughly described in two steps:
 \end{enumerate}
 
 
-\subsection{Convolutional DBNs}
+\subsection{Convolutional DBNs} \label{c:convdbns}
 
 To train a convolutional DBNs we proceed similar to Hinton et al. and Lee et al. \cite{hinton2006fast} \cite{lee2009convolutional}.
 
-At first the convolutional RBMs are trained greedily with CD, as described in section 2.x, for a certain number of iterations on data batches of batch-size $b$.
+At first the convolutional RBMs are trained greedily with CD, as described in Chapter \ref{c:convrbm}, for a certain number of iterations on data batches of batch-size $b$.
 After a RBM is trained, we convert the dataset by sampling of the hidden layer of the RBM (one sampling/forward-pass step), into a new dataset:
 \[
 p(x') = \sigma(W * x) .
@@ -75,10 +75,10 @@ This architecture is similar to the architecture of Hinton \cite{hinton2006fast}
 	\label{fig:dbnmnist}
 \end{figure}
 
-To evaluate the final performance, we input a data sample without a label into the DBN and let the top layer sample a label prediction by performing Gibbs sampling steps, which can be seen as a reconstruction of partially presented data (as mentioned in section 2.1).
+To evaluate the final performance, we input a data sample without a label into the DBN and let the top layer sample a label prediction by performing Gibbs sampling steps, which can be seen as a reconstruction of partially presented data (as mentioned in Chapter \ref{c:pgms}).
 
 
-\subsection{Conversion}
+\subsection{Conversion} \label{c:conversionappr}
 
 For the conversion we present three different variations.
 
@@ -101,7 +101,7 @@ For the conversion we present three different variations.
 \end{figure}
 
 
-\paragraph{Conversion as CNN} 
+\paragraph{Conversion as CNN}  \label{c:convascnn}
 
 One way to convert the DBN to the spiking domain, is by interpreting it as a pre-trained CNN with purely forward connections (we do not perform any commonly used gradient descent fine tuning to get comparable results with only CD trained models, but fine tuning could further improve the performance).
 While this allows classification, it removes the generative capabilities of the network.
@@ -116,17 +116,17 @@ The DBN layers are replaced by a LIF neuron population layers with an identical 
 The connections are replaced by (directed) synapses, with the weights of the DBN synapses scaled with a constant factor, to get similar activations.
  
 
-\paragraph{Conversion with conductance-based LIF}
+\paragraph{Conversion with conductance-based LIF} \label{c:convascoba}
 
 Another way to convert the DBN to the spiking domain, is by interpreting it as a directed graphical model, a sigmoid belief network, and performing ancestral sampling.
 This approach is heavily based on the synaptic sampling theory, i.e. it uses spiking neurons to perform sampling.
-The sampling can be either performed with current-based or conductance-base LIF neurons as described in section 3.2.
+The sampling can be either performed with current-based or conductance-base LIF neurons as described in Chapter \ref{c:snnsampling}.
 
 For the COBA neurons, we choose a biological plausible neuron model (see parameters in Table \ref{cobalifparam}). 
 The high membrane conductance, an increased Gaussian distributed mean membrane potential and thus a firing probability of $0.5$, is achieved by using high frequency Poisson generated inhibitory and excitatory spikes to bring the neuron to a high conductance state (HCS) (see Fig. \ref{fig:cobahcs1}). 
 This neuron model has an input-rate output-rate transfer function which approximates a sigmoid function (see Fig. \ref{fig:cobahcs2}).
 
-The PSPs are chosen to have an alpha shape instead of rectangular shape, which as described in 3.2 may introduce some discrepancies when performing sampling in comparison to Gibbs sampling, but is more biologically plausible (see Fig. \ref{fig:cobahcs3}).
+The PSPs are chosen to have an alpha shape instead of rectangular shape, which as described in Chapter \ref{c:snnsampling} may introduce some discrepancies when performing sampling in comparison to Gibbs sampling, but is more biologically plausible (see Fig. \ref{fig:cobahcs3}).
 
 \begin{figure}
 	\centering
@@ -158,7 +158,7 @@ The DBN is converted by simply converting each layer to a layer of conductance-b
 Consequently the DBN simply performs ancestral sampling with the data sample as evidences and the label as inferred state.   
 
 
-\paragraph{Conversion with current-based LIF}
+\paragraph{Conversion with current-based LIF} \label{c:convascuba}
 
 To reduce the computational expenses of the COBA models, they can be replaced by less computational complex CUBA models.
 The model parameters as chose to simulate a HCS state.
@@ -190,12 +190,12 @@ By adding high frequency Poisson noise, a sigmoid shaped input-rate output-rate 
 \end{figure}
 The DBN conversion is similar to the COBA case, where the COBA neurons are now replaced by the adapted CUBA LIFs (see Fig. \ref{fig:converted2}).
 
-\section{eCD}
+\section{eCD} \label{c:ecdappr}
 
 Another approach implements the learning of the convolutional spiking DBN with an STDP based learning rule. 
 
 The main idea of the learning rule is adapted from Neftcis eCD and applied to a network of LIF neurons with symmetric bidirectional synapses \cite{Neftci2013}.
-We modify the STDP learning rule described in 3.2 is used, by extending the model with a learning rate. 
+We modify the STDP learning rule described in Chapter \ref{c:ecd} is used, by extending the model with a learning rate. 
 This rule can be reformulated as an iterative rule as follows:
 \begin{itemize}
 \item The visible unit $v$ spikes: 
@@ -235,8 +235,8 @@ The original division into four training phases poses similarities to pCD since 
 	\label{fig:ecd5}
 \end{figure}
 
-
-\subsection{Convolution in eCD}
+ 
+\subsection{Convolution in eCD} \label{c:ecdconv}
 
 We implement convolution with local receptive fields and shared weights between synapses through weight synchronization.
 Since each weight has their local STDP based update rule (eCD), we have to find a way to synchronize weights between synapses of the same feature map.
@@ -255,12 +255,12 @@ w_{shared}(t) = \frac{1}{2} (w_i(t) + w_j(t) ) = \frac{1}{2} (w_{shared}(t-1) + 
 \end{split}
 \]
 
-This results in a update rule similar to the convolutional RBM update rule 3.x.
+This results in a update rule similar to the convolutional RBM update rule as in Chapter \ref{c:convrbm}.
 Thus we can simply take the mean of the weight changes and apply it to all the weights, which is equivalent to just taking the average of the new individual weights. 
 
-\paragraph{Lateral inhibition}
+\paragraph{Lateral inhibition} \label{c:latinhib}
 In addition we introduce fixed negative connections between neuron in the top/ hidden layers ( which is more biological plausible \cite{King2013} , see a simplified sample in Fig. \ref{fig:bminhib}).
-This removes one advantage of RBMs since the hidden layers are no longer independent, which makes it harder to sample from the true distributions, but since the network continuously performs sampling steps, the approximation has shown to be sufficient, if the weights are not too strong and prevent changes of different modes (see chapter 7.x and Fig. \ref{fig:dbnmixing} ).
+This removes one advantage of RBMs since the hidden layers are no longer independent, which makes it harder to sample from the true distributions, but since the network continuously performs sampling steps, the approximation has shown to be sufficient, if the weights are not too strong and prevent changes of different modes (see Chapter \ref{c:latinhibexp} and Fig. \ref{fig:dbnmixing} ).
 
 \begin{figure}
 	\centering
@@ -275,7 +275,7 @@ Also this poses some similarities to adding a negative structured bias to the hi
 
 An intuitive interpretation, is that if one feature reacts to a certain input it will be highly active and prevent the others from being active as well and thus prevent them from learning the same features.  
 
-\subsection{Spiking DBNs}
+\subsection{Spiking DBNs} \label{c:spikingdbn}
 
 To build up a spiking DBN we train the convolutional BMs layer-wise and forward the input of the previous layer to the next layer.
 

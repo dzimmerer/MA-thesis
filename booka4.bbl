@@ -37,6 +37,11 @@ Restricted boltzmann machines.
   \url{http://www.todaysoftmag.com/article/747/restricted-boltzmann-machines}.
 \newblock Accessed: 2016-11-22.
 
+\bibitem{theanoRBM}
+Restricted boltzmann machines (rbm) - deeplearning 0.1 documentation.
+\newblock \url{http://deeplearning.net/tutorial/rbm.html}.
+\newblock Accessed: 2016-11-22.
+
 \bibitem{cdImg}
 Training neural networks.
 \newblock

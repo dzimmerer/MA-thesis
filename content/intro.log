@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  21 NOV 2016 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  24 NOV 2016 09:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -46,7 +46,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
 
 ! Undefined control sequence.
 l.3 \section
-            {Motivation}
+            {Motivation} \label{c:motiv}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -61,7 +61,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.3 \section{M
-              otivation}
+              otivation} \label{c:motiv}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -77,7 +77,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 3--4
-[] 
+[]
  []
 
 
@@ -2522,7 +2522,7 @@ Overfull \hbox (5.43053pt too wide) in paragraph at lines 23--26
 
 ! Undefined control sequence.
 l.27 \section
-             {Problem Statement}
+             {Problem Statement} \label{c:probstate}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2537,7 +2537,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.27 \section{P
-               roblem Statement}
+               roblem Statement} \label{c:probstate}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -3280,7 +3280,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 29--35
 
 ! Undefined control sequence.
 l.36 \section
-             {The Human Brain Project}
+             {The Human Brain Project} \label{c:thehbp}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3295,7 +3295,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.36 \section{T
-               he Human Brain Project}
+               he Human Brain Project} \label{c:thehbp}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4214,7 +4214,7 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 44--49
 
 ! Undefined control sequence.
 l.51 \section
-             {Overview}
+             {Overview} \label{c:overw}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4229,7 +4229,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.51 \section{O
-               verview}
+               verview} \label{c:overw}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -4243,7 +4243,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no w in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 51--52
-[] 
+[]
  []
 
 
@@ -4441,7 +4441,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.55 C
-      hapter 2 introduces some background information, which is used in chap...
+      hapter \ref{c:backgrnd} introduces some background information, which ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4453,7 +4453,20 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no 2 in font nullfont!
+! Undefined control sequence.
+<write> ...eference `c:backgrnd' on page \thepage 
+                                                  \space undefined\on@line .
+l.55 Chapter \ref{c:backgrnd}
+                              introduces some background information, which ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:backgrnd' on page  undefined on input line 55.
+
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -4503,14 +4516,27 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no C in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no 3 in font nullfont!
+! Undefined control sequence.
+<write> ...Reference `c:relwork' on page \thepage 
+                                                  \space undefined\on@line .
+l.55 ..., which is used in Chapter \ref{c:relwork}
+                                                   to describe state-of-the-...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:relwork' on page  undefined on input line 55.
+
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -4569,7 +4595,20 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no 4 in font nullfont!
+! Undefined control sequence.
+<write> ...eference `c:approach' on page \thepage 
+                                                  \space undefined\on@line .
+l.56 Chapter \ref{c:approach}
+                              will describe the different approaches to buil...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:approach' on page  undefined on input line 56.
+
 Missing character: There is no w in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
@@ -4657,14 +4696,27 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
+Missing character: There is no C in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no 5 in font nullfont!
+! Undefined control sequence.
+<write> ...g: Reference `c:impl' on page \thepage 
+                                                  \space undefined\on@line .
+l.57 In Chapter \ref{c:impl}
+                             the different implementation steps and  archite...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:impl' on page  undefined on input line 57.
+
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -4734,7 +4786,20 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no 6 in font nullfont!
+! Undefined control sequence.
+<write> ... Reference `c:expres' on page \thepage 
+                                                  \space undefined\on@line .
+l.58 Chapter \ref{c:expres}
+                            outlines and compares the performance of the net...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:expres' on page  undefined on input line 58.
+
 Missing character: There is no o in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -4789,7 +4854,20 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no r in font nullfont!
-Missing character: There is no 7 in font nullfont!
+! Undefined control sequence.
+<write> ...erence `c:conclusion' on page \thepage 
+                                                  \space undefined\on@line .
+l.59 Chapter  \ref{c:conclusion}
+                                 will conclude the gathered insight of this ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `c:conclusion' on page  undefined on input line 59.
+
 Missing character: There is no w in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
@@ -4912,10 +4990,10 @@ Missing character: There is no . in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 19 strings out of 493105
- 362 string characters out of 6137071
+ 25 strings out of 493105
+ 429 string characters out of 6137071
  53508 words of memory out of 5000000
- 3583 multiletter control sequences out of 15000+600000
+ 3589 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  20i,2n,26p,378b,93s stack positions out of 5000i,500n,10000p,200000b,80000s

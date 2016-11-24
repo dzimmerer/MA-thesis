@@ -1,14 +1,14 @@
-\chapter{Related Work}
+\chapter{Related Work} \label{c:relwork}
 
 In this section we present recent work related to convolutional RBMs which already have been proposed in discrete time.
 We further show recent approaches for sampling and implementing Boltzmann machines in spiking neural networks.
 
-\section{Convolutional RBM}
+\section{Convolutional RBM} \label{c:convrbm}
 
 The convolutional RBM (cRBM) was invented more or less at the same time by Desjardins et al., Lee et al. and Norouzi et al. in 2008/2009 \cite{desjardins2008empirical}\cite{lee2009convolutional}\cite{norouzi2009stacks}. 
 In similarity to CNNs it can be seen as the advancement of an energy based model adapting to compositional data.
 Describing images in terms of spatially local features needs fewer parameters, generalizes better, and offers re-usability as identical local features can be extracted from different locations of an image.
-Modelled after CNNs and unlike a normal RBM, the visible and hidden layer in the cRBM are connected in a convolutional manner (as described in section 2.x) instead of being fully connected.
+Modelled after CNNs and unlike a normal RBM, the visible and hidden layer in the cRBM are connected in a convolutional manner (as described in Chapter \ref{c:cnns}) instead of being fully connected.
 
 
 Propagating information up can be seen as the convolution with a filter matrix $W$ (see Fig \ref{fig:convrbmsub1}): 
@@ -73,7 +73,7 @@ E(\textbf{h} , \textbf{v}) = \textbf{h}^\intercal(W * \textbf{v}) + \textbf{h}^\
 
 
 Similar to normal a RBM, a convolutional RBM is trained with the objective to maximize the probability of the training data.
-This can be achieved using the CD algorithm with a few adaptations due to the tied weights (see backprop for CNNs) \cite{NorouziM2009}: 
+This can be achieved using the CD algorithm with a few adaptations due to the tied weights (similar to backprop for CNNs in Chapter \ref{c:cnntraining}) \cite{NorouziM2009}: 
 \[
 \frac{\partial E}{\partial w} = \sum_{w \in W_{\text{group}}} \Delta w,
 \]
@@ -96,7 +96,7 @@ This drives the activity in a block to be sparse and likely only one or none uni
 \end{figure}
 
 
-\section{Sampling in SNNs}
+\section{Sampling in SNNs} \label{c:snnsampling}
 
 Indicated by stochastic neural transitions found in the brain in experimental studies, a new way of information encoding in the brain as representations of probability distributions and probabilistic interference has been suggested \cite{lee2003hierarchical}\cite{yang2007probabilistic}\cite{griffiths2008bayesian}.
 
@@ -187,7 +187,7 @@ Replacing the rectangular PSP with a more biological plausible alpha shaped PSP 
 \end{figure}
 
 Petrovici improved the model by replacing the stochastic neuron model by conductance bases LIF neurons, a more common and biologically inspired neuron model \cite{Petrovici2016}.
-He proved under high frequency (Poisson) noise, which leads to a high conductance state of the membrane potential, the neuron shows stochastic firing, determined by the input current and the noise frequency (as described in section 2.X).
+He proved under high frequency (Poisson) noise, which leads to a high conductance state of the membrane potential, the neuron shows stochastic firing, determined by the input current and the noise frequency (as described in Chapter \ref{c:hcs}).
 This allows the neuron to show a firing behaviour which can be matched by a sigmoid function (see Fig. \ref{fig:snnsamp4}).  
 By scaling the weights, the LIF neurons can be used to perform neural sampling similar to Buesing.
 
@@ -198,7 +198,7 @@ By scaling the weights, the LIF neurons can be used to perform neural sampling s
 	\label{fig:snnsamp4}
 \end{figure}
 
-\section{Artificial to spiking neural network conversion}
+\section{Artificial to spiking neural network conversion} \label{c:nnconversion}
 
 The results of Petrovici allow a quite simple transformation of a Boltzmann machine to spiking neural networks of noisy conductance based LIF neurons with the synaptic weights scaled to match the impact on the membrane potential \cite{Petrovici2016}.
 \\
@@ -238,12 +238,12 @@ In addition before applying the final weights, Diehl et al use some model- and d
 	\label{fig:csnnconv}
 \end{figure}
 
-\section{eCD and Sampling Machines}
+\section{eCD and Sampling Machines} \label{c:ecd}
 
 Different approaches have been proposed to train a rate-based or spiking RBM, of which the first was probably by Hinton.
 They use multiple identical binary stochastic input units for the each element in a data sample to approximate a rate based input \cite{Teh2005}.
 
-The approaches described next make use of the synaptic sampling described in the previous chapter.
+The approaches described next make use of the synaptic sampling described in the previous Chapter \ref{c:snnsampling}.
 
 One approach is the evtCD by Daniel Neil which works in continuous time with spiking networks and a STDP variant \cite{Diehl2015}.
 He simulates the positive and negative phase of the CD by unrolling the RBM with shared weights (a seen in Fig. \ref{fig:evtCD} where the RBM is unrolled to simulate CD-1 updates). 
