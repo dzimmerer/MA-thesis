@@ -263,7 +263,7 @@ The symmetric learning rule for two neurons, given their spike train $v_i(t)$ an
 \[
 \Delta w_{ij} = \mu g(t) STDP(v_i(t), h_j(t)),
 \]
-with the learning rule $\mu$, the global STDP status flag $g(t)$ determining the positive and negative phase of the CD algorithm and the $STDP(v, h)$ parametrized to implement a symmetric weight change depended in the neural activity:
+with the learning rule $\mu$, the global STDP status flag $g(t)$ determining the positive and negative phase of the CD algorithm and the $STDP(v, h)$ parametrized to implement a symmetric weight change dependent in the neural activity:
 \[
 \begin{split}
 STDP(v_i(t), h_j(t)) = v_i(t) A_{h_j}(t) + h_j(t) A_{v_i}(t), \\

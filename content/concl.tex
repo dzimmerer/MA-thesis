@@ -7,16 +7,16 @@ Two different approaches with a focus on biological resemblance to build an even
 The first system trains a probabilistic graphical model, a deep belief network, on visual input by using the contrastive divergence algorithm to approximate some data distribution and stacking up Boltzmann machines.
 This probabilistic model was transferred to different variations of spiking neural networks.
 We showed the similarities between the deep belief network and the spiking neural network and evaluated and compared their performance on a classification task.   
-The second system directly trains a spiking neural network using a version of spike time depended plasticity to simulate the contrastive divergence algorithm. By training consecutive parts of the network layerwise, a more complex system was build. Due to the computational complexity, we only evaluated the performance on a small visual datasets. We showed how lateral inhibitory connections allow more discriminative features and allow a classification accuracy of 100 $\%$ on a dataset.
+The second system directly trains a spiking neural network using a version of spike time dependent plasticity to simulate the contrastive divergence algorithm. By training consecutive parts of the network layerwise, a more complex system was built. Due to the computational complexity, we evaluated the performance on a small visual datasets. We showed how lateral inhibitory connections allow more discriminative features and allow a classification accuracy of 100 $\%$ on a dataset.
 At last we compare those two approaches and show how the event-based approach is able to generate more discriminative features and learns faster than the other approach.  
 
 \subsubsection{Biological plausibility} \label{c:bioplau}
 
 Studies by Hubel and Wiesel suggest, certain neurons respond so similar features at different position of in visible field \cite{Hubel1959}.
 This suggest similar, but due to contortions in the cornea most probably not exactly the same, synaptic weights. 
-One explanation of this could be shared weights similar to CNNs. 
+One explanation for this could be shared weights similar to CNNs. 
 Since the weight updates in the brain are primarily believed to be local, there is no known principle to keep weights between different neurons in the brain synchronized \cite{DBLP:journals/corr/ScellierB16}.
-So while the trained structure, with receptive fields and similar weights is quite plausible, the training procedure here is not.
+So while the trained structure, with receptive fields and similar weights is quite plausible, the training procedure presented here is not.
 A more plausible way in the brain to get similar weights, is due to the similarity of the inputs, e.g. if two receptive fields get quite similar input, their weights will with a high probability converge to the same target values.  
 While this requires all receptive fields to be presented with the complete data, presenting each field with some part of the data but updating all fields with a combined update can be more computational effective. 
 This could be a principle CNNs utilize to get biological plausible result, while performing not completely biological plausible updates.
@@ -24,7 +24,7 @@ This could be a principle CNNs utilize to get biological plausible result, while
 Another biological not completely plausible part of our presented system are the bidirectional synapses.
 This in turn could be easily translated to two directional synapses, with some weight synchronization. 
 While in this case local updates are sufficient, to keep the weights similar (e.g. applying a similar learning rule to both weights), and research on discrete NNs has shown some automatic weight synchronization in Autoencoders \cite{vincent2010stacked}, there is no biological proof.
-The STDP flag determining either completely positive or negative does not appear to be plausible as well.
+The STDP flag determining either completely positive or negative and dividing the training into different phases, does not appear to be plausible as well.
 
 Even so this system has many constrains, it might could be counted among one of the more biological plausible deep learning architectures.     
 

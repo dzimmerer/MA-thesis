@@ -58,7 +58,7 @@
 \contentsline {paragraph}{\nonumberline Kernel function}{29}{section*.65}
 \contentsline {subsubsection}{\nonumberline Neural Coding}{31}{section*.67}
 \contentsline {subsubsection}{\nonumberline Learning}{32}{section*.68}
-\contentsline {paragraph}{\nonumberline Spike time depended plasticity}{32}{section*.69}
+\contentsline {paragraph}{\nonumberline Spike time dependent plasticity}{32}{section*.69}
 \contentsline {paragraph}{\nonumberline Long-term potentiation}{32}{section*.70}
 \contentsline {paragraph}{\nonumberline Long-term depression}{32}{section*.71}
 \contentsline {chapter}{\numberline {3}Related Work}{35}{chapter.3}
@@ -79,7 +79,7 @@
 \contentsline {paragraph}{\nonumberline Lateral inhibition}{49}{section*.92}
 \contentsline {subsection}{\numberline {4.3.2}Spiking DBNs}{50}{subsection.4.3.2}
 \contentsline {chapter}{\numberline {5}Implementation}{53}{chapter.5}
-\contentsline {section}{\numberline {5.1}Analog DBNs}{53}{section.5.1}
+\contentsline {section}{\numberline {5.1}Artifical DBNs}{53}{section.5.1}
 \contentsline {section}{\numberline {5.2}Conversion}{54}{section.5.2}
 \contentsline {section}{\numberline {5.3}eCD}{55}{section.5.3}
 \contentsline {chapter}{\numberline {6}Experiments \& Results}{57}{chapter.6}

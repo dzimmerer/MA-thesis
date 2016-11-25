@@ -1,14 +1,14 @@
 \chapter{Implementation} \label{c:impl}
 
 
-\section{Analog DBNs} \label{c:dbnimpl}
+\section{Artifical DBNs} \label{c:dbnimpl}
 
 The DBNs were implemented in the Theano-Framework \cite{2016arXiv160502688full}, to utilize the computational power of the GPU.
 The implementation of the singe RBMs is adapted from the official Theano RBM \cite{theanoRBM}.
 \\
 \\
 An upward pass in performed as follows:
-As an input we take a 4D tensor $\textbf{V}$ in the form of \textit{(batch size, input channels, input height, input width)}, and for the upwards pass convolve it with a filters $\textbf{W}$ of the shape \textit{(number of filters, input channel, filter height, filter width)} with a stride of 1.
+As an input we take a 4D tensor $\textbf{V}$ of size \textit{(batch size, input channels, input rows, input columns)}, and for the upwards pass convolve it with a filters $\textbf{W}$ of the shape \textit{(number of filters, input channel, filter height, filter width)} with a stride of 1 without any padding.
 This results in feature maps $\textbf{H}_{pre} = \textbf{W} * \textbf{V}$ of the shape \textit{(batch size, number of filters, input height - filter height + 1 , input width - filter width + 1)}.
 A constant $c$ is added to the pre-activation feature maps as bias.
 On those feature maps a sigmoid function $\sigma$ is applied and accordingly Bernoulli sampled to get the activation of the hidden units $\textbf{H}$.
@@ -24,7 +24,7 @@ On those feature maps a sigmoid function $\sigma$ is applied and accordingly Ber
 
 
 The downward pass on the activation of the hidden units is performed similar:
-The input is the activation of the hidden unit $\textbf{H}$, and convolve it the the 180 degree flipped kernel $\tilde{\textbf{W}}$, where the first and second dimensions are swapped.
+The input is the activation of the hidden unit $\textbf{H}$ with zero padding, and convolve it with the 180 degree flipped kernel $\tilde{\textbf{W}}$, where the first and second dimensions are swapped.
 Afterwards a sigmoid function $\sigma$ is applied and accordingly sampled to get the new visible layer activations $\textbf{V}'$.
 
 \begin{algorithm}
@@ -36,17 +36,17 @@ Afterwards a sigmoid function $\sigma$ is applied and accordingly sampled to get
 \end{algorithmic}
 \end{algorithm}
 
-One complete Gibbs sampling step consists of on upwards and a consecutive downward pass.
+One complete Gibbs sampling step consists of an upwards and a consecutive downward pass.
 
 \begin{algorithm}
 \caption{Gibbs step}
 \begin{algorithmic}
-\State $V_0 \gets upward(H_0) $  
-\State $H_1 \gets downward(V_0) $  
+\State $H_0 \gets upward(V_0) $  
+\State $V_1 \gets downward(H_0) $  
 \end{algorithmic}
 \end{algorithm}
 
-Each RBM is trained with the CD-$k$ update rule, therefore after performing one Gibbs sampling step to get the distribution of the data $\textbf{V}_0, \textbf{H}_0$  (positive phase), we perform $k-1$ additional Gibbs sampling steps to get an estimate of the model distribution $\textbf{V}_k, \textbf{H}_k$  (negative phase).
+Each RBM is trained with the CD-$k$ update rule, therefore after performing one Gibbs sampling step to get a sample of the data distribution $\textbf{V}_0, \textbf{H}_0$  (positive phase), we perform $k-1$ additional Gibbs sampling steps to get a sample of an estimate of the model distribution $\textbf{V}_k, \textbf{H}_k$  (negative phase).
 
 As error function we define the difference between the free energy of the positive phase and the negative phase.
 \[
@@ -56,15 +56,16 @@ We use Theanos auto-differentiation to determine the gradient and perform gradie
 \[
 \textbf{W}' = \textbf{W} - \mu \Delta \textbf{W} - \upsilon \textbf{W} 
 \]
-We train the RBM for a given number of epochs, with a batch size smaller than the dataset, thus performing stochastic gradient descent.
+A common choice for $\mu$ is $0.1$ and for $\upsilon$ is $0.003$ throughout this thesis.
+We train the RBM for a given number of iterations over the dataset, with a batch size smaller than the dataset, thus performing stochastic gradient descent.
 
-To build up the DBN each RBM was trained greedily.
-After training one RBM the entire dataset was converted by doing one upwards pass in the trained RBM and using the activation of the hidden units as the new input data for the next RBM.
+To build up the DBN each RBM is trained greedily.
+After training one RBM the entire dataset is converted by doing one upwards pass in the trained RBM and using the activation of the hidden units as the new input data for the next RBM.
 
 \begin{algorithm}
 \caption{build DBN}
 \begin{algorithmic}
-\For{$i$  in $\#$ \textit{layers}} 
+\For{$i$  in $\#$\textit{layers}} 
 \State Train $\text{RBM}_i$ on dataset $\text{ds}_i$
 \State convert dataset: $\text{ds}_{i+1} = upward_i(\text{ds}_i)$ 
 \EndFor
@@ -78,9 +79,10 @@ The last layer, the classification layer, consists of a fully connected RBM trai
 
 \section{Conversion} \label{c:conversionimpl}
 
-To simulate the converted DBNs we use the pyNN framework with Nest as spiking network simulator \cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}.
-To simulate the CNN and DBN we use current and conductance based LIF neurons, respectively.
+To simulate the converted DBNs we use the PyNN framework with Nest as spiking network simulator \cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}.
+To simulate the CNN and DBN we use current and conductance based LIF neurons, respectively, see Chapter \ref{c:conversionappr} for more details.
 Each unit is injected with high frequency Possion distributed excitatory and inhibitory input spikes with the frequency $\lambda_{noise}= 5000 \text{Hz}$ and synaptic weights $w_{n+}$ and $w_{n-}$ respectively.
+A common choice in this thesis is $w_{n+} \approx - w_{n-} \approx 0.1$ for current-based LIF neurons and  $w_{n+} \approx - w_{n-} \approx 0.005$ for conductance-based LIF neurons.
 %The parameters for the models can be seen in Table x( @TODO table).
 
 A unit in the DBN is represented by a neuron, a layer by a neuron population.
@@ -90,29 +92,30 @@ The input is transformed to a Poisson distributed spike trains, where the rate o
 The input is directly fed into the bottom layer neurons with a high fixed weight $w_{in}$ to reliably generate equal spikes in the bottom layer.    
 
 For each data sample the network is simulated for a runtime of $t$. 
-To get the classification results, the spikes count of all single neurons in the label layer $a_i$ is recorded and to get a label prediction the index of the most frequent spiking neuron is determined:
+To get the classification results, the spike count of all single neurons in the label layer $a_i$ is recorded and to get a label prediction the index $i$ of the most frequent spiking neuron is determined:
 \[
-y_{pred} = argmax_i \; a_i
+y_{pred} = argmax_i \; a_i,
 \]
-
+with the size of the label layer being, due to the one-hot encoding of the label, equivalent to the number of different classes ($i \in \{0,..., n_{classes}\}$). 
 
 \section{eCD} \label{c:ecdimpl}
 
-The eCD learning was implemented in PyNN with Nest with simulated STDP weight updated at discrete time steps outside the simulation, as well as Brian simulator with event-based online STDP weight updates, but due to the simulation speed we chose Brian for most of our experiments\cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}\cite{10.3389/neuro.11.005.2008}.
+The eCD learning was implemented in PyNN with Nest with shared synaptic weights and shared continuous STDP weight updates as well as in the Brian simulator with individual STDP weight updates and weight synchronization at discrete timesteps \cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}\cite{10.3389/neuro.11.005.2008}. 
+As shown in \ref{fig:ecdnest} due to self-facilitation leading to a weight "explosion" when using convolutional shared weight updates, we chose Brian for most of our experiments.
 
 As neuron type LIF neurons with high frequency input noise were chosen.
 Each input element $x_i \in \textbf{x}$ of a data sample $\textbf{x}$ gets transformed to Poisson distributed spikes train, with the rate $\lambda$ proportional to the input value $\lambda \propto x_i$. 
 
 Each RBM consist of a visible and hidden layer. 
-The visible consist of one neuron population with $n = |\textbf{x}|$ neurons representing the input, the data population. 
+The visible layer consist of one neuron population with $n = |\textbf{x}|$ neurons representing the input, the data population. 
 If needed a second neuron population representing the label input $\textbf{y}$, the label population, can be added to the visible units.
 The hidden layer is an neuron population of the size  $ k = \textit{number of filters} \times (\textit{input height} - \textit{filter height} + 1) \times (\textit{input width} - \textit{filter width} + 1)$.
 
 The data population is sparsely connected to the hidden layer with synchronized weights implementing the convolution, while the label population is fully connected to the hidden layer.
 In the hidden layer we connect a neuron to other neurons in a square around same position in different feature maps with a inhibitory synapse with a fixed negative weight.
 
-The training of the spiking RBM is performed with the adapted eCD algorithm (see 4.3).
-The RBM is trained on one data sample for $t_{sample} = n \times t_{ref}$ cycles, which can, considering the different training phases, be further divided into $t_{sample} = t_{burn-in} + t_{learn} + t_{burn-in} + t_{learn} + t_{flush} = t_{pos} + t_{neg} + t_{flush}$ (with $t_{pos} = t_{neg} = t_{burn-in} + t_{learn}$ ). 
+The training of the spiking RBM is performed with the adapted eCD algorithm (see \ref{c:ecdappr}).
+The RBM is trained on one data sample for $t_{sample} = n \times t_{ref}$ cycles, which can, considering the different training phases, be further divided into $t_{sample} = t_{burn-in} + t_{learn} + t_{burn-in} + t_{learn} + t_{flush} = t_{pos} + t_{neg} + t_{flush}$ (with $t_{pos} = t_{neg} = t_{burn-in} + t_{learn}$ ), as visualized in Figure \ref{fig:ecd5}. 
 As a result we receive the following training procedure:
 \begin{itemize}
 

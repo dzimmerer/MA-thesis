@@ -65,7 +65,7 @@ A sample network with the qualitative part as well as the quantitative part can 
   		\caption{Conditional probability $p(c |a , b)$ given by a function over $a,b$.}
   		\label{fig:bayesnet}
 	\end{subfigure}
-	\caption{A sample Bayesian network with 5 binary nodes. (a) In the network RV $c$ is directly depended on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$, $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descended $e$. (b) The conditional probability of $p(c |a , b)$ in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma$ a network with such probability functions is called sigmoid belief network.}
+	\caption{A sample Bayesian network with 5 binary nodes. (a) In the network RV $c$ is directly dependent on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$, $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descended $e$. (b) The conditional probability of $p(c |a , b)$ in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma$ a network with such probability functions is called sigmoid belief network.}
 	\label{fig:test}
 \end{figure}
 
@@ -94,7 +94,7 @@ Thus a Bayesian network can be seen as a tool to simplify and apply the Bayes ru
 
 In contrast to Bayesian networks, Markov random fields are undirected graphical models, in which random variables are also represented by nodes but edges in this case indicate conditional dependencies \cite{Goodfellow-et-al-2016-Book}\cite{murphy2012machine}.
 If two nodes $x_i$ and $x_j$ are connected by a edge, they are called each others neighbours.
-Given all of their neighbours, two nodes $x_k$ and $x_m$ are in-depended on each other.
+Given all of their neighbours, two nodes $x_k$ and $x_m$ are independent on each other.
 Thus an MRF can be seen as a model of the joint probabilities of RVs (see Fig. \ref{fig:markovnet1}).
 
 As a result to reduce the complexities and redundancies of the probability distribution, instead of defining one probability distribution over all RVs, this allows a factorization of the probability distribution into fully connected partial graphs, so-called cliques:
@@ -123,7 +123,7 @@ The clique potential for each state always has to be greater or equal to zero, b
   		\caption{Cliques in a Markov network}
   		\label{fig:markovnet2}
 	\end{subfigure}
-	\caption{(a) A Markov network with 5 nodes. The white node is depended on all connected nodes (blue nodes). Given the blue nodes the white node is independent on any other node in the network. Given the white node all the blue nodes are independent on each other. (b) Two cliques in a Markov network. The blue clique is maximal, since no vertex can be added, which is fully connected to all others in the blue clique. The green one is not maximal, since the node $x_3$ could be added \cite{bishop2013pattern}.}
+	\caption{(a) A Markov network with 5 nodes. The white node is dependent on all connected nodes (blue nodes). Given the blue nodes the white node is independent on any other node in the network. Given the white node all the blue nodes are independent on each other. (b) Two cliques in a Markov network. The blue clique is maximal, since no vertex can be added, which is fully connected to all others in the blue clique. The green one is not maximal, since the node $x_3$ could be added \cite{bishop2013pattern}.}
 	\label{fig:markovnet}
 \end{figure}
 
@@ -1140,9 +1140,9 @@ To consider these changes as learning, they have to span over minutes to days or
  
 The models most commonly used are inspired on the research and discoveries of Hebb and the previously discussed Hebb principle (Chapter \ref{c:hebb}).
 
-\paragraph{Spike time depended plasticity} \label{c:stdp}
+\paragraph{Spike time dependent plasticity} \label{c:stdp}
 
-Spike time depended plasticity (STDP), inspired by research on single neurons with artificially induced current, describes such a Hebbian learning algorithm.
+Spike time dependent plasticity (STDP), inspired by research on single neurons with artificially induced current, describes such a Hebbian learning algorithm.
 
 Experiments indicated an increase of the synaptic weight if a post-synaptic spike occurred in strong temporal vicinity after a pre-synaptic spike and a decrease of the synaptic weight if a post-synaptic spike occurred in strong temporal vicinity before a pre-synaptic spike.
 The further apart the spike times of the different neurons were, the weaker was the effect on the spike (see Fig. \ref{fig:stdp}).
