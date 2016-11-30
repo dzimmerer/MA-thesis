@@ -19,15 +19,16 @@ I was expecting a `,' or a `}'---line 38 of file content/bibliography.bib
  : @misc{rbmImg,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "10.3389/fpsyg.2013.00515"
 Warning--to sort, need author or key in sampleFD
 Warning--to sort, need author or key in neuronImg
 Warning--to sort, need author or key in perceptronImg
 Warning--to sort, need author or key in mlpImg
-Warning--to sort, need author or key in hopfImg
 Warning--to sort, need author or key in boltzImg
-Warning--to sort, need author or key in rbmImg
-Warning--to sort, need author or key in cdImg
 Warning--to sort, need author or key in theanoRBM
+Warning--to sort, need author or key in cdImg
+Warning--to sort, need author or key in DBNImg
+Warning--to sort, need author or key in convImg
 Warning--empty booktitle in heikoMA
 Warning--empty year in heikoMA
 Warning--empty journal in Fischer2014
@@ -49,45 +50,45 @@ Warning--empty booktitle in salakhutdinov2009deep
 Warning--empty year in salakhutdinov2009deep
 Warning--empty journal in Scellier2016a
 Warning--there's a number but no volume in Woodford2002
-You've used 85 entries,
+You've used 86 entries,
             2118 wiz_defined-function locations,
-            982 strings with 20867 characters,
-and the built_in function-call counts, 30701 in all, are:
-= -- 2880
-> -- 1880
+            989 strings with 21110 characters,
+and the built_in function-call counts, 31011 in all, are:
+= -- 2909
+> -- 1898
 < -- 13
-+ -- 749
-- -- 664
-* -- 2318
-:= -- 5168
-add.period$ -- 254
-call.type$ -- 85
-change.case$ -- 581
++ -- 756
+- -- 670
+* -- 2341
+:= -- 5224
+add.period$ -- 257
+call.type$ -- 86
+change.case$ -- 587
 chr.to.int$ -- 0
-cite$ -- 115
-duplicate$ -- 1011
-empty$ -- 2128
-format.name$ -- 664
-if$ -- 6236
+cite$ -- 116
+duplicate$ -- 1022
+empty$ -- 2150
+format.name$ -- 670
+if$ -- 6298
 int.to.chr$ -- 0
-int.to.str$ -- 85
-missing$ -- 75
-newline$ -- 420
-num.names$ -- 154
-pop$ -- 660
+int.to.str$ -- 86
+missing$ -- 76
+newline$ -- 425
+num.names$ -- 156
+pop$ -- 664
 preamble$ -- 1
-purify$ -- 499
+purify$ -- 504
 quote$ -- 0
-skip$ -- 735
+skip$ -- 742
 stack$ -- 0
-substring$ -- 1545
-swap$ -- 194
+substring$ -- 1559
+swap$ -- 195
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 330
+type$ -- 334
 warning$ -- 30
-while$ -- 251
-width$ -- 87
-write$ -- 876
+while$ -- 254
+width$ -- 88
+write$ -- 887
 (There was 1 error message)

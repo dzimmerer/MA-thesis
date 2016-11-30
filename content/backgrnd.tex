@@ -689,8 +689,7 @@ where $s_i$ is the current state/ activity of neuron $i$.
 \begin{figure}
 	\centering
     	\includegraphics[width=0.5\textwidth]{imgs/hopfield.png} 
-    \caption{A blueprint of a Hopfield nets with 8 binary units. The units are connected with symmetric undirected connections \cite{hopfImg}.}
-    % http://blogs.cetis.org.uk/wilbert/2009/04/07/ims-qti-and-the-economics-of-interoperability/
+    \caption{A blueprint of a Hopfield nets with 7 binary units. The units are connected with symmetric undirected connections.}
 	\label{fig:hopfiled}
 \end{figure}
 
@@ -830,8 +829,7 @@ F(\textbf{v}) = - \sum x_i b_i - \sum \log(1 + \exp^{x_i})  .
 \begin{figure}
 	\centering
     	\includegraphics[width=0.5\textwidth]{imgs/rbm.png} 
-    \caption{A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are only dependent on the hidden units and the hidden units only on the visible units \cite{rbmImg}.}
-    % http://www.todaysoftmag.com/article/747/restricted-boltzmann-machines
+    \caption{A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are only dependent on the hidden units and the hidden units only on the visible units \cite{theanoRBM}.}
 	\label{fig:rbm}
 \end{figure}
 
@@ -853,7 +851,6 @@ Thus given a data sample $\textbf{x}$ an CD-k update is computed as follows:
 	\centering
     	\includegraphics[width=0.8\textwidth]{imgs/cd.png} 
     \caption{A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite{cdImg}.}
-    % http://recognize-speech.com/acoustic-model/knn/training-neural-networks
 	\label{fig:cd}
 \end{figure}
 
@@ -887,8 +884,7 @@ After training, the DBN still has symmetric weights.
 \begin{figure}
 	\centering
     	\includegraphics[width=0.8\textwidth]{imgs/dbn_stacking.png} 
-    \caption{Building up a deep belief network, by training RBMs greedily and stacking them up on top of each other. At first only one RBM is trained. On top of the first RBM the next RBM is trained. This can procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite{cdImg}.}
-    % http://recognize-speech.com/acoustic-model/knn/training-neural-networks
+    \caption{Building up a deep belief network, by training RBMs greedily and stacking them up on top of each other. At first only one RBM is trained. On top of the first RBM the next RBM is trained. This can procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite{DBNImg}.}
 	\label{fig:dbn}
 \end{figure}
 

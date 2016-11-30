@@ -153,10 +153,8 @@
 \newlabel{c:hopnets}{{2.2.2}{18}{Hopfield Nets}{section*.36}{}}
 \newlabel{c:hopmodel}{{2.2.2}{18}{Model}{section*.37}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Model}{18}{section*.37}}
-\citation{hopfImg}
-\citation{hopfImg}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces A blueprint of a Hopfield nets with 8 binary units. The units are connected with symmetric undirected connections \cite  {hopfImg}.\relax }}{19}{figure.caption.38}}
-\newlabel{fig:hopfiled}{{2.12}{19}{A blueprint of a Hopfield nets with 8 binary units. The units are connected with symmetric undirected connections \cite {hopfImg}.\relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces A blueprint of a Hopfield nets with 7 binary units. The units are connected with symmetric undirected connections.\relax }}{19}{figure.caption.38}}
+\newlabel{fig:hopfiled}{{2.12}{19}{A blueprint of a Hopfield nets with 7 binary units. The units are connected with symmetric undirected connections.\relax }{figure.caption.38}{}}
 \citation{ackley1985learning}
 \citation{Goodfellow-et-al-2016-Book}
 \citation{boltzImg}
@@ -176,42 +174,42 @@
 \citation{smolensky1986information}
 \citation{hinton2010practical}
 \citation{Fischer2014}
+\citation{theanoRBM}
+\citation{theanoRBM}
+\citation{hinton2002training}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline RBMs}{22}{section*.43}}
 \newlabel{c:rbms}{{2.2.2}{22}{RBMs}{section*.43}{}}
-\citation{rbmImg}
-\citation{rbmImg}
-\citation{hinton2002training}
+\newlabel{c:cdk}{{2.2.2}{22}{CD-k Training}{section*.45}{}}
 \citation{cdImg}
 \citation{cdImg}
 \citation{tieleman2008training}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are only dependent on the hidden units and the hidden units only on the visible units \cite  {rbmImg}.\relax }}{23}{figure.caption.44}}
-\newlabel{fig:rbm}{{2.14}{23}{A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are only dependent on the hidden units and the hidden units only on the visible units \cite {rbmImg}.\relax }{figure.caption.44}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite  {cdImg}.\relax }}{23}{figure.caption.46}}
-\newlabel{fig:cd}{{2.15}{23}{A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite {cdImg}.\relax }{figure.caption.46}{}}
-\newlabel{c:cdk}{{2.2.2}{23}{CD-k Training}{section*.45}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline CD-k Training}{23}{section*.45}}
 \citation{hinton2006fast}
 \citation{hinton2009deep}
 \citation{Goodfellow-et-al-2016-Book}
-\citation{cdImg}
-\citation{cdImg}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Building up a deep belief network, by training RBMs greedily and stacking them up on top of each other. At first only one RBM is trained. On top of the first RBM the next RBM is trained. This can procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite  {cdImg}.\relax }}{24}{figure.caption.50}}
-\newlabel{fig:dbn}{{2.16}{24}{Building up a deep belief network, by training RBMs greedily and stacking them up on top of each other. At first only one RBM is trained. On top of the first RBM the next RBM is trained. This can procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite {cdImg}.\relax }{figure.caption.50}{}}
-\newlabel{c:pcd}{{2.2.2}{24}{Persistent CD}{section*.47}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Persistent CD}{24}{section*.47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are only dependent on the hidden units and the hidden units only on the visible units \cite  {theanoRBM}.\relax }}{23}{figure.caption.44}}
+\newlabel{fig:rbm}{{2.14}{23}{A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are only dependent on the hidden units and the hidden units only on the visible units \cite {theanoRBM}.\relax }{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite  {cdImg}.\relax }}{23}{figure.caption.46}}
+\newlabel{fig:cd}{{2.15}{23}{A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite {cdImg}.\relax }{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline CD-k Training}{23}{section*.45}}
+\newlabel{c:pcd}{{2.2.2}{23}{Persistent CD}{section*.47}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Persistent CD}{23}{section*.47}}
+\citation{DBNImg}
+\citation{DBNImg}
+\citation{hinton1995wake}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Building up a deep belief network, by training RBMs greedily and stacking them up on top of each other. At first only one RBM is trained. On top of the first RBM the next RBM is trained. This can procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite  {DBNImg}.\relax }}{24}{figure.caption.50}}
+\newlabel{fig:dbn}{{2.16}{24}{Building up a deep belief network, by training RBMs greedily and stacking them up on top of each other. At first only one RBM is trained. On top of the first RBM the next RBM is trained. This can procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite {DBNImg}.\relax }{figure.caption.50}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Deep Belief Networks}{24}{section*.48}}
 \newlabel{c:dbns}{{2.2.2}{24}{Deep Belief Networks}{section*.48}{}}
 \newlabel{c:dbntraining}{{2.2.2}{24}{Training}{section*.49}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Training}{24}{section*.49}}
 \newlabel{c:dbnfinetuning}{{2.2.2}{24}{Fine-tuning}{section*.51}{}}
-\citation{hinton1995wake}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Fine-tuning}{24}{section*.51}}
 \citation{maass1997networks}
 \citation{abbott1999lapicque}
 \citation{gerstner2014neuronal}
 \citation{Petrovici2016}
 \citation{heikoMA}
 \citation{heikoMA}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Fine-tuning}{25}{section*.51}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Spiking neural networks}{25}{subsection.2.2.3}}
 \newlabel{c:snns}{{2.2.3}{25}{Spiking neural networks}{subsection.2.2.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Neuron Models}{25}{section*.52}}
@@ -226,59 +224,59 @@
 \newlabel{fig:lif}{{2.17}{26}{A LIF neuron as an electrical circuit. The capacitor $C_m$ corresponds to the potential at the membrane, $g_l$ the leakage potential and $E_l$ the resting potential. If the membrane potential is greater than $U_t$ a spike $\delta $ is emitted \cite {heikoMA}.\relax }{figure.caption.54}{}}
 \newlabel{c:hodghux}{{2.2.3}{26}{Hodgkin-Huxley}{section*.56}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Hodgkin-Huxley}{26}{section*.56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces Different firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite  {gerstner2014neuronal}.\relax }}{26}{figure.caption.55}}
+\newlabel{fig:neuronbe}{{2.18}{26}{Different firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite {gerstner2014neuronal}.\relax }{figure.caption.55}{}}
 \citation{heikoMA}
 \citation{heikoMA}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces A Hodgkin-Huxley as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite  {heikoMA}.\relax }}{27}{figure.caption.57}}
+\newlabel{fig:hogdehux}{{2.19}{27}{A Hodgkin-Huxley as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite {heikoMA}.\relax }{figure.caption.57}{}}
 \citation{Heeger2000}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces Different firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite  {gerstner2014neuronal}.\relax }}{27}{figure.caption.55}}
-\newlabel{fig:neuronbe}{{2.18}{27}{Different firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite {gerstner2014neuronal}.\relax }{figure.caption.55}{}}
-\newlabel{c:poissonspikes}{{2.2.3}{27}{Activity in a network}{section*.58}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Activity in a network}{27}{section*.58}}
 \citation{Petrovici2016}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces A Hodgkin-Huxley as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite  {heikoMA}.\relax }}{28}{figure.caption.57}}
-\newlabel{fig:hogdehux}{{2.19}{28}{A Hodgkin-Huxley as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite {heikoMA}.\relax }{figure.caption.57}{}}
+\newlabel{c:poissonspikes}{{2.2.3}{28}{Activity in a network}{section*.58}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Activity in a network}{28}{section*.58}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Synapses}{28}{section*.59}}
 \newlabel{c:synapses}{{2.2.3}{28}{Synapses}{section*.59}{}}
 \newlabel{c:cuba}{{2.2.3}{28}{Current-based synaptic interaction}{section*.60}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Current-based synaptic interaction}{28}{section*.60}}
+\newlabel{c:coba}{{2.2.3}{28}{Conductance-based synaptic interaction}{section*.61}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Conductance-based synaptic interaction}{28}{section*.61}}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
-\newlabel{c:coba}{{2.2.3}{29}{Conductance-based synaptic interaction}{section*.61}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Conductance-based synaptic interaction}{29}{section*.61}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.20}{\ignorespaces Three samples of Ornstein\IeC {\textendash }Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite  {Petrovici2016}.\relax }}{29}{figure.caption.63}}
+\newlabel{fig:ornuhl}{{2.20}{29}{Three samples of Ornstein–Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite {Petrovici2016}.\relax }{figure.caption.63}{}}
 \newlabel{c:hcs}{{2.2.3}{29}{High conductance state}{section*.62}{}}
 \@writefile{toc}{\contentsline {subparagraph}{\nonumberline High conductance state}{29}{section*.62}}
 \newlabel{c:pspkernel}{{2.2.3}{29}{Kernel function}{section*.65}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Kernel function}{29}{section*.65}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.20}{\ignorespaces Three samples of Ornstein\IeC {\textendash }Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite  {Petrovici2016}.\relax }}{30}{figure.caption.63}}
-\newlabel{fig:ornuhl}{{2.20}{30}{Three samples of Ornstein–Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite {Petrovici2016}.\relax }{figure.caption.63}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.21}{\ignorespaces A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time \cite  {Petrovici2016}. \relax }}{30}{figure.caption.64}}
-\newlabel{fig:hcs}{{2.21}{30}{A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time \cite {Petrovici2016}. \relax }{figure.caption.64}{}}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
 \citation{Meftah2013}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.22}{\ignorespaces Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite  {Petrovici2016}. \relax }}{31}{figure.caption.66}}
-\newlabel{fig:pspkernels}{{2.22}{31}{Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite {Petrovici2016}. \relax }{figure.caption.66}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Neural Coding}{31}{section*.67}}
-\newlabel{c:neuralcoding}{{2.2.3}{31}{Neural Coding}{section*.67}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.21}{\ignorespaces A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time \cite  {Petrovici2016}. \relax }}{30}{figure.caption.64}}
+\newlabel{fig:hcs}{{2.21}{30}{A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time \cite {Petrovici2016}. \relax }{figure.caption.64}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.22}{\ignorespaces Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite  {Petrovici2016}. \relax }}{30}{figure.caption.66}}
+\newlabel{fig:pspkernels}{{2.22}{30}{Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite {Petrovici2016}. \relax }{figure.caption.66}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Kernel function}{30}{section*.65}}
 \citation{gerstner2014neuronal}
 \citation{gerstner2014neuronal}
 \citation{Sjostrom2010}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Neural Coding}{31}{section*.67}}
+\newlabel{c:neuralcoding}{{2.2.3}{31}{Neural Coding}{section*.67}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Learning}{31}{section*.68}}
+\newlabel{c:snnlearning}{{2.2.3}{31}{Learning}{section*.68}{}}
+\newlabel{c:stdp}{{2.2.3}{31}{Spike time dependent plasticity}{section*.69}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Spike time dependent plasticity}{31}{section*.69}}
 \citation{Buchanan2010}
 \citation{Buchanan2010}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Learning}{32}{section*.68}}
-\newlabel{c:snnlearning}{{2.2.3}{32}{Learning}{section*.68}{}}
-\newlabel{c:stdp}{{2.2.3}{32}{Spike time dependent plasticity}{section*.69}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Spike time dependent plasticity}{32}{section*.69}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.23}{\ignorespaces Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite  {Buchanan2010}.\relax }}{32}{figure.caption.72}}
+\newlabel{fig:stdp}{{2.23}{32}{Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite {Buchanan2010}.\relax }{figure.caption.72}{}}
 \newlabel{c:ltp}{{2.2.3}{32}{Long-term potentiation}{section*.70}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Long-term potentiation}{32}{section*.70}}
 \newlabel{c:ldp}{{2.2.3}{32}{Long-term depression}{section*.71}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Long-term depression}{32}{section*.71}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.23}{\ignorespaces Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite  {Buchanan2010}.\relax }}{33}{figure.caption.72}}
-\newlabel{fig:stdp}{{2.23}{33}{Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite {Buchanan2010}.\relax }{figure.caption.72}{}}
 \@setckpt{content/backgrnd}{
-\setcounter{page}{34}
+\setcounter{page}{33}
 \setcounter{equation}{0}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}

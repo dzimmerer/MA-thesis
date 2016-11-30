@@ -42,71 +42,73 @@
 \contentsline {paragraph}{\nonumberline Learning Rule}{21}{section*.42}
 \contentsline {subsubsection}{\nonumberline RBMs}{22}{section*.43}
 \contentsline {paragraph}{\nonumberline CD-k Training}{23}{section*.45}
-\contentsline {paragraph}{\nonumberline Persistent CD}{24}{section*.47}
+\contentsline {paragraph}{\nonumberline Persistent CD}{23}{section*.47}
 \contentsline {subsubsection}{\nonumberline Deep Belief Networks}{24}{section*.48}
 \contentsline {paragraph}{\nonumberline Training}{24}{section*.49}
-\contentsline {paragraph}{\nonumberline Fine-tuning}{25}{section*.51}
+\contentsline {paragraph}{\nonumberline Fine-tuning}{24}{section*.51}
 \contentsline {subsection}{\numberline {2.2.3}Spiking neural networks}{25}{subsection.2.2.3}
 \contentsline {subsubsection}{\nonumberline Neuron Models}{25}{section*.52}
 \contentsline {paragraph}{\nonumberline LIF}{25}{section*.53}
 \contentsline {paragraph}{\nonumberline Hodgkin-Huxley}{26}{section*.56}
-\contentsline {paragraph}{\nonumberline Activity in a network}{27}{section*.58}
+\contentsline {paragraph}{\nonumberline Activity in a network}{28}{section*.58}
 \contentsline {subsubsection}{\nonumberline Synapses}{28}{section*.59}
 \contentsline {paragraph}{\nonumberline Current-based synaptic interaction}{28}{section*.60}
-\contentsline {paragraph}{\nonumberline Conductance-based synaptic interaction}{29}{section*.61}
+\contentsline {paragraph}{\nonumberline Conductance-based synaptic interaction}{28}{section*.61}
 \contentsline {subparagraph}{\nonumberline High conductance state}{29}{section*.62}
-\contentsline {paragraph}{\nonumberline Kernel function}{29}{section*.65}
+\contentsline {paragraph}{\nonumberline Kernel function}{30}{section*.65}
 \contentsline {subsubsection}{\nonumberline Neural Coding}{31}{section*.67}
-\contentsline {subsubsection}{\nonumberline Learning}{32}{section*.68}
-\contentsline {paragraph}{\nonumberline Spike time dependent plasticity}{32}{section*.69}
+\contentsline {subsubsection}{\nonumberline Learning}{31}{section*.68}
+\contentsline {paragraph}{\nonumberline Spike time dependent plasticity}{31}{section*.69}
 \contentsline {paragraph}{\nonumberline Long-term potentiation}{32}{section*.70}
 \contentsline {paragraph}{\nonumberline Long-term depression}{32}{section*.71}
-\contentsline {chapter}{\numberline {3}Related Work}{35}{chapter.3}
-\contentsline {section}{\numberline {3.1}Convolutional RBM}{35}{section.3.1}
-\contentsline {section}{\numberline {3.2}Sampling in SNNs}{36}{section.3.2}
-\contentsline {section}{\numberline {3.3}Artificial to spiking neural network conversion}{38}{section.3.3}
-\contentsline {section}{\numberline {3.4}eCD and Sampling Machines}{39}{section.3.4}
-\contentsline {chapter}{\numberline {4}Approach}{43}{chapter.4}
-\contentsline {section}{\numberline {4.1}Convolutional architecture in spiking neural network}{43}{section.4.1}
-\contentsline {section}{\numberline {4.2}Conversion}{43}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Convolutional DBNs}{43}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Conversion}{45}{subsection.4.2.2}
-\contentsline {paragraph}{\nonumberline Conversion as CNN}{45}{section*.86}
-\contentsline {paragraph}{\nonumberline Conversion with conductance-based LIF}{45}{section*.87}
-\contentsline {paragraph}{\nonumberline Conversion with current-based LIF}{47}{section*.89}
-\contentsline {section}{\numberline {4.3}eCD}{47}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Convolution in eCD}{48}{subsection.4.3.1}
-\contentsline {paragraph}{\nonumberline Lateral inhibition}{49}{section*.92}
-\contentsline {subsection}{\numberline {4.3.2}Spiking DBNs}{50}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}Implementation}{53}{chapter.5}
-\contentsline {section}{\numberline {5.1}Artifical DBNs}{53}{section.5.1}
-\contentsline {section}{\numberline {5.2}Conversion}{54}{section.5.2}
-\contentsline {section}{\numberline {5.3}eCD}{55}{section.5.3}
-\contentsline {chapter}{\numberline {6}Experiments \& Results}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Datasets}{57}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Stripe Dataset}{57}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}MNIST}{57}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Poker-DVS}{57}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Experiments}{57}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Computational Constrains}{59}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Conversion}{60}{subsection.6.2.2}
-\contentsline {subsubsection}{\nonumberline Conversion comparison}{61}{section*.99}
-\contentsline {subsection}{\numberline {6.2.3}eCD}{63}{subsection.6.2.3}
-\contentsline {subsubsection}{\nonumberline Learning the data distribution}{64}{section*.108}
-\contentsline {subsubsection}{\nonumberline Lateral connections}{65}{section*.111}
-\contentsline {subsubsection}{\nonumberline Convolution vs no Convolution}{66}{section*.113}
-\contentsline {subsubsection}{\nonumberline Simulation time}{66}{section*.115}
-\contentsline {subsubsection}{\nonumberline Performance on the stripe dataset}{67}{section*.117}
-\contentsline {subsubsection}{\nonumberline Performance on the Poker-DVS dataset}{68}{section*.122}
+\contentsline {chapter}{\numberline {3}Related Work}{33}{chapter.3}
+\contentsline {section}{\numberline {3.1}Convolutional RBM}{33}{section.3.1}
+\contentsline {section}{\numberline {3.2}Sampling in SNNs}{34}{section.3.2}
+\contentsline {section}{\numberline {3.3}Artificial to spiking neural network conversion}{36}{section.3.3}
+\contentsline {section}{\numberline {3.4}eCD and Sampling Machines}{37}{section.3.4}
+\contentsline {chapter}{\numberline {4}Approach}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Convolutional architecture in spiking neural network}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Conversion}{41}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Convolutional DBNs}{41}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Conversion}{43}{subsection.4.2.2}
+\contentsline {paragraph}{\nonumberline Conversion as CNN}{43}{section*.86}
+\contentsline {paragraph}{\nonumberline Conversion with conductance-based LIF}{43}{section*.87}
+\contentsline {paragraph}{\nonumberline Conversion with current-based LIF}{45}{section*.89}
+\contentsline {section}{\numberline {4.3}eCD}{45}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Convolution in eCD}{46}{subsection.4.3.1}
+\contentsline {paragraph}{\nonumberline Lateral inhibition}{47}{section*.92}
+\contentsline {subsection}{\numberline {4.3.2}Spiking DBNs}{48}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Implementation}{51}{chapter.5}
+\contentsline {section}{\numberline {5.1}Artifical DBNs}{51}{section.5.1}
+\contentsline {section}{\numberline {5.2}Conversion}{52}{section.5.2}
+\contentsline {section}{\numberline {5.3}eCD}{53}{section.5.3}
+\contentsline {chapter}{\numberline {6}Experiments \& Results}{55}{chapter.6}
+\contentsline {section}{\numberline {6.1}Datasets}{55}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Stripe Dataset}{55}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}MNIST}{55}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Poker-DVS}{55}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Ball-Can-Pen-DVS}{55}{subsection.6.1.4}
+\contentsline {section}{\numberline {6.2}Experiments}{58}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Computational Constrains}{58}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Conversion}{59}{subsection.6.2.2}
+\contentsline {subsubsection}{\nonumberline Conversion comparison}{59}{section*.102}
+\contentsline {subsection}{\numberline {6.2.3}eCD}{62}{subsection.6.2.3}
+\contentsline {subsubsection}{\nonumberline Learning the data distribution}{63}{section*.111}
+\contentsline {subsubsection}{\nonumberline Lateral connections}{63}{section*.114}
+\contentsline {subsubsection}{\nonumberline Convolution vs no Convolution}{65}{section*.116}
+\contentsline {subsubsection}{\nonumberline Simulation time}{66}{section*.118}
+\contentsline {subsubsection}{\nonumberline Performance on the stripe dataset}{66}{section*.120}
+\contentsline {subsubsection}{\nonumberline Performance on the Poker-DVS dataset}{68}{section*.125}
+\contentsline {subsubsection}{\nonumberline Performance on the Ball-Can-Pen-DVS dataset}{69}{section*.131}
 \contentsline {subsection}{\numberline {6.2.4}Conversion vs online}{69}{subsection.6.2.4}
-\contentsline {subsubsection}{\nonumberline Direct comparison}{69}{section*.128}
+\contentsline {subsubsection}{\nonumberline Direct comparison}{69}{section*.133}
 \contentsline {chapter}{\numberline {7}Conclusion and Outlook}{75}{chapter.7}
-\contentsline {subsubsection}{\nonumberline Biological plausibility}{75}{section*.130}
+\contentsline {subsubsection}{\nonumberline Biological plausibility}{75}{section*.135}
 \contentsline {section}{\numberline {7.1}Future work}{76}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Neuromorphic Hardware}{76}{subsection.7.1.1}
-\contentsline {paragraph}{\nonumberline SpiNNakker}{76}{section*.131}
-\contentsline {paragraph}{\nonumberline Spikey}{76}{section*.132}
-\contentsline {subsection}{\numberline {7.1.2}Biological plausible learning}{76}{subsection.7.1.2}
+\contentsline {paragraph}{\nonumberline SpiNNakker}{76}{section*.136}
+\contentsline {paragraph}{\nonumberline Spikey}{76}{section*.137}
+\contentsline {subsection}{\numberline {7.1.2}Biological plausible learning}{77}{subsection.7.1.2}
 \contentsline {chapter}{\numberline {A}Appendix}{79}{appendix.A}
 \contentsline {chapter}{\numberline {B}List of Figures}{85}{appendix.B}
 \contentsline {chapter}{\numberline {C}List of Tables}{93}{appendix.C}

@@ -5,9 +5,20 @@ Boltzmann machines.
 \newblock \url{http://gorayni.blogspot.de/2014/06/boltzmann-machines.html},
   note = {Accessed: 2016-11-22}.
 
+\bibitem{convImg}
+Convolution arithmetic.
+\newblock \url{https://github.com/vdumoulin/conv_arithmetic}.
+\newblock Accessed: 2016-11-22.
+
 \bibitem{mlpImg}
 Cs231n convolutional neural networks for visual recognition.
 \newblock \url{http://cs231n.github.io/neural-networks-1/}.
+\newblock Accessed: 2016-11-22.
+
+\bibitem{DBNImg}
+Deep belief networks - lisa wiki -- pascallamblin.
+\newblock
+  \url{http://www.iro.umontreal.ca/~lisa/twiki/bin/view.cgi/Public/DeepBeliefNetworks}.
 \newblock Accessed: 2016-11-22.
 
 \bibitem{perceptronImg}
@@ -20,32 +31,21 @@ File:neuron hand-tuned.svg - wikipedia.
 \newblock \url{http://en.wikipedia.org/wiki/File:Neuron_Hand-tuned.svg}.
 \newblock Accessed: 2016-11-22.
 
-\bibitem{hopfImg}
-Ims qti and the economics of interoperability.
-\newblock
-  \url{http://blogs.cetis.org.uk/wilbert/2009/04/07/ims-qti-and-the-economics-of-interoperability/}.
-\newblock Accessed: 2016-11-22.
-
 \bibitem{sampleFD}
 Mcmc sampling for dummies.
 \newblock \url{http://twiecki.github.io/blog/2015/11/10/mcmc-sampling/}.
 \newblock Accessed: 2016-11-22.
 
-\bibitem{rbmImg}
-Restricted boltzmann machines.
+\bibitem{cdImg}
+Neural networks: Restricted boltzmann machine - contrastive divergence -- hugo
+  larochelle.
 \newblock
-  \url{http://www.todaysoftmag.com/article/747/restricted-boltzmann-machines}.
+  \url{http://info.usherbrooke.ca/hlarochelle/neural_networks/content.html}.
 \newblock Accessed: 2016-11-22.
 
 \bibitem{theanoRBM}
 Restricted boltzmann machines (rbm) - deeplearning 0.1 documentation.
 \newblock \url{http://deeplearning.net/tutorial/rbm.html}.
-\newblock Accessed: 2016-11-22.
-
-\bibitem{cdImg}
-Training neural networks.
-\newblock
-  \url{http://recognize-speech.com/acoustic-model/knn/training-neural-networks}.
 \newblock Accessed: 2016-11-22.
 
 \bibitem{abbott1999lapicque}
@@ -499,5 +499,11 @@ Y.~Zhou.
 \newblock {Structure Learning of Probabilistic Graphical Models : A
   Comprehensive Survey}.
 \newblock {\em arXiv: 1111.6925}, 2007.
+
+\bibitem{Zorzi2013Modeling}
+M.~Zorzi, A.~Testolin, and I.~Stoianov.
+\newblock Modeling language and cognition with deep unsupervised learning: a
+  tutorial overview.
+\newblock {\em Frontiers in Psychology}, 4:515, 2013.
 
 \end{thebibliography}

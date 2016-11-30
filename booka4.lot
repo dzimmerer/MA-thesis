@@ -5,15 +5,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Kullback-Leibler divergence between the activations in the feature maps.\relax }}{61}{table.caption.100}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Classification performances of the converted spiking DBNs to a the artificial DBN on a subset of 100 samples.\relax }}{61}{table.caption.101}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Classification performances of the converted spiking DBNs with different simulated runtimes.\relax }}{62}{table.caption.104}
-\contentsline {table}{\numberline {6.4}{\ignorespaces eCD-parameters for the experiments\relax }}{63}{table.caption.105}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Kullback-Leibler divergence between the activations in the feature maps.\relax }}{60}{table.caption.103}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Classification performances of the converted spiking DBNs to a the artificial DBN on a subset of 100 samples.\relax }}{60}{table.caption.104}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Classification performances of the converted spiking DBNs with different simulated runtimes.\relax }}{62}{table.caption.107}
+\contentsline {table}{\numberline {6.4}{\ignorespaces eCD-parameters for the experiments\relax }}{62}{table.caption.108}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Current-based LIF neuron parameters used for the converted CNN\relax }}{79}{table.caption.133}
-\contentsline {table}{\numberline {A.2}{\ignorespaces Current-based LIF neuron parameters used for the converted DBN\relax }}{80}{table.caption.134}
-\contentsline {table}{\numberline {A.3}{\ignorespaces Conductance-based LIF neuron parameters used for the converted DBN\relax }}{80}{table.caption.135}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Current-based LIF neuron parameters used for the converted CNN\relax }}{79}{table.caption.138}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Current-based LIF neuron parameters used for the converted DBN\relax }}{80}{table.caption.139}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Conductance-based LIF neuron parameters used for the converted DBN\relax }}{80}{table.caption.140}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
