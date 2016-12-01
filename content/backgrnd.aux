@@ -18,17 +18,17 @@
 \newlabel{c:pgms}{{2.1}{3}{Probabilistic Graphical Models}{section.2.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Bayesian network}{3}{subsection.2.1.1}}
 \newlabel{c:bayesnet}{{2.1.1}{3}{Bayesian network}{subsection.2.1.1}{}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:sub1}{{2.1a}{4}{\relax }{figure.caption.3}{}}
+\newlabel{sub@fig:sub1}{{a}{4}{\relax }{figure.caption.3}{}}
+\newlabel{fig:sub2}{{2.1b}{4}{\relax }{figure.caption.3}{}}
+\newlabel{sub@fig:sub2}{{b}{4}{\relax }{figure.caption.3}{}}
+\newlabel{fig:bayesnet}{{2.1c}{4}{\relax }{figure.caption.3}{}}
+\newlabel{sub@fig:bayesnet}{{c}{4}{\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces A sample Bayesian network with 5 binary nodes (a). In the network RV $c$ is directly dependent on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$, $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descended $e$. In (b) the conditional probability of $p(c |a , b)$ is given in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma $ a network with such probability functions is called sigmoid belief network.\relax }}{4}{figure.caption.3}}
+\newlabel{fig:test}{{2.1}{4}{A sample Bayesian network with 5 binary nodes (a). In the network RV $c$ is directly dependent on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$, $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descended $e$. In (b) the conditional probability of $p(c |a , b)$ is given in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma $ a network with such probability functions is called sigmoid belief network.\relax }{figure.caption.3}{}}
 \citation{Goodfellow-et-al-2016-Book}
 \citation{murphy2012machine}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:sub1}{{2.1a}{4}{A Bayesian with 5 RVs.\relax }{figure.caption.3}{}}
-\newlabel{sub@fig:sub1}{{a}{4}{A Bayesian with 5 RVs.\relax }{figure.caption.3}{}}
-\newlabel{fig:sub2}{{2.1b}{4}{Tabular conditional probability $p(c |a , b)$.\relax }{figure.caption.3}{}}
-\newlabel{sub@fig:sub2}{{b}{4}{Tabular conditional probability $p(c |a , b)$.\relax }{figure.caption.3}{}}
-\newlabel{fig:bayesnet}{{2.1c}{4}{Conditional probability $p(c |a , b)$ given by a function over $a,b$.\relax }{figure.caption.3}{}}
-\newlabel{sub@fig:bayesnet}{{c}{4}{Conditional probability $p(c |a , b)$ given by a function over $a,b$.\relax }{figure.caption.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces A sample Bayesian network with 5 binary nodes. (a) In the network RV $c$ is directly dependent on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$, $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descended $e$. (b) The conditional probability of $p(c |a , b)$ in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma $ a network with such probability functions is called sigmoid belief network.\relax }}{4}{figure.caption.3}}
-\newlabel{fig:test}{{2.1}{4}{A sample Bayesian network with 5 binary nodes. (a) In the network RV $c$ is directly dependent on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$, $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descended $e$. (b) The conditional probability of $p(c |a , b)$ in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma $ a network with such probability functions is called sigmoid belief network.\relax }{figure.caption.3}{}}
 \citation{bishop2013pattern}
 \citation{bishop2013pattern}
 \citation{Goodfellow-et-al-2016-Book}
@@ -40,8 +40,6 @@
 \newlabel{fig:markovnet}{{2.2}{5}{(a) A Markov network with 5 nodes. The white node is dependent on all connected nodes (blue nodes). Given the blue nodes the white node is independent on any other node in the network. Given the white node all the blue nodes are independent on each other. (b) Two cliques in a Markov network. The blue clique is maximal, since no vertex can be added, which is fully connected to all others in the blue clique. The green one is not maximal, since the node $x_3$ could be added \cite {bishop2013pattern}.\relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Markov Random Field}{5}{subsection.2.1.2}}
 \newlabel{c:markovnet}{{2.1.2}{5}{Markov Random Field}{subsection.2.1.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Energy-Based Models}{5}{subsection.2.1.3}}
-\newlabel{c:ebms}{{2.1.3}{5}{Energy-Based Models}{subsection.2.1.3}{}}
 \citation{Goodfellow-et-al-2016-Book}
 \citation{Petrovici2016}
 \citation{sampleFD}
@@ -49,23 +47,25 @@
 \citation{Goodfellow-et-al-2016-Book}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Sampling a Gaussian distribution. The number of samples in an interval approximates the true density function. As more samples are drawn, the approximation of the density function will be more exact \cite  {sampleFD}.\relax }}{6}{figure.caption.5}}
 \newlabel{fig:Sampling}{{2.3}{6}{Sampling a Gaussian distribution. The number of samples in an interval approximates the true density function. As more samples are drawn, the approximation of the density function will be more exact \cite {sampleFD}.\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Energy-Based Models}{6}{subsection.2.1.3}}
+\newlabel{c:ebms}{{2.1.3}{6}{Energy-Based Models}{subsection.2.1.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}Sampling}{6}{subsection.2.1.4}}
 \newlabel{c:sampling}{{2.1.4}{6}{Sampling}{subsection.2.1.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Ancestral Sampling}{6}{section*.6}}
 \citation{Goodfellow-et-al-2016-Book}
 \citation{Goodfellow-et-al-2016-Book}
-\citation{gerstner2014neuronal}
-\citation{Byrne1997}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Ancestral Sampling}{7}{section*.6}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Markov Chain Monte Carlo}{7}{section*.7}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Gibbs sampling}{7}{section*.8}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Neural Networks}{7}{section.2.2}}
 \newlabel{c:NNs}{{2.2}{7}{Neural Networks}{section.2.2}{}}
 \citation{gerstner2014neuronal}
+\citation{Byrne1997}
+\citation{gerstner2014neuronal}
 \citation{gerstner2014neuronal}
 \citation{gerstner2014neuronal}
 \citation{Byrne1997}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces A small section in the Brain. The neurons $a$ - $g$ are connected to other neurons in a complex network \cite  {gerstner2014neuronal}.\relax }}{8}{figure.caption.10}}
-\newlabel{fig:brain}{{2.4}{8}{A small section in the Brain. The neurons $a$ - $g$ are connected to other neurons in a complex network \cite {gerstner2014neuronal}.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces A small section in the brain. The neurons $a$ - $g$ are connected to other neurons in a complex network \cite  {gerstner2014neuronal}.\relax }}{8}{figure.caption.10}}
+\newlabel{fig:brain}{{2.4}{8}{A small section in the brain. The neurons $a$ - $g$ are connected to other neurons in a complex network \cite {gerstner2014neuronal}.\relax }{figure.caption.10}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Natural}{8}{subsection.2.2.1}}
 \newlabel{c:natural}{{2.2.1}{8}{Natural}{subsection.2.2.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Brain}{8}{section*.9}}
@@ -74,11 +74,12 @@
 \newlabel{c:natneuron}{{2.2.1}{8}{Neuron}{section*.11}{}}
 \citation{neuronImg}
 \citation{neuronImg}
+\citation{Byrne1997}
 \citation{gerstner2014neuronal}
 \citation{Byrne1997}
 \citation{Markram2012}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces A schematic view of a natural neuron. Other neurons are pre-synaptic connected via the dendrites. The signals are then forwarded and accumulated in the soma and from there on via the in myelin sheath cover axon to the axon terminal and the out going synapses \cite  {neuronImg}.\relax }}{9}{figure.caption.12}}
-\newlabel{fig:neuron}{{2.5}{9}{A schematic view of a natural neuron. Other neurons are pre-synaptic connected via the dendrites. The signals are then forwarded and accumulated in the soma and from there on via the in myelin sheath cover axon to the axon terminal and the out going synapses \cite {neuronImg}.\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces A schematic view of a natural neuron. Other neurons are presynaptically connected via the dendrites. The spikes are then forwarded and accumulated in the soma and further propagated via the axon to the axon terminal and the out going synapses \cite  {neuronImg}.\relax }}{9}{figure.caption.12}}
+\newlabel{fig:neuron}{{2.5}{9}{A schematic view of a natural neuron. Other neurons are presynaptically connected via the dendrites. The spikes are then forwarded and accumulated in the soma and further propagated via the axon to the axon terminal and the out going synapses \cite {neuronImg}.\relax }{figure.caption.12}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Learning}{9}{section*.13}}
 \newlabel{c:natlearning}{{2.2.1}{9}{Learning}{section*.13}{}}
 \citation{hebb19680}
@@ -90,32 +91,32 @@
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline "What fires together, wires together"}{10}{section*.15}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Artificial neural networks}{10}{subsection.2.2.2}}
 \newlabel{c:ann}{{2.2.2}{10}{Artificial neural networks}{subsection.2.2.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Perceptron}{10}{section*.16}}
-\newlabel{c:perceptron}{{2.2.2}{10}{Perceptron}{section*.16}{}}
 \citation{perceptronImg}
 \citation{perceptronImg}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Structure of a perceptron. The input $in(t)$ is set at the input variables $x_i$ and the multiplied with the corresponding synaptic weight $w_i$ and accumulated. In addition a threshold offset $\theta $ is added. On the sum the step-function is applied i.e. the output $out(t)$ is $1$ if the sum is greater $0$ and $0$ if the sum is smaller $0$ \cite  {perceptronImg}.\relax }}{11}{figure.caption.18}}
-\newlabel{fig:perceptron}{{2.6}{11}{Structure of a perceptron. The input $in(t)$ is set at the input variables $x_i$ and the multiplied with the corresponding synaptic weight $w_i$ and accumulated. In addition a threshold offset $\theta $ is added. On the sum the step-function is applied i.e. the output $out(t)$ is $1$ if the sum is greater $0$ and $0$ if the sum is smaller $0$ \cite {perceptronImg}.\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Structure of a perceptron. The input $in(t)$ is set at the input variables $x_i$ and multiplied with the corresponding synaptic weight $w_i$ and accumulated. In addition, a threshold offset $\theta $ is added. Afterwards the step-function is applied i.e. the output $out(t)$ is $1$ if the sum is greater $0$ and $0$ if the sum is smaller $0$ \cite  {perceptronImg}.\relax }}{11}{figure.caption.18}}
+\newlabel{fig:perceptron}{{2.6}{11}{Structure of a perceptron. The input $in(t)$ is set at the input variables $x_i$ and multiplied with the corresponding synaptic weight $w_i$ and accumulated. In addition, a threshold offset $\theta $ is added. Afterwards the step-function is applied i.e. the output $out(t)$ is $1$ if the sum is greater $0$ and $0$ if the sum is smaller $0$ \cite {perceptronImg}.\relax }{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Perceptron}{11}{section*.16}}
+\newlabel{c:perceptron}{{2.2.2}{11}{Perceptron}{section*.16}{}}
 \newlabel{c:permodel}{{2.2.2}{11}{Model}{section*.17}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Model}{11}{section*.17}}
 \newlabel{c:perdecision}{{2.2.2}{11}{Decision Function}{section*.19}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Decision Function}{11}{section*.19}}
 \citation{rumelhart1985learning}
 \citation{Goodfellow-et-al-2016-Book}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The discrimination function of a perceptron. The discrimination function has the shape of a linear hyper plane in data space and it defined by the synaptic weight-vector $\textbf  {w}$. It divides the data space and thus the data samples into two subspaces, the positive space $\textbf  {x}^{\intercal }\textbf  {w} > 0$ and the negative space $\textbf  {x}^{\intercal }\textbf  {w} < 0$. In (a) the discrimination function is given in a two-dimensional data space and in (b) in a three-dimensional data space.\relax }}{12}{figure.caption.20}}
-\newlabel{fig:discrimation}{{2.7}{12}{The discrimination function of a perceptron. The discrimination function has the shape of a linear hyper plane in data space and it defined by the synaptic weight-vector $\textbf {w}$. It divides the data space and thus the data samples into two subspaces, the positive space $\textbf {x}^{\intercal }\textbf {w} > 0$ and the negative space $\textbf {x}^{\intercal }\textbf {w} < 0$. In (a) the discrimination function is given in a two-dimensional data space and in (b) in a three-dimensional data space.\relax }{figure.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The discrimination function of a perceptron. The discrimination function has the shape of a linear hyper plane in data space and is defined by the synaptic weight-vector $\textbf  {w}$. It divides the data space and thus the data samples into two subspaces, the positive space $\textbf  {x}^{\intercal }\textbf  {w} > 0$ and the negative space $\textbf  {x}^{\intercal }\textbf  {w} < 0$. In (a) the discrimination function is given in a two-dimensional data space and in (b) in a three-dimensional data space.\relax }}{12}{figure.caption.20}}
+\newlabel{fig:discrimation}{{2.7}{12}{The discrimination function of a perceptron. The discrimination function has the shape of a linear hyper plane in data space and is defined by the synaptic weight-vector $\textbf {w}$. It divides the data space and thus the data samples into two subspaces, the positive space $\textbf {x}^{\intercal }\textbf {w} > 0$ and the negative space $\textbf {x}^{\intercal }\textbf {w} < 0$. In (a) the discrimination function is given in a two-dimensional data space and in (b) in a three-dimensional data space.\relax }{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Decision Function}{12}{section*.19}}
 \newlabel{c:perlearning}{{2.2.2}{12}{Perceptron Learning}{section*.21}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Perceptron Learning}{12}{section*.21}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Mutlilayer-Perceptron}{12}{section*.22}}
-\newlabel{c:mlp}{{2.2.2}{12}{Mutlilayer-Perceptron}{section*.22}{}}
-\newlabel{c:mlparch}{{2.2.2}{12}{Model architecture}{section*.23}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Model architecture}{12}{section*.23}}
 \citation{mlpImg}
 \citation{mlpImg}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces A schematic multi layer perceptron with three layers \cite  {mlpImg}.\relax }}{13}{figure.caption.24}}
-\newlabel{fig:mlp}{{2.8}{13}{A schematic multi layer perceptron with three layers \cite {mlpImg}.\relax }{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Mutlilayer-Perceptron}{13}{section*.22}}
+\newlabel{c:mlp}{{2.2.2}{13}{Mutlilayer-Perceptron}{section*.22}{}}
+\newlabel{c:mlparch}{{2.2.2}{13}{Model architecture}{section*.23}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Model architecture}{13}{section*.23}}
 \newlabel{c:mlpact}{{2.2.2}{13}{Activation functions}{section*.25}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Activation functions}{13}{section*.25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces A schematic multi layer perceptron with three layers \cite  {mlpImg}.\relax }}{14}{figure.caption.24}}
+\newlabel{fig:mlp}{{2.8}{14}{A schematic multi layer perceptron with three layers \cite {mlpImg}.\relax }{figure.caption.24}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces The output of different activation functions plotted given the input.\relax }}{14}{figure.caption.26}}
 \newlabel{fig:activations}{{2.9}{14}{The output of different activation functions plotted given the input.\relax }{figure.caption.26}{}}
 \newlabel{c:mlperr}{{2.2.2}{14}{Error functions}{section*.27}{}}
@@ -132,37 +133,37 @@
 \newlabel{c:convolution}{{2.2.2}{16}{Convolution}{section*.30}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Convolution}{16}{section*.30}}
 \citation{simonyan2014very}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces A cross correlation of a $3\times 3$ image matrix with a $2\times 2$ kernel without stride and padding. The result is a $2\times 2$ feature map.\relax }}{17}{figure.caption.31}}
+\newlabel{fig:conv}{{2.10}{17}{A cross correlation of a $3\times 3$ image matrix with a $2\times 2$ kernel without stride and padding. The result is a $2\times 2$ feature map.\relax }{figure.caption.31}{}}
+\newlabel{c:convlayers}{{2.2.2}{17}{Convolution Layers}{section*.32}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Convolution Layers}{17}{section*.32}}
 \citation{NIPS2012_4824}
 \citation{simonyan2014very}
 \citation{szegedy2015going}
 \citation{cnnarchImg}
 \citation{cnnarchImg}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces A cross correlation of a $3\times 3$ image matrix with a $2\times 2$ kernel without stride and padding. The result is a $2\times 2$ feature map.\relax }}{17}{figure.caption.31}}
-\newlabel{fig:conv}{{2.10}{17}{A cross correlation of a $3\times 3$ image matrix with a $2\times 2$ kernel without stride and padding. The result is a $2\times 2$ feature map.\relax }{figure.caption.31}{}}
-\newlabel{c:convlayers}{{2.2.2}{17}{Convolution Layers}{section*.32}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Convolution Layers}{17}{section*.32}}
-\newlabel{c:cnnarch}{{2.2.2}{17}{Architecture}{section*.33}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Architecture}{17}{section*.33}}
-\newlabel{c:cnntraining}{{2.2.2}{17}{Training}{section*.35}{}}
-\citation{hopfield1982neural}
-\citation{Goodfellow-et-al-2016-Book}
+\newlabel{c:cnnarch}{{2.2.2}{18}{Architecture}{section*.33}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Architecture}{18}{section*.33}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Typical architecture of a convolutional neural network with two convolution-pooling stages \cite  {cnnarchImg}.\relax }}{18}{figure.caption.34}}
 \newlabel{fig:convarcitecuture}{{2.11}{18}{Typical architecture of a convolutional neural network with two convolution-pooling stages \cite {cnnarchImg}.\relax }{figure.caption.34}{}}
+\newlabel{c:cnntraining}{{2.2.2}{18}{Training}{section*.35}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Training}{18}{section*.35}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Hopfield Nets}{18}{section*.36}}
-\newlabel{c:hopnets}{{2.2.2}{18}{Hopfield Nets}{section*.36}{}}
-\newlabel{c:hopmodel}{{2.2.2}{18}{Model}{section*.37}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Model}{18}{section*.37}}
+\citation{hopfield1982neural}
+\citation{Goodfellow-et-al-2016-Book}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces A blueprint of a Hopfield nets with 7 binary units. The units are connected with symmetric undirected connections.\relax }}{19}{figure.caption.38}}
 \newlabel{fig:hopfiled}{{2.12}{19}{A blueprint of a Hopfield nets with 7 binary units. The units are connected with symmetric undirected connections.\relax }{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Hopfield Nets}{19}{section*.36}}
+\newlabel{c:hopnets}{{2.2.2}{19}{Hopfield Nets}{section*.36}{}}
+\newlabel{c:hopmodel}{{2.2.2}{19}{Model}{section*.37}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Model}{19}{section*.37}}
 \citation{ackley1985learning}
 \citation{Goodfellow-et-al-2016-Book}
-\citation{boltzImg}
-\citation{boltzImg}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Boltzmann Machines}{20}{section*.39}}
 \newlabel{c:bms}{{2.2.2}{20}{Boltzmann Machines}{section*.39}{}}
 \newlabel{c:bmmodel}{{2.2.2}{20}{Model}{section*.40}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Model}{20}{section*.40}}
+\citation{boltzImg}
+\citation{boltzImg}
 \citation{ackley1985learning}
 \citation{hinton2002training}
 \citation{Woodford2002}
@@ -172,32 +173,30 @@
 \newlabel{c:cd}{{2.2.2}{21}{Learning Rule}{section*.42}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Learning Rule}{21}{section*.42}}
 \citation{smolensky1986information}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline RBMs}{22}{section*.43}}
+\newlabel{c:rbms}{{2.2.2}{22}{RBMs}{section*.43}{}}
 \citation{hinton2010practical}
 \citation{Fischer2014}
 \citation{theanoRBM}
 \citation{theanoRBM}
 \citation{hinton2002training}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline RBMs}{22}{section*.43}}
-\newlabel{c:rbms}{{2.2.2}{22}{RBMs}{section*.43}{}}
-\newlabel{c:cdk}{{2.2.2}{22}{CD-k Training}{section*.45}{}}
 \citation{cdImg}
 \citation{cdImg}
 \citation{tieleman2008training}
-\citation{hinton2006fast}
-\citation{hinton2009deep}
-\citation{Goodfellow-et-al-2016-Book}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are only dependent on the hidden units and the hidden units only on the visible units \cite  {theanoRBM}.\relax }}{23}{figure.caption.44}}
-\newlabel{fig:rbm}{{2.14}{23}{A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are only dependent on the hidden units and the hidden units only on the visible units \cite {theanoRBM}.\relax }{figure.caption.44}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite  {cdImg}.\relax }}{23}{figure.caption.46}}
-\newlabel{fig:cd}{{2.15}{23}{A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite {cdImg}.\relax }{figure.caption.46}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are solely dependent on the hidden units and the hidden units solely on the visible units \cite  {theanoRBM}.\relax }}{23}{figure.caption.44}}
+\newlabel{fig:rbm}{{2.14}{23}{A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are solely dependent on the hidden units and the hidden units solely on the visible units \cite {theanoRBM}.\relax }{figure.caption.44}{}}
+\newlabel{c:cdk}{{2.2.2}{23}{CD-k Training}{section*.45}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline CD-k Training}{23}{section*.45}}
 \newlabel{c:pcd}{{2.2.2}{23}{Persistent CD}{section*.47}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Persistent CD}{23}{section*.47}}
+\citation{hinton2006fast}
+\citation{hinton2009deep}
+\citation{Goodfellow-et-al-2016-Book}
 \citation{DBNImg}
 \citation{DBNImg}
 \citation{hinton1995wake}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Building up a deep belief network, by training RBMs greedily and stacking them up on top of each other. At first only one RBM is trained. On top of the first RBM the next RBM is trained. This can procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite  {DBNImg}.\relax }}{24}{figure.caption.50}}
-\newlabel{fig:dbn}{{2.16}{24}{Building up a deep belief network, by training RBMs greedily and stacking them up on top of each other. At first only one RBM is trained. On top of the first RBM the next RBM is trained. This can procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite {DBNImg}.\relax }{figure.caption.50}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite  {cdImg}.\relax }}{24}{figure.caption.46}}
+\newlabel{fig:cd}{{2.15}{24}{A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite {cdImg}.\relax }{figure.caption.46}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Deep Belief Networks}{24}{section*.48}}
 \newlabel{c:dbns}{{2.2.2}{24}{Deep Belief Networks}{section*.48}{}}
 \newlabel{c:dbntraining}{{2.2.2}{24}{Training}{section*.49}{}}
@@ -210,6 +209,8 @@
 \citation{Petrovici2016}
 \citation{heikoMA}
 \citation{heikoMA}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces Building up a deep belief network by training RBMs greedily and stacking them up on top of each other. At first, only one RBM is trained. On top of the first RBM the next RBM is trained. This procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite  {DBNImg}.\relax }}{25}{figure.caption.50}}
+\newlabel{fig:dbn}{{2.16}{25}{Building up a deep belief network by training RBMs greedily and stacking them up on top of each other. At first, only one RBM is trained. On top of the first RBM the next RBM is trained. This procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite {DBNImg}.\relax }{figure.caption.50}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Spiking neural networks}{25}{subsection.2.2.3}}
 \newlabel{c:snns}{{2.2.3}{25}{Spiking neural networks}{subsection.2.2.3}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Neuron Models}{25}{section*.52}}
@@ -224,59 +225,59 @@
 \newlabel{fig:lif}{{2.17}{26}{A LIF neuron as an electrical circuit. The capacitor $C_m$ corresponds to the potential at the membrane, $g_l$ the leakage potential and $E_l$ the resting potential. If the membrane potential is greater than $U_t$ a spike $\delta $ is emitted \cite {heikoMA}.\relax }{figure.caption.54}{}}
 \newlabel{c:hodghux}{{2.2.3}{26}{Hodgkin-Huxley}{section*.56}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Hodgkin-Huxley}{26}{section*.56}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces Different firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite  {gerstner2014neuronal}.\relax }}{26}{figure.caption.55}}
-\newlabel{fig:neuronbe}{{2.18}{26}{Different firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite {gerstner2014neuronal}.\relax }{figure.caption.55}{}}
 \citation{heikoMA}
 \citation{heikoMA}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces A Hodgkin-Huxley as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite  {heikoMA}.\relax }}{27}{figure.caption.57}}
-\newlabel{fig:hogdehux}{{2.19}{27}{A Hodgkin-Huxley as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite {heikoMA}.\relax }{figure.caption.57}{}}
 \citation{Heeger2000}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces Different firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite  {gerstner2014neuronal}.\relax }}{27}{figure.caption.55}}
+\newlabel{fig:neuronbe}{{2.18}{27}{Different firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite {gerstner2014neuronal}.\relax }{figure.caption.55}{}}
+\newlabel{c:poissonspikes}{{2.2.3}{27}{Activity in a network}{section*.58}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Activity in a network}{27}{section*.58}}
 \citation{Petrovici2016}
-\newlabel{c:poissonspikes}{{2.2.3}{28}{Activity in a network}{section*.58}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Activity in a network}{28}{section*.58}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces A Hodgkin-Huxley as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite  {heikoMA}.\relax }}{28}{figure.caption.57}}
+\newlabel{fig:hogdehux}{{2.19}{28}{A Hodgkin-Huxley as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite {heikoMA}.\relax }{figure.caption.57}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Synapses}{28}{section*.59}}
 \newlabel{c:synapses}{{2.2.3}{28}{Synapses}{section*.59}{}}
 \newlabel{c:cuba}{{2.2.3}{28}{Current-based synaptic interaction}{section*.60}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Current-based synaptic interaction}{28}{section*.60}}
-\newlabel{c:coba}{{2.2.3}{28}{Conductance-based synaptic interaction}{section*.61}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Conductance-based synaptic interaction}{28}{section*.61}}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.20}{\ignorespaces Three samples of Ornstein\IeC {\textendash }Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite  {Petrovici2016}.\relax }}{29}{figure.caption.63}}
-\newlabel{fig:ornuhl}{{2.20}{29}{Three samples of Ornstein–Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite {Petrovici2016}.\relax }{figure.caption.63}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Current-based synaptic interaction}{29}{section*.60}}
+\newlabel{c:coba}{{2.2.3}{29}{Conductance-based synaptic interaction}{section*.61}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Conductance-based synaptic interaction}{29}{section*.61}}
 \newlabel{c:hcs}{{2.2.3}{29}{High conductance state}{section*.62}{}}
 \@writefile{toc}{\contentsline {subparagraph}{\nonumberline High conductance state}{29}{section*.62}}
-\newlabel{c:pspkernel}{{2.2.3}{29}{Kernel function}{section*.65}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.20}{\ignorespaces Three samples of Ornstein\IeC {\textendash }Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite  {Petrovici2016}.\relax }}{30}{figure.caption.63}}
+\newlabel{fig:ornuhl}{{2.20}{30}{Three samples of Ornstein–Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite {Petrovici2016}.\relax }{figure.caption.63}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.21}{\ignorespaces A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time \cite  {Petrovici2016}. \relax }}{30}{figure.caption.64}}
+\newlabel{fig:hcs}{{2.21}{30}{A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time \cite {Petrovici2016}. \relax }{figure.caption.64}{}}
 \citation{Petrovici2016}
 \citation{Petrovici2016}
 \citation{Meftah2013}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.21}{\ignorespaces A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time \cite  {Petrovici2016}. \relax }}{30}{figure.caption.64}}
-\newlabel{fig:hcs}{{2.21}{30}{A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time \cite {Petrovici2016}. \relax }{figure.caption.64}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.22}{\ignorespaces Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite  {Petrovici2016}. \relax }}{30}{figure.caption.66}}
-\newlabel{fig:pspkernels}{{2.22}{30}{Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite {Petrovici2016}. \relax }{figure.caption.66}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Kernel function}{30}{section*.65}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.22}{\ignorespaces Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite  {Petrovici2016}. \relax }}{31}{figure.caption.66}}
+\newlabel{fig:pspkernels}{{2.22}{31}{Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite {Petrovici2016}. \relax }{figure.caption.66}{}}
+\newlabel{c:pspkernel}{{2.2.3}{31}{Kernel function}{section*.65}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Kernel function}{31}{section*.65}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Neural Coding}{31}{section*.67}}
+\newlabel{c:neuralcoding}{{2.2.3}{31}{Neural Coding}{section*.67}{}}
 \citation{gerstner2014neuronal}
 \citation{gerstner2014neuronal}
 \citation{Sjostrom2010}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Neural Coding}{31}{section*.67}}
-\newlabel{c:neuralcoding}{{2.2.3}{31}{Neural Coding}{section*.67}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Learning}{31}{section*.68}}
-\newlabel{c:snnlearning}{{2.2.3}{31}{Learning}{section*.68}{}}
-\newlabel{c:stdp}{{2.2.3}{31}{Spike time dependent plasticity}{section*.69}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Spike time dependent plasticity}{31}{section*.69}}
 \citation{Buchanan2010}
 \citation{Buchanan2010}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.23}{\ignorespaces Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite  {Buchanan2010}.\relax }}{32}{figure.caption.72}}
-\newlabel{fig:stdp}{{2.23}{32}{Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite {Buchanan2010}.\relax }{figure.caption.72}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Learning}{32}{section*.68}}
+\newlabel{c:snnlearning}{{2.2.3}{32}{Learning}{section*.68}{}}
+\newlabel{c:stdp}{{2.2.3}{32}{Spike time dependent plasticity}{section*.69}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Spike time dependent plasticity}{32}{section*.69}}
 \newlabel{c:ltp}{{2.2.3}{32}{Long-term potentiation}{section*.70}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Long-term potentiation}{32}{section*.70}}
 \newlabel{c:ldp}{{2.2.3}{32}{Long-term depression}{section*.71}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Long-term depression}{32}{section*.71}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.23}{\ignorespaces Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite  {Buchanan2010}.\relax }}{33}{figure.caption.72}}
+\newlabel{fig:stdp}{{2.23}{33}{Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite {Buchanan2010}.\relax }{figure.caption.72}{}}
 \@setckpt{content/backgrnd}{
-\setcounter{page}{33}
+\setcounter{page}{34}
 \setcounter{equation}{0}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
@@ -310,7 +311,7 @@
 \setcounter{ALG@blocknr}{10}
 \setcounter{ALG@storecount}{0}
 \setcounter{ALG@tmpcounter}{0}
-\setcounter{Item}{16}
+\setcounter{Item}{18}
 \setcounter{Hfootnote}{0}
 \setcounter{bookmark@seq@number}{15}
 \setcounter{section@level}{4}

@@ -147,11 +147,13 @@ p(\xi_t | \xi_{t-1}) =
 	\begin{subfigure}[t]{.39\textwidth}
   		\centering
   		\includegraphics[width=0.9\textwidth]{imgs/snn_sample2.png}
+  		\caption{}
   		\label{fig:snnsamp2sub1}
 	\end{subfigure}
 	\begin{subfigure}[t]{.59\textwidth}
   		\centering
   		\includegraphics[width=0.9\textwidth]{imgs/sampl_bsp.png}
+  		\caption{}
   		\label{fig:snnsamp2sub1}
 	\end{subfigure}
     \caption{The artificial counter state $\xi$ of a neuron in a discrete time. In (a) the red state represent an active state $z_i = 1$. After a spike $\xi$ is set to the refractory period $\tau$. In each time step the refractory period counter $\xi$ is reduced by 1 until the neuron is inactive and can spike again. In (b) a exemplary membrane potential with the corresponding states of a neuron is given \cite{Buesing2011}.}
@@ -173,16 +175,16 @@ Replacing the rectangular PSP with a more biological plausible alpha shaped PSP 
 	\begin{subfigure}[t]{.50\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/snn_sample3.png}
-  		\caption{Sampling in a Boltzmann machine with a rectangular PSP kernel.}
+  		\caption{}
   		\label{fig:sub1}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.50\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/snn_sample4.png}
-  		\caption{Sampling in a Boltzmann machine with a alpha-shaped PSP kernel. }
+  		\caption{}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption{Comparison of the state probabilities with of neural sampling with Gibbs sampling in a four state Boltzmann machine. In (a) a probabilistic neuron model with a rectangular PSP is used and no discrepancies can be detected given a long enough sampling period. In (b) a more biological plausible alpha shaped kernel is used, which leads to some differences \cite{Buesing2011}.}
+	\caption{Comparison of the state probabilities with of neural sampling with Gibbs sampling in a five state Boltzmann machine. In (a) a probabilistic neuron model with a rectangular PSP is used and no discrepancies can be detected given a long enough sampling period. In (b) a more biological plausible alpha shaped kernel is used, which leads to some differences \cite{Buesing2011}.}
 	\label{fig:snnsamp3}
 \end{figure}
 

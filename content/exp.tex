@@ -79,11 +79,12 @@ The resulting dataset is visualized in Figure \ref{fig:pokerdvs} by integrating 
 \subsection{Ball-Can-Pen-DVS} \label{c:bcpdvs}
 
 For this thesis we recorded a dataset of three different object categories with a Dynamic Vision Sensor (DVS), the Ball-Can-Pen-DVS (BCP-DVS) dataset.
-Different images of balls, cans and pens were flashed for 200$ms$ at different positions on an LED-display and recorded with an DVS.
-The recordings are further divided into 100$ms$ samples, which results in $90$ samples for each class. 
-Similar to the Poker-DVS dataset, the $128 \times 128$ pixel samples are scaled to a size of $16 \times 16$ pixels. 
+Motivated by different types of grasps, balls, cans and pens were chosen.   
+To generate the dataset, images of these objects were flashed for 200$ms$ at different positions on an LED-display and recorded with an DVS.
+The recordings were further divided into 100$ms$ samples, which results in $90$ samples for each class. 
+Similar to the Poker-DVS dataset, the $128 \times 128$ pixel samples were scaled to a size of $16 \times 16$ pixels. 
 
-The original recorded events and the scaled events are visualized in Fig. \ref{fig:bcpdvsb} , Fig. \ref{fig:bcpdvsc} \& Fig. \ref{fig:bcpdvsp} by integrating all events of a sample and then normalizing them by the maximal number of events per pixel.
+The original recorded events and the scaled events are visualized in Fig. \ref{fig:bcpdvsb} , \ref{fig:bcpdvsc} \& \ref{fig:bcpdvsp} by integrating all events of a sample and then normalizing them by the maximal number of events per pixel.
  
 \begin{figure}[h!]
 	\centering
@@ -198,8 +199,8 @@ The original recorded events and the scaled events are visualized in Fig. \ref{f
   		\centering
   		\includegraphics[width=.9\linewidth]{imgs/bcp/p4.png}
 	\end{subfigure}
-	\caption{ Recorded and down sampled samples from the Ball-Can-Pen-DVS dataset visualized by  integrating all events of a sample and then normalizing them by the maximal number of events per pixel. In the first row are the original size DVS samples visualized and in the second row the scaled samples.
-	In Figure \ref{fig:bcpdvsb} are samples from different Balls, in Figure \ref{fig:bcpdvsc} are samples of Cans and in Figure \ref{fig:bcpdvsp} are samples of Pens presented.	
+	\caption{ Recorded and down sampled samples from the Ball-Can-Pen-DVS dataset visualized by  integrating all events of a sample and then normalizing them by the maximal number of events per pixel. In the first row shows the original sized DVS samples with the corresponding scaled samples in the second row.
+	In Figure \ref{fig:bcpdvsb} are samples of different Balls, in Figure \ref{fig:bcpdvsc} are samples of Cans and in Figure \ref{fig:bcpdvsp} are samples of Pens presented.	
 	}
 	\label{fig:bcpdvsp}
 \end{figure}
@@ -306,7 +307,7 @@ CUBA LIF DBN     	& 0.93 & 30.6 s                 \\\hline
 \end{tabular}
 \end{table}
 
-%
+
 %\begin{figure}
 %	\centering
 %	\begin{subfigure}[t]{.24\textwidth}
@@ -392,7 +393,7 @@ CUBA LIF DBN     	& 0.93 & 30.6 s                 \\\hline
 %  		\includegraphics[width=.9\linewidth]{imgs/convert/cuba00003.png}
 %  		\label{fig:sub2}
 %	\end{subfigure}	
-%	
+%
 %	\begin{subfigure}[t]{.24\textwidth}
 %  		\centering
 %  		\includegraphics[width=.9\linewidth]{imgs/convert/rbm00004.png}
@@ -420,11 +421,11 @@ CUBA LIF DBN     	& 0.93 & 30.6 s                 \\\hline
 %	\caption{Activations in the features maps in a artificial convolutional DBN and the converted spiking network architectures. }
 %	\label{fig:convacts}
 %\end{figure}
-%
+
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{imgs/convert/compl1.png}
+	\includegraphics[width=\textwidth]{imgs/convert/compl4.png}
 	\caption{Activations in the features maps in a artificial convolutional DBN and the converted spiking network architectures. }
 	\label{fig:convacts}
 \end{figure}
@@ -885,7 +886,7 @@ The development of the of the weights in the first layer can be seen in Figure \
 
 \begin{figure}[h!]
 	\centering
-    	\includegraphics[width=0.6\textwidth]{imgs/dbn_stripe.png} 
+    	\includegraphics[width=0.6\textwidth]{imgs/dbn_stripe1.png} 
     \caption{Abstract architecture of the DBN for the stripe dataset.}
 	\label{fig:dbnstrarch}
 \end{figure}
@@ -1025,7 +1026,7 @@ The trained DBN reaches a peak performance of $94 \%$ on the training set (see F
 
 \begin{figure}[h!]
 	\centering
-    	\includegraphics[width=0.7\textwidth]{imgs/poker/dbn_poker.png} 
+    	\includegraphics[width=0.7\textwidth]{imgs/poker/dbn_poker1.png} 
     \caption{Abstract architecture of the DBN for the poker dataset.}
 	\label{fig:pokerdbnarch}
 \end{figure}
@@ -1166,7 +1167,7 @@ The DBN reaches a peak performance of $90 \%$ on the training set (see Figure \r
 	\centering
 	\begin{subfigure}{.32\textwidth}
   		\centering
-    	\includegraphics[width=0.95\textwidth]{imgs/bcp/dbn_bcp.png} 
+    	\includegraphics[width=0.95\textwidth]{imgs/bcp/dbn_bcp1.png} 
     \caption{}
 	\label{fig:bcpdbnarch}
 	\end{subfigure}%
