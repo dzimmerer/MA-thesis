@@ -5,21 +5,21 @@
 \BOOKMARK [1][-]{section.1.4}{1.4 Overview}{chapter.1}% 5
 \BOOKMARK [0][]{chapter.2}{2 Background}{}% 6
 \BOOKMARK [1][-]{section.2.1}{2.1 Probabilistic Graphical Models}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 Bayesian network}{section.2.1}% 8
-\BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Markov Random Field}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 Bayesian Networks}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Markov Random Fields}{section.2.1}% 9
 \BOOKMARK [2][-]{subsection.2.1.3}{2.1.3 Energy-Based Models}{section.2.1}% 10
 \BOOKMARK [2][-]{subsection.2.1.4}{2.1.4 Sampling}{section.2.1}% 11
 \BOOKMARK [1][-]{section.2.2}{2.2 Neural Networks}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Natural}{section.2.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Artificial neural networks}{section.2.2}% 14
-\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Spiking neural networks}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Natural Neural Networks}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Artificial Neural Networks}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Spiking Neural Networks}{section.2.2}% 15
 \BOOKMARK [0][]{chapter.3}{3 Related Work}{}% 16
 \BOOKMARK [1][-]{section.3.1}{3.1 Convolutional RBM}{chapter.3}% 17
 \BOOKMARK [1][-]{section.3.2}{3.2 Sampling in SNNs}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.3}{3.3 Artificial to spiking neural network conversion}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.3}{3.3 Artificial to Spiking Neural Network Conversion}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.4}{3.4 eCD and Sampling Machines}{chapter.3}% 20
 \BOOKMARK [0][]{chapter.4}{4 Approach}{}% 21
-\BOOKMARK [1][-]{section.4.1}{4.1 Convolutional architecture in spiking neural network}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.1}{4.1 Convolutional Architecture in Spiking Neural Networks}{chapter.4}% 22
 \BOOKMARK [1][-]{section.4.2}{4.2 Conversion}{chapter.4}% 23
 \BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Convolutional DBNs}{section.4.2}% 24
 \BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Conversion}{section.4.2}% 25
@@ -40,12 +40,16 @@
 \BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 Computational Constrains}{section.6.2}% 40
 \BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 Conversion}{section.6.2}% 41
 \BOOKMARK [2][-]{subsection.6.2.3}{6.2.3 eCD}{section.6.2}% 42
-\BOOKMARK [2][-]{subsection.6.2.4}{6.2.4 Conversion vs online}{section.6.2}% 43
+\BOOKMARK [2][-]{subsection.6.2.4}{6.2.4 Conversion vs. STDP}{section.6.2}% 43
 \BOOKMARK [0][]{chapter.7}{7 Conclusion and Outlook}{}% 44
 \BOOKMARK [1][-]{section.7.1}{7.1 Future work}{chapter.7}% 45
 \BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Neuromorphic Hardware}{section.7.1}% 46
 \BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Biological plausible learning}{section.7.1}% 47
 \BOOKMARK [0][]{appendix.A}{A Appendix}{}% 48
-\BOOKMARK [0][]{appendix.B}{B List of Figures}{}% 49
-\BOOKMARK [0][]{appendix.C}{C List of Tables}{}% 50
-\BOOKMARK [0][]{appendix.D}{D Bibliography}{}% 51
+\BOOKMARK [1][-]{section.A.1}{A.1 Neuron Parameters}{appendix.A}% 49
+\BOOKMARK [1][-]{section.A.2}{A.2 Lateral Inhibition}{appendix.A}% 50
+\BOOKMARK [1][-]{section.A.3}{A.3 Spiking DBN Architectures}{appendix.A}% 51
+\BOOKMARK [1][-]{section.A.4}{A.4 Synchronous Weight Updates}{appendix.A}% 52
+\BOOKMARK [0][]{appendix.B}{B List of Figures}{}% 53
+\BOOKMARK [0][]{appendix.C}{C List of Tables}{}% 54
+\BOOKMARK [0][]{appendix.D}{D Bibliography}{}% 55

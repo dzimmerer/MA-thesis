@@ -7,7 +7,7 @@ The second approach trains the RBMs event based with STDP directly as spiking ne
 
 In Chapter \ref{c:expres}, we will then evaluate and compare the performance of both approaches.
 
-\section{Convolutional architecture in spiking neural network} \label{c:spikingconvarch}
+\section{Convolutional Architecture in Spiking Neural Networks} \label{c:spikingconvarch}
 
 We implement a convolutional layer with receptive fields and shared weights between two neuron populations. 
 Each population has a similar three dimensional topology as in "normal" CNNs with the number of neurons given by $n_{ \text{neurons}} = \text{channels} \times \text{height} \times \text{width}$.
@@ -35,7 +35,7 @@ By using more neurons with different set of shared weights over the same recepti
   		\caption{Four receptive fields with shared weights.}
   		\label{fig:receptfields2}
 	\end{subfigure}
-	\caption{Receptive fields over 4 neurons. In (a) the top layer neuron (red), is only connected to a some neurons in close vicinity to each other. In (b) four receptive fields are next to each other with a stride of two and shared weights. The top layer neurons have a similar topology as their receptive fields. Such a structure can give similar results to conventional more dimensional convolution. }
+	\caption[Receptive fields over 4 neurons.]{Receptive fields over 4 neurons. In (a) the top layer neuron (red), is only connected to a some neurons in close vicinity to each other. In (b) four receptive fields are next to each other with a stride of two and shared weights. The top layer neurons have a similar topology as their receptive fields. Such a structure can give similar results to conventional more dimensional convolution. }
 	\label{fig:receptfields}
 \end{figure}
 
@@ -71,7 +71,7 @@ This architecture is similar to the architecture of Hinton \cite{hinton2006fast}
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/dbn_mnist.png} 
-    \caption{A common structure of a deep belief network, built up of RBMs used for classification. The first layers transform the input data/ pixel image and can extract features and the top layer RBM is used for association the data with the correct label \cite{Zorzi2013Modeling}.}
+    \caption[A common structure of a deep belief network.]{A common structure of a deep belief network, built up of RBMs used for classification. The first layers transform the input data/ pixel image and can extract features and the top layer RBM is used for association the data with the correct label \cite{Zorzi2013Modeling}.}
 	\label{fig:dbnmnist}
 \end{figure}
 
@@ -96,7 +96,7 @@ For the conversion we present three different variations.
   		\caption{Structure of a spiking DBN with LIF neurons.}
   		\label{fig:converted2}
   	\end{subfigure}
-	\caption{Different converted structures of a CNN and a DBN. The CNN is converted to a spiking network, by simply using simple LIF neurons (white) (a). In the DBN (b) the LIF neurons are put in a high conductance state (black), by inserting high frequency Poisson noise. The weights are scaled accordingly to fit the activations of the neurons.}
+	\caption[Different converted structures of a CNN and a DBN.]{Different converted structures of a CNN and a DBN. The CNN is converted to a spiking network, by simply using simple LIF neurons (white) (a). In the DBN (b) the LIF neurons are put in a high conductance state (black), by inserting high frequency Poisson noise. The weights are scaled accordingly to fit the activations of the neurons.}
 	\label{fig:converted}
 \end{figure}
 
@@ -148,7 +148,7 @@ The PSPs are chosen to have an alpha shape instead of rectangular shape, which a
   		\caption{omparison between a HCS COBA LIF neuron sampling and the true distribution in a RBM.}
   		\label{fig:cobahcs3}
 	\end{subfigure}
-	\caption{Properties of a conductance based LIF neuron, put into a high conductance state with high frequency input noise. The neuron fires with a probability of $0.5$ given no additional input (a). With input the input output transfer function approximates a sigmoid function (b). A network with such neurons is able to sample in a Boltzmann distribution similar to original distribution (c). }
+	\caption[Properties of a conductance based LIF neuron in a high conductance state.]{Properties of a conductance based LIF neuron, put into a high conductance state with high frequency input noise. The neuron fires with a probability of $0.5$ given no additional input (a). With input the input output transfer function approximates a sigmoid function (b). A network with such neurons is able to sample in a Boltzmann distribution similar to original distribution (c). }
 	\label{fig:cobahcs}
 
 \end{figure}
@@ -185,7 +185,7 @@ By adding high frequency Poisson noise, a sigmoid shaped input-rate output-rate 
   		\caption{Comparison between a HCS CUBA LIF neuron sampling and the true distribution in a RBM.}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption{Properties of a current based LIF neuron, put into a simulated high conductance state by high frequency input noise and a artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).}
+	\caption[Properties of a current based LIF neuron in a high conductance state.]{Properties of a current based LIF neuron, put into a simulated high conductance state by high frequency input noise and a artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).}
 	\label{fig:cubahcs}
 \end{figure}
 The DBN conversion is similar to the COBA case, where the COBA neurons are now replaced by the adapted CUBA LIFs (see Fig. \ref{fig:converted2}).
@@ -240,7 +240,7 @@ The original division into four training phases poses similarities to pCD since 
 
 We implement convolution with local receptive fields and shared weights between synapses through weight synchronization.
 Since each weight has their local STDP based update rule (eCD), we have to find a way to synchronize weights between synapses of the same feature map.
-To keep the shared weights the same, we perform a weight synchronization step at discrete time steps, since updating all weights after a single update did not show any promising results, due to some self-reinforcement and resulting weight "explosion" (see Fig. \ref{fig:ecdnest} for further insight).
+To keep the shared weights the same, we perform a weight synchronization step at discrete time steps, since updating all weights after a single update did not show any promising results, due to some self-reinforcement and resulting weight "explosion" (see \ref{fig:ecdnest} for further insight).
 Thus the synchronization at a time step for weight shared weights $w_i$ , $w_j$ can be described by the following rule:  
 \[
 \begin{split}
@@ -289,7 +289,7 @@ An approach to predict the influences of the top RBM in advance e.g like Salakhu
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/spike_dbm.png} 
-    \caption{The structure of a deep belief network trained with eCD. The spiking DBN consists of single Boltzmann machines stacked on top of each others. In contrast to artificial DBNs, the Boltzmann machines are still bidirection connected, and two Boltzmann machines are stacked up by forwarding the activations of the hidden layer in the bottom RBM to the visible layer in the top RBM.}
+    \caption[Structure of a deep belief network trained with eCD.]{The structure of a deep belief network trained with eCD. The spiking DBN consists of single Boltzmann machines stacked on top of each others. In contrast to artificial DBNs, the Boltzmann machines are still bidirection connected, and two Boltzmann machines are stacked up by forwarding the activations of the hidden layer in the bottom RBM to the visible layer in the top RBM.}
 	\label{fig:spikedbn}
 \end{figure}
 

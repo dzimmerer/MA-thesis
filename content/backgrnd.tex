@@ -28,7 +28,7 @@ There exist different approaches such as the SGS algorithm \cite{Zhou2007} or EM
 PGMs can be be divided into two basic categories, models with directed graphs and models with undirected graphs.
 
 
-\subsection{Bayesian network} \label{c:bayesnet}
+\subsection{Bayesian Networks} \label{c:bayesnet}
 
 Bayesian networks or belief networks are directed acyclic graphs, in which random variables are represented by nodes and their causal dependencies are represented by (directed) edges/connections \cite{Faltin2007} \cite{Goodfellow-et-al-2016-Book}. 
 It poses a way to depict a probability distribution factorized by repeatedly applying the Bayes rule.
@@ -66,7 +66,7 @@ A sample network with the qualitative part as well as the quantitative part can 
   		\caption{}
   		\label{fig:bayesnet}
 	\end{subfigure}
-	\caption{A sample Bayesian network with 5 binary nodes (a). In the network RV $c$ is directly dependent on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$, $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descended $e$. In (b) the conditional probability of $p(c |a , b)$ is given in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma$ a network with such probability functions is called sigmoid belief network.}
+	\caption[A sample Bayesian network with 5 binary nodes.]{A sample Bayesian network with 5 binary nodes (a). In the network RV $c$ is directly dependent on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$, $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descended $e$. In (b) the conditional probability of $p(c |a , b)$ is given in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma$ a network with such probability functions is called sigmoid belief network.}
 	\label{fig:test}
 \end{figure}
 
@@ -91,7 +91,7 @@ This process of computing the posterior distributions given the evidences is cal
 
 Thus, a Bayesian network can be seen as a tool to simplify and apply the Bayes rule to complex problems.   
 
-\subsection{Markov Random Field} \label{c:markovnet}
+\subsection{Markov Random Fields} \label{c:markovnet}
 
 In contrast to Bayesian networks, Markov random fields are undirected graphical models, in which random variables are also represented by nodes, but edges in this case indicate conditional dependencies \cite{Goodfellow-et-al-2016-Book}\cite{murphy2012machine}.
 If two nodes $x_i$ and $x_j$ are connected by a edge, they are called each others neighbours.
@@ -124,7 +124,7 @@ The clique potential for each state always has to be greater or equal to zero, b
   		\caption{Cliques in a Markov network}
   		\label{fig:markovnet2}
 	\end{subfigure}
-	\caption{(a) A Markov network with 5 nodes. The white node is dependent on all connected nodes (blue nodes). Given the blue nodes the white node is independent on any other node in the network. Given the white node all the blue nodes are independent on each other. (b) Two cliques in a Markov network. The blue clique is maximal, since no vertex can be added, which is fully connected to all others in the blue clique. The green one is not maximal, since the node $x_3$ could be added \cite{bishop2013pattern}.}
+	\caption[A Markov network with 5 nodes.]{(a) A Markov network with 5 nodes. The white node is dependent on all connected nodes (blue nodes). Given the blue nodes the white node is independent on any other node in the network. Given the white node all the blue nodes are independent on each other. (b) Two cliques in a Markov network. The blue clique is maximal, since no vertex can be added, which is fully connected to all others in the blue clique. The green one is not maximal, since the node $x_3$ could be added \cite{bishop2013pattern}.}
 	\label{fig:markovnet}
 \end{figure}
 
@@ -165,7 +165,7 @@ In this case graphical models can be useful since they often facilitate the task
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/sampling.png} 
-    \caption{Sampling a Gaussian distribution. The number of samples in an interval approximates the true density function. As more samples are drawn, the approximation of the density function will be more exact \cite{sampleFD}.}
+    \caption[Sampling a Gaussian distribution.]{Sampling a Gaussian distribution. The number of samples in an interval approximates the true density function. As more samples are drawn, the approximation of the density function will be more exact \cite{sampleFD}.}
 	\label{fig:Sampling}
 \end{figure}
 
@@ -201,7 +201,7 @@ At first, we look at the mechanisms behind natural neural networks in the brain.
 Then different artificial models, starting with models working at discrete time steps and then models, working in continuous time are described.
 To distinguish those, we refer to models working at discrete time steps as \textit{artificial neural networks} (ANNs) and models working in continuous time as \textit{spiking neural networks} (SNNs) throughout this thesis.
 
-\subsection{Natural} \label{c:natural}
+\subsection{Natural Neural Networks} \label{c:natural}
 \subsubsection{Brain} \label{c:brain}
 
 The human brain is the main organ of the human central nervous system and with a weigh of about 1.2 - 1.4 kg (2\% of the total body weight) and a power consumption of around 20 Watts (20\% of the total human power consumption), it is assumed to be mainly responsible for what is commonly referred to as human intelligence \cite{gerstner2014neuronal}\cite{Byrne1997}.  
@@ -209,7 +209,7 @@ The human brain is the main organ of the human central nervous system and with a
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/brain.png} 
-    \caption{A small section in the brain. The neurons $a$ - $g$ are connected to other neurons in a complex network \cite{gerstner2014neuronal}.}
+    \caption[A small section in the brain.]{A small section in the brain. The neurons $a$ - $g$ are connected to other neurons in a complex network \cite{gerstner2014neuronal}.}
 	\label{fig:brain}
 \end{figure}
 
@@ -239,7 +239,7 @@ Each neuron can be divided into three, functional distinct, parts: the dendrites
 \begin{figure}[h]
 	\centering
     	\includegraphics[width=0.6\textwidth]{imgs/neuron.png} 
-    \caption{A schematic view of a natural neuron. Other neurons are presynaptically connected via the dendrites. The spikes are then forwarded and accumulated in the soma and further propagated via the axon to the axon terminal and the out going synapses \cite{neuronImg}.}
+    \caption[A schematic view of a natural neuron.]{A schematic view of a natural neuron. Other neurons are presynaptically connected via the dendrites. The spikes are then forwarded and accumulated in the soma and further propagated via the axon to the axon terminal and the out going synapses \cite{neuronImg}.}
 	\label{fig:neuron}
 \end{figure}
 
@@ -247,9 +247,9 @@ The dendrites are thin, complexly branching structures emerging the cell body/ s
 They are the primary access for signals of preceding neurons through their synapses. 
 These signals can polarize or depolarize the part of the dendrites and so inhibit or promote a spike. 
 
-The soma, which encompasses the nucleus, accumulates all polarizations from the dendrites and if the accumulation exceeds a "pseudo" threshold, usually around -55 mV, certain ion channels become more active, which allows an influx of positively charged ions and a spike emerges.
+The soma, which encompasses the nucleus, accumulates all polarizations from the dendrites and if the accumulation exceeds a "pseudo" threshold, usually around -55 mV, certain ion channels become more active, which allows an influx of positively charged ions and a spike emerges (there is no threshold in natural neurons, but rather the activation probability of some ion channels increases significantly as the membrane potential reaches some "pseudo" threshold, however, due to computational benefits some abstract neuron models explicitly choose to model a spike threshold as described in Chapter \ref{c:snnneurons} ).
 
-The spike is propagated across the axon to the axon terminal where it is distributed to the dendrites of other subsequent (post-synaptic) neurons via the synapses, where they in turn can evoke (post-synaptic) potentials.
+Starting from the soma the spike is propagated across the axon to the axon terminal where it is distributed to the dendrites of other subsequent (post-synaptic) neurons via the synapses, where they in turn can evoke (post-synaptic) potentials.
 The axon is often covered by a fatty substance, the myelin, to regulate and improve the conductivity.
 
 Synapses can be divided into two different categories: Electrical, which communicate with other neurons with direct electrical connections and chemical, which use chemical compounds.
@@ -288,7 +288,7 @@ Such algorithms can in general be formalized as
 where $F$ is a function describing the weight change conditioned on the neural activities \cite{gerstner2014neuronal}.     
 This formulation allows a more complex processing of the neural activity and implementations as e.g. the original formulation of the Hebbian principle as well as the anti-Hebbian rule. 
 
-\subsection{Artificial neural networks} \label{c:ann}
+\subsection{Artificial Neural Networks} \label{c:ann}
 
 The first artificial neural network models performed computations at discrete time slices.
 While it simplifies the neuron model considerably, it makes them exceptionally easy to handle on most processors, which also work at a discrete tact rate.
@@ -305,7 +305,7 @@ The perceptron loosely models a neuron with a multi-dimensional input and a sing
 \begin{figure}
 	\centering
     	\includegraphics[width=0.8\textwidth]{imgs/percept.png} 
-    \caption{Structure of a perceptron. The input $in(t)$ is set at the input variables $x_i$ and multiplied with the corresponding synaptic weight $w_i$ and accumulated. In addition, a threshold offset $\theta$ is added. Afterwards the step-function is applied i.e. the output $out(t)$ is $1$ if the sum is greater $0$ and $0$ if the sum is smaller $0$ \cite{perceptronImg}.}
+    \caption[Structure of a perceptron.]{Structure of a perceptron. The input $in(t)$ is set at the input variables $x_i$ and multiplied with the corresponding synaptic weight $w_i$ and accumulated. In addition, a threshold offset $\theta$ is added. Afterwards the step-function is applied i.e. the output $out(t)$ is $1$ if the sum is greater $0$ and $0$ if the sum is smaller $0$ \cite{perceptronImg}.}
     % https://github.com/cdipaolo/goml/tree/master/perceptron
 	\label{fig:perceptron}
 \end{figure}
@@ -362,7 +362,7 @@ While a perceptron with a linear decision function only allows quite simple disc
   		\includegraphics[width=.9\linewidth]{imgs/percept_discr2.png}
   		 \caption{}
 	\end{subfigure}
-    \caption{The discrimination function of a perceptron. The discrimination function has the shape of a linear hyper plane in data space and is defined by the synaptic weight-vector $\textbf{w}$. It divides the data space and thus the data samples into two subspaces, the positive space $\textbf{x}^{\intercal}\textbf{w} > 0$ and the negative space $\textbf{x}^{\intercal}\textbf{w} < 0$. In (a) the discrimination function is given in a two-dimensional data space and in (b) in a three-dimensional data space.}
+    \caption[The discrimination function of a perceptron.]{The discrimination function of a perceptron. The discrimination function has the shape of a linear hyper plane in data space and is defined by the synaptic weight-vector $\textbf{w}$. It divides the data space and thus the data samples into two subspaces, the positive space $\textbf{x}^{\intercal}\textbf{w} > 0$ and the negative space $\textbf{x}^{\intercal}\textbf{w} < 0$. In (a) the discrimination function is given in a two-dimensional data space and in (b) in a three-dimensional data space.}
 	\label{fig:discrimation}
 \end{figure}
 
@@ -579,7 +579,7 @@ Due to this similarity, the terms convolution and cross correlation are often us
 \begin{figure}
 	\centering
     	\includegraphics[width=0.8\textwidth]{imgs/convolution.png} 
-    \caption{A cross correlation of a $3\times3$ image matrix with a $2\times2$ kernel without stride and padding. The result is a $2\times2$ feature map.}
+    \caption[A cross correlation of a $3\times3$ image matrix with a $2\times2$ kernel.]{A cross correlation of a $3\times3$ image matrix with a $2\times2$ kernel without stride and padding. The result is a $2\times2$ feature map.}
 	\label{fig:conv}
 \end{figure}
 
@@ -593,7 +593,7 @@ A discrete convolution with a $(M , P , Q)$ filter matrix $K_j$ at position $(x,
 y_{i}^{jxy} = \sigma(\sum_M \sum_{p=-\frac{P}{2}}^{\frac{P}{2}} \sum_{q=-\frac{Q}{2}}^{\frac{Q}{2}} w_{ij}^{mpq} y_{(i-1)}^{m(x+p)(y+q)}) .
 \]
 where $w_{ij}^{mpq}$ is the value at position $(m,p,q)$ of the $j$th Kernel matrix $K_j$ in the $i$th layer and $y_{i}^{jxy}$ is the entry in the $j$th 2D-feature map in the $i$th layer at position $(x, y)$.\\
-In a typical layer the weights $w_{ij}^{mpq}$ of all Kernel matrices $K_j$ in all layers $i$ are the free parameters that have to be learned. 
+In a typical CNN the weights $w_{ij}^{mpq}$ of all Kernel matrices $K_j$ in all layers $i$ are the free parameters that have to be learned. 
 Other so called hyper-parameters, which have to be determined, are the number $j$ of Kernel matrices for each layer $i$, their stride size defining the shift of a filter at each step, and therefore the output dimension of the layer.
 Recent state-of-the-art systems have mostly reached the common consensus, of choosing a stride of $1$, which we have adapted throughout this thesis \cite{simonyan2014very}.
 
@@ -696,7 +696,7 @@ where $s_i$ is the current state/ activity of neuron $i$.
 \begin{figure}
 	\centering
     	\includegraphics[width=0.5\textwidth]{imgs/hopfield.png} 
-    \caption{A blueprint of a Hopfield nets with 7 binary units. The units are connected with symmetric undirected connections.}
+    \caption[A blueprint of a Hopfield nets with 7 binary units.]{A blueprint of a Hopfield nets with 7 binary units. The units are connected with symmetric undirected connections.}
 	\label{fig:hopfiled}
 \end{figure}
 
@@ -762,7 +762,7 @@ Running a certain number of consecutive update steps probabilistically drives th
 \begin{figure}
 	\centering
     	\includegraphics[width=0.5\textwidth]{imgs/bm.png} 
-    \caption{A Boltzmann machine with 7 units. In contrast to a Hopfield nets, units are divided into visible and hidden/ unobserved units with stochastic activations \cite{boltzImg}.}
+    \caption[A Boltzmann machine with 7 units.]{A Boltzmann machine with 7 units. In contrast to a Hopfield nets, units are divided into visible and hidden/ unobserved units with stochastic activations \cite{boltzImg}.}
     % http://gorayni.blogspot.de/
 	\label{fig:bm}
 \end{figure}
@@ -838,7 +838,7 @@ F(\textbf{v}) = - \sum x_i b_i - \sum \log(1 + \exp^{x_i})  .
 \begin{figure}
 	\centering
     	\includegraphics[width=0.5\textwidth]{imgs/rbm.png} 
-    \caption{A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are solely dependent on the hidden units and the hidden units solely on the visible units \cite{theanoRBM}.}
+    \caption[A restricted Boltzmann machine with 7 units.]{A restricted Boltzmann machine is special kind of Boltzmann machine with no lateral connections in the hidden and visible layer. This eases sampling, since the visible are solely dependent on the hidden units and the hidden units solely on the visible units \cite{theanoRBM}.}
 	\label{fig:rbm}
 \end{figure}
 
@@ -859,7 +859,7 @@ Thus given a data sample $\textbf{x}$ an CD-k update is computed as follows:
 \begin{figure}
 	\centering
     	\includegraphics[width=0.8\textwidth]{imgs/cd.png} 
-    \caption{A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite{cdImg}.}
+    \caption[A temporal unrolling of the contrastive divergence algorithm.]{A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite{cdImg}.}
 	\label{fig:cd}
 \end{figure}
 
@@ -893,7 +893,7 @@ After training, the DBN still has symmetric weights.
 \begin{figure}
 	\centering
     	\includegraphics[width=0.8\textwidth]{imgs/dbn_stacking.png} 
-    \caption{Building up a deep belief network by training RBMs greedily and stacking them up on top of each other. At first, only one RBM is trained. On top of the first RBM the next RBM is trained. This procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite{DBNImg}.}
+    \caption[Building up a deep belief network.]{Building up a deep belief network by training RBMs greedily and stacking them up on top of each other. At first, only one RBM is trained. On top of the first RBM the next RBM is trained. This procedure can be performed for an arbitrary number of repetitions. In the top layer "association" RBM the label information $y$ can be in-cooperated as well \cite{DBNImg}.}
 	\label{fig:dbn}
 \end{figure}
 
@@ -912,7 +912,7 @@ In the wake-sleep algorithm the symmetric weights are split up into bottom-up an
 Another way to fine-tune the weights for classification given labels and an error function, is to perform back propagation to further fine tune the bottom-up weights (while the top-down weights are usually discarded). 
 One interpretation of this is to see a DBN as a pre-trained ANN.
 
-\subsection{Spiking neural networks} \label{c:snns}
+\subsection{Spiking Neural Networks} \label{c:snns}
 
 While all the previous presented models did run at discrete time steps, the next models are designed to run contentiously which makes them more similar to natural neurons and neural networks \cite{maass1997networks}. 
 
@@ -932,7 +932,7 @@ It is one of the simplest and consequently computationally most efficient, most 
 \begin{figure}
 	\centering
     	\includegraphics[width=0.6\textwidth]{imgs/lif.png} 
-    \caption{A LIF neuron as an electrical circuit. The capacitor $C_m$ corresponds to the potential at the membrane, $g_l$ the leakage potential and $E_l$ the resting potential. If the membrane potential is greater than $U_t$ a spike $\delta$ is emitted \cite{heikoMA}.}
+    \caption[A LIF neuron as an electrical circuit.]{A LIF neuron as an electrical circuit. The capacitor $C_m$ corresponds to the potential at the membrane, $g_l$ the leakage potential and $E_l$ the resting potential. If the membrane potential is greater than $U_t$ a spike $\delta$ is emitted \cite{heikoMA}.}
     % Heiko
 	\label{fig:lif}
 \end{figure}
@@ -975,7 +975,7 @@ Due to its simplifications the LIF model can not capture some natural observed b
   		\includegraphics[width=.9\linewidth]{imgs/lif_bad3.png}
   		\caption{Delayed regular bursting}
 	\end{subfigure}
-    \caption{Different firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite{gerstner2014neuronal}.}
+    \caption[Different neural firing behaviour observed in the Brain.]{Different neural firing behaviour observed in the Brain. In (a) a neuron shows constant tonic firing, while in (b) the neuron shows frequency adaptation and in (c) the neurons shows delayed regular bursting \cite{gerstner2014neuronal}.}
 	\label{fig:neuronbe}
 \end{figure}
 
@@ -1005,7 +1005,7 @@ with the rate constants $\alpha$, $\beta$ for each ion channel.
 \begin{figure}
 	\centering
     	\includegraphics[width=0.6\textwidth]{imgs/hode_hux.png} 
-    \caption{A Hodgkin-Huxley as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite{heikoMA}.}
+    \caption[A Hodgkin-Huxley neuron as an electrical circuit.]{A Hodgkin-Huxley neuron as an electrical circuit. The membrane potential corresponds to $C_m$, and the ion channels to $g_{Na}$, $g_{k}$, $g_{L}$ with their reversal potentials $E_{Na}$, $E_{}$, $E_{L}$ \cite{heikoMA}.}
     % Heiko
 	\label{fig:hogdehux}
 \end{figure}
@@ -1087,7 +1087,7 @@ This will show further application as a stochastically firing neuron model used 
 \begin{figure}
 	\centering
     	\includegraphics[width=0.6\textwidth]{imgs/orn_uhl_process.png} 
-    \caption{Three samples of Ornstein–Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite{Petrovici2016}.}
+    \caption[Three samples of Ornstein–Uhlenbeck processes.]{Three samples of Ornstein–Uhlenbeck processes. This can be seen as the membrane potential of neurons in a high conductance state (in comparison to the black doted line can be seen as a neuron without noisy input) \cite{Petrovici2016}.}
     % Petrovici
 	\label{fig:ornuhl}
 \end{figure}
@@ -1096,7 +1096,7 @@ This will show further application as a stochastically firing neuron model used 
 \begin{figure}
 	\centering
     	\includegraphics[width=0.6\textwidth]{imgs/hcs.png} 
-    \caption{A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time  \cite{Petrovici2016}. }
+    \caption[A membrane potential trajectory of a neuron in a high conductance state.]{A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time  \cite{Petrovici2016}. }
     % Petrovici
 	\label{fig:hcs}
 \end{figure}
@@ -1118,7 +1118,7 @@ These are also visualized in Figure \ref{fig:pspkernels}.
 \begin{figure}
 	\centering
     	\includegraphics[width=0.6\textwidth]{imgs/psp_kernel.png} 
-    \caption{Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite{Petrovici2016}. }
+    \caption[PSP kernels.]{Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite{Petrovici2016}. }
     % Petrovici
 	\label{fig:pspkernels}
 \end{figure}
@@ -1188,6 +1188,6 @@ This leads to a purely negative decrease of weights (see Fig. \ref{fig:stdp}).
 \begin{figure}
 	\centering
     	\includegraphics[width=0.6\textwidth]{imgs/stdp_curves.jpg} 
-    \caption{Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite{Buchanan2010}.}
+    \caption[STDP curves observed in the Brain.]{Different STDP curves observed in the Brain. The first curve shows only long term potentiation. The middle one shows a variant of the classic STDP Curve and the last one shows purely long term depression \cite{Buchanan2010}.}
 	\label{fig:stdp}
 \end{figure}

@@ -67,7 +67,7 @@ E(\textbf{h} , \textbf{v}) = \textbf{h}^\intercal(W * \textbf{v}) + \textbf{h}^\
   		\caption{The downward pass in the convolutional RBM}
   		\label{fig:convrbmsub3}
 	\end{subfigure}
-	\caption{A Gibbs sampling step in a convolutional RBM. At first the visible data is convolved with the kernel to get the hidden activations. Afterwards the kernel matrix is flipped 180\textdegree . In the downward pass the hidden activations with padding are convolved with the flipped kernel to get the new visible activations \cite{convImg}.}
+	\caption[A Gibbs sampling step in a convolutional RBM.]{A Gibbs sampling step in a convolutional RBM. At first the visible data is convolved with the kernel to get the hidden activations. Afterwards the kernel matrix is flipped 180\textdegree . In the downward pass the hidden activations with padding are convolved with the flipped kernel to get the new visible activations \cite{convImg}.}
 	\label{fig:convrbm}
 \end{figure}
 
@@ -123,7 +123,7 @@ Thus for a given time step $t$ the state of the network $\textbf{z}(t) = (z_1(t)
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/snn_sample1.png} 
-    \caption{A spiking neural network as probabilistic model. The state $z_i$ of a neuron is set to $1$ for a time period $t_{on}$ after a spike. The complete state of the network $\textbf{z}$ is given by the individual state $(z_1, z_2, z_3, z_4)$  \cite{Petrovici2016}.}
+    \caption[A spiking neural network as probabilistic model.]{A spiking neural network as probabilistic model. The state $z_i$ of a neuron is set to $1$ for a time period $t_{on}$ after a spike. The complete state of the network $\textbf{z}$ is given by the individual state $(z_1, z_2, z_3, z_4)$  \cite{Petrovici2016}.}
 	\label{fig:snnsamp1}
 \end{figure}
 
@@ -156,7 +156,7 @@ p(\xi_t | \xi_{t-1}) =
   		\caption{}
   		\label{fig:snnsamp2sub1}
 	\end{subfigure}
-    \caption{The artificial counter state $\xi$ of a neuron in a discrete time. In (a) the red state represent an active state $z_i = 1$. After a spike $\xi$ is set to the refractory period $\tau$. In each time step the refractory period counter $\xi$ is reduced by 1 until the neuron is inactive and can spike again. In (b) a exemplary membrane potential with the corresponding states of a neuron is given \cite{Buesing2011}.}
+    \caption[The artificial counter state of a neuron in a discrete time.]{The artificial counter state $\xi$ of a neuron in a discrete time. In (a) the red state represent an active state $z_i = 1$. After a spike $\xi$ is set to the refractory period $\tau$. In each time step the refractory period counter $\xi$ is reduced by 1 until the neuron is inactive and can spike again. In (b) a exemplary membrane potential with the corresponding states of a neuron is given \cite{Buesing2011}.}
 	\label{fig:snnsamp2}
 \end{figure}
 
@@ -184,7 +184,7 @@ Replacing the rectangular PSP with a more biological plausible alpha shaped PSP 
   		\caption{}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption{Comparison of the state probabilities with of neural sampling with Gibbs sampling in a five state Boltzmann machine. In (a) a probabilistic neuron model with a rectangular PSP is used and no discrepancies can be detected given a long enough sampling period. In (b) a more biological plausible alpha shaped kernel is used, which leads to some differences \cite{Buesing2011}.}
+	\caption[Comparison of the state probabilities of neural sampling with Gibbs sampling.]{Comparison of the state probabilities of neural sampling with Gibbs sampling in a five state Boltzmann machine. In (a) a probabilistic neuron model with a rectangular PSP is used and no discrepancies can be detected given a long enough sampling period. In (b) a more biological plausible alpha shaped kernel is used, which leads to some differences \cite{Buesing2011}.}
 	\label{fig:snnsamp3}
 \end{figure}
 
@@ -196,11 +196,11 @@ By scaling the weights, the LIF neurons can be used to perform neural sampling s
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/snn_sample5.png} 
-    \caption{Input output transfer function of a neuron in a high conductance state. The output rate is normalized by $\frac{1}{\tau_{ref}}$ to get a output probability. The transfer function is identical to shifted sigmoid function $\sigma$  \cite{Petrovici2016}.}
+    \caption[Input output transfer function of a neuron in a high conductance state.]{Input output transfer function of a neuron in a high conductance state. The output rate is normalized by $\frac{1}{\tau_{ref}}$ to get a output probability. The transfer function is identical to shifted sigmoid function $\sigma$  \cite{Petrovici2016}.}
 	\label{fig:snnsamp4}
 \end{figure}
 
-\section{Artificial to spiking neural network conversion} \label{c:nnconversion}
+\section{Artificial to Spiking Neural Network Conversion} \label{c:nnconversion}
 
 The results of Petrovici allow a quite simple transformation of a Boltzmann machine to spiking neural networks of noisy conductance based LIF neurons with the synaptic weights scaled to match the impact on the membrane potential \cite{Petrovici2016}.
 \\
@@ -254,7 +254,7 @@ But this approach only allows a fixed number of CD steps and is due to the weigh
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/evtCD.png} 
-    \caption{An unrolled RBM with tied weights, which can be used to simulate the positive and negative phase and learn the weighs online \cite{Neil2013}.}
+    \caption[An unrolled RBM with tied weights for CD.]{An unrolled RBM with tied weights, which can be used to simulate the positive and negative phase and learn the weighs online \cite{Neil2013}.}
 	\label{fig:evtCD}
 \end{figure}
 
@@ -279,7 +279,7 @@ The kernel function $W$ should be symmetric, a common choice is $W(x) = exp(\fra
 \begin{figure}
 	\centering
     	\includegraphics[width=0.8\textwidth]{imgs/eCD2.png} 
-    \caption{Comparison between classical CD and event-based CD. In the classical k-CD (a) the weight update is determined by positive phase and negative phase, while in event-base CD (b) the weight update is determined by STDP and the sampling phase, determined by $g$ \cite{Neftci2013}.}
+    \caption[Comparison between classical CD and event-based CD.]{Comparison between classical CD and event-based CD. In the classical k-CD (a) the weight update is determined by positive phase and negative phase, while in event-base CD (b) the weight update is determined by STDP and the sampling phase, determined by $g$ \cite{Neftci2013}.}
 	\label{fig:ecdcomp}
 \end{figure}
   
