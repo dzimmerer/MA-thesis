@@ -11,6 +11,8 @@
 
 \usepackage{tabularx}
 
+\usepackage{acronym}
+
 \usepackage{algorithm}
 \usepackage{algpseudocode} 
 
@@ -36,7 +38,7 @@
 
 \makeindex
 
-\newcommand{\myname}{Forename~Surname}
+\newcommand{\myname}{David~Zimmerer}
 \newcommand{\headtitle}{Title of thesis\\ 
                         Second title line}
 \newcommand{\floatingtitle}{Title of thesis - Second title line}
@@ -64,6 +66,8 @@
 % A graphic best describing your thesis
 \newcommand{\titlefig}{\includegraphics[width=1.0\textwidth]{graphics/not-the-final-title}}
 
+
+
 \begin{document}
 
 \pagenumbering{roman}
@@ -73,8 +77,11 @@
 \parindent 1em
 \include{preface/affirmation}
 % \include{preface/preface}
-% \include{preface/abstract}
+\include{preface/abstract}
 % \include{preface/acknowledgment}
+
+\include{preface/abbrev}
+
 
 \begingroup
 \changefont{phv}{m}{n}

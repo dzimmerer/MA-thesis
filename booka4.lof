@@ -1,85 +1,85 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A sample Bayesian network with 5 binary nodes.}}{4}{figure.caption.3}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces A Markov network with 5 nodes.}}{5}{figure.caption.4}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Sampling a Gaussian distribution.}}{6}{figure.caption.5}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A small section in the brain.}}{8}{figure.caption.10}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces A schematic view of a natural neuron.}}{9}{figure.caption.12}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Structure of a perceptron.}}{11}{figure.caption.18}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces The discrimination function of a perceptron.}}{12}{figure.caption.20}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces A schematic multi layer perceptron with three layers \cite {mlpImg}.\relax }}{13}{figure.caption.23}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces The output of different activation functions plotted given the input.\relax }}{14}{figure.caption.26}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces A cross correlation of a $3\times 3$ image matrix with a $2\times 2$ kernel.}}{17}{figure.caption.31}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Typical architecture of a convolutional neural network with two convolution-pooling stages \cite {cnnarchImg}.\relax }}{18}{figure.caption.34}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces A blueprint of a Hopfield nets with 7 binary units.}}{19}{figure.caption.38}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces A Boltzmann machine with 7 units.}}{21}{figure.caption.41}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces A restricted Boltzmann machine with 7 units.}}{23}{figure.caption.44}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces A temporal unrolling of the contrastive divergence algorithm.}}{24}{figure.caption.46}
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Building up a deep belief network.}}{25}{figure.caption.50}
-\contentsline {figure}{\numberline {2.17}{\ignorespaces A LIF neuron as an electrical circuit.}}{26}{figure.caption.54}
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Different neural firing behaviour observed in the Brain.}}{27}{figure.caption.55}
-\contentsline {figure}{\numberline {2.19}{\ignorespaces A Hodgkin-Huxley neuron as an electrical circuit.}}{28}{figure.caption.57}
-\contentsline {figure}{\numberline {2.20}{\ignorespaces Three samples of Ornstein\IeC {\textendash }Uhlenbeck processes.}}{30}{figure.caption.63}
-\contentsline {figure}{\numberline {2.21}{\ignorespaces A membrane potential trajectory of a neuron in a high conductance state.}}{30}{figure.caption.64}
-\contentsline {figure}{\numberline {2.22}{\ignorespaces PSP kernels.}}{31}{figure.caption.66}
-\contentsline {figure}{\numberline {2.23}{\ignorespaces STDP curves observed in the Brain.}}{33}{figure.caption.72}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A sample Bayesian network with 5 binary nodes.}}{4}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A Markov network with 5 nodes.}}{5}{figure.caption.6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Sampling a Gaussian distribution.}}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A small section in the brain.}}{8}{figure.caption.12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces A schematic view of a natural neuron.}}{9}{figure.caption.14}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Structure of a perceptron.}}{11}{figure.caption.20}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces The discrimination function of a perceptron.}}{12}{figure.caption.22}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces A schematic multi layer perceptron with three layers \cite {mlpImg}.\relax }}{13}{figure.caption.25}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces The output of different activation functions plotted given the input.\relax }}{14}{figure.caption.28}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces A cross correlation of a $3\times 3$ image matrix with a $2\times 2$ kernel.}}{17}{figure.caption.33}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Typical architecture of a convolutional neural network with two convolution-pooling stages \cite {cnnarchImg}.\relax }}{18}{figure.caption.36}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces A blueprint of a Hopfield nets with 7 binary units.}}{19}{figure.caption.40}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces A Boltzmann machine with 7 units.}}{21}{figure.caption.43}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces A restricted Boltzmann machine with 7 units.}}{23}{figure.caption.46}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces A temporal unrolling of the contrastive divergence algorithm.}}{24}{figure.caption.48}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Building up a deep belief network.}}{25}{figure.caption.52}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces A LIF neuron as an electrical circuit.}}{26}{figure.caption.56}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Different neural firing behaviour observed in the Brain.}}{27}{figure.caption.57}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces A Hodgkin-Huxley neuron as an electrical circuit.}}{28}{figure.caption.59}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Three samples of Ornstein\IeC {\textendash }Uhlenbeck processes.}}{30}{figure.caption.65}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces A membrane potential trajectory of a neuron in a high conductance state.}}{30}{figure.caption.66}
+\contentsline {figure}{\numberline {2.22}{\ignorespaces PSP kernels.}}{31}{figure.caption.68}
+\contentsline {figure}{\numberline {2.23}{\ignorespaces STDP curves observed in the Brain.}}{33}{figure.caption.74}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A Gibbs sampling step in a convolutional RBM.}}{36}{figure.caption.73}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The RBM layer architecture with probabilistic max pooling \cite {lee2009convolutional}.\relax }}{36}{figure.caption.74}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces A spiking neural network as probabilistic model.}}{37}{figure.caption.75}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The artificial counter state of a neuron in a discrete time.}}{38}{figure.caption.76}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Comparison of the state probabilities of neural sampling with Gibbs sampling.}}{38}{figure.caption.77}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Input output transfer function of a neuron in a high conductance state.}}{39}{figure.caption.78}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces The proposed architectures to conversion between CNNs and SNNs \cite {Cao2014}. \relax }}{40}{figure.caption.79}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces An unrolled RBM with tied weights for CD.}}{40}{figure.caption.80}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Comparison between classical CD and event-based CD.}}{41}{figure.caption.81}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Visualization of the phases of the event based contrastive divergence.\relax }}{41}{figure.caption.82}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A Gibbs sampling step in a convolutional RBM.}}{36}{figure.caption.75}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The RBM layer architecture with probabilistic max pooling \cite {lee2009convolutional}.\relax }}{36}{figure.caption.76}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A spiking neural network as probabilistic model.}}{37}{figure.caption.77}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The artificial counter state of a neuron in a discrete time.}}{38}{figure.caption.78}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Comparison of the state probabilities of neural sampling with Gibbs sampling.}}{38}{figure.caption.79}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Input output transfer function of a neuron in a high conductance state.}}{39}{figure.caption.80}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The proposed architectures to conversion between CNNs and SNNs \cite {Cao2014}. \relax }}{40}{figure.caption.81}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces An unrolled RBM with tied weights for CD.}}{40}{figure.caption.82}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Comparison between classical CD and event-based CD.}}{41}{figure.caption.83}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Visualization of the phases of the event based contrastive divergence.\relax }}{41}{figure.caption.84}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Receptive fields over 4 neurons.}}{43}{figure.caption.83}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces A common structure of a deep belief network.}}{44}{figure.caption.84}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Different converted structures of a CNN and a DBN.}}{45}{figure.caption.85}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Properties of a conductance based LIF neuron in a high conductance state.}}{46}{figure.caption.88}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Properties of a current based LIF neuron in a high conductance state.}}{47}{figure.caption.90}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces The five phases for a data sample in the adapted eCD algorithm. \relax }}{48}{figure.caption.91}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces A (restricted) Boltzmann machine with lateral inhibition in the top layer.\relax }}{49}{figure.caption.93}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Structure of a deep belief network trained with eCD.}}{50}{figure.caption.94}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Samples from the stripe dataset.}}{55}{figure.caption.95}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Samples from the MNIST dataset.}}{56}{figure.caption.96}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Samples from the Poker-DVS dataset.}}{56}{figure.caption.97}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Pen samples from the Ball-Can-Pen-DVS dataset.}}{57}{figure.caption.98}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Visualized $16 \times 16$ filters of the first layer convolutional RBM of a DBN trained on the $28 \times 28$ pixel MNIST dataset.\relax }}{59}{figure.caption.99}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Activations in the features maps in a artificial convolutional DBN and the converted spiking network architectures. \relax }}{61}{figure.caption.103}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Misclassifications of the converted spiking DBNs on MNIST.}}{61}{figure.caption.104}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Positive phase and negative phase of a diagonal stripe with 4 filters.}}{62}{figure.caption.107}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Weight change during training.}}{62}{figure.caption.108}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Visualization of the spikes in the visible layer during the positive phase and negative phase of a diagonal stripe.}}{63}{figure.caption.110}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Spikes in the hidden layer of a spiking convolutional RBM.}}{63}{figure.caption.111}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces $5 \times 5$ convolution filter matrices with and without lateral inhibitory connections in the top RBM layer on the stripe dataset.}}{64}{figure.caption.113}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Weights of the first layers of the DBNs with and without convolutions with the same number of free parameters.}}{64}{figure.caption.115}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces The runtime of a learning step in dependence on the network size.}}{65}{figure.caption.117}
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Abstract architecture of the DBN for the stripe dataset.\relax }}{66}{figure.caption.119}
-\contentsline {figure}{\numberline {6.16}{\ignorespaces The development of the $5 \times 5$ convolution filter matrices in the first layer of a DBN during training with the convolutional eCD algorithm on $1000$ samples of the stripe dataset.\relax }}{66}{figure.caption.120}
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Spikes in the layers of the first RBM during training.}}{67}{figure.caption.121}
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Spikes in the layers of the second RBM during training.}}{68}{figure.caption.122}
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Abstract architecture of the DBN for the poker dataset.\relax }}{69}{figure.caption.124}
-\contentsline {figure}{\numberline {6.20}{\ignorespaces The accuracy and reconstruction error of the DBN on the Poker-DVS dataset.}}{69}{figure.caption.125}
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Visualization of the convolution filters of the first layer RBM trained with the convolutional eCD algorithm on the Poker-DVS dataset.\relax }}{70}{figure.caption.126}
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Positive phase and negative phase in the first layer of the DBN of after training on the Poker-DVS dataset.}}{70}{figure.caption.127}
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Completion of partially presented input data of the Poker-DVS dataset.}}{70}{figure.caption.128}
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Performance on the Ball-Can-Pen-DVS dataset.}}{71}{figure.caption.130}
-\contentsline {figure}{\numberline {6.25}{\ignorespaces Convolutional filters of the first layers of the artificial and spiking convolutional DBNs.}}{72}{figure.caption.132}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Receptive fields over 4 neurons.}}{43}{figure.caption.85}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces A common structure of a deep belief network.}}{44}{figure.caption.86}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Different converted structures of a CNN and a DBN.}}{45}{figure.caption.87}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Properties of a conductance based LIF neuron in a high conductance state.}}{46}{figure.caption.90}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Properties of a current based LIF neuron in a high conductance state.}}{47}{figure.caption.92}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces The five phases for a data sample in the adapted eCD algorithm. \relax }}{48}{figure.caption.93}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces A (restricted) Boltzmann machine with lateral inhibition in the top layer.\relax }}{49}{figure.caption.95}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Structure of a deep belief network trained with eCD.}}{50}{figure.caption.96}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Spikes in a hidden layer of a spiking RBM with different kinds of lateral inhibition.}}{78}{figure.caption.139}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Activity in the visible layer of the top RBM in a DBNs with different architectures.}}{79}{figure.caption.140}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Weights with shared STDP weight updates and without any convolution.}}{80}{figure.caption.141}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Weights development for eCD with synchronous weight updates.}}{80}{figure.caption.142}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Spikes activity during convolutional eCD with synchronous weight updates.}}{81}{figure.caption.143}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Learned weights for convolutional eCD with synchronous weight updates.\relax }}{81}{figure.caption.144}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Weight histogram for convolutional eCD with synchronous weight updates and an increased learning rate during the positive phase.}}{81}{figure.caption.145}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Samples from the stripe dataset.}}{55}{figure.caption.97}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Samples from the MNIST dataset.}}{56}{figure.caption.98}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Samples from the Poker-DVS dataset.}}{56}{figure.caption.99}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Pen samples from the Ball-Can-Pen-DVS dataset.}}{57}{figure.caption.100}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Visualized $16 \times 16$ filters of the first layer convolutional RBM of a DBN trained on the $28 \times 28$ pixel MNIST dataset.\relax }}{59}{figure.caption.101}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Activations in the features maps in a artificial convolutional DBN and the converted spiking network architectures. \relax }}{61}{figure.caption.105}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Misclassifications of the converted spiking DBNs on MNIST.}}{61}{figure.caption.106}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Positive phase and negative phase of a diagonal stripe with 4 filters.}}{62}{figure.caption.109}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Weight change during training.}}{62}{figure.caption.110}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Visualization of the spikes in the visible layer during the positive phase and negative phase of a diagonal stripe.}}{63}{figure.caption.112}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Spikes in the hidden layer of a spiking convolutional RBM.}}{63}{figure.caption.113}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces $5 \times 5$ convolution filter matrices with and without lateral inhibitory connections in the top RBM layer on the stripe dataset.}}{64}{figure.caption.115}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Weights of the first layers of the DBNs with and without convolutions with the same number of free parameters.}}{64}{figure.caption.117}
+\contentsline {figure}{\numberline {6.14}{\ignorespaces The runtime of a learning step in dependence on the network size.}}{65}{figure.caption.119}
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Abstract architecture of the DBN for the stripe dataset.\relax }}{66}{figure.caption.121}
+\contentsline {figure}{\numberline {6.16}{\ignorespaces The development of the $5 \times 5$ convolution filter matrices in the first layer of a DBN during training with the convolutional eCD algorithm on $1000$ samples of the stripe dataset.\relax }}{66}{figure.caption.122}
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Spikes in the layers of the first RBM during training.}}{67}{figure.caption.123}
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Spikes in the layers of the second RBM during training.}}{68}{figure.caption.124}
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Abstract architecture of the DBN for the poker dataset.\relax }}{69}{figure.caption.126}
+\contentsline {figure}{\numberline {6.20}{\ignorespaces The accuracy and reconstruction error of the DBN on the Poker-DVS dataset.}}{69}{figure.caption.127}
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Visualization of the convolution filters of the first layer RBM trained with the convolutional eCD algorithm on the Poker-DVS dataset.\relax }}{70}{figure.caption.128}
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Positive phase and negative phase in the first layer of the DBN of after training on the Poker-DVS dataset.}}{70}{figure.caption.129}
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Completion of partially presented input data of the Poker-DVS dataset.}}{70}{figure.caption.130}
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Performance on the Ball-Can-Pen-DVS dataset.}}{71}{figure.caption.132}
+\contentsline {figure}{\numberline {6.25}{\ignorespaces Convolutional filters of the first layers of the artificial and spiking convolutional DBNs.}}{72}{figure.caption.134}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Spikes in a hidden layer of a spiking RBM with different kinds of lateral inhibition.}}{78}{figure.caption.141}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Activity in the visible layer of the top RBM in a DBNs with different architectures.}}{79}{figure.caption.142}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Weights with shared STDP weight updates and without any convolution.}}{80}{figure.caption.143}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Weights development for eCD with synchronous weight updates.}}{80}{figure.caption.144}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Spikes activity during convolutional eCD with synchronous weight updates.}}{81}{figure.caption.145}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Learned weights for convolutional eCD with synchronous weight updates.\relax }}{81}{figure.caption.146}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Weight histogram for convolutional eCD with synchronous weight updates and an increased learning rate during the positive phase.}}{81}{figure.caption.147}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

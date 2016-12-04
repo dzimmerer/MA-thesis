@@ -201,17 +201,17 @@ This rule can be reformulated as an iterative rule as follows:
 \item The visible unit $v$ spikes: 
 \[
 \begin{split}
-A_v = A_v \exp(\frac{\Delta t}{\tau}) + a_{\delta} ,\\
-A_h = A_h \exp(\frac{\Delta t}{\tau}) ,\\
-\delta w = g(t) \mu A_v  ,\\
+A_v &= A_v \exp(\frac{\Delta t}{\tau}) + a_{\delta} ,\\
+A_h &= A_h \exp(\frac{\Delta t}{\tau}) ,\\
+\delta w &= \mu g(t)  A_v  ,\\
 \end{split}
 \]
 \item The visible unit $h$ spikes: 
 \[
 \begin{split}
-A_h = A_h \exp(\frac{\Delta t}{\tau}) + a_{\delta} ,\\
-A_v = A_v \exp(\frac{\Delta t}{\tau}) ,\\
-\delta w = g(t) \mu A_h  ,\\
+A_h &= A_h \exp(\frac{\Delta t}{\tau}) + a_{\delta} ,\\
+A_v &= A_v \exp(\frac{\Delta t}{\tau}) ,\\
+\delta w &= \mu  g(t) A_h  ,\\
 \end{split}
 \]
 \end{itemize}
@@ -259,7 +259,7 @@ This results in a update rule similar to the convolutional RBM update rule as in
 Thus we can simply take the mean of the weight changes and apply it to all the weights, which is equivalent to just taking the average of the new individual weights. 
 
 \paragraph{Lateral inhibition} \label{c:latinhib}
-In addition we introduce fixed negative connections between neuron in the top/ hidden layers ( which is more biological plausible \cite{King2013} , see a simplified sample in Fig. \ref{fig:bminhib}).
+In addition we introduce fixed negative connections between neuron in the top/ hidden layers ( which is more biologically plausible \cite{King2013}, see a simplified sample in Fig. \ref{fig:bminhib}).
 This removes one advantage of RBMs since the hidden layers are no longer independent, which makes it harder to sample from the true distributions, but since the network continuously performs sampling steps, the approximation has shown to be sufficient, if the weights are not too strong and prevent changes of different modes (see Chapter \ref{c:latinhibexp} and Fig. \ref{fig:dbnmixing} ).
 
 \begin{figure}

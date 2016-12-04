@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  25 NOV 2016 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  4 DEC 2016 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5012,10 +5012,10 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-<write> ...ference `fig:ecdnest' on page \thepage 
+<write> ...nce `fig:ecdnestconv' on page \thepage 
                                                   \space undefined\on@line .
-l.104 As shown in \ref{fig:ecdnest}
-                                    due to self-facilitation leading to a we...
+l.104 As shown in \ref{fig:ecdnestconv}
+                                        due to self-facilitation leading to ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -5023,7 +5023,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `fig:ecdnest' on page  undefined on input line 104.
+LaTeX Warning: Reference `fig:ecdnestconv' on page  undefined on input line 104
+.
 
 Missing character: There is no d in font nullfont!
 Missing character: There is no u in font nullfont!
@@ -8421,7 +8422,7 @@ Overfull \hbox (17.72124pt too wide) in paragraph at lines 154--157
  
 Here is how much of TeX's memory you used:
  30 strings out of 493105
- 443 string characters out of 6137071
+ 447 string characters out of 6137071
  58508 words of memory out of 5000000
  3591 multiletter control sequences out of 15000+600000
  4294 words of font info for 16 fonts, out of 8000000 for 9000
