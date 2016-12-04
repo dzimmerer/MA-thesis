@@ -392,6 +392,15 @@ Thus the learning algorithm can be described as follows:
 
 While the perceptron models a single neuron, a multi-layer perceptron, consisting of stacked perceptrons, can be seen as an extension of the model to neural networks and thus overcomes the perceptrons disadvantage to only discriminate linearly \cite{rumelhart1985learning}\cite{Goodfellow-et-al-2016-Book}. 
 
+\begin{figure}
+	\centering
+    	\includegraphics[width=0.6\textwidth]{imgs/mlp.jpeg} 
+    \caption{A schematic multi layer perceptron with three layers \cite{mlpImg}.}
+	\label{fig:mlp}
+\end{figure}
+
+
+
 \paragraph{Model architecture} \label{c:mlparch}
 
 A MLP is built up of multiple consecutive layers (see Fig. \ref{fig:mlp}).
@@ -423,14 +432,6 @@ where the superscript index represents the layer number.
 
 Modelled like this the output is always forwarded to the next layer, i.e. there are no cycles in the information flow of the network.
 Such a network with only forward connections is called feed-forward network (in contrast to recurrent networks such as Boltzmann machines, which are introduced in Chapter \ref{c:bms} and allow information to be forwarded in cycles).
-
-\begin{figure}
-	\centering
-    	\includegraphics[width=0.6\textwidth]{imgs/mlp.jpeg} 
-    \caption{A schematic multi layer perceptron with three layers \cite{mlpImg}.}
-	\label{fig:mlp}
-\end{figure}
-
 
 
 \paragraph{Activation functions} \label{c:mlpact}

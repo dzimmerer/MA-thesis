@@ -1,7 +1,5 @@
 \relax 
 \providecommand\hyper@newdestlabel[2]{}
-\citation{hinton2006fast}
-\citation{lee2009convolutional}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Approach}{43}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -9,21 +7,25 @@
 \newlabel{c:approach}{{4}{43}{Approach}{chapter.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Convolutional Architecture in Spiking Neural Networks}{43}{section.4.1}}
 \newlabel{c:spikingconvarch}{{4.1}{43}{Convolutional Architecture in Spiking Neural Networks}{section.4.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Conversion}{43}{section.4.2}}
-\newlabel{c:convappro}{{4.2}{43}{Conversion}{section.4.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Convolutional DBNs}{43}{subsection.4.2.1}}
-\newlabel{c:convdbns}{{4.2.1}{43}{Convolutional DBNs}{subsection.4.2.1}{}}
+\newlabel{fig:receptfields1}{{4.1a}{43}{\relax }{figure.caption.83}{}}
+\newlabel{sub@fig:receptfields1}{{a}{43}{\relax }{figure.caption.83}{}}
+\newlabel{fig:receptfields2}{{4.1b}{43}{\relax }{figure.caption.83}{}}
+\newlabel{sub@fig:receptfields2}{{b}{43}{\relax }{figure.caption.83}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Receptive fields over 4 neurons.}}{43}{figure.caption.83}}
+\newlabel{fig:receptfields}{{4.1}{43}{Receptive fields over 4 neurons}{figure.caption.83}{}}
+\citation{hinton2006fast}
+\citation{lee2009convolutional}
 \citation{hinton2006fast}
 \citation{Zorzi2013Modeling}
 \citation{Zorzi2013Modeling}
-\newlabel{fig:receptfields1}{{4.1a}{44}{A singe receptive field over 4 neurons\relax }{figure.caption.83}{}}
-\newlabel{sub@fig:receptfields1}{{a}{44}{A singe receptive field over 4 neurons\relax }{figure.caption.83}{}}
-\newlabel{fig:receptfields2}{{4.1b}{44}{Four receptive fields with shared weights.\relax }{figure.caption.83}{}}
-\newlabel{sub@fig:receptfields2}{{b}{44}{Four receptive fields with shared weights.\relax }{figure.caption.83}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Receptive fields over 4 neurons.}}{44}{figure.caption.83}}
-\newlabel{fig:receptfields}{{4.1}{44}{Receptive fields over 4 neurons}{figure.caption.83}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces A common structure of a deep belief network.}}{44}{figure.caption.84}}
 \newlabel{fig:dbnmnist}{{4.2}{44}{A common structure of a deep belief network}{figure.caption.84}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Conversion}{44}{section.4.2}}
+\newlabel{c:convappro}{{4.2}{44}{Conversion}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Convolutional DBNs}{44}{subsection.4.2.1}}
+\newlabel{c:convdbns}{{4.2.1}{44}{Convolutional DBNs}{subsection.4.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Conversion}{44}{subsection.4.2.2}}
+\newlabel{c:conversionappr}{{4.2.2}{44}{Conversion}{subsection.4.2.2}{}}
 \citation{Cao2014}
 \citation{Diehl2015}
 \citation{Nair2010}
@@ -33,8 +35,6 @@
 \newlabel{sub@fig:converted2}{{b}{45}{Structure of a spiking DBN with LIF neurons.\relax }{figure.caption.85}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Different converted structures of a CNN and a DBN.}}{45}{figure.caption.85}}
 \newlabel{fig:converted}{{4.3}{45}{Different converted structures of a CNN and a DBN}{figure.caption.85}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Conversion}{45}{subsection.4.2.2}}
-\newlabel{c:conversionappr}{{4.2.2}{45}{Conversion}{subsection.4.2.2}{}}
 \newlabel{c:convascnn}{{4.2.2}{45}{Conversion as CNN}{section*.86}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Conversion as CNN}{45}{section*.86}}
 \newlabel{c:convascoba}{{4.2.2}{45}{Conversion with conductance-based LIF}{section*.87}{}}
@@ -47,6 +47,8 @@
 \newlabel{sub@fig:cobahcs3}{{c}{46}{omparison between a HCS COBA LIF neuron sampling and the true distribution in a RBM.\relax }{figure.caption.88}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Properties of a conductance based LIF neuron in a high conductance state.}}{46}{figure.caption.88}}
 \newlabel{fig:cobahcs}{{4.4}{46}{Properties of a conductance based LIF neuron in a high conductance state}{figure.caption.88}{}}
+\newlabel{c:convascuba}{{4.2.2}{46}{Conversion with current-based LIF}{section*.89}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Conversion with current-based LIF}{46}{section*.89}}
 \citation{Neftci2013}
 \newlabel{fig:sub1}{{4.5a}{47}{Firing of a HCS CUBA LIF neuron.\relax }{figure.caption.90}{}}
 \newlabel{sub@fig:sub1}{{a}{47}{Firing of a HCS CUBA LIF neuron.\relax }{figure.caption.90}{}}
@@ -56,28 +58,26 @@
 \newlabel{sub@fig:sub2}{{c}{47}{Comparison between a HCS CUBA LIF neuron sampling and the true distribution in a RBM.\relax }{figure.caption.90}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Properties of a current based LIF neuron in a high conductance state.}}{47}{figure.caption.90}}
 \newlabel{fig:cubahcs}{{4.5}{47}{Properties of a current based LIF neuron in a high conductance state}{figure.caption.90}{}}
-\newlabel{c:convascuba}{{4.2.2}{47}{Conversion with current-based LIF}{section*.89}{}}
-\@writefile{toc}{\contentsline {paragraph}{\nonumberline Conversion with current-based LIF}{47}{section*.89}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.3}eCD}{47}{section.4.3}}
 \newlabel{c:ecdappr}{{4.3}{47}{eCD}{section.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces The five phases for a data sample in the adapted eCD algorithm. \relax }}{48}{figure.caption.91}}
+\newlabel{fig:ecd5}{{4.6}{48}{The five phases for a data sample in the adapted eCD algorithm. \relax }{figure.caption.91}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Convolution in eCD}{48}{subsection.4.3.1}}
 \newlabel{c:ecdconv}{{4.3.1}{48}{Convolution in eCD}{subsection.4.3.1}{}}
 \citation{King2013}
 \citation{NorouziM2009}
 \citation{LeCun}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces The five phases for a data sample in the adapted eCD algorithm. \relax }}{49}{figure.caption.91}}
-\newlabel{fig:ecd5}{{4.6}{49}{The five phases for a data sample in the adapted eCD algorithm. \relax }{figure.caption.91}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces A (restricted) Boltzmann machine with lateral inhibition in the top layer.\relax }}{49}{figure.caption.93}}
+\newlabel{fig:bminhib}{{4.7}{49}{A (restricted) Boltzmann machine with lateral inhibition in the top layer.\relax }{figure.caption.93}{}}
 \newlabel{c:latinhib}{{4.3.1}{49}{Lateral inhibition}{section*.92}{}}
 \@writefile{toc}{\contentsline {paragraph}{\nonumberline Lateral inhibition}{49}{section*.92}}
 \citation{salakhutdinov2009deep}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces A (restricted) Boltzmann machine with lateral inhibition in the top layer.\relax }}{50}{figure.caption.93}}
-\newlabel{fig:bminhib}{{4.7}{50}{A (restricted) Boltzmann machine with lateral inhibition in the top layer.\relax }{figure.caption.93}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Structure of a deep belief network trained with eCD.}}{50}{figure.caption.94}}
+\newlabel{fig:spikedbn}{{4.8}{50}{Structure of a deep belief network trained with eCD}{figure.caption.94}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Spiking DBNs}{50}{subsection.4.3.2}}
 \newlabel{c:spikingdbn}{{4.3.2}{50}{Spiking DBNs}{subsection.4.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Structure of a deep belief network trained with eCD.}}{51}{figure.caption.94}}
-\newlabel{fig:spikedbn}{{4.8}{51}{Structure of a deep belief network trained with eCD}{figure.caption.94}{}}
 \@setckpt{content/appro}{
-\setcounter{page}{52}
+\setcounter{page}{51}
 \setcounter{equation}{0}
 \setcounter{enumi}{5}
 \setcounter{enumii}{0}

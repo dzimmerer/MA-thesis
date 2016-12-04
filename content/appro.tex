@@ -21,21 +21,21 @@ Since the weights of the receptive field can be shared, the neural activity in t
 In this case the top layer activation of receptive fields with the same weights can also be called a feature map  (see Fig. \ref{fig:receptfields2}).
 By using more neurons with different set of shared weights over the same receptive fields, more feature maps can be implemented.     
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
-	\begin{subfigure}[t]{.5\textwidth}
+	\begin{subfigure}[t]{.4\textwidth}
   		\centering
-  		\includegraphics[width=.8\linewidth]{imgs/recpt_field1.png}
-  		\caption{A singe receptive field over 4 neurons}
+  		\includegraphics[width=.5\linewidth]{imgs/recpt_field1.png}
+  		\caption{}
   		\label{fig:receptfields1}
 	\end{subfigure}%
-	\begin{subfigure}[t]{.5\textwidth}
+	\begin{subfigure}[t]{.4\textwidth}
   		\centering
-  		\includegraphics[width=.8\linewidth]{imgs/recpt_field2.png}
-  		\caption{Four receptive fields with shared weights.}
+  		\includegraphics[width=.5\linewidth]{imgs/recpt_field2.png}
+  		\caption{}
   		\label{fig:receptfields2}
 	\end{subfigure}
-	\caption[Receptive fields over 4 neurons.]{Receptive fields over 4 neurons. In (a) the top layer neuron (red), is only connected to a some neurons in close vicinity to each other. In (b) four receptive fields are next to each other with a stride of two and shared weights. The top layer neurons have a similar topology as their receptive fields. Such a structure can give similar results to conventional more dimensional convolution. }
+	\caption[Receptive fields over 4 neurons.]{Receptive fields over 4 neurons. In (a) the top layer neuron (red), is only connected to a some neurons in close vicinity to each other. In (b) four receptive fields are next to each other with a stride of two and shared weights. }
 	\label{fig:receptfields}
 \end{figure}
 
@@ -86,7 +86,7 @@ For the conversion we present three different variations.
 	\centering
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
-  		\includegraphics[width=.6\linewidth]{imgs/convert_cnn.png}
+  		\includegraphics[width=.54\linewidth]{imgs/convert_cnn.png}
   		\caption{Structure of a spiking CNN with LIF neurons.}
   		\label{fig:converted1}
 	\end{subfigure}%
@@ -240,7 +240,7 @@ The original division into four training phases poses similarities to pCD since 
 
 We implement convolution with local receptive fields and shared weights between synapses through weight synchronization.
 Since each weight has their local STDP based update rule (eCD), we have to find a way to synchronize weights between synapses of the same feature map.
-To keep the shared weights the same, we perform a weight synchronization step at discrete time steps, since updating all weights after a single update did not show any promising results, due to some self-reinforcement and resulting weight "explosion" (see \ref{fig:ecdnest} for further insight).
+To keep the shared weights the same, we perform a weight synchronization step at discrete time steps, since updating all weights after a single update did not show any promising results, due to some self-reinforcement and resulting weight "explosion" (see \ref{fig:ecdnestconv} for further insight).
 Thus the synchronization at a time step for weight shared weights $w_i$ , $w_j$ can be described by the following rule:  
 \[
 \begin{split}

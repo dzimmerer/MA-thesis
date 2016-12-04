@@ -88,7 +88,7 @@ where $I(h^k_{ij})$ is the activation of the hidden unit before applying the sig
 Such an architecture is visualized in Fig \ref{fig:probmaxpool}.
 This drives the activity in a block to be sparse and likely only one or none unit a block will be active.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/prob_max_pool.png} 
     \caption{The RBM layer architecture with probabilistic max pooling \cite{lee2009convolutional}.}
@@ -170,7 +170,12 @@ P(\textit{"i fires at time t"}) \approx \sigma(\sum_j w_{ij} z_j(t) + b_i).
 With this model Buesing proved that spikes and the corresponding state updates in a such networks can be seen as MCMC sampling. Experiments show, as $t \rightarrow \infty$ , the network is in fact able to approximate a Boltzmann distribution.
 Replacing the rectangular PSP with a more biological plausible alpha shaped PSP deteriorates the performance a little, due to overshooting at the beginning and accumulation effects, but is still reasonable well (see Fig. \ref{fig:snnsamp3}).
 
-\begin{figure}
+Petrovici improved the model by replacing the stochastic neuron model by conductance bases LIF neurons, a more common and biologically inspired neuron model \cite{Petrovici2016}.
+He proved under high frequency (Poisson) noise, which leads to a high conductance state of the membrane potential, the neuron shows stochastic firing, determined by the input current and the noise frequency (as described in Chapter \ref{c:hcs}).
+This allows the neuron to show a firing behaviour which can be matched by a sigmoid function (see Fig. \ref{fig:snnsamp4}).  
+By scaling the weights, the LIF neurons can be used to perform neural sampling similar to Buesing.
+
+\begin{figure}[h!]
 	\centering
 	\begin{subfigure}[t]{.50\textwidth}
   		\centering
@@ -188,10 +193,6 @@ Replacing the rectangular PSP with a more biological plausible alpha shaped PSP 
 	\label{fig:snnsamp3}
 \end{figure}
 
-Petrovici improved the model by replacing the stochastic neuron model by conductance bases LIF neurons, a more common and biologically inspired neuron model \cite{Petrovici2016}.
-He proved under high frequency (Poisson) noise, which leads to a high conductance state of the membrane potential, the neuron shows stochastic firing, determined by the input current and the noise frequency (as described in Chapter \ref{c:hcs}).
-This allows the neuron to show a firing behaviour which can be matched by a sigmoid function (see Fig. \ref{fig:snnsamp4}).  
-By scaling the weights, the LIF neurons can be used to perform neural sampling similar to Buesing.
 
 \begin{figure}
 	\centering
@@ -292,15 +293,16 @@ In their approach a training step can be divided into four phases (see Fig. \ref
 \end{enumerate}
 
 
-\begin{figure}
-	\centering
-    	\includegraphics[width=0.3\textwidth]{imgs/eCD11.png} 
-    \caption{Visualization of the phases of the event based contrastive divergence.}
-	\label{fig:ecdph}
-\end{figure}
-
 In similarity to RBMs, the weight change in the second phase can be summarized as $\mu \; \delta w_{pos}$, the weight change in the fourth phase as $\mu \; \delta w_{neg}$, which results in the CD update rule:
 \[
 w = w +  \mu \; \delta w_{pos} - \mu \; \delta w_{neg} = w +  \mu (\delta w_{pos} - \delta w_{neg}).
 \]
  
+ 
+
+\begin{figure}[h!]
+	\centering
+    	\includegraphics[width=0.3\textwidth]{imgs/eCD11.png} 
+    \caption{Visualization of the phases of the event based contrastive divergence.}
+	\label{fig:ecdph}
+\end{figure}
