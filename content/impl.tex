@@ -4,11 +4,11 @@
 \section{Artifical DBNs} \label{c:dbnimpl}
 
 The DBNs were implemented in the Theano-Framework \cite{2016arXiv160502688full}, to utilize the computational power of the GPU.
-The implementation of the singe RBMs is adapted from the official Theano RBM \cite{theanoRBM}.
+The implementation of the single RBMs is adapted from the official Theano RBM \cite{theanoRBM}.
 \\
 \\
 An upward pass in performed as follows:
-As an input we take a 4D tensor $\textbf{V}$ of size \textit{(batch size, input channels, input rows, input columns)}, and for the upwards pass convolve it with a filters $\textbf{W}$ of the shape \textit{(number of filters, input channel, filter height, filter width)} with a stride of 1 without any padding.
+As an input we take a 4D tensor $\textbf{V}$ of size \textit{(batch size, input channels, input rows, input columns)}, and for the upwards pass convolve it with a filter $\textbf{W}$ of the shape \textit{(number of filters, input channel, filter height, filter width)} with a stride of 1 and without any padding.
 This results in feature maps $\textbf{H}_{pre} = \textbf{W} * \textbf{V}$ of the shape \textit{(batch size, number of filters, input height - filter height + 1 , input width - filter width + 1)}.
 A constant $c$ is added to the pre-activation feature maps as bias.
 On those feature maps a sigmoid function $\sigma$ is applied and accordingly Bernoulli sampled to get the activation of the hidden units $\textbf{H}$.
@@ -24,7 +24,7 @@ On those feature maps a sigmoid function $\sigma$ is applied and accordingly Ber
 
 
 The downward pass on the activation of the hidden units is performed similar:
-The input is the activation of the hidden unit $\textbf{H}$ with zero padding, and convolve it with the 180 degree flipped kernel $\tilde{\textbf{W}}$, where the first and second dimensions are swapped.
+The input is the activation of the hidden units $\textbf{H}$ with zero padding, and is convolved with the 180 degree flipped kernel $\tilde{\textbf{W}}$, with the first and second dimensions swapped.
 Afterwards a sigmoid function $\sigma$ is applied and accordingly sampled to get the new visible layer activations $\textbf{V}'$.
 
 \begin{algorithm}
@@ -48,19 +48,19 @@ One complete Gibbs sampling step consists of an upwards and a consecutive downwa
 
 Each RBM is trained with the CD-$k$ update rule, therefore after performing one Gibbs sampling step to get a sample of the data distribution $\textbf{V}_0, \textbf{H}_0$  (positive phase), we perform $k-1$ additional Gibbs sampling steps to get a sample of an estimate of the model distribution $\textbf{V}_k, \textbf{H}_k$  (negative phase).
 
-As error function we define the difference between the free energy of the positive phase and the negative phase.
+As error function we define the difference between the free energy of the positive phase and the negative phase:
 \[
-\Delta \textbf{W} = \frac{\partial F(V_k)}{\partial \textbf{W}} -  \frac{\partial F(V_0)}{\partial \textbf{W}} 
+\Delta \textbf{W} = \frac{\partial F(V_k)}{\partial \textbf{W}} -  \frac{\partial F(V_0)}{\partial \textbf{W}} .
 \]
-We use Theanos auto-differentiation to determine the gradient and perform gradient decent with a learning rate $\mu$ and a weight decay of $\upsilon$.
+We use Theanos auto-differentiation to determine the gradient and perform gradient decent with a learning rate $\mu$ and a weight decay of $\upsilon$:
 \[
-\textbf{W}' = \textbf{W} - \mu \Delta \textbf{W} - \upsilon \textbf{W} 
+\textbf{W}' = \textbf{W} - \mu \Delta \textbf{W} - \upsilon \textbf{W} .
 \]
 A common choice for $\mu$ is $0.1$ and for $\upsilon$ is $0.003$ throughout this thesis.
 We train the RBM for a given number of iterations over the dataset, with a batch size smaller than the dataset, thus performing stochastic gradient descent.
 
 To build up the DBN each RBM is trained greedily.
-After training one RBM the entire dataset is converted by doing one upwards pass in the trained RBM and using the activation of the hidden units as the new input data for the next RBM.
+After training one RBM the entire dataset is converted by performing one upwards pass in the trained RBM and using the activation of the hidden units as the new input data for the next RBM.
 
 \begin{algorithm}
 \caption{build DBN}
@@ -72,8 +72,8 @@ After training one RBM the entire dataset is converted by doing one upwards pass
 \end{algorithmic}
 \end{algorithm}
 
-Up to this time no label information is used to train any RBM, thus the learned features up to this point are trained purely unsupervised.
-The last layer, the classification layer, consists of a fully connected RBM trained on the input data of the converted data set concatenated with a one-hot encoding of the label.
+Up to this point no label information is used to train any RBM, thus the learned features are trained purely unsupervised.
+The last layer, the association layer, consists of a fully connected RBM trained on input data comprised of the converted data set concatenated with a one-hot encoding of the label.
 
 
 
@@ -125,8 +125,8 @@ The STDP learning flag is set to $g=0$, so no learning is allowed
 \item $t \in (t_{burn-in} , \; t_{burn-in} + t_{learn}]$ : In the second phase ("Data distribution phase"), now the STDP learning flag is set to $g=1$ so positive learning is allowed.
 This should drive the weights to represent the data distribution.
 
-\item $t \in (t_{pos}, \;  t_{pos} + t_{burn-in}]$ : In the third phase ("Model burn-in phase"), we set the data input of the visible layer to zero and remove the induced negative current, to let it reach the model distribution.
-In this phase the learning is disabled, setting the STDP learning flag to $g=0$
+\item $t \in (t_{pos}, \;  t_{pos} + t_{burn-in}]$ : In the third phase ("Model burn-in phase"), we set the data input of the visible layer to zero and remove the induced negative current to let it reach the model distribution.
+In this phase the learning is disabled, setting the STDP learning flag to $g=0$.
 
 \item $t \in (t_{pos} + t_{burn-in}, \;  t_{pos} + t_{burn-in} + t_{learn}]$ : In the fourth phase ("Model distribution phase"), the STDP learning flag is set to $g=-1$, enabling only negative (un-)learning.
 This will unlearn the model distribution.
@@ -146,8 +146,8 @@ where $\upsilon$ is the weight decay rate and $\textbf{W}_{group} = (W_0 ,... W_
 \\
 Each RBM is trained on $m$ data samples.
 \\
-After a RBM is trained, the next RBM will be trained on top of the previous RBM.
-Therefore the a connection with a strong synaptic weight is established from the hidden layer of the previous RBM to the new RBM.
+After an RBM is trained, the next RBM will be trained on top of the previous RBM.
+Therefore the a connection with a strong synaptic weight is established from the hidden layer of the previous RBM to the visible layer of the new RBM.
 The original input data is still fed to the bottom RBM while the activations of hidden layer in previous RBM act as training data for the top RBM.
 
 

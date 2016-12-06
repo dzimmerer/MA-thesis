@@ -4,12 +4,14 @@ In this thesis we demonstrated how to train and build a spiking network to gener
 Although many systems for discrete data, such as images, have been proposed, event-based systems are still mostly neglected.
 Systems working on event-based data with highly distributed computational units can lower the power performance, the response-time and show more biologically plausible performance.  
 Using a biologically inspired convolutional architecture has allowed systems to exploit the hierarchical structure in data and to facilitate training \cite{NIPS2012_4824}.
-In this thesis two different approaches with a focus on biological resemblance to build an convolutional event-based system were shown.
+In this thesis two different approaches with a focus on biological resemblance to build a convolutional event-based system were shown.
 The first system trains a probabilistic graphical model, a deep belief network, on visual input by using the contrastive divergence algorithm to approximate some data distribution.
 This probabilistic model was transferred to different variations of spiking neural networks.
 We outlined the similarities between the deep belief network and the spiking neural network and evaluated and compared their performance on a classification task. 
 We showed that the conversion to spiking network did not degrade the performance of the system. 
-The second system directly trains a spiking neural network using a version of spike time dependent plasticity to simulate the contrastive divergence algorithm. By training consecutive parts of the network layerwise, a more complex system was built. Due to the computational complexity, we evaluated the performance on a small visual datasets. We showed how lateral inhibitory connections allow more discriminative features and allow a classification accuracy of 100 $\%$ on a dataset.
+The second system directly trains a spiking neural network using a version of spike time dependent plasticity to simulate the contrastive divergence algorithm. 
+By training consecutive parts of the network layerwise, a more complex system was built. Due to the computational complexity, we evaluated the performance on small visual datasets. 
+We showed how lateral inhibitory connections allow more discriminative features and allow a classification accuracy of 100 $\%$ on a dataset.
 At last we compared those two approaches and showed how the event-based approach is able to generate more discriminative features and learns faster than the other approach.  
 
 \subsubsection{Biological plausibility} \label{c:bioplau}
@@ -43,11 +45,11 @@ There exists a few platforms which could be used, each having different advantag
 \paragraph{SpiNNakker} \label{c:spinnakker}
 is a massively-parallel computer architecture which can use up to 1 million ARM processors to simulate up to 1 billion neurons \cite{jin2008efficient}. 
 In addition it can be interfaced with PyNN. 
-While implementing a custom STDP rule is quite feasible although having only integer weights, but keeping weights synchronized either for symmetric connections as well as convolution, poses a bigger challenge whose complexity exceeds this thesis.
+While implementing a custom STDP rule is quite feasible although having only integer weights, keeping weights synchronized either for symmetric connections or for convolution poses a bigger challenge whose complexity exceeds this thesis.
 
 \paragraph{Spikey} \label{c:spikey}
 emulates spiking neural networks with conductance based leaky integrate-and-fire neurons and synapses implemented in analog microelectronics \cite{Pfeil1311}.
-It can simulate 384 neurons and 256 incoming synapses in each neuron, resulting in a total 98304 synapses.
+It can simulate 384 neurons and 256 incoming synapses in each neuron, resulting in a total of 98304 synapses.
 It can also be interfaced with PyNN.
 This can allow approximately 10000-fold faster computations than biological real-time.
 But due to the weights, which are implemented directly in hardware and the noisy and less fault tolerant analog electronics this poses challenges for a "phased" custom STDP mechanism and weight-sharing. 
@@ -57,23 +59,23 @@ While implementing a custom STDP rule on both neuromorphic devices could be quit
 
 \subsection{Biologically Plausible Learning} \label{c:biofuture}
 
-Another direction which poses great potential for further research is tackling, the current restrictions on the biological plausibility.  
+Another direction which poses great potential for further research is tackling the current restrictions on the biological plausibility.  
 
 One of the primary problems is the division in distinct learning phases.
-This is currently an active topic for research and there are different algorithms proposed, which loosen the constraints on explicit positive and negative learning phases.
+This is currently an active topic of research and there are different algorithms proposed, which loosen the constraints on explicit positive and negative learning phases.
 There are two approaches which appear in particular promising.
 One learns with a LTP variant only for a short period after a data sample is presented and the distribution converges towards the data distribution \cite{DBLP:journals/corr/ScellierB16}.
-Another approach replaces the a data sample by a sample of the model distribution which has only been nudged towards a real data input, so the distribution in the positive phase only shifts towards, but does not have to reach the data distribution completely \cite{Scellier2016a}.
+Another approach replaces a data sample by a sample of the model distribution which has only been nudged towards a real data input, so the distribution in the positive phase only shifts towards, but does not have to reach the data distribution completely \cite{Scellier2016a}.
 A combination of those might be interesting as well.
 These approaches show similarities to some STDP mechanism, but to the best of our knowledge have not been implemented in spiking networks.
 
 These approaches might also help with the problem of cascaded learning of different layers.
-With the contrastive divergence a good estimate of the data and model distribution are needed and thus for arbitrary Boltzmann machines potentially infinite sampling has to be performed.
+With the contrastive divergence algorithm a good estimate of the data and model distribution is needed and thus for arbitrary Boltzmann machines potentially infinite sampling has to be performed.
 This leads to only simple and shallow Boltzmann machine structures which are used.
-Due to the break up of hard sampling phases, this allows a simple transition to arbitrary Boltzmann machines.
-Thus researching on joint layer learning algorithms shows great promise as well.
+Due to the breaking up of hard sampling phases, this allows a simple transition to arbitrary Boltzmann machines.
+Thus researching joint layer learning algorithms shows great promise as well.
 
-Another constrain are the synchronized weights.
+Another constraint are the synchronized weights.
 On going research points to the idea, that the synchronization might not be so important.
 Lillicrap et al. showed that a linear system was still able to be trained with using backpropagation, even if the feedback weights were chosen randomly and kept constant \cite{Lillicrap2014}.
 In addition research on autoencoders showed another kind of weight synchronization, where even without tied weight autoencoders often end up with symmetric weights\cite{vincent2010stacked}.

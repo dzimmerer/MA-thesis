@@ -8,7 +8,7 @@ This can be primarily contributed to their ability to extract high level feature
 
 Creating discriminative high level feature extractors allows the system to dynamically adapt to the input data and work on various kinds of data. 
 In addition, the feature extractors do not need to have any semantic, human interpretable representation and can be more complex than manually built feature extractors. 
-This also removes the labour-intensive and time consuming task of manually building feature extractors.
+This also removes the labour-intensive and time consuming task of building feature extractors manually.
 Consequently, they recently got adapted to solve robotic problems like grasp planning, drone navigation and autonomous driving \cite{giusti2016machine}\cite{levine2016learning}\cite{chen2015deepdriving}. 
 
 One precursor of CNNs are the deep belief networks (DBNs), which are built up of restricted Boltzmann machines (RBMs). 
@@ -30,7 +30,7 @@ To the best of our knowledge, up to today, no system which utilizes the benefits
 The main objective of the presented thesis is to realize such a spiking network, which integrates convolution and can be easily trained utilizing an RBM learning algorithm in order to extract high level features. 
 Two approaches are explored. 
 The first approach trains convolutional RBMs on discretized input data to build up a DBN which is then converted to a SNN. 
-The second approach learns from continuous, event-driven input-data and adopts the synaptic weights with a plasticity rule with shared weights to train spiking convolutional RBMs directly. 
+The second approach learns from continuous, event-driven input-data and adapts the synaptic weights with a plasticity rule with shared weights to train spiking convolutional RBMs directly. 
 Both approaches will learn to extract high level features which can be further used to classify an object. 
 
 \section{The Human Brain Project} \label{c:thehbp}
