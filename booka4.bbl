@@ -2,8 +2,8 @@
 
 \bibitem{boltzImg}
 Boltzmann machines.
-\newblock \url{http://gorayni.blogspot.de/2014/06/boltzmann-machines.html},
-  note = {Accessed: 2016-11-22}.
+\newblock \url{http://gorayni.blogspot.de/2014/06/boltzmann-machines.html}.
+\newblock Accessed: 2016-11-22.
 
 \bibitem{convImg}
 Convolution arithmetic.
@@ -279,6 +279,11 @@ A.~Karpathy, G.~Toderici, S.~Shetty, T.~Leung, R.~Sukthankar, and L.~Fei-Fei.
   networks}.
 \newblock In {\em Proceedings of the IEEE conference on Computer Vision and
   Pattern Recognition}, pages 1725--1732, 2014.
+
+\bibitem{DBLP:journals/corr/KheradpishehGTM16}
+S.~R. Kheradpisheh, M.~Ganjtabesh, S.~J. Thorpe, and T.~Masquelier.
+\newblock Stdp-based spiking deep neural networks for object recognition.
+\newblock {\em CoRR}, abs/1611.01421, 2016.
 
 \bibitem{King2013}
 P.~D. King, J.~Zylberberg, and M.~R. DeWeese.

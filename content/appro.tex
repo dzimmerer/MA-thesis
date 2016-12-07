@@ -53,7 +53,7 @@ The conversion approach can be roughly described in two steps:
 
 \subsection{Convolutional DBNs} \label{c:convdbns}
 
-To train a convolutional DBN we proceed similar to Hinton et al. and Lee et al. \cite{hinton2006fast} \cite{lee2009convolutional}.
+To train a convolutional DBN we proceed similar to Hinton et al. and Lee et al. \cite{hinton2006fast}\cite{lee2009convolutional}.
 
 At first the convolutional RBMs are trained greedily with CD, as described in Chapter \ref{c:convrbm}, for a certain number of iterations on data batches of batch-size $b$.
 After an RBM is trained, we convert the dataset $X$ by sampling of the hidden layer of the RBM (one forward-pass step), into a new dataset $X'$:
@@ -272,7 +272,7 @@ This removes one advantage of RBMs since the hidden layers are no longer indepen
 
 
 Connecting neurons to neurons on a similar positions in other feature maps appears to make the features more discriminative and less correlated.
-This also poses some similarities to adding a negative structured bias to the hidden units, which has shown to result in better features \cite{NorouziM2009}\cite{LeCun}.
+This also poses some similarities to adding a negative structured bias to the hidden units, which has shown to result in better features \cite{DBLP:journals/corr/KheradpishehGTM16}\cite{LeCun}\cite{NorouziM2009}.
 
 An intuitive interpretation is that if one feature reacts to a certain input it will be highly active and prevent the others from being active as well and thus prevent them from learning the same features.  
 

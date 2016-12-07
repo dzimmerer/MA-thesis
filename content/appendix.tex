@@ -132,12 +132,12 @@ Excitatory reversal potential  & -0.0 mV 	               \\\hline
 
 For this thesis two different approaches were implemented. 
 
-The first approach, as presented in Chapter \ref{c:ecdconv} and \ref{c:ecdexp}, synchronizes the weights at a discrete time step after a training samples is presented and processed.
-This poses some similarities to the normal contrastive divergence algorithm since, due to discrete nature of artificial neural networks, the weight are updated and synchronized after the positive and negative phase.  
+The first approach, as presented in Chapter \ref{c:ecdconv} and \ref{c:ecdexp}, synchronizes the weights at a discrete time step after a training sample is presented and processed.
+This poses some similarities to the normal contrastive divergence algorithm since, due to discrete nature of artificial neural networks, the weights are updated and synchronized after the positive and negative phase.  
 
-The second approach keeps the weights synchronized, by applying the same STDP update to all synapses which share the same weight at the same time. 
+The second approach keeps the weights synchronized by applying the same STDP update to all synapses which share the same weight at the same time. 
 Namely, if one synapses is updated by a local STDP rule, the update is shared with all tied synapses.
-For the non-convolutional case i.e. only the weights between forward and backward synapses between the same neurons are shared, this leads discriminative results, as shown in Figure \ref{fig:nestwwout}.
+For the non-convolutional case i.e. only the weights of forward and backward synapses between the same neurons are shared, this leads to discriminative results, as shown in Figure \ref{fig:nestwwout}.
 
 \begin{figure}[h!]
 
@@ -158,7 +158,7 @@ For the non-convolutional case i.e. only the weights between forward and backwar
 \end{figure}	
 
 
-In out case the shared STDP updates with convolutions did not show any promising results. Although the learning rate was scaled accordingly, due to some self-facilitation and weight explosion, the weights become mostly negative as illustrated in Figure \ref{fig:ecdnestconv}.
+In our case, the case with shared STDP updates with convolutions did not show any promising results. Although the learning rate was scaled accordingly, due to some self-facilitation and weight explosion, the weights become mostly negative as illustrated in Figure \ref{fig:ecdnestconv}.
 
 
  \begin{figure}[h!]
@@ -200,7 +200,7 @@ As a result, due to the mostly negative weights, this leads to a "dying-out" of 
   	\label{fig:ecdnestdieout}
 \end{figure}
 
-Thus, no learning happens and the weight become not very discriminative (compare Figure \ref{fig:ecdnestwnot}).
+Thus, no learning happens and the weights become not very discriminative (compare Figure \ref{fig:ecdnestwnot}).
 
 
 \begin{figure}[h!]
@@ -210,7 +210,7 @@ Thus, no learning happens and the weight become not very discriminative (compare
   	\label{fig:ecdnestwnot}
 \end{figure}
 
-Increasing the learning rate to increase the weights lead to a few strong positive weights, while the majority of the weights still become negative, leading to no good results either (Fig. \ref{fig:ecdnestwnot}).
+Increasing the learning rate to increase the weights leads to a few strong positive weights, while the majority of the weights still become negative, leading to no good results either (Fig. \ref{fig:ecdnestwnot}).
 
 
 \begin{figure}[h!]

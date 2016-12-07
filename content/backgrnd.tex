@@ -4,7 +4,7 @@ In this chapter some foundations of spiking deep belief networks are presented, 
 
 \section{Probabilistic Graphical Models} \label{c:pgms}
 
-Probabilistic graphical models (PGMs) or structured probabilistic models can be used to describe, formalize and model neural learning architectures \cite{Goodfellow-et-al-2016-Book} \cite{Petrovici2016}.
+Probabilistic graphical models (PGMs) or structured probabilistic models can be used to describe, formalize and model neural learning architectures \cite{Goodfellow-et-al-2016-Book}\cite{Petrovici2016}.
 They can capture the basic probabilistic structure of data, which makes a significant number of data-related task feasible, such as \cite{Goodfellow-et-al-2016-Book}:
 \begin{itemize}
 
@@ -30,7 +30,7 @@ PGMs can be be divided into two basic categories, models with directed graphs an
 
 \subsection{Bayesian Networks} \label{c:bayesnet}
 
-Bayesian networks or belief networks are directed acyclic graphs, in which random variables are represented by nodes and their causal dependencies are represented by (directed) edges/connections \cite{Faltin2007} \cite{Goodfellow-et-al-2016-Book}. 
+Bayesian networks or belief networks are directed acyclic graphs, in which random variables are represented by nodes and their causal dependencies are represented by (directed) edges \cite{Faltin2007}\cite{Goodfellow-et-al-2016-Book}. 
 It poses a way to depict a probability distribution factorized by repeatedly applying the Bayes rule.
 
 A connection from $x_i$ to $x_j$ represents a conditional probability distribution from $x_j$ dependent on $x_i$, and $x_i$ is called the parent of its child $x_j$:
@@ -104,7 +104,7 @@ As a result the complexity and redundancies of the probability distribution can 
 p(\textbf{z}) = \frac{1}{Z} \prod \phi (z_k)  ,
 \]
 
-where $Z$ is the normalization factor, so that $p(\textbf{z})$ is a valid probability distribution with $\sum_{\textbf{z}} p(\textbf{z}) = 1$ ($ \Rightarrow Z = \sum_z \prod \phi (z_k) $) and $\phi (z_k)$ is the partition function of the clique/ partial graph $z_k$.
+where $Z$ is the normalization factor, so that $p(\textbf{z})$ is a valid probability distribution with $\sum_{\textbf{z}} p(\textbf{z}) = 1$ ($ \Rightarrow Z = \sum_z \prod \phi (z_k) $) and $\phi (z_k)$ is the partition function of the clique $z_k$.
 
 The partition function $\phi (z_k)$ defines the potential of a clique, which indicates the likelihood of a state in the clique to be present.
 The higher the clique potential of a state the more likely is that clique-state.
@@ -153,7 +153,7 @@ A probability distribution given by an EBM is also called Boltzmann distribution
 
 \subsection{Sampling} \label{c:sampling}
 
-Often, calculating the exact probability distribution or marginal distributions is a computational inefficient or untraceable problem \cite{Goodfellow-et-al-2016-Book} \cite{Petrovici2016}.
+Often, calculating the exact probability distribution or marginal distributions is a computational inefficient or untraceable problem \cite{Goodfellow-et-al-2016-Book}\cite{Petrovici2016}.
 Sampling is a probabilistic solution to this problem, as it allows to approximate the target distribution nearly arbitrarily exact, and also turns calculating marginal probabilities into a by-product.  
 An exemplary sampling of a Gaussian distribution is given in Figure \ref{fig:Sampling}.
 
@@ -204,7 +204,7 @@ To distinguish those, we refer to models working at discrete time steps as \text
 \subsection{Natural Neural Networks} \label{c:natural}
 \subsubsection{Brain} \label{c:brain}
 
-The human brain is the main organ of the human central nervous system and with a weigh of about 1.2 - 1.4 kg (2\% of the total body weight) and a power consumption of around 20 Watts (20\% of the total human power consumption), it is assumed to be mainly responsible for what is commonly referred to as human intelligence \cite{gerstner2014neuronal}\cite{Byrne1997}.  
+The human brain is the main organ of the human central nervous system and with a weigh of about 1.2 - 1.4 kg (2\% of the total body weight) and a power consumption of around 20 Watts (20\% of the total human power consumption), it is assumed to be mainly responsible for what is commonly referred to as human intelligence \cite{Byrne1997}\cite{gerstner2014neuronal}.  
 
 \begin{figure}
 	\centering
@@ -224,7 +224,7 @@ The resulting complex neural network with roughly $10^{15}$ neural connections i
 
 \subsubsection{Neuron} \label{c:natneuron}
 
-Neurons are the main information processing unit in the brain \cite{gerstner2014neuronal}\cite{Byrne1997}. 
+Neurons are the main information processing unit in the brain \cite{Byrne1997}\cite{gerstner2014neuronal}. 
 Information is primarily processed through chemical and electrical signals.
 
 A neuron, which is a specialized kind of a (biological) cell, is separated from its surroundings by a cell membrane.   
@@ -232,7 +232,7 @@ Due to ion concentration differences between the interior and the exterior of th
 Ion channels, often voltage gated, in the cell membrane allow positively and negatively charged ions to flow from the inside to the outside and from the outside to the inside of the cell.
 This can lead to an increase (de-polarization) or decrease (hyper-polarization) of the membrane potential.
 The ion flow is primarily determined by the charge difference at the membrane (electrochemical potential), the ion concentration differences (diffusion potential) and ion pumps actively pumping ions across the membrane.
-The membrane of a neuron at rest, with an equal influx and outflow of ions neutralizing each other, has usually a resting/equilibrium potential of -65 mV. 
+The membrane of a neuron at rest, with an equal influx and outflow of ions neutralizing each other, has usually a equilibrium potential of -65 mV. 
 
 Each neuron can be divided into three, functional distinct, parts: the dendrites, the soma and the synapses (see Fig. \ref{fig:neuron}).
 
@@ -257,7 +257,7 @@ Probably due to their more diverse form of signal exchange, almost exclusively a
 
 \subsubsection{Learning} \label{c:natlearning}
 
-The exact mechanisms behind learning in the brain are still mostly unknown \cite{gerstner2014neuronal}\cite{Byrne1997}\cite{Markram2012}.
+The exact mechanisms behind learning in the brain are still mostly unknown \cite{Byrne1997}\cite{gerstner2014neuronal}\cite{Markram2012}.
 Neural plasticity is often considered to be one of the methods behind learning. 
 It describes the ability of the brain to change and reorganize the structure of brain, build new and alter connections.  
 
@@ -390,7 +390,7 @@ Thus the learning algorithm can be described as follows:
 
 \subsubsection{Mutlilayer-Perceptron} \label{c:mlp}
 
-While a perceptron models a single neuron, a multilayer perceptron, consisting of stacked perceptrons, can be seen as an extension of the model to neural networks and thus overcomes the perceptrons disadvantage to only discriminate linearly \cite{rumelhart1985learning}\cite{Goodfellow-et-al-2016-Book}. 
+While a perceptron models a single neuron, a multilayer perceptron, consisting of stacked perceptrons, can be seen as an extension of the model to neural networks and thus overcomes the perceptrons disadvantage to only discriminate linearly \cite{Goodfellow-et-al-2016-Book}\cite{rumelhart1985learning}. 
 
 \begin{figure}
 	\centering
@@ -464,7 +464,7 @@ This is very similar to the different neuron models for spiking neural networks 
 
 \paragraph{Error functions} \label{c:mlperr}
 
-In machine learning, in order to validate the quality of a model an error function/cost function is used.
+In machine learning, in order to validate the quality of a model an error function or cost function is used.
 The error function provides a quantification of the performance of the model on a given task.
 Thus, the primary goal of a learning algorithm is to reduce the error on its task.
 Hereby, it is important to note that the main error function is often primarily task dependent and rather independent on the learning algorithm used.  
@@ -485,7 +485,7 @@ Different optimization algorithms can be used to achieve this objective.
 However, the most common class of algorithms use the gradient of the error function with respect to the weights in order to determine the contributions of the weights to the error and thus, reduce the error and reach a minimal point.
 For gradient descent the gradient for the parameters are calculated and, by following the negative gradient direction, the weights are updated.
 
-Since MLPs have a clearly defined structure, using the chain rule of calculus, the gradient descent update rule can be simplified to an iterative procedure called backpropagation (backprop)  \cite{rumelhart1985learning}\cite{Goodfellow-et-al-2016-Book}.
+Since MLPs have a clearly defined structure, using the chain rule of calculus, the gradient descent update rule can be simplified to an iterative procedure called backpropagation (backprop)  \cite{Goodfellow-et-al-2016-Book}\cite{rumelhart1985learning}.
 
 We define the output $y_j$ of neuron $j$ as
 \[
@@ -548,7 +548,7 @@ with a learning rate $\mu$.
 
 Convolutional neural networks (CNN) exploit spacial relations and the compositional structure of the input data to regularize the complexity of the neural network by putting further constrains on the architecture of those networks.
 This facilitates training and allows greater generalization on fewer training samples.
-It is implemented by having solely partially connected layers with shared connection weights instead of fully connected networks \cite{lecun1989backpropagation}\cite{Goodfellow-et-al-2016-Book}.    
+It is implemented by having solely partially connected layers with shared connection weights instead of fully connected networks \cite{Goodfellow-et-al-2016-Book}\cite{lecun1989backpropagation}.    
 
 \paragraph{Convolution} \label{c:convolution}
 
@@ -670,7 +670,7 @@ which results in applying the sum of each individual weight in a group of "tied"
 \subsubsection{Hopfield Nets} \label{c:hopnets}
 
 While CNNs have been wildly successful on image and speech recognition tasks, due to the pure forward nature of their connections, they still lack some biological plausibility since there are more feedback than feed-forward connections in the visual cortex \cite{sillito2006always}.
-Hopfield nets try to overcome some of those issues by using recurrent connections and binary units \cite{hopfield1982neural} \cite{Goodfellow-et-al-2016-Book} (see Fig. \ref{fig:hopfiled} for a sample network with 7 units).
+Hopfield nets try to overcome some of those issues by using recurrent connections and binary units \cite{Goodfellow-et-al-2016-Book}\cite{hopfield1982neural} (see Fig. \ref{fig:hopfiled} for a sample network with 7 units).
 
 \paragraph{Model} \label{c:hopmodel}
 
@@ -733,7 +733,7 @@ However, they can also end up in a spurious state, an attractor state i.e. a loc
 \subsubsection{Boltzmann Machines} \label{c:bms}
 
 Boltzmann machines try to improve Hopfield nets by replacing the deterministic update rule with a stochastic one.
-This allows a more stochastic exploration of the network states due to probabilistic escaping of minima states \cite{ackley1985learning} \cite{Goodfellow-et-al-2016-Book}.
+This allows a more stochastic exploration of the network states due to probabilistic escaping of minima states \cite{ackley1985learning}\cite{Goodfellow-et-al-2016-Book}.
 
 \paragraph{Model} \label{c:bmmodel}
 
@@ -763,7 +763,7 @@ Running a certain number of consecutive update steps probabilistically drives th
 \begin{figure}
 	\centering
     	\includegraphics[width=0.5\textwidth]{imgs/bm.png} 
-    \caption[A Boltzmann machine with 7 units.]{A Boltzmann machine with 7 units. In contrast to a Hopfield nets, units are divided into visible and hidden/ unobserved units with stochastic activations \cite{boltzImg}.}
+    \caption[A Boltzmann machine with 7 units.]{A Boltzmann machine with 7 units. In contrast to a Hopfield nets, units are divided into visible and hidden units with stochastic activations \cite{boltzImg}.}
     % http://gorayni.blogspot.de/
 	\label{fig:bm}
 \end{figure}
@@ -776,7 +776,7 @@ With hidden units a Boltzmann machine can universally approximate arbitrary prob
 \paragraph{Learning Rule} \label{c:cd}
 
 The goal for training a Boltzmann machine is to get a probability distribution similar to the distribution which generated the training data, the so-called data distribution.
-Thus, the objective for a Boltzmann machine is to assign a high probability to its training data (while assigning data not drawn from the data distribution a low probability) \cite{ackley1985learning} \cite{hinton2002training} \cite{Woodford2002} \cite{Bengio2009}.
+Thus, the objective for a Boltzmann machine is to assign a high probability to its training data (while assigning data not drawn from the data distribution a low probability) \cite{ackley1985learning}\cite{Bengio2009}\cite{hinton2002training}\cite{Woodford2002} .
 By applying gradient descent, the weights of the Boltzmann machine are modified towards a configuration which assigns training samples $\textbf{x}$ a high probability:
 \[
 w_{ij} = w_{ij} - \mu \Delta w_{ij},
@@ -827,7 +827,7 @@ Thus, a Boltzmann machine with two bipartite layers is called restricted Boltzma
 
 Sampling the hidden units $\textbf{h}$ given the visible units $\textbf{v}$ is called a \textit{upward pass} and sampling the visible units $\textbf{v}$ given the hidden units $\textbf{h}$ is called a \textit{downward pass}.
 
-In this case the probability of data sample $\textbf{x}$ can be expressed using the free energy $F(\textbf{v})$ over its visible activations $\textbf{v}$ \cite{hinton2010practical}\cite{Fischer2014}:
+In this case the probability of data sample $\textbf{x}$ can be expressed using the free energy $F(\textbf{v})$ over its visible activations $\textbf{v}$ \cite{Fischer2014}\cite{hinton2010practical}:
 \[
 p(\textbf{x}) =  p(\textbf{v}) = \sum_{\textbf{h}} \exp^{-E(\textbf{v},\textbf{h})} = \exp^{-F(\textbf{v})},
 \]
@@ -873,7 +873,7 @@ In Figure \ref{fig:cd} the sampling steps are visualized by unrolling the RBM as
 
 \subsubsection{Deep Belief Networks} \label{c:dbns}
 
-A deep belief network (DBN) is a generative graphical model, or alternatively a type of deep neural network, composed of multiple layers of latent variables (hidden units), with connections between consecutive layers, but with no connections within layers \cite{hinton2006fast} \cite{hinton2009deep} \cite{Goodfellow-et-al-2016-Book}.
+A deep belief network (DBN) is a generative graphical model, or alternatively a type of deep neural network, composed of multiple layers of latent variables (hidden units), with connections between consecutive layers, but with no connections within layers \cite{Goodfellow-et-al-2016-Book}\cite{hinton2009deep}\cite{hinton2006fast}.
 
 A deep belief network can be built up by stacking up RBMs.
 This does not only enable unsupervised training of a deep belief net, but also improves the conditional distribution of the bottom RBM (each time an RBM is added, it improves the prior over the hidden units with a better and more complex prior).
@@ -984,7 +984,7 @@ Due to its simplifications the LIF model can not capture some natural observed b
 
 \paragraph{Hodgkin-Huxley} \label{c:hodghux}
 
-The Hodgkin-Huxley model tries to improve some of the limitations of the LIF model by explicitly modelling different ion channels \cite{Hodgkin1952}\cite{gerstner2014neuronal}. 
+The Hodgkin-Huxley model tries to improve some of the limitations of the LIF model by explicitly modelling different ion channels \cite{gerstner2014neuronal}\cite{Hodgkin1952}. 
 
 The first model, as described by Hodgkin and Huxley, introduced three different ion channels, namely sodium, potassium and a leak current of $\text{CL}^{-}$ ions, which they discovered in their experiments on the axon of a squid.
 Each channel is modelled as a resistor with a battery (see Fig. \ref{fig:hogdehux}).

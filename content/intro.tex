@@ -3,13 +3,13 @@
 \section{Motivation} \label{c:motiv}
 
 By winning the Imagenet Large Scale Visual Recognition Challenge in 2012, convolutional neural networks gained momentum \cite{NIPS2012_4824}. 
-Their powerful abstraction mechanism made them one of the most used algorithms in the fields of image and video classification and description and speech recognition \cite{szegedy2015going}\cite{karpathy2014large}\cite{abdel2014convolutional}\cite{LeCun2015}. 
+Their powerful abstraction mechanism made them one of the most used algorithms in the fields of image and video classification and description and speech recognition \cite{abdel2014convolutional}\cite{karpathy2014large}\cite{LeCun2015}\cite{szegedy2015going}. 
 This can be primarily contributed to their ability to extract high level features on spatial and/or temporal conditioned data and utilize the compositional structure in information of the world.
 
 Creating discriminative high level feature extractors allows the system to dynamically adapt to the input data and work on various kinds of data. 
 In addition, the feature extractors do not need to have any semantic, human interpretable representation and can be more complex than manually built feature extractors. 
 This also removes the labour-intensive and time consuming task of building feature extractors manually.
-Consequently, they recently got adapted to solve robotic problems like grasp planning, drone navigation and autonomous driving \cite{giusti2016machine}\cite{levine2016learning}\cite{chen2015deepdriving}. 
+Consequently, they recently got adapted to solve robotic problems like grasp planning, drone navigation and autonomous driving \cite{chen2015deepdriving}\cite{giusti2016machine}\cite{levine2016learning}. 
 
 One precursor of CNNs are the deep belief networks (DBNs), which are built up of restricted Boltzmann machines (RBMs). 
 DBNs have shown excellent performance on image classification tasks in the early 2000s \cite{hinton2006fast}\cite{lee2009convolutional}.
@@ -33,19 +33,19 @@ The first approach trains convolutional RBMs on discretized input data to build 
 The second approach learns from continuous, event-driven input-data and adapts the synaptic weights with a plasticity rule with shared weights to train spiking convolutional RBMs directly. 
 Both approaches will learn to extract high level features which can be further used to classify an object. 
 
-\section{The Human Brain Project} \label{c:thehbp}
-
-Heiko:
-
-This thesis is under the scope of the research of the SP10 (sub-project 10) of the Human Brain
-Project. The Human Brain Project is an European Commission Future and Emerging Technologies Flagship and a large ten-year research project which aims to create a collaborative research infrastructure across national borders to progress the knowledge in neuroscience, computational neuroscience, medicine, scientific computation, and robotics. In the project over 120
-institution from across Europe collaborate in 12 sub-projects.
-
-The sub-project 10 of the Human Brain Project develops the Neurorobotics Platform which
-permits researchers to simulate robotic experiments with regard to neurorobotics. Apart from the
-platform, research is focused on the development of applications in robotics based on insights
-from neuroscience. One focus of the research group at the FZI Karlsruhe is the development of
-computational models for neurobiological inspired robotic grasping.
+%\section{The Human Brain Project} \label{c:thehbp}
+%
+%Heiko:
+%
+%This thesis is under the scope of the research of the SP10 (sub-project 10) of the Human Brain
+%Project. The Human Brain Project is an European Commission Future and Emerging Technologies Flagship and a large ten-year research project which aims to create a collaborative research infrastructure across national borders to progress the knowledge in neuroscience, computational neuroscience, medicine, scientific computation, and robotics. In the project over 120
+%institution from across Europe collaborate in 12 sub-projects.
+%
+%The sub-project 10 of the Human Brain Project develops the Neurorobotics Platform which
+%permits researchers to simulate robotic experiments with regard to neurorobotics. Apart from the
+%platform, research is focused on the development of applications in robotics based on insights
+%from neuroscience. One focus of the research group at the FZI Karlsruhe is the development of
+%computational models for neurobiological inspired robotic grasping.
 
 
 \section{Overview} \label{c:overw}
