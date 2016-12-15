@@ -1,29 +1,29 @@
 \chapter{Background} \label{c:backgrnd}
 
-In this chapter some foundations of spiking deep belief networks are presented, starting with probabilistic models and explaining different neural network models afterwards.
+In this chapter some foundations of spiking deep belief networks are presented, starting with probabilistic models, and explaining different neural network models afterwards.
 
 \section{Probabilistic Graphical Models} \label{c:pgms}
 
-Probabilistic graphical models (PGMs) or structured probabilistic models can be used to describe, formalize and model neural learning architectures \cite{Goodfellow-et-al-2016-Book}\cite{Petrovici2016}.
+Probabilistic graphical models (PGMs) or structured probabilistic models can be used to describe, formalize, and model neural learning architectures \cite{Goodfellow-et-al-2016-Book}\cite{Petrovici2016}.
 They can capture the basic probabilistic structure of data, which makes a significant number of data-related task feasible, such as \cite{Goodfellow-et-al-2016-Book}:
 \begin{itemize}
 
-\item Density estimation: Assigning a data sample $x$ an estimate of its true probability density $p(x)$ (e.g. indicating unusual data).
+\item Density estimation: Assigning a data sample $x$ an estimate of its true probability density $p(x)$ (e.g., indicating unusual data).
 
-\item Denoising: Given a perturbed or noisy input $\widetilde{x}$,  estimating the original data sample $x$
+\item Denoising: Estimating the original data sample $x$ given a perturbed or noisy input $\widetilde{x}$.  
 
-\item Missing value imputation: Given a partial input sample of $x$, it returns the most probable completion of the mission values( e.g. inferring a label of data sample).
+\item Missing value imputation: Given a partial input sample of $x$, it returns the most probable completion of the missing values (e.g., inferring a label of data sample).
 
 \item Sampling: Generating data samples $x$ drawn from the data distribution $p(x)$. 
 
 \end{itemize}  
 
 PGMs facilitate the process of modeling the probability distribution by using graphs to describe the probability distribution over the interactions of its random variables (RVs).
-A node in the graph represents a RV and an edge a direct interaction between two RVs.
+A node in the graph represents an RV, and an edge a direct interaction between two RVs.
 This allows a less complex description of the probability density with basic factors over interacting RVs instead of modelling the probability density over all RVs. 
 
 How to build a PGM and set the parameters for a given problem is still an active research topic \cite{Ghahramani2002}\cite{Zhou2007}.
-There exist different approaches such as the SGS algorithm \cite{Zhou2007} or EM algorithms \cite{Ghahramani2002}, but in the following we use Boltzmann machines and the contrastive divergence algorithm, to build up and determine the parameters in a PGM (see Chapter \ref{c:bms}).
+There exist different approaches such as the SGS algorithm \cite{Zhou2007} or EM algorithms \cite{Ghahramani2002}, but in the following we use Boltzmann machines and the contrastive divergence algorithm to build up and determine the parameters in a PGM (see Chapter \ref{c:bms}).
 
 PGMs can be be divided into two basic categories, models with directed graphs and models with undirected graphs.
 
@@ -33,14 +33,14 @@ PGMs can be be divided into two basic categories, models with directed graphs an
 Bayesian networks or belief networks are directed acyclic graphs, in which random variables are represented by nodes and their causal dependencies are represented by (directed) edges \cite{Faltin2007}\cite{Goodfellow-et-al-2016-Book}. 
 It poses a way to depict a probability distribution factorized by repeatedly applying the Bayes rule.
 
-A connection from $x_i$ to $x_j$ represents a conditional probability distribution from $x_j$ dependent on $x_i$, and $x_i$ is called the parent of its child $x_j$:
+A connection from an RV $x_i$ to an RV $x_j$ represents a conditional probability distribution from $x_j$ dependent on $x_i$, and $x_i$ is called the parent of its child $x_j$:
 
 \[
 p(x_j | x_i) .
 \]
 
 
-If a path from node $x_n$ to $x_k$ exists then $x_n$ is called an ancestor of $x_k$, and $x_k$ an descendant of $x_n$. 
+If a path from node $x_n$ to $x_k$ exists, then $x_n$ is called an ancestor of $x_k$, and $x_k$ an descendant of $x_n$. 
 
 In addition to the graph structure, which is often called the "qualitative" part of the models, the "quantitative" part has to be determined as well.
 The quantitative parameters are described by the local conditional probability distribution at each node given its parents.
@@ -66,11 +66,11 @@ A sample network with the qualitative part as well as the quantitative part can 
   		\caption{}
   		\label{fig:sub3}
 	\end{subfigure}
-	\caption[A sample Bayesian network with 5 binary nodes.]{A sample Bayesian network with 5 binary nodes (a). In the network RV $c$ is directly dependent on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$, $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descended $e$. In (b) the conditional probability of $p(c |a , b)$ is given in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma$ a network with such probability functions is called sigmoid belief network.}
+	\caption[A sample Bayesian network with 5 binary nodes.]{A sample Bayesian network with 5 binary nodes (a). In the network, the RV $c$ is directly dependent on $a$, $b$ and thus $c$ is the child of its parents $a$, $b$. The RVs $d$ and $e$ are the children of $c$. Since there is a path from $a$ to $e$, $a$ is an ancestor of its descendent $e$. In (b) the conditional probability of $p(c |a , b)$ is given in a tabular form. Another variant of the conditional probability $p(c |a , b)$ is given in (c). The probability is defined by the parameters $w_{ac}$, $w_{bc}$, and due to the sigmoid activation function $\sigma$ a network with such probability functions is called sigmoid belief network.}
 	\label{fig:bayesnet}
 \end{figure}
 
-This is consistent with with the Markov property, since each node is only depend on its direct parents:
+This is consistent with the Markov property, since each node is only depend on its direct parents:
 
 \[
 p(x_i | x_{\setminus i}) = p(x_i | parents(x_i) ),
@@ -82,10 +82,10 @@ where $x_{\setminus i} = \textbf{z} \setminus x_i$ and $\textbf{z} = (x_1, ... ,
 A Bayesian network contains a simple conditional independence assertion, i.e. each variable is, given its parents, independent on all non descendants:
 
 \[
-p(\textbf{z}) = \prod_{x_i \in \textbf{z}} p(x_i | x_{\setminus i}) = \prod_{x_i \in \textbf{x}} p(x_i | parents(x_i) ) .
+p(\textbf{z}) = \prod_{x_i \in \textbf{z}} p(x_i | x_{\setminus i}) = \prod_{x_i \in \textbf{z}} p(x_i | parents(x_i) ) .
 \]
 
-This reduction provides (e.a. from a computational perspective) an efficient way for learning i.e. parameter estimation and inference.
+This reduction provides (i.a. from a computational perspective) an efficient way for learning i.e. parameter estimation and inference.
 Given some observed variables, the evidences, the network can be used to compute the posterior probabilities and infer the most likely state of the unobserved variables.
 This process of computing the posterior distributions given the evidences is called probabilistic interference.
 
@@ -95,7 +95,7 @@ Thus, a Bayesian network can be seen as a tool to apply and simplify the Bayes r
 
 In contrast to Bayesian networks, Markov random fields (MRFs) are undirected graphical models, in which random variables are also represented by nodes, but edges in this case indicate conditional dependencies \cite{Goodfellow-et-al-2016-Book}\cite{murphy2012machine}.
 If two nodes $x_i$ and $x_j$ are connected by a edge, they are called each others neighbours.
-Given all of their neighbours, two unconnected nodes $x_k$ and $x_m$ are independent on each other.
+Given all of their neighbours, two unconnected nodes $x_k$ and $x_m$ are independent of each other.
 Thus, an MRF can be seen as a model of the joint probabilities of RVs (see Fig. \ref{fig:markovnet1}).
 
 As a result the complexity and redundancies of the probability distribution can be reduced. Instead of defining one probability distribution over all RVs, the probability distribution can be factorized into fully connected partial graphs, so-called cliques:
@@ -104,11 +104,11 @@ As a result the complexity and redundancies of the probability distribution can 
 p(\textbf{z}) = \frac{1}{Z} \prod \phi (z_k)  ,
 \]
 
-where $Z$ is the normalization factor, so that $p(\textbf{z})$ is a valid probability distribution with $\sum_{\textbf{z}} p(\textbf{z}) = 1$ ($ \Rightarrow Z = \sum_z \prod \phi (z_k) $) and $\phi (z_k)$ is the partition function of the clique $z_k$.
+where $Z$ is the normalizing factor, so that $p(\textbf{z})$ is a valid probability distribution with $\sum_{\textbf{z}} p(\textbf{z}) = 1$ ($ \Rightarrow Z = \sum_z \prod \phi (z_k) $) and $\phi (z_k)$ is the partition function of the clique $z_k$.
 
 The partition function $\phi (z_k)$ defines the potential of a clique, which indicates the likelihood of a state in the clique to be present.
 The higher the clique potential of a state the more likely is that clique-state.
-The clique potential for each state always has to be greater or equal to zero, but a common, computational beneficial choice is to represent each state with a purely positive value.
+The clique potential for each state always has to be greater or equal to zero, but a general, computational convenient choice is to represent each state with a purely positive value.
 
 \begin{figure}
 	\centering
@@ -124,13 +124,13 @@ The clique potential for each state always has to be greater or equal to zero, b
   		\caption{Cliques in a Markov network}
   		\label{fig:markovnet2}
 	\end{subfigure}
-	\caption[A Markov network with 5 nodes.]{(a) A Markov network with 5 nodes. The white node is dependent on all connected nodes (blue nodes). Given the blue nodes the white node is independent on any other node in the network. Given the white node all the blue nodes are independent on each other. (b) Two cliques in a Markov network. The blue clique is maximal, since no vertex can be added, which is fully connected to all others in the blue clique. The green one is not maximal, since the node $x_3$ could be added \cite{bishop2013pattern}.}
+	\caption[A Markov network with 5 nodes.]{(a) A Markov network with 5 nodes. The white node is dependent on all connected nodes (blue nodes). Given the blue nodes the white node is independent on any other node in the network. Given the white node all the blue nodes are independent of each other. (b) Two cliques in a Markov network. The blue clique is maximal, since no vertex can be added, which is fully connected to all others in the blue clique. The green one is not maximal, since the node $x_3$ could be added \cite{bishop2013pattern}.}
 	\label{fig:markovnet}
 \end{figure}
 
 
 Usually the maximal (sized) cliques are chosen since they contain all smaller sub-cliques and allow a finer factorization over those sub-cliques.
-But depending on the concrete problem, smaller clique sizes may be useful as well, e.g. Boltzmann machines usually are modelled with cliques of size two (see Fig. \ref{fig:markovnet2}).
+But depending on the concrete problem, smaller clique sizes may be useful as well, e.g., Boltzmann machines usually are modelled with cliques of size two (see Fig. \ref{fig:markovnet2}).
 
 
 
@@ -145,8 +145,8 @@ One convenient way to model the clique potentials is to use an energy function $
 
 Models with exponentials over energy functions are called energy-base models (EBMs).
 
-This is useful since, due to $exp(z_n)exp(z_m) = exp(z_n+z_m)$, the energy of the complete graph can be decomposed into the sum of the energy of all cliques.
-Because the exponential function is always positive ($exp(z) > 0$), the probability for each state is guaranteed to be greater than zero. 
+This is useful since, due to $exp(z_n)exp(z_m) = exp(z_n+z_m)$, the energy of the whole graph can be decomposed into the sum of the energy of all cliques.
+Because the exponential function is always positive, the probability for each state is guaranteed to be greater than zero. 
 This offers the freedom of choice of an arbitrary energy function $E(z_k)$, which can simplify optimization. 
 
 A probability distribution given by an EBM is also called Boltzmann distribution due to the similarity to statistical mechanics of gases in thermal equilibrium (and this is also where a Boltzmann machine get its name as presented in Chapter \ref{c:bms} ).
@@ -158,7 +158,7 @@ Sampling is a probabilistic solution to this problem, as it allows to approximat
 An exemplary sampling of a Gaussian distribution is given in Figure \ref{fig:Sampling}.
 
 Sampling can be described as the selection of a subset of individuals from a distribution to estimate properties of the complete distribution.
-To select a representative subset, the samples have to be unbiased of external influences such as the the sampling procedure or problems in data collection.
+To select a representative subset, the samples have to be unbiased of external influences such as the sampling procedure or problems in data collection.
 This can be particularly difficult since it may need infinite data, computational or temporal resources.
 In this case graphical models can be useful since they often facilitate the task of drawing samples from a distribution.
 
@@ -171,17 +171,17 @@ In this case graphical models can be useful since they often facilitate the task
 
 
 
-\paragraph{Ancestral Sampling} For directed graphical models, such a Bayesian networks, there is a simple and efficient procedure called ancestral sampling, which can produce samples from the probability distribution represented by the model \cite{Goodfellow-et-al-2016-Book}. 
-The basic idea is to sort the variables $x_n$ in the graph in a topological ordering, so that for all $i$ and $j$, $j$ is greater than $i$ if $x_i$ is a descendant of $x_j$. The variables can then be sampled in this order.
+\paragraph{Ancestral Sampling} For directed graphical models such a Bayesian networks there is a simple and efficient procedure called ancestral sampling, which can produce samples from the probability distribution represented by the model \cite{Goodfellow-et-al-2016-Book}. 
+The basic idea is to sort the variables $x_n$ in the graph in a topological ordering, so that for all $i$ and $j$, $i$ is greater than $j$ if $x_i$ is a descendant of $x_j$. The variables can then be sampled in this order.
 
 The topological sorting operation guarantees that the conditional distributions are valid and one can sample from them in order.
 
 \paragraph{Markov Chain Monte Carlo} If the probability distribution is represented by an undirected model, Markov Chain Monte Carlo (MCMC) methods can be used \cite{Goodfellow-et-al-2016-Book}. 
-MCMC methods interpret the model as a Markov chain, and work best in an irreducible and aperiodic chain, that is when no state in the undirected model has zero probability.
+MCMC methods interpret the model as a Markov chain, and work best in an irreducible and aperiodic chain that is when no state in the undirected model has zero probability.
 
 The basic idea is to begin in a state $z$ with some arbitrary value. 
 Then for some time $z$ is repeatedly randomly updated using the, by the model given, transition distribution $T(z',z)$. 
-Given enough update steps (possibly an infinite number), the network states will have reached a distribution which does not change any more (even though the individual states might do, the relative time spend in one state becomes constant).
+Given enough update steps (possibly an infinite number), the network states will have reached a distribution which does not change any more (even though the individual states might do, the relative time spent in one state becomes constant).
 Such a distribution is referred to as stationary distribution or equilibrium distribution (due to its similarity to particle physics).
 Eventually, $z$ becomes a fair sample of $p(z)$, which is equivalent to the stationary distribution of the Markov chain.
 
@@ -189,7 +189,7 @@ To get more than one sample, one can run more Markov chains in parallel, each in
 Another method is to run only one Markov chain, run it for some time to allow the Markov chain to reach its equilibrium, and then take samples after different timesteps.
 Those approaches need the Markov chain to reach its equilibrium distribution, which is usually done, by letting it run for some burn-in time.
 But there are no guarantees that the Markov chain will settle in the given timespan.    
-The second approach may lead to another problem since it can be hard to escape probable states, and when not run for an infinite timespan, more likely states can be over represented and less likely states under represented, if they did not occur or over represented if they did occur.  
+The second approach may lead to another problem since it can be hard to escape probable states, and when not run for an infinite timespan, more likely states can be over represented and less likely states under represented if they did not occur or over represented if they did occur.  
 
 \paragraph{Gibbs sampling} Gibbs sampling is a commonly used MCMC algorithm \cite{Goodfellow-et-al-2016-Book}. The basic idea to perform the transition from one state to another, in accordance with $T(z',z)$, is to sample a single variable $x_i$ only conditioned on its neighbours. 
 Several variables can be sampled at the same time as long as they are conditionally independent given all of their neighbours.
@@ -204,7 +204,7 @@ To distinguish those, we refer to models working at discrete time steps as \text
 \subsection{Natural Neural Networks} \label{c:natural}
 \subsubsection{Brain} \label{c:brain}
 
-The human brain is the main organ of the human central nervous system and with a weigh of about 1.2 - 1.4 kg (2\% of the total body weight) and a power consumption of around 20 Watts (20\% of the total human power consumption), it is assumed to be mainly responsible for what is commonly referred to as human intelligence \cite{Byrne1997}\cite{gerstner2014neuronal}.  
+The human brain is the main organ of the human central nervous system and with a weigh of about 1.2 - 1.4 kg (2\% of the total body weight) and a power consumption of around 20 Watts (20\% of the total human power consumption) it is assumed to be mainly responsible for what is commonly referred to as human intelligence \cite{Byrne1997}\cite{gerstner2014neuronal}.  
 
 \begin{figure}
 	\centering
@@ -213,7 +213,7 @@ The human brain is the main organ of the human central nervous system and with a
 	\label{fig:brain}
 \end{figure}
 
-A human brain constantly performs tasks such as learning, memory, self-control, planning, reasoning, abstract thought, motor control, vision and language.
+A human brain constantly performs tasks such as learning, memory, self-control, planning, reasoning, abstract thought, motor control, vision, and language.
 Different specialized regions in the brain which are involved in a task can be localized. 
 
 Even though different regions are involved in different tasks, the basic building blocks of the brain are astonishingly uniform. 
@@ -247,7 +247,7 @@ The dendrites are thin, complexly branching structures emerging from the cell bo
 They are the primary access for signals of preceding neurons through their synapses. 
 These signals can polarize or depolarize the part of the dendrites and so inhibit or promote a spike. 
 
-The soma, which encompasses the nucleus, accumulates all polarizations from the dendrites and if the accumulation exceeds a "pseudo" threshold, usually around -55 mV, certain ion channels become more active, which allows an influx of positively charged ions and a spike emerges (there is no threshold in natural neurons, but rather the activation probability of some ion channels increases significantly as the membrane potential reaches some "pseudo" threshold, however, due to computational benefits some abstract neuron models explicitly choose to model a spike threshold as described in Chapter \ref{c:snnneurons} ).
+The soma, which encompasses the nucleus, accumulates all polarizations from the dendrites and if the accumulation exceeds a "pseudo" threshold, usually around -55 mV, certain ion channels become more active, which allows an influx of positively charged ions and a spike emerges (there is no threshold in natural neurons, but rather the activation probability of some ion channels increases significantly as the membrane potential reaches some value. However, due to computational benefits some abstract neuron models explicitly choose to model a spike threshold as described in Chapter \ref{c:snnneurons} ).
 
 Starting from the soma the spike is propagated across the axon to the axon terminal where it is distributed to the dendrites of other subsequent (post-synaptic) neurons via the synapses, where they in turn can evoke (post-synaptic) potentials.
 The axon is often covered by a fatty substance, the myelin, to regulate and improve the conductivity.
@@ -265,11 +265,11 @@ It describes the ability of the brain to change and reorganize the structure of 
 specifies the changes to the synaptic strength, which is often associated with task learning and memory (in contrast to learning in brain, which is the general mechanism of altering the information processing in the brain, task learning describes the actual learning and remembering of a task). 
 
 Synaptic plasticity builds on the principle that temporally and locally correlated neural activity  can lead to synaptic changes.
-It is often further divided into \textbf{short-term plasticity}, which acts on a time scale of milliseconds to minutes, and \textbf{long-term plasticity}, lasting minutes or more.
+It is often further divided into \textbf{short-term plasticity}, which acts on a time scale of milliseconds to minutes, and \textbf{long-term plasticity} lasting minutes or more.
 
 
 \paragraph{"What fires together, wires together"} \label{c:hebb}
-A principle which generalizes these principles is the Hebbian principle or Hebbian rule.
+A principle, which generalizes these principles, is the Hebbian principle or Hebbian rule.
 It is often commonly summarized as "Cells that fire together, wire together".
 Hebb originally stated it as follows: "When an axon of cell $A$ is near enough to excite a cell $B$ and repeatedly or persistently takes part in firing it, some growth process or metabolic change takes place in one or both cells such that $A$'s efficiency, as one of the cells firing $B$, is increased."\cite{hebb19680}.
 Thus, meaning that the more often $A$ is active directly before $B$, the more likely $A$ will have contributed to $B$'s spike and the more causal $B$ will become of $A$ and $A$ and $B$ become associated.
@@ -286,7 +286,7 @@ Such algorithms can in general be formalized as
 \Delta w_{ab} = F( v_a, v_b) , 
 \]
 where $F$ is a function describing the weight change conditioned on the neural activities \cite{gerstner2014neuronal}.     
-This formulation allows a more complex processing of the neural activity and implementations as e.g. the original formulation of the Hebbian principle as well as the anti-Hebbian rule. 
+This formulation allows a more complex processing of the neural activity and implementations as e.g., the original formulation of the Hebbian principle as well as the anti-Hebbian rule. 
 
 \subsection{Artificial Neural Networks} \label{c:ann}
 
@@ -348,7 +348,7 @@ Using the heaviside step function $\varphi_{step}$, the perceptron calculation r
 This equation can be interpreted as a linear discrimination function, in which $\textbf{w}$ defines a hyper plane in the data space, dividing it into two half spaces. 
 Two exemplary linear discrimination functions in data space are given in Figure \ref{fig:discrimation}.
 This separation of the data space into distinct sub-spaces is often regarded to as classification. 
-While a perceptron with a linear decision function only allows quite simple discrimination, more complex decision functions can be chosen e.g. multilayer perceptrons combine simple functions into more complex ones. 
+While a perceptron with a linear decision function only allows quite simple discrimination, more complex decision functions can be chosen e.g., multilayer perceptrons combine simple functions into more complex ones. 
 
 \begin{figure}
 	\centering
@@ -485,7 +485,7 @@ Different optimization algorithms can be used to achieve this objective.
 However, the most common class of algorithms use the gradient of the error function with respect to the weights in order to determine the contributions of the weights to the error and thus, reduce the error and reach a minimal point.
 For gradient descent the gradient for the parameters are calculated and, by following the negative gradient direction, the weights are updated.
 
-Since MLPs have a clearly defined structure, using the chain rule of calculus, the gradient descent update rule can be simplified to an iterative procedure called backpropagation (backprop)  \cite{Goodfellow-et-al-2016-Book}\cite{rumelhart1985learning}.
+Since MLPs have a clearly defined structure, using the chain rule of calculus the gradient descent update rule can be simplified to an iterative procedure called backpropagation (backprop)  \cite{Goodfellow-et-al-2016-Book}\cite{rumelhart1985learning}.
 
 We define the output $y_j$ of neuron $j$ as
 \[
@@ -558,11 +558,11 @@ c(t) = (a * b)(t) = \int_{- \infty}^{\infty} a(x)b(t-x) dx.
 \]
 In this equation $a$ is usually called the input and $b$ the kernel of the convolution. The result $c$ is often referred to as the feature map.
 
-Since recorded data (e.g. images, speech) is often discretized, we extend the convolution to discrete data
+Since recorded data (e.g., images, speech) is often discretized, we extend the convolution to discrete data
 \[
 c(t) = \sum_{x = - \infty}^{\infty} a(x)b(t-x).
 \]
-Whereas convolution is originally defined over the one-dimensional temporal dimension, it can also be applied to multiple arbitrary dimensions, e.g. two dimensional images $I$
+Whereas convolution is originally defined over the one-dimensional temporal dimension, it can also be applied to multiple arbitrary dimensions, e.g., two dimensional images $I$
 \[
 C(i,j) = \sum_m^M \sum_n^N I(m,n) K(i - m, j -n).
 \]
@@ -588,7 +588,7 @@ Due to this similarity, the terms convolution and cross correlation are often us
 
 In neural networks convolution is implemented in the so-called convolution layer, where the convolution operation with a learnable kernel matrix $K$ is applied. 
 An input given as an 3D tensor $Y$ be composed of $m$ 2D feature maps. Each feature map has the dimension $s \times t$. 
-In the input layer, $m$ is for example the number of color channels (3 in case of an RGB image), and $s$ is the width and $t$ the height of the input image. 
+In the input layer, $m$ is for example the number of color channels (three in case of an RGB image), and $s$ is the width and $t$ the height of the input image. 
 A discrete convolution with a $(M , P , Q)$ filter matrix $K_j$ at position $(x,y)$ is then defined as : 
 \[
 y_{i}^{jxy} = \sigma(\sum_M \sum_{p=-\frac{P}{2}}^{\frac{P}{2}} \sum_{q=-\frac{Q}{2}}^{\frac{Q}{2}} w_{ij}^{mpq} y_{(i-1)}^{m(x+p)(y+q)}) .
@@ -717,7 +717,7 @@ E(z) = - \frac{1}{2} \sum w_{ij} s_i s_j + \sum b_i s_i .
 
 By introducing recurrent connections, the network can be trained to store information.
 Indeed, with each (asynchronous) update step, the energy is thus guaranteed to stay the same or lower in value.
-Consequently, the network will converge to a local minimum of the energy function, similar to a stable equilibrium state, where it can not escape from. 
+Consequently, the network will converge to a local minimum of the energy function similar to a stable equilibrium state, where it can not escape from. 
 Such a state can be called mode or attractor state.
 Hopfield nets can be trained as associative memory, where each stored pattern corresponds to such an attractor state.
 
@@ -744,7 +744,7 @@ A further similarity are bidirectional, symmetric weights without any self conne
 \]
 This allows the interpretation of a Boltzmann machine as an energy-based model with the probability distribution defined by the energy function $E$ and its parameters $\textbf{w}$.
 
-In other words, a Boltzmann machine is an energy based model with the probability distribution defined by the Energy.
+In other words, a Boltzmann machine is an energy based model with the probability distribution defined by the energy.
 Thus, each state $\textbf{z}$ can be assigned an energy which directly indicates the probability of the state $P(\textbf{z}) \propto -E(\textbf{z})$:
 \[
 P(\textbf{z}) = - \frac{1}{Z} \exp^{-E(\textbf{z})} 
@@ -775,9 +775,9 @@ With hidden units a Boltzmann machine can universally approximate arbitrary prob
 
 \paragraph{Learning Rule} \label{c:cd}
 
-The goal for training a Boltzmann machine is to get a probability distribution similar to the distribution which generated the training data, the so-called data distribution.
+The goal for training a Boltzmann machine is to get a probability distribution similar to the distribution, which generated the training data, the so-called data distribution.
 Thus, the objective for a Boltzmann machine is to assign a high probability to its training data (while assigning data not drawn from the data distribution a low probability) \cite{ackley1985learning}\cite{Bengio2009}\cite{hinton2002training}\cite{Woodford2002} .
-By applying gradient descent, the weights of the Boltzmann machine are modified towards a configuration which assigns training samples $\textbf{x}$ a high probability:
+By applying gradient descent, the weights of the Boltzmann machine are modified towards a configuration, which assigns training samples $\textbf{x}$ a high probability:
 \[
 w_{ij} = w_{ij} - \mu \Delta w_{ij},
 \]
@@ -810,7 +810,7 @@ gives the quite simple update rule called contrastive divergence (CD)
 w_{ij}= w_{ij} + \mu ( \langle s_i s_j \rangle_{\text{data}} - \langle s_i s_j \rangle_{\text{model}} ) ,
 \]
 where $\langle s_i s_j \rangle_{\text{data}}$ are the expected activations from the data distribution and  $ \langle s_i s_j \rangle_{\text{model}}$ are the expected activations from the model distribution.
-The most common way to get the data and model distribution is to perform consecutive Gibbs update steps until an equilibrium distribution is reached, with either training data clamped or no data clamped to visible units.
+The most common way to get the data and model distribution is to perform consecutive Gibbs update steps until an equilibrium distribution is reached with either training data clamped or no data clamped to visible units.
 
 Here $\langle s_i s_j \rangle_{\text{data}}$ is referred to as the positive phase and $ \langle s_i s_j \rangle_{\text{model}}$ as negative phase.
 A simple interpretation of the update rule is a shift of the weights away from the model distribution towards the data distribution.
@@ -873,7 +873,7 @@ In Figure \ref{fig:cd} the sampling steps are visualized by unrolling the RBM as
 
 \subsubsection{Deep Belief Networks} \label{c:dbns}
 
-A deep belief network (DBN) is a generative graphical model, or alternatively a type of deep neural network, composed of multiple layers of latent variables (hidden units), with connections between consecutive layers, but with no connections within layers \cite{Goodfellow-et-al-2016-Book}\cite{hinton2009deep}\cite{hinton2006fast}.
+A deep belief network (DBN) is a generative graphical model, or alternatively a type of deep neural network, composed of multiple layers of latent variables (hidden units) with connections between consecutive layers, but with no connections within layers \cite{Goodfellow-et-al-2016-Book}\cite{hinton2009deep}\cite{hinton2006fast}.
 
 A deep belief network can be built up by stacking up RBMs.
 This does not only enable unsupervised training of a deep belief net, but also improves the conditional distribution of the bottom RBM (each time an RBM is added, it improves the prior over the hidden units with a better and more complex prior).
@@ -915,7 +915,7 @@ One interpretation of this is to see a DBN as a pre-trained ANN.
 
 \subsection{Spiking Neural Networks} \label{c:snns}
 
-While all the previous presented models run at discrete time steps, the next models are designed to run contentiously which makes them more similar to natural neurons and neural networks \cite{maass1997networks}. 
+While all the previous presented models run at discrete time steps, the next models are designed to run contentiously, which makes them more similar to natural neurons and neural networks \cite{maass1997networks}. 
 
 \subsubsection{Neuron Models} \label{c:snnneurons}
 
@@ -1017,7 +1017,7 @@ C_m \frac{\partial u}{\partial t} = \sum_{k \in K} g_k m^{p_k} h^{q_k} (E_k - u(
 \]
 with an arbitrary number of ion channels $K$.
 
-While this allows the model to predict and simulate various effects observed in the brain, like frequency adaptation, with high accuracy, the Hodgkin-Huxley model is more computationally expensive.
+While this allows the model to predict and simulate various effects observed in the brain like frequency adaptation with high accuracy, the Hodgkin-Huxley model is more computationally expensive.
 
 \paragraph{Activity in a network} \label{c:poissonspikes}
 
@@ -1068,10 +1068,10 @@ Thus, the synaptic input current $I^{syn}$ can now be described using the membra
 \[
 I^{syn}(t) = g_e^{syn} (E_e^{rev} - u(t)) + g_i^{syn} (E_i^{rev} - u(t)),
 \]
-where $E_e^{rev}$ and $E_i^{rev}$ is the excitatory and inhibitory reversal potential of the membrane, which can be e.g. chosen as $E_{Na}$ and $E_{K}$ respectively.  
+where $E_e^{rev}$ and $E_i^{rev}$ is the excitatory and inhibitory reversal potential of the membrane, which can be e.g., chosen as $E_{Na}$ and $E_{K}$ respectively.  
 
 \subparagraph{High conductance state} \label{c:hcs}
-One interesting property of conductance based neurons is, that they can reach a so-called high conductance state (HCS) \cite{Petrovici2016}. Such a state is defined by a high total membrane conductance 
+One interesting property of conductance based neurons is that they can reach a so-called high conductance state (HCS) \cite{Petrovici2016}. Such a state is defined by a high total membrane conductance 
 \[
 g^{tot} = g_l + \sum_{\text{synapses } k} g_k^{syn},
 \]
@@ -1079,9 +1079,9 @@ with
 \[
 \sum_{\text{synapses } k} g_k^{syn} =: g^{syn} >> g_l .
 \]
-Such a state can be reached by a lot of incoming synaptic firing. e.g. high frequency Poisson noise from other neurons. 
+Such a state can be reached by a lot of incoming synaptic firing. e.g., high frequency Poisson noise from other neurons. 
 
-The HCS is especially interesting, because the dynamics of the membrane potential can be described by a Gaussian process called Ornstein–Uhlenbeck process, with a mean primarily determined by the effective synaptic input (with the noise) and the variance by the total membrane conductance (see Fig. \ref{fig:ornuhl}).
+The HCS is especially interesting because the dynamics of the membrane potential can be described by a Gaussian process called Ornstein–Uhlenbeck process with a mean primarily determined by the effective synaptic input (with the noise) and the variance by the total membrane conductance (see Fig. \ref{fig:ornuhl}).
 In addition, Petrovici showed that in such a state the time the neuron needs to get from its resting potential to a value given by the Ornstein–Uhlenbeck process can be basically neglected (see Fig. \ref{fig:hcs}).
 This will show further application as a stochastically firing neuron model used for neural sampling  in Chapter \ref{c:snnsampling}.
 
@@ -1097,7 +1097,7 @@ This will show further application as a stochastically firing neuron model used 
 \begin{figure}
 	\centering
     	\includegraphics[width=0.6\textwidth]{imgs/hcs.png} 
-    \caption[A membrane potential trajectory of a neuron in a high conductance state.]{A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent, that the blue curve returns the the hypothetical red potential without a "return from rest" time  \cite{Petrovici2016}. }
+    \caption[A membrane potential trajectory of a neuron in a high conductance state.]{A membrane potential trajectory of a neuron in a high conductance state. (a) The spike train and the membrane potential. (b) The blue curve represents the actual membrane potential with refractory periods after each spike, while the red curve represents a membrane potential without a firing threshold. It is apparent that the blue curve returns the the hypothetical red potential without a "return from rest" time  \cite{Petrovici2016}. }
     % Petrovici
 	\label{fig:hcs}
 \end{figure}
@@ -1135,14 +1135,14 @@ In contrast to rate coding, in \textit{temporal coding} the information is addit
 Thus, the information is carried in the exact spike timings.
 \textit{Population coding} encodes information as the joint activity of several neurons in a population.  
 
-In this thesis we use temporal or rate encoded input data which is represented in the network as a population coded state over the joint activity of several neurons and is decoded in a rate-based manner. 
+In this thesis we use temporal or rate encoded input data, which is represented in the network as a population coded state over the joint activity of several neurons and is decoded in a rate-based manner. 
 
 \subsubsection{Learning} \label{c:snnlearning}
 
-Learning in the brain describes the generalized term, how information in the brain is stored (in contrast to task learning, memory adaptation is also considered learning).
+Learning in the brain describes the generalized term how information in the brain is stored (in contrast to task learning, memory adaptation is also considered learning).
 
 Most models of learning algorithms in spiking neural networks build on changes in the synaptic strength between neurons to store information \cite{gerstner2014neuronal}.
-To consider these changes as learning, they have to span over minutes to days or more, which is described by long-term plasticity, e.g by LTP (long-term potentiation), LTD (long-term depression) or STDP (see Fig. \ref{fig:stdp}).
+To consider these changes as learning, they have to span over minutes to days or more, which is described by long-term plasticity, e.g., by LTP (long-term potentiation), LTD (long-term depression) or STDP (see Fig. \ref{fig:stdp}).
  
 The most commonly used models are inspired by the research and discoveries of Hebb and the previously discussed Hebbian principle (Chapter \ref{c:hebb}).
 

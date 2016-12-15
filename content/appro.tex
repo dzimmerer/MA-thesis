@@ -35,7 +35,7 @@ By using more neurons with different sets of shared weights over the same recept
   		\caption{}
   		\label{fig:receptfields2}
 	\end{subfigure}
-	\caption[Receptive fields over 4 neurons.]{Receptive fields over 4 neurons. In (a) the top layer neuron (red), is only connected to a some neurons in close vicinity to each other. In (b) four receptive fields are next to each other with a stride of two and shared weights. }
+	\caption[Receptive fields over 4 neurons.]{Receptive fields over 4 neurons. In (a) the top layer neuron (red) is only connected to a some neurons in close vicinity to each other. In (b) four receptive fields are next to each other with a stride of two and shared weights. }
 	\label{fig:receptfields}
 \end{figure}
 
@@ -56,7 +56,7 @@ The conversion approach can be roughly described in two steps:
 To train a convolutional DBN we proceed similar to Hinton et al. and Lee et al. \cite{hinton2006fast}\cite{lee2009convolutional}.
 
 At first the convolutional RBMs are trained greedily with CD, as described in Chapter \ref{c:convrbm}, for a certain number of iterations on data batches of batch-size $b$.
-After an RBM is trained, we convert the dataset $X$ by sampling of the hidden layer of the RBM (one forward-pass step), into a new dataset $X'$:
+After an RBM is trained, we convert the dataset $X$ by sampling of the hidden layer of the RBM (one forward-pass step) into a new dataset $X'$:
 \[
 p(x') = \sigma(W * x) .
 \]
@@ -64,14 +64,14 @@ p(x') = \sigma(W * x) .
 On this converted dataset the next convolutional RBM is trained greedily.
 
 Evaluating feature qualities is still an active research topic.
-To get a measurement of our feature quality we use labelled data and train a classifier on top of the extracted features.
+To get a measurement of our feature quality, we use labelled data and train a classifier on top of the extracted features.
 To stay in a biological plausible domain, we train a fully connected RBM on the top level features combined with the label of the data samples in order to associate the features with the correct labels.
 This architecture is similar to the architecture of Hinton \cite{hinton2006fast} (see Fig. \ref{fig:dbnmnist}).
 
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/dbn_mnist.png} 
-    \caption[A common structure of a deep belief network.]{A common structure of a deep belief network, built up of RBMs used for classification. The first layers transform the input data/ pixel image and can extract features and the top layer RBM is used for association the data with the correct label \cite{Zorzi2013Modeling}.}
+    \caption[A common structure of a deep belief network.]{A common structure of a deep belief network, built up of RBMs, used for classification. The first layers transform the input data/ pixel image and can extract features and the top layer RBM is used for association the data with the correct label \cite{Zorzi2013Modeling}.}
 	\label{fig:dbnmnist}
 \end{figure}
 
@@ -96,7 +96,7 @@ We present three different variations of the conversion.
   		\caption{Structure of a spiking DBN with LIF neurons.}
   		\label{fig:converted2}
   	\end{subfigure}
-	\caption[Different converted structures of a CNN and a DBN.]{Different converted structures of a CNN and a DBN. The CNN is converted to a spiking network, by simply using simple LIF neurons (white) (a). In the DBN (b) the LIF neurons are put in a high conductance state (black), by inserting high frequency Poisson noise. The weights are scaled accordingly to fit the activations of the neurons.}
+	\caption[Different converted structures of a CNN and a DBN.]{Different converted structures of a CNN and a DBN. The CNN is converted to a spiking network by simply using simple LIF neurons (white) (a). In the DBN (b) the LIF neurons are put in a high conductance state (black) by inserting high frequency Poisson noise. The weights are scaled accordingly to fit the activations of the neurons.}
 	\label{fig:converted}
 \end{figure}
 
@@ -107,7 +107,7 @@ One way to convert the DBN to the spiking domain, is by interpreting it as a pre
 While this allows classification, it removes the generative capabilities of the network.
 
 For the conversion, we proceed similar to Cao et al. and Diehl et al. \cite{Cao2014}\cite{Diehl2015} .
-They use average pooling and ReLU functions, to get a similar architecture as SNNs.
+They use average pooling and ReLU functions to get a similar architecture as SNNs.
 In contrast, we don't use any pooling, since for RBM there is no simple way to integrate average pooling (used by Cao et al. and Diehl et al. in their trained CNNs), and for spiking CNNs there is no simple way to integrate probabilistic max pooling, which is to our knowledge currently the only into the training integrated pooling thought of for RBMs.
 We also use the sigmoid function, since RBMs are commonly trained with sigmoid activations (but some approaches propose ReLU for RBMs as well \cite{Nair2010}).
 Furthermore the input-rate output-rate transfer function of rate based LIF neurons with a refractory period matches the sigmoid function more closely.
@@ -148,21 +148,21 @@ The PSPs are chosen to have an alpha shape instead of a rectangular shape, which
   		\caption{omparison between a HCS COBA LIF neuron sampling and the true distribution in a RBM.}
   		\label{fig:cobahcs3}
 	\end{subfigure}
-	\caption[Properties of a conductance based LIF neuron in a high conductance state.]{Properties of a conductance based LIF neuron, put into a high conductance state with high frequency input noise. The neuron fires with a probability of $0.5$ given no additional input (a). With input the input output transfer function approximates a sigmoid function (b). A network with such neurons is able to sample in a Boltzmann distribution similar to original distribution (c). }
+	\caption[Properties of a conductance based LIF neuron in a high conductance state.]{Properties of a conductance based LIF neuron put into a high conductance state with high frequency input noise. The neuron fires with a probability of $0.5$ given no additional input (a). With input the input output transfer function approximates a sigmoid function (b). A network with such neurons is able to sample in a Boltzmann distribution similar to original distribution (c). }
 	\label{fig:cobahcs}
 
 \end{figure}
   
 The DBN is converted by replacing each layer with a layer of conductance-based LIF neurons with Poisson noise, and the connections are transformed to synapses with the weights scaled to achieve an action function similar to the sigmoid function (see Fig. \ref{fig:converted2}).
 
-Consequently the DBN simply performs ancestral sampling with the data sample as evidences and the label as inferred state.   
+Consequently, the DBN simply performs ancestral sampling with the data sample as evidences and the label as inferred state.   
 
 
 \paragraph{Conversion with current-based LIF neurons} \label{c:convascuba}
 
 To reduce the computational expenses of the COBA models, they can be replaced by less computational complex CUBA models.
 The model parameters as chose to simulate a HCS state.
-Therefore the membrane time constant is reduced and the membrane conductance is increased and a static input current is inserted.  
+Therefore, the membrane time constant is reduced and the membrane conductance is increased and a static input current is inserted.  
 Adding high frequency Poisson noise results in a sigmoid shaped input-rate output-rate transfer function (see Fig. \ref{fig:cubahcs}).
 
 \begin{figure}
@@ -185,10 +185,10 @@ Adding high frequency Poisson noise results in a sigmoid shaped input-rate outpu
   		\caption{Comparison between a HCS CUBA LIF neuron sampling and the true distribution in a RBM.}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption[Properties of a current based LIF neuron in a high conductance state.]{Properties of a current based LIF neuron, put into a simulated high conductance state by high frequency input noise and a artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).}
+	\caption[Properties of a current based LIF neuron in a high conductance state.]{Properties of a current based LIF neuron put into a simulated high conductance state by high frequency input noise and a artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).}
 	\label{fig:cubahcs}
 \end{figure}
-The DBN conversion is similar to the COBA case, but instead of COBA LIF neurons the adapted CUBA LIF neurons are used(see Fig. \ref{fig:converted2}).
+The DBN conversion is similar to the COBA case, but instead of COBA LIF neurons the adapted CUBA LIF neurons are used (see Fig. \ref{fig:converted2}).
 
 \section{eCD} \label{c:ecdappr}
 
@@ -224,7 +224,7 @@ We extent the model by a 5th phase between two data samples, where the network i
 \begin{enumerate}
 \item The data signal is applied and the system is allowed to model the data distribution ($g(t)=0$).
 \item Positive STDP is used to get $v_i h_j$-data and is added to the weights (postive phase $g(t)=1$).
-\item The data signal is remove and the system is allowed to model the model distribution ($g(t)=0$).
+\item The data signal is removed and the system is allowed to model the model distribution ($g(t)=0$).
 \item Negative STDP is used to get $v_i h_j$-model and is subtracted from the synaptic weights (negative phase $g(t)=-1$).
 \item The neural activity is "flushed" by inserting a strong negative current into the visible and hidden layer, no learning is performed ($g(t)=0$).
 \end{enumerate}
@@ -260,7 +260,7 @@ This results in a update rule similar to the convolutional RBM update rule as pr
 Thus we can simply take the mean of the weight changes and apply it to all the weights, which is equivalent to just taking the average of the new individual weights. 
 
 \paragraph{Lateral inhibition} \label{c:latinhib}
-In addition we introduce fixed negative connections between neuron in the hidden layers ( which is more biologically plausible \cite{King2013}, see a simplified sample in Fig. \ref{fig:bminhib}).
+In addition we introduce fixed negative connections between neuron in the hidden layers (which is more biologically plausible \cite{King2013}, see a simplified sample in Fig. \ref{fig:bminhib}).
 This removes one advantage of RBMs since the hidden layers are no longer independent, which makes it harder to sample from the true distributions, but since the network continuously performs sampling steps, the approximation has shown to be sufficient, if the weights are not too strong and prevent changes of different modes (see Chapter \ref{c:latinhibexp} and Fig. \ref{fig:dbnmixing} ).
 
 \begin{figure}
@@ -278,14 +278,14 @@ An intuitive interpretation is that if one feature reacts to a certain input it 
 
 \subsection{Spiking DBNs} \label{c:spikingdbn}
 
-To build up a spiking DBN we train the convolutional BMs layer-wise and forward the input of the previous layer to the next layer.
+To build up a spiking DBN, we train the convolutional BMs layer-wise and forward the input of the previous layer to the next layer.
 
-Either replacing the symmetric bidirectional synapses with forward only synapses or keeping them bidirected, did not show any significant differences (see Fig. \ref{fig:spikingdbnarch} ). 
+Either replacing the symmetric bidirectional synapses with forward only synapses or keeping them bidirected did not show any significant differences (see Fig. \ref{fig:spikingdbnarch} ). 
 To be exact the spiking DBN with bidirectional synapses in the bottom RBMs is a mixture between a deep belief network and a deep Boltzmann machine, since the single Boltzmann machines are still bidirectional connected and only the hidden layer activations are forwarded in a directed manner to the next Boltzmann machines (see Fig. \ref{fig:spikedbn}).
 
 Due to some top-down influences, when stacking a new BM  on the trained BM directly, the hidden distribution gets distorted and unfit input for the new BM to be trained on. 
-To solve this in our case we use forward connections from the hidden layer of the bottom BM to the visible layer of a new two layered top BM. 
-An approach to predict the influences of the top RBM in advance e.g like Salakhutdinovs DBMs by doubling the weights or joint training may sound promising and could be an area for further research \cite{salakhutdinov2009deep}.
+To solve this in our case, we use forward connections from the hidden layer of the bottom BM to the visible layer of a new two layered top BM. 
+An approach to predict the influences of the top RBM in advance like Salakhutdinovs DBMs by doubling the weights or joint training may sound promising and could be an area for further research \cite{salakhutdinov2009deep}.
 
 \begin{figure}[h]
 	\centering

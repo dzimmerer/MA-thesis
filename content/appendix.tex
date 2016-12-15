@@ -3,7 +3,7 @@
 \section{Neuron Parameters}
 
 \begin{table}[h!]
-\caption{Current-based LIF neuron parameters used for the converted CNN}
+\caption{Current-based LIF neuron parameters used for the converted CNN.}
 \centering
 \label{cnnlifparam}
 \begin{tabularx}{0.65\textwidth}{|XX|}
@@ -19,7 +19,7 @@ Spike threshold     		& -50.0 mV          \\\hline
 \end{table}
 
 \begin{table}[h!]
-\caption{Current-based LIF neuron parameters used for the converted DBN}
+\caption{Current-based LIF neuron parameters used for the converted DBN.}
 \centering
 \label{cubalifparam}
 \begin{tabularx}{0.65\textwidth}{|XX|}
@@ -36,7 +36,7 @@ Spike threshold     		& -52.0 mV          \\\hline
 
 
 \begin{table}[h!]
-\caption{Conductance-based LIF neuron parameters used for the converted DBN}
+\caption{Conductance-based LIF neuron parameters used for the converted DBN.}
 \centering
 \label{cobalifparam}
 \begin{tabularx}{0.65\textwidth}{|XX|}
@@ -124,7 +124,7 @@ Excitatory reversal potential  & -0.0 mV 	               \\\hline
   		\includegraphics[width=.9\linewidth]{imgs/app/DBN_np_sp.png}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption[Activity in the visible layer of the top RBM in a DBNs with different architectures.]{Activity in the visible layer of the top RBM in a DBNs with different architectures. The first two architectures model separate RBM layers which are stacked by one-on-one forward connections from the hidden layer of the bottom RBM to the visible layer of the top RBM, while in the last architecture, the RBMs are directly stacked, i.e. the hidden layer of the bottom RBM is the visible layer of the top RBM. While in the top two architectures, there are hardly any differences and the input is modelled correctly, due to top down influences the output of the bottom RBM gets distorted by activity in the hidden layer of the top RBM.}
+	\caption[Activity in the visible layer of the top RBM in a DBNs with different architectures.]{Activity in the visible layer of the top RBM in a DBNs with different architectures. The first two architectures model separate RBM layers which are stacked by one-on-one forward connections from the hidden layer of the bottom RBM to the visible layer of the top RBM, while in the last architecture the RBMs are directly stacked, i.e. the hidden layer of the bottom RBM is the visible layer of the top RBM. While in the top two architectures, there are hardly any differences and the input is modelled correctly, due to top down influences the output of the bottom RBM gets distorted by activity in the hidden layer of the top RBM.}
 	\label{fig:spikingdbnarch}
 \end{figure}
 
@@ -210,7 +210,7 @@ Thus, no learning happens and the weights become not very discriminative (compar
   	\label{fig:ecdnestwnot}
 \end{figure}
 
-Increasing the learning rate to increase the weights leads to a few strong positive weights, while the majority of the weights still become negative, leading to no good results either (Fig. \ref{fig:ecdnestwnot}).
+Increasing the learning rate to increase the weights leads to a few strong positive weights, while the majority of the weights still become negative leading to no good results either (Fig. \ref{fig:ecdnestwnot}).
 
 
 \begin{figure}[h!]

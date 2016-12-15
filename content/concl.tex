@@ -16,19 +16,19 @@ At last we compared those two approaches and showed how the event-based approach
 
 \subsubsection{Biological plausibility} \label{c:bioplau}
 
-Studies by Hubel and Wiesel suggest, certain neurons respond so similar features at different position of in visible field \cite{Hubel1959}.
+Studies by Hubel and Wiesel suggest certain neurons respond so similar features at different position of in visible field \cite{Hubel1959}.
 This suggests similar synaptic weights, but due to contortions in the cornea most probably not exactly the same weights. 
 One explanation for this could be shared weights similar to CNNs. 
 Since the weight updates in the brain are primarily believed to be local, there is no known principle to keep weights between different neurons in the brain synchronized \cite{DBLP:journals/corr/ScellierB16}.
-So while the trained structure, with receptive fields and similar weights is quite plausible, the training procedure presented here is not.
-A more plausible way in the brain to get similar weights, is due to the similarity of the inputs, e.g. if two receptive fields get quite similar input, their weights will with a high probability converge to the same target values.  
+So while the trained structure with receptive fields and similar weights is quite plausible, the training procedure presented here is not.
+A more plausible way in the brain to get similar weights is due to the similarity of the inputs, e.g., if two receptive fields get quite similar input, their weights will with a high probability converge to the same target values.  
 While this requires all receptive fields to be presented with the complete data, presenting each field with some part of the data but updating all fields with a combined update can be more computational effective. 
 This could be a principle CNNs utilize to get biological plausible result, while performing not completely biological plausible updates.
 
 Another biological not completely plausible part of our presented system are the bidirectional synapses.
-This in turn could be easily translated to two directional synapses, with some weight synchronization. 
-While in this case local updates are sufficient to keep the weights similar (e.g. applying a similar learning rule to both weights) and research on discrete NNs has shown some automatic weight synchronization in Autoencoders \cite{vincent2010stacked}, there is no biological proof.
-The STDP flag determining either completely positive or negative and dividing the training into different phases, does not appear to be plausible as well.
+This in turn could be easily translated to two directional synapses with some weight synchronization. 
+While in this case local updates are sufficient to keep the weights similar (e.g., applying a similar learning rule to both weights) and research on discrete NNs has shown some automatic weight synchronization in Autoencoders \cite{vincent2010stacked}, there is no biological proof.
+The STDP flag determining either completely positive or negative and dividing the training into different phases does not appear to be plausible as well.
 
 Even so this system has many constrains, it might could be counted among one of the more biological plausible deep learning architectures \cite{bengio2015towards}.     
 
@@ -38,18 +38,18 @@ While this system shows promising results on small dataset, there is still a lot
 
 \subsection{Neuromorphic Hardware} \label{c:neuhard}
 
-One of the biggest constrains of the here proposed frameworks, is the simulation speed of neural simulations.
-One way the training could be speed up, is to perform the simulations on dedicated Neuromorphic hardware. 
+One of the biggest constrains of the here proposed frameworks is the simulation speed of neural simulations.
+One way the training could be speed up is to perform the simulations on dedicated Neuromorphic hardware. 
 There exists a few platforms which could be used, each having different advantages and disadvantages.
 
 \paragraph{SpiNNakker} \label{c:spinnakker}
-is a massively-parallel computer architecture which can use up to 1 million ARM processors to simulate up to 1 billion neurons \cite{jin2008efficient}. 
-In addition it can be interfaced with PyNN. 
+is a massively-parallel computer architecture, which can use up to 1 million ARM processors to simulate up to 1 billion neurons \cite{jin2008efficient}. 
+In addition, it can be interfaced with PyNN. 
 While implementing a custom STDP rule is quite feasible although having only integer weights, keeping weights synchronized either for symmetric connections or for convolution poses a bigger challenge whose complexity exceeds this thesis.
 
 \paragraph{Spikey} \label{c:spikey}
 emulates spiking neural networks with conductance based leaky integrate-and-fire neurons and synapses implemented in analog microelectronics \cite{Pfeil1311}.
-It can simulate 384 neurons and 256 incoming synapses in each neuron, resulting in a total of 98304 synapses.
+It can simulate 384 neurons and 256 incoming synapses in each neuron resulting in a total of 98304 synapses.
 It can also be interfaced with PyNN.
 This can allow approximately 10000-fold faster computations than biological real-time.
 But due to the weights, which are implemented directly in hardware and the noisy and less fault tolerant analog electronics this poses challenges for a "phased" custom STDP mechanism and weight-sharing. 
@@ -59,27 +59,27 @@ While implementing a custom STDP rule on both neuromorphic devices could be quit
 
 \subsection{Biologically Plausible Learning} \label{c:biofuture}
 
-Another direction which poses great potential for further research is tackling the current restrictions on the biological plausibility.  
+Another direction, which poses great potential for further research, is tackling the current restrictions on the biological plausibility.  
 
 One of the primary problems is the division in distinct learning phases.
 This is currently an active topic of research and there are different algorithms proposed, which loosen the constraints on explicit positive and negative learning phases.
 There are two approaches which appear in particular promising.
-One learns with a LTP variant only for a short period after a data sample is presented and the distribution converges towards the data distribution \cite{DBLP:journals/corr/ScellierB16}.
-Another approach replaces a data sample by a sample of the model distribution which has only been nudged towards a real data input, so the distribution in the positive phase only shifts towards, but does not have to reach the data distribution completely \cite{Scellier2016a}.
+One learns with a Hebbian learning variant only for a short period after a data sample is presented and the distribution converges towards the data distribution \cite{DBLP:journals/corr/ScellierB16}.
+Another approach replaces a data sample by a sample of the model distribution, which has only been nudged towards a real data input, so the distribution in the positive phase only shifts towards, but does not have to reach the data distribution completely \cite{Scellier2016a}.
 A combination of those might be interesting as well.
 These approaches show similarities to some STDP mechanism, but to the best of our knowledge have not been implemented in spiking networks.
 
 These approaches might also help with the problem of cascaded learning of different layers.
 With the contrastive divergence algorithm a good estimate of the data and model distribution is needed and thus for arbitrary Boltzmann machines potentially infinite sampling has to be performed.
-This leads to only simple and shallow Boltzmann machine structures which are used.
+This leads to only simple and shallow Boltzmann machine structures, which are used.
 Due to the breaking up of hard sampling phases, this allows a simple transition to arbitrary Boltzmann machines.
 Thus researching joint layer learning algorithms shows great promise as well.
 
 Another constraint are the synchronized weights.
-On going research points to the idea, that the synchronization might not be so important.
+On going research points to the idea that the synchronization might not be so important.
 Lillicrap et al. showed that a linear system was still able to be trained with using backpropagation, even if the feedback weights were chosen randomly and kept constant \cite{Lillicrap2014}.
-In addition research on autoencoders showed another kind of weight synchronization, where even without tied weight autoencoders often end up with symmetric weights \cite{vincent2010stacked}.
+In addition, research on autoencoders showed another kind of weight synchronization, where even without tied weight autoencoders often end up with symmetric weights \cite{vincent2010stacked}.
 It would be interesting to see how such mechanisms perform in spiking neural networks and if they can be transferred to local learning with STDP.
 
-Eventually it would be interesting to see if a biological plausible system integrating the relaxed phases without shared weights could be realized and simulated in real time.
+Eventually, it would be interesting to see if a biological plausible system integrating the relaxed phases without shared weights could be realized and simulated in real time.
  

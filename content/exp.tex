@@ -7,9 +7,9 @@ The dataset size is primarily limited by the computational resources, such as me
 
 \subsection{Stripe Dataset} \label{c:stripes}
 
-We generate a $10 \times 10$ pixel noisy stripe dataset, with three different oriented stripes, horizontal, diagonal and vertical. 
+We generate a $10 \times 10$ pixel noisy stripe dataset with three different oriented stripes, horizontal, diagonal and vertical. 
 This could represent an object similar to a pen in different orientations.
-In the easiest version of this dataset, the stripes always occur on the same places, with some random noise (see Fig. \ref{fig:stripes1}).
+In the easiest version of this dataset the stripes always occur on the same places with some random noise (see Fig. \ref{fig:stripes1}).
 A more complex version of the datasets contains the stripes randomly distributed across the whole image (see Fig. \ref{fig:stripes2}).
 This dataset can be either binary or continuous (see Fig. \ref{fig:stripes3} \& \ref{fig:stripes4}).
 
@@ -220,40 +220,40 @@ The original recorded events and the scaled events are visualized in Figure \ref
 
 \section{Experiments} \label{c:exps}
 
-We focus in our experiments primarily on the stripe dataset, due to time and computational constrains which will be explained at first.
+We focus in our experiments primarily on the stripe dataset, due to time and computational constrains, which will be explained first.
 Then we will look at and compare the performance of the converted models.
-Afterwards to get better insight into the eCD algorithm we will evaluating our models on the stripe dataset and then look at the performance on other datasets for comparison and generalization.
+Afterwards, to get better insight into the eCD algorithm, we will evaluating our models on the stripe dataset and then look at the performance on other datasets for comparison and generalization.
 In the end we will compare those two approaches.
 
 \subsection{Computational Constrains} \label{c:compconstr}
 
 Most of the experiments were executed on a quad-core processor with 3.2 GHz, 16 GB RAM and a NVidia GTX 650.
 
-In the ANN case, CNNs can be optimized to utilize the processing units (e.g. the GPU) of most computers. 
+In the ANN case, CNNs can be optimized to utilize the processing units (e.g., the GPU) of most computers. 
 Due to the shared weights, only one copy of each convolutional filter has to be stored. 
-In addition each feature map has to be calculated and stored as well.
+In addition, each feature map has to be calculated and stored as well.
 Calculating a features map can be reduced to a convolution operation over the previous feature maps with a kernel, which can be implemented quite computationally efficient.
 Thus the data needed for an artificial CNN is given by the size of the feature maps and the kernel matrices, the operations can be primarily reduced to convolutions.  
 
-In contrast to CNNs, spiking networks with a convolutional structure, can not utilize all of the benefits.
-While the shared weights still reduce the number of learning steps needed, compared to a network without shared weights, the structure is more complicated.
+In contrast to CNNs, spiking networks with a convolutional structure can not utilize all of the benefits.
+While the shared weights still reduce the number of learning steps needed compared to a network without shared weights, the structure is more complicated.
 Due to the time dependent nature of the synapses and neurons, each single neuron and synapse has to be explicitly modelled.
-While the number of neurons is equivalent to the number of elements in a feature map and thus comparable to the units in a classical CNN, because all synapses have an internal state, synapses with shared weights cannot be reduced to a single synapse as in kernel matrices.
+While the number of neurons is equivalent to the number of elements in a feature map and thus comparable to the units in a classical CNN because all synapses have an internal state, synapses with shared weights cannot be reduced to a single synapse as in kernel matrices.
 In addition to the additional computations needed for the neuron dynamics, these synapse dynamics, which do not have to be modelled in classical CNNs, can drastically increase the computational complexity.   
 
-For example a CNN over $5 \times 5 = 25$ dimensional input data with a $4 \times 4 = 16$ kernel, would result in a $2 \times 2 = 4$ feature map, so the number of stored values is $45$. 
+For example a CNN over $5 \times 5 = 25$ dimensional input data with a $4 \times 4 = 16$ kernel would result in a $2 \times 2 = 4$ feature map so the number of stored values is $45$. 
 For a spiking network, in addition to modelling the $25$ dimensional input data and the $4$ feature maps as time dynamic neurons, now $(2 \times 2) \times (4 \times 4) = 64$ synapses and their dynamics have to be modelled.
 This number increases quadratically as the filter size is reduced or the number of filters is increased.
 
 Due to these constrains, the experiments primarily focus on smaller datasets and are not performed on current state-of-the-art image recognition datasets. 
-Specialized neuromorphic hardware, e.g. SpiNNaker or Spikey as discussed in the "Future Work" Chapter \ref{c:neuhard}, could speed up the computations and allow the evaluation of more complex datasets.  
-In addition most spiking neural network frameworks have, in contrast to most artificial neural network frameworks which are optimized for machine learning and speed, their main focus on biological imitation and plausibility.
+Specialized neuromorphic hardware, e.g., SpiNNaker or Spikey as discussed in the "Future Work" Chapter \ref{c:neuhard}, could speed up the computations and allow the evaluation of more complex datasets.  
+In addition, most spiking neural network frameworks have, in contrast to most artificial neural network frameworks, which are optimized for machine learning and speed, their main focus on biological imitation and plausibility.
 
 
 \subsection{Conversion} \label{c:conversionexp}
 
 At first we compare the three different converted DBNs as introduced in Chapter \ref{c:conversionappr}.
-Therefore an artificial DBN was trained on the MINST dataset.
+Therefore, an artificial DBN was trained on the MINST dataset.
 The dataset was split into 50.000 training images and 10.000 images for testing.
 The DBN consists of three RBMs (similar to Fig. \ref{fig:dbnmnist}), where the first RBM is convolutional with 20 filters of size $1 \times 16 \times 16$. 
 The second RBM has 15 filters of size $20 \times 10 \times 10$. 
@@ -277,7 +277,7 @@ An intentionally simple DBN structure was chosen due to the computational effort
 \subsubsection{Conversion comparison} \label{c:conversioncomp}
 
 For the comparison of the conversion methods, we convert the RBM to the different spiking architectures, as described in Chapter \ref{c:conversionappr}. 
-The input rate of the images are converted to Poisson spike-trains, with a maximal frequency of $\lambda = 100 \text{Hz}$ .
+The input rate of the images are converted to Poisson spike-trains with a maximal frequency of $\lambda = 100 \text{Hz}$ .
 Each input sample is simulated for $500 \text{ms}$, but we inspect how the simulated timespan affects the output later on.
 Since it can take approximately one minute real time to simulation $500 \text{ms}$ of such a network, we evaluate all approaches on the same randomly drawn subset of the test set consisting of $100$ samples.
 
@@ -619,7 +619,8 @@ The performance on the partial dataset can be seen in Table \ref{tab:convperf}.
 It is apparent that all approaches show a similar performance. Interestingly the spiking DBN sometimes shows better performance than the RBM.
 Most misclassifications can from a human perspective be categorized as "reasonable" mistakes (as seen in Fig. \ref{fig:mismnisthum}) and hint, that further fine-tuning of the DBN could resolve some misclassifications.
 
-Another factor is the simulated runtime for each sample. It is quite apparent from Table \ref{tab:pervovert}, that a longer classification time benefits the performance.
+Another factor is the simulated runtime for each sample. 
+It is quite apparent from Table \ref{tab:pervovert} that a longer classification time benefits the performance.
 
 
 \begin{table}[]
@@ -643,14 +644,14 @@ In contrast to this approach in which the network is trained in discrete timeste
 \subsection{eCD} \label{c:ecdexp}
 
 To get an intuitive insight into the eCD algorithm, we visualize the positive and negative phase for the stripe dataset.
-It is apparent, that in the positive phase a sample from the data distribution is learned and in the negative phase the model distribution is unlearned (see Fig. \ref{fig:ecdstrlearn}).
+It is apparent that in the positive phase a sample from the data distribution is learned and in the negative phase the model distribution is unlearned (see Fig. \ref{fig:ecdstrlearn}).
 As the training progresses and the model distribution approximates the data distribution more closely the weight updates become smaller (see Fig. \ref{fig:ecdwdiff}). 
-The eCD-parameters chosen for our experiments are given in Table \ref{tab:ecdrunparam}.
+The eCD-parameters chosen for most of our experiments are given in Table \ref{tab:ecdrunparam}.
 
 This indicates some learning and we further inspect the capability of this algorithm to learn the data distribution.
 
 \begin{table}[]
-\caption{eCD-parameters for the experiments}
+\caption{eCD-parameters for most experiments.}
 \centering
 \label{tab:ecdrunparam}
 \begin{tabular}{|ll|}
@@ -783,7 +784,7 @@ As the training progresses, the reconstruction matches the original input image 
 	\label{fig:posnegstrec}
 \end{figure}
 
-In Addition the filters become more specialized, thus resulting in a sparse activation of the hidden layer as shown in Figure \ref{fig:actdevstr}.  
+In addition, the filters become more specialized, thus resulting in a sparse activation of the hidden layer as shown in Figure \ref{fig:actdevstr}.  
 
 \begin{figure}[h!]
 	\centering
@@ -813,7 +814,7 @@ As it turns out, to approximate the data distribution and to learn discriminativ
 
 \subsubsection{Lateral connections} \label{c:latinhibexp}
 
-An important addition to the convolution spiking RBM, are the lateral inhibitory connections in the hidden layer. 
+An important addition to the convolution spiking RBM are the lateral inhibitory connections in the hidden layer. 
 Each neuron in the hidden layer at position $i,j$ in feature map $k$ is connected to other neurons in all other feature maps $K \setminus k$ at the approximately same position $i', j'$ with $ |i'-i| \le 2 , |j' - j| \le 2 $.   
 This results in faster training and more discriminative features and better results (see Fig. \ref{fig:latconstr} for the learned weights of both approaches).
 
@@ -839,10 +840,10 @@ By using the lateral connection we can get some insight into the benefits of a c
 
 \subsubsection{Convolution vs. no Convolution} \label{c:convvsnoconvexp}
 
-To demonstrate the benefits of convolution, even on a small dataset, we train two DBNs with the same number of free parameters, one convolutional , one without any convolution.
+To demonstrate the benefits of convolution even on a small dataset, we train two DBNs with the same number of free parameters, one convolutional, one without any convolution.
 The parameters for the first layer are chosen to be $20$ and for the second "association" layer $250$.
 
-For the convolution DBN this results in a structure of $3$ $7x7$ convolutional filters in the first layer, and a fully connected RBM with $5$ hidden units in the second layer.
+For the convolution DBN this results in a structure of $3$ $7x7$ convolutional filters in the first layer and a fully connected RBM with $5$ hidden units in the second layer.
 For the DBN without convolution, this results in two fully connected RBMs, where the first RBM has $2$ hidden units and the second RBM has $120$ hidden units.
 
 Both DBNs are trained with 100 samples for the first layer and 500 samples with labels for the second layer, since it has more free parameters.
@@ -867,7 +868,7 @@ The resulting weights are visualized in Fig. \ref{fig:wwoconwconv}.
 \end{figure}
 
 
-This suggests, that the DBN with convolution is able to capture the structure of the data better with the same number of free parameters. 
+This suggests that the DBN with convolution is able to capture the structure of the data better with the same number of free parameters. 
 This is also apparent in the final classification results.
 While the DBN without convolutions reaches its top performance of $60 \%$ after 500 samples, the convolutional DBN reaches its top performance of $100 \%$ already after being presented with 300 samples.
 One disadvantage of convolutions is the increased runtime, which we inspect in the next section.
@@ -885,11 +886,11 @@ As we increase the number of hidden units, the runtime increases more or less li
 	\label{fig:simtime}
 \end{figure}
 
-After inspecting some mechanisms and properties of the eCD algorithm we next look at the performance of more complex DBNs trained with eCD on different datasets.
+After inspecting some mechanisms and properties of the eCD algorithm, we next look at the performance of more complex DBNs trained with eCD on different datasets.
 
 \subsubsection{Performance on the stripe dataset} \label{c:stripeexp}
 
-The DBN consists of two layers, with the first layer consisting of a convolutional RBM with $20$ filters of size $7 \times 7$ and the second layer being fully connected with $20$ hidden units (see Fig \ref{fig:dbnstrarch} for the abstract architecture).
+The DBN consists of two layers with the first layer consisting of a convolutional RBM with $20$ filters of size $7 \times 7$ and the second layer being fully connected with $20$ hidden units (see Fig \ref{fig:dbnstrarch} for the abstract architecture).
 The first layer is trained with $1000$ samples without labels.
 The weights of the first layer are then keep fixed and the second layer is trained over $500$ samples with their corresponding labels.
 The development of the of the weights in the first layer can be seen in Figure \ref{fig:stripesdbnw}.
@@ -969,7 +970,7 @@ The resulting spiking DBN show shows a performance of $100 \%$ classification ac
   		\caption{Hidden layer  activations after 1000 samples.}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption[Spikes in the layers of the first RBM during training.]{Spikes in the layers of the first RBM during training. As the training progresses, the activations become more sparse. The hidden layer learns new representations for the data. The model distribution approximates the data distribution, resulting in a nearly perfect reconstruction of the input data.}
+	\caption[Spikes in the layers of the first RBM during training.]{Spikes in the layers of the first RBM during training. As the training progresses, the activations become more sparse. The hidden layer learns new representations for the data. The model distribution approximates the data distribution resulting in a nearly perfect reconstruction of the input data.}
 	\label{fig:stripesspl1}
 \end{figure}
 
@@ -1013,7 +1014,7 @@ The resulting spiking DBN show shows a performance of $100 \%$ classification ac
   		\caption{Hidden layer  activations after 500 samples.}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption[Spikes in the layers of the second RBM during training.]{Spikes in the layers of the second RBM during training. As the training progresses, the activations become more sparse. The hidden layer learns new 20 dimensional representations for the data. The model distribution approximates the data distribution, resulting in a nearly perfect reconstruction of the input data, especially of the label.}
+	\caption[Spikes in the layers of the second RBM during training.]{Spikes in the layers of the second RBM during training. As the training progresses, the activations become more sparse. The hidden layer learns new 20 dimensional representations for the data. The model distribution approximates the data distribution resulting in a nearly perfect reconstruction of the input data, especially of the label.}
 	\label{fig:stripesspl2}
 \end{figure}
 
@@ -1053,7 +1054,7 @@ The trained DBN reaches a peak performance of $94 \%$ on the training set (see F
   		\caption{Reconstruction error.}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption[The accuracy and reconstruction error of the DBN on the Poker-DVS dataset.]{The accuracy and reconstruction error of the DBN on the Poker-DVS dataset. The accuracy increases to a maximal value of $94 \%$ and the reconstruction error decreases, indicating discriminative features. }
+	\caption[The accuracy and reconstruction error of the DBN on the Poker-DVS dataset.]{The accuracy and reconstruction error of the DBN on the Poker-DVS dataset. The accuracy increases to a maximal value of $94 \%$ and the reconstruction error decreases indicating discriminative features. }
 	\label{fig:poker_err}
 \end{figure}
 
@@ -1217,7 +1218,7 @@ The trained DBN reaches a peak performance of $94 \%$ on the training set (see F
 
 \subsubsection{Performance on the Ball-Can-Pen-DVS dataset} \label{c:pokerexp}
 
-The DBN for the Ball-Can-Pen-DVS dataset, is similar to the DBN used for the Poker-DVS dataset, but with $20$ filters of size $14 \times 14$ in the first layer. The second, the association layer has $10$ hidden units (see Fig. \ref{fig:bcpdbnarch}).
+The DBN for the Ball-Can-Pen-DVS dataset is similar to the DBN used for the Poker-DVS dataset, but with $20$ filters of size $14 \times 14$ in the first layer. The second "association" layer has $10$ hidden units (see Fig. \ref{fig:bcpdbnarch}).
 Each layer is trained once over all samples in the dataset, i.e. for 270 training steps. 
 The resulting convolutional filters are visualized in Figure \ref{fig:bcpw}.
 
@@ -1279,6 +1280,6 @@ The resulting convolutional filters are visualized in Fig \ref{fig:convvsnoconv}
 	\label{fig:convvsnoconv}
 \end{figure}
 
-It is apparent, that the weights of the first layer in the spiking DBN are more discriminative compared to the artificial DBN.
-This also show in the classification performance, where the converted artificial DBN only reaches $67 \%$ and the spiking DBN reaches $100 \%$.
-This divide can be e.a. be attributed to the inhibitory lateral connections in the spiking DBN.  
+It is apparent that the weights of the first layer in the spiking DBN are more discriminative compared to the artificial DBN.
+This also shows in the classification performance, where the converted artificial DBN only reaches $67 \%$ and the spiking DBN reaches $100 \%$.
+This divide can be i.a. be attributed to the inhibitory lateral connections in the spiking DBN.  

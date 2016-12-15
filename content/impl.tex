@@ -3,12 +3,12 @@
 
 \section{Artifical DBNs} \label{c:dbnimpl}
 
-The DBNs were implemented in the Theano-Framework \cite{2016arXiv160502688full}, to utilize the computational power of the GPU.
+The DBNs were implemented in the Theano-Framework \cite{2016arXiv160502688full} to utilize the computational power of the GPU.
 The implementation of the single RBMs is adapted from the official Theano RBM \cite{theanoRBM}.
 \\
 \\
 An upward pass in performed as follows:
-As an input we take a 4D tensor $\textbf{V}$ of size \textit{(batch size, input channels, input rows, input columns)}, and for the upwards pass convolve it with a filter $\textbf{W}$ of the shape \textit{(number of filters, input channel, filter height, filter width)} with a stride of 1 and without any padding.
+As an input we take a 4D tensor $\textbf{V}$ of size \textit{(batch size, input channels, input rows, input columns)} and for the upwards pass convolve it with a filter $\textbf{W}$ of the shape \textit{(number of filters, input channel, filter height, filter width)} with a stride of 1 and without any padding.
 This results in feature maps $\textbf{H}_{pre} = \textbf{W} * \textbf{V}$ of the shape \textit{(batch size, number of filters, input height - filter height + 1 , input width - filter width + 1)}.
 A constant $c$ is added to the pre-activation feature maps as bias.
 On those feature maps a sigmoid function $\sigma$ is applied and accordingly Bernoulli sampled to get the activation of the hidden units $\textbf{H}$.
@@ -24,7 +24,7 @@ On those feature maps a sigmoid function $\sigma$ is applied and accordingly Ber
 
 
 The downward pass on the activation of the hidden units is performed similar:
-The input is the activation of the hidden units $\textbf{H}$ with zero padding, and is convolved with the 180 degree flipped kernel $\tilde{\textbf{W}}$, with the first and second dimensions swapped.
+The input is the activation of the hidden units $\textbf{H}$ with zero padding and is convolved with the 180 degree flipped kernel $\tilde{\textbf{W}}$ with the first and second dimensions swapped.
 Afterwards a sigmoid function $\sigma$ is applied and accordingly sampled to get the new visible layer activations $\textbf{V}'$.
 
 \begin{algorithm}
@@ -59,7 +59,7 @@ We use Theanos auto-differentiation to determine the gradient and perform gradie
 A common choice for $\mu$ is $0.1$ and for $\upsilon$ is $0.003$ throughout this thesis.
 We train the RBM for a given number of iterations over the dataset, with a batch size smaller than the dataset, thus performing stochastic gradient descent.
 
-To build up the DBN each RBM is trained greedily.
+To build up the DBN, each RBM is trained greedily.
 After training one RBM the entire dataset is converted by performing one upwards pass in the trained RBM and using the activation of the hidden units as the new input data for the next RBM.
 
 \begin{algorithm}
@@ -79,8 +79,8 @@ The last layer, the association layer, consists of a fully connected RBM trained
 
 \section{Conversion} \label{c:conversionimpl}
 
-To simulate the converted DBNs we use the PyNN framework with Nest as spiking network simulator \cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}.
-To simulate the CNN and DBN we use current and conductance based LIF neurons, respectively, see Chapter \ref{c:conversionappr} for more details.
+To simulate the converted DBNs, we use the PyNN framework with Nest as spiking network simulator \cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}.
+To simulate the CNN and DBN, we use current and conductance based LIF neurons, respectively, see Chapter \ref{c:conversionappr} for more details.
 Each unit is injected with high frequency Possion distributed excitatory and inhibitory input spikes with the frequency $\lambda_{noise}= 5000 \text{Hz}$ and synaptic weights $w_{n+}$ and $w_{n-}$ respectively.
 A common choice in this thesis is $w_{n+} \approx - w_{n-} \approx 0.1$ for current-based LIF neurons and  $w_{n+} \approx - w_{n-} \approx 0.005$ for conductance-based LIF neurons.
 %The parameters for the models can be seen in Table x( @TODO table).
@@ -88,7 +88,7 @@ A common choice in this thesis is $w_{n+} \approx - w_{n-} \approx 0.1$ for curr
 A unit in the DBN is represented by a neuron, a layer by a neuron population.
 For the connections static synapses with the scaled original weights were used. 
 
-The input is transformed to a Poisson distributed spike trains, where the rate of the Poisson process $\lambda_{data}$ is proportional to the original data value (e.g. the image intensities). 
+The input is transformed to a Poisson distributed spike trains, where the rate of the Poisson process $\lambda_{data}$ is proportional to the original data value (e.g., the image intensities). 
 The input is directly fed into the bottom layer neurons with a high fixed weight $w_{in}$ to reliably generate equal spikes in the bottom layer.    
 
 For each data sample the network is simulated for a runtime of $t$. 
@@ -120,7 +120,7 @@ As a result we receive the following training procedure:
 \begin{itemize}
 
 \item $t \in [0, t_{burn-in}]$ : In the first phase ("Data burn-in phase"), the visible layer is induced with a strong negative current and the data input is fed as spikes with a high synaptic weight, so that the visible layer only spikes in accordance to the input data and is unaffected from any spikes in the top layer.
-The STDP learning flag is set to $g=0$, so no learning is allowed
+The STDP learning flag is set to $g=0$, so no learning is allowed.
 
 \item $t \in (t_{burn-in} , \; t_{burn-in} + t_{learn}]$ : In the second phase ("Data distribution phase"), now the STDP learning flag is set to $g=1$ so positive learning is allowed.
 This should drive the weights to represent the data distribution.
@@ -147,7 +147,7 @@ where $\upsilon$ is the weight decay rate and $\textbf{W}_{group} = (W_0 ,... W_
 Each RBM is trained on $m$ data samples.
 \\
 After an RBM is trained, the next RBM will be trained on top of the previous RBM.
-Therefore the a connection with a strong synaptic weight is established from the hidden layer of the previous RBM to the visible layer of the new RBM.
+Therefore, the a connection with a strong synaptic weight is established from the hidden layer of the previous RBM to the visible layer of the new RBM.
 The original input data is still fed to the bottom RBM while the activations of hidden layer in previous RBM act as training data for the top RBM.
 
 
