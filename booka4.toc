@@ -14,7 +14,7 @@
 \contentsline {paragraph}{\nonumberline Gibbs sampling}{7}{section*.11}
 \contentsline {section}{\numberline {2.2}Neural Networks}{7}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Natural Neural Networks}{8}{subsection.2.2.1}
-\contentsline {subsubsection}{\nonumberline Brain}{8}{section*.12}
+\contentsline {subsubsection}{\nonumberline Human Brain}{8}{section*.12}
 \contentsline {subsubsection}{\nonumberline Neuron}{8}{section*.14}
 \contentsline {subsubsection}{\nonumberline Learning}{10}{section*.16}
 \contentsline {paragraph}{\nonumberline Synaptic Plasticity}{10}{section*.17}

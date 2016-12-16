@@ -202,9 +202,9 @@ Then different artificial models, starting with models working at discrete time 
 To distinguish those, we refer to models working at discrete time steps as \textit{artificial neural networks} (ANNs) and models working in continuous time as \textit{spiking neural networks} (SNNs) throughout this thesis.
 
 \subsection{Natural Neural Networks} \label{c:natural}
-\subsubsection{Brain} \label{c:brain}
+\subsubsection{Human Brain} \label{c:brain}
 
-The human brain is the main organ of the human central nervous system and with a weigh of about 1.2 - 1.4 kg (2\% of the total body weight) and a power consumption of around 20 Watts (20\% of the total human power consumption) it is assumed to be mainly responsible for what is commonly referred to as human intelligence \cite{Byrne1997, gerstner2014neuronal}.  
+The human brain is the main organ of the human central nervous system and with a weight of about 1.2 - 1.4 kg (2\% of the total body weight) and a power consumption of around 20 watts (20\% of the total human power consumption) it is assumed to be mainly responsible for what is commonly referred to as human intelligence \cite{Byrne1997, gerstner2014neuronal}.  
 
 \begin{figure}
 	\centering
@@ -219,7 +219,7 @@ Different specialized regions in the brain which are involved in a task can be l
 Even though different regions are involved in different tasks, the basic building blocks of the brain are astonishingly uniform. 
 It is mainly composed of neurons, glial cells and blood vessels.
 While the neurons cells are the main computational unit, the other constituents are required for structural stabilization and energy support.
-A single neuron can perform rather simple operations, but as the human brain contains $10^{12}$ neurons and each neuron is interconnected with $10^{4}$ other neurons the operations can become more complex.
+A single neuron can only perform rather simple operations, but as the human brain contains $10^{12}$ neurons and each neuron is interconnected with $10^{4}$ other neurons the operations can become more complex.
 The resulting complex neural network with roughly $10^{15}$ neural connections is the main component for human intelligence and enables complex tasks such as scene understanding, language processing and motion planing. A small section of a neural network recorded in a human brain is illustrated in Figure \ref{fig:brain}. 
 
 \subsubsection{Neuron} \label{c:natneuron}
@@ -229,12 +229,12 @@ Information is primarily processed through chemical and electrical signals.
 
 A neuron, which is a specialized kind of a (biological) cell, is separated from its surroundings by a cell membrane.   
 Due to ion concentration differences between the interior and the exterior of the cell, there are potential differences at the cell membrane, which are referred to as the membrane potential. 
-Ion channels, often voltage gated, in the cell membrane allow positively and negatively charged ions to flow from the inside to the outside and from the outside to the inside of the cell.
+Ion channels, often voltage-gated, in the cell membrane allow positively and negatively charged ions to flow from the inside to the outside and from the outside to the inside of the cell.
 This can lead to an increase (de-polarization) or decrease (hyper-polarization) of the membrane potential.
 The ion flow is primarily determined by the charge difference at the membrane (electrochemical potential), the ion concentration differences (diffusion potential) and ion pumps actively pumping ions across the membrane.
 The membrane of a neuron at rest, with an equal influx and outflow of ions neutralizing each other, has usually an equilibrium potential of -65 mV. 
 
-Each neuron can be divided into three, functional distinct, parts: the dendrites, the soma and the synapses (see Fig. \ref{fig:neuron}).
+Each neuron can be divided into three functional distinct parts: the dendrites, the soma and the synapses (see Fig. \ref{fig:neuron}).
 
 \begin{figure}[h]
 	\centering
@@ -253,7 +253,7 @@ Starting from the soma the spike is propagated across the axon to the axon termi
 The axon is often covered by a fatty substance, the myelin, to regulate and improve the conductivity.
 
 Synapses can be divided into two different categories: Electrical, which communicate with other neurons with direct electrical connections and chemical, which use chemical compounds.
-Probably due to their more diverse form of signal exchange, almost exclusively all synapses found in the brain have a chemical nature \cite{Byrne1997}.
+Probably due to their more diverse form of signal exchange, almost all synapses found in the brain have a chemical nature \cite{Byrne1997}.
 
 \subsubsection{Learning} \label{c:natlearning}
 
@@ -280,13 +280,13 @@ This can be mathematically expressed as
 where $\Delta w_{ab}$ describes the change of the synaptic weight between the pre-synaptic neuron $A$ and the post-synaptic neuron $B$. 
 $v_a$ and $v_b$ describe the activity of $A$ and $B$ respectively and $\eta$ is some positive learning rate. 
 
-While this describes the classical Hebbian principle, often different algorithms processing the neural activity of two connected neurons are summarized and labelled as general Hebbian learning algorithms.
+While this describes the classical Hebbian principle, different algorithms processing the neural activity of two connected neurons are often summarized and labelled as general Hebbian learning algorithms.
 Such algorithms can in general be formalized as
 \[
 \Delta w_{ab} = F( v_a, v_b) , 
 \]
 where $F$ is a function describing the weight change conditioned on the neural activities \cite{gerstner2014neuronal}.     
-This formulation allows a more complex processing of the neural activity and implementations as e.g., the original formulation of the Hebbian principle as well as the anti-Hebbian rule. 
+This formulation allows a more complex processing of the neural activity and implementations e.g., the original formulation of the Hebbian principle as well as the anti-Hebbian rule. 
 
 \subsection{Artificial Neural Networks} \label{c:ann}
 
@@ -305,17 +305,17 @@ The perceptron loosely models a neuron with a multi-dimensional input and a sing
 \begin{figure}
 	\centering
     	\includegraphics[width=0.8\textwidth]{imgs/percept.png} 
-    \caption[Structure of a perceptron.]{Structure of a perceptron. The input $in(t)$ is set at the input variables $x_i$ and multiplied with the corresponding synaptic weight $w_i$ and accumulated. In addition, a threshold offset $\theta$ is added. Afterwards the step-function is applied i.e. the output $out(t)$ is $1$ if the sum is greater $0$ and $0$ if the sum is smaller $0$ \cite{perceptronImg}.}
+    \caption[Structure of a perceptron.]{Structure of a perceptron. The input $in(t)$ is set at the input variables $x_i$ and multiplied with the corresponding synaptic weight $w_i$ and accumulated. In addition, a threshold offset $\theta$ is added. Afterwards the step-function is applied i.e. the output $out(t)$ is $1$ if the sum is positive and $0$ if the sum is smaller $0$ \cite{perceptronImg}.}
     % https://github.com/cdipaolo/goml/tree/master/perceptron
 	\label{fig:perceptron}
 \end{figure}
 
-Be $\textbf{x} \in \mathbb{R}^n$ the input of dimension $n$ and $\textbf{w}\in \mathbb{R}^n$ the $n$-dimensional vector describing the synaptic weights, then each $x_i$ is multiplied by its synaptic weight $w_i$ and then accumulated up:
+Let $\textbf{x} \in \mathbb{R}^n$ be the input of dimension $n$ and $\textbf{w}\in \mathbb{R}^n$ the $n$-dimensional vector describing the synaptic weights, then each $x_i$ is multiplied by its synaptic weight $w_i$ and then accumulated:
 \[
-\sum x_i w_i = \textbf{x}^\intercal \textbf{w}.
+\sum_i x_i w_i = \textbf{x}^\intercal \textbf{w}.
 \] 
 
-If the sum exceeds a threshold $b$, often referred to as the bias, the perceptron "fires" and the output $y$ is set to $1$ whereas otherwise it is set to $0$:
+If the sum exceeds a threshold $-b$, often referred to as the bias, the perceptron "fires" and the output $y$ is set to $1$ whereas otherwise it is set to $0$:
 
 \[
 	f = 
@@ -325,7 +325,7 @@ If the sum exceeds a threshold $b$, often referred to as the bias, the perceptro
 		\end{cases}	
 \]
 
-One simplification is to append the bias $b$ to the weight vector $\textbf{w}' = (b , w_1, ... , w_n)$ and to extend the input dimension by a constant one $\textbf{x}' = (1, x_1 , ... , x_n)$ .
+One simplification is to add the bias $b$ to the weight vector $\textbf{w}' = (b , w_1, ... , w_n)$ and to extend the input dimension by a constant 1 i.e. $\textbf{x}' = (1, x_1 , ... , x_n)$ .
 This allows us to handle the bias as a simple synaptic weight, and thus we cease to model it explicitly:
 
 \[
@@ -370,7 +370,7 @@ While a perceptron with a linear decision function only allows quite simple disc
 \paragraph{Perceptron Learning} \label{c:perlearning}
 
 Be $\textbf{X}$ a set of data-points and $\textbf{Y}$ their corresponding labels and $\mu$ a learning rate. 
-For a sample $x \in \textbf{X}$  and $y \in \textbf{Y}$ and $\tilde{y}$ the output of the perceptron, one update step can be described as:
+For a sample $x \in \textbf{X}$  and $y \in \textbf{Y}$ and $\tilde{y}$ the output of the perceptron, one update step can be described as
 \[ 
 	w = w + \Delta w,
 \]
@@ -384,13 +384,13 @@ Thus the learning algorithm can be described as follows:
 	\item Initialize $w$ randomly.
 	\item Select a data sample and calculate its output.
 	\item Calculate $\Delta w$ and update the weights.
-	\item Perform steps 2.-3. until all data samples are correctly classified i.e. $\tilde{y} = y$ or a predetermined number of iterations have been completed.
+	\item Perform steps 2.-3. until all data samples are correctly classified i.e. $\tilde{y} = y$ or a predetermined number of iterations has been completed.
 \end{enumerate}
 
 
 \subsubsection{Mutlilayer-Perceptron} \label{c:mlp}
 
-While a perceptron models a single neuron, a multilayer perceptron, consisting of stacked perceptrons, can be seen as an extension of the model to neural networks and thus overcomes the perceptrons disadvantage to only discriminate linearly \cite{Goodfellow-et-al-2016-Book, rumelhart1985learning}. 
+While a perceptron models a single neuron, a multilayer perceptron (MLP), consisting of stacked perceptrons, can be seen as an extension of the model to neural networks and thus overcomes the perceptrons disadvantage to only discriminate linearly \cite{Goodfellow-et-al-2016-Book, rumelhart1985learning}. 
 
 \begin{figure}
 	\centering
@@ -413,20 +413,20 @@ A layer is defined by:
 \begin{enumerate}
 	\item The input dimension $n$,
 	\item The output dimension $m$ (which can be seen as the number of individual perceptrons in the layer),
-	\item The weight matrix $W \in \mathbb{R}^{nxm} $ defining the weights between the synaptic connections,
+	\item The weight matrix $W \in \mathbb{R}^{m\times n} $ defining the weights between the synaptic connections,
 	\item The activation function $\varphi : \mathbb{R}^m \rightarrow \mathbb{R}^m $.
 \end{enumerate}
 
 The output $\textbf{y}$ of the layer is calculated as:
 \[
-\textbf{y} = \varphi(x^\intercal W).
+\textbf{y} = \varphi(W x).
 \]
 
 Each element $y_i \in \textbf{y}$ can be interpreted as the output of a perceptron given the input $\textbf{x}$ and the synaptic weights $w_i \in W = (w_1, ... , w_n)$.
 
 By using the output of a previous layer $l$ as input for a next layer $l+1$, several layers can be stacked up: 
 \[
-\textbf{y}^{l+1} = \varphi ((\textbf{y}^{l})^\intercal W^{l+1} ) ,
+\textbf{y}^{l+1} = \varphi ( W^{l+1} (\textbf{y}^{l})) ,
 \]
 where the superscript index represents the layer number. 
 
@@ -436,7 +436,7 @@ Such a network with only forward connections is called feed-forward network (in 
 
 \paragraph{Activation functions} \label{c:mlpact}
 
-The activation function $\varphi$ can be basically arbitrarily chosen. 
+Basically, the activation function $\varphi$ can be arbitrarily chosen. 
 Different activation functions have been proposed, which also have proven to perform well on certain tasks:
 
 \begin{itemize}
@@ -469,7 +469,7 @@ The error function provides a quantification of the performance of the model on 
 Thus, the primary goal of a learning algorithm is to reduce the error on its task.
 Hereby, it is important to note that the main error function is often primarily task dependent and rather independent on the learning algorithm used.  
 
-To compare the outputs $\tilde{\textbf{y}}$ of the network with parameters $\theta$ to the correct data-labels $\textbf{y}$ some of the most used error function or cost function $E(\textbf{y},\tilde{\textbf{y}} | \theta)$ are:.
+To compare the outputs $\tilde{\textbf{y}}$ of the network with parameters $\theta$ to the correct data-labels $\textbf{y}$ some of the most used error function or cost function $E(\textbf{y},\tilde{\textbf{y}} | \theta)$ are:
 
 \begin{itemize}
 	\item Mean squared error: $MSE = \frac{1}{N} \sum_{i=1}^N (\tilde{\textbf{y}}_i - \textbf{y}_i)^2 $ ,
@@ -480,26 +480,26 @@ To compare the outputs $\tilde{\textbf{y}}$ of the network with parameters $\the
 
 In order to reduce the error $E$ on a task, the parameters $\theta$ of the model can be modified.
 This modification of the parameters is often referred to as learning.
-Thus, the objective is to obtain parameters $\theta^*$ which form a (global) minimal point in the error function. 
+Thus, the goal is to obtain parameters $\theta^*$ which form a (global) minimal point in the error function. 
 Different optimization algorithms can be used to achieve this objective.
 However, the most common class of algorithms use the gradient of the error function with respect to the weights in order to determine the contributions of the weights to the error and thus, reduce the error and reach a minimal point.
 For gradient descent the gradient for the parameters are calculated and, by following the negative gradient direction, the weights are updated.
 
-Since MLPs have a clearly defined structure, using the chain rule of calculus the gradient descent update rule can be simplified to an iterative procedure called backpropagation (backprop)  \cite{Goodfellow-et-al-2016-Book, rumelhart1985learning}.
+Since MLPs have a clearly defined structure, using the chain rule of calculus the gradient descent update rule can be simplified to an iterative procedure called backpropagation (or backprop for short)  \cite{Goodfellow-et-al-2016-Book, rumelhart1985learning}.
 
 We define the output $y_j$ of neuron $j$ as
 \[
 	y_j = \varphi(net_j) = \varphi(\sum_{k=1}^n w_{kj} y_k) .
 \]
  
-The partial derivative of the error function $E$ with respect to a weight $w_{ij}$ can be simplified by the repetitive application of the chain rule:
+The partial derivative of the error function $E$ with respect to a weight $w_{ij}$ can be simplified by the repeated application of the chain rule:
 \[
 	\frac{\partial E}{\partial w_{ij}} = \frac{\partial E}{\partial y_j} \frac{\partial y_j}{\partial net_j} \frac{\partial net_j}{\partial w_{ij}} ,
 \]
  
 where the single factors of the derivation can be resolved to:
 \[
-	\frac{\partial net_j}{\partial w_{ij}} = \frac{\partial}{\partial w_{ij}} ( \sum_{k=1}^n w_{kj} y_k ) = y_k
+	\frac{\partial net_j}{\partial w_{ij}} = \frac{\partial}{\partial w_{ij}} ( \sum_{k=1}^n w_{kj} y_k ) = y_i
 \]
 and 
 \[
@@ -522,10 +522,10 @@ Next, the first factor $\frac{\partial E}{\partial y_j}$ has to be determined. T
  
 We define 
 \[
-\delta_l = \frac{\partial E}{\partial net_l} = \frac{\partial E}{\partial y_l} \frac{\partial y_l}{\partial net_l} =
+\delta_j = \frac{\partial E}{\partial net_j} = \frac{\partial E}{\partial y_j} \frac{\partial y_j}{\partial net_j} =
 \begin{cases}
-E'(y_l) \varphi'(net_l), & \text{  if } j \text{ is an output neuron,} \\
-(\sum_{k \in K} \delta_k w_{lk}) \varphi'(net_l), & \text{  if } j \text{ is not an output neuron.}
+E'(y_j) \varphi'(net_j), & \text{  if } j \text{ is an output neuron,} \\
+(\sum_{l \in L} \delta_l w_{jl}) \varphi'(net_j), & \text{  if } j \text{ is not an output neuron.}
 \end{cases}
 \]
 
@@ -533,8 +533,8 @@ This all concludes to
 \[
 \frac{\partial E}{\partial w_{ij}} = 
 \begin{cases}
-E'(y_j) \varphi'(net_j) w_{ij}, & \text{  if } j \text{ is an output neuron,} \\
-(\sum_{l \in L} \delta_l w_{jl}) \varphi'(net_j) w_{ij}, & \text{  if } j \text{ is not an output neuron.}
+E'(y_j) \varphi'(net_j) y_{i}, & \text{  if } j \text{ is an output neuron,} \\
+(\sum_{l \in L} \delta_l w_{jl}) \varphi'(net_j) y_{i}, & \text{  if } j \text{ is not an output neuron.}
 \end{cases}
 \]
 
