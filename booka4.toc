@@ -59,7 +59,7 @@
 \contentsline {subsubsection}{\nonumberline Learning}{32}{section*.71}
 \contentsline {paragraph}{\nonumberline Spike time dependent plasticity}{32}{section*.72}
 \contentsline {paragraph}{\nonumberline Long-term potentiation}{32}{section*.73}
-\contentsline {paragraph}{\nonumberline Long-term depression}{33}{section*.74}
+\contentsline {paragraph}{\nonumberline Long-term depression}{32}{section*.74}
 \contentsline {chapter}{\numberline {3}Related Work}{35}{chapter.3}
 \contentsline {section}{\numberline {3.1}Convolutional RBM}{35}{section.3.1}
 \contentsline {section}{\numberline {3.2}Sampling in SNNs}{36}{section.3.2}

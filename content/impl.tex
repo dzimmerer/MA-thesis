@@ -79,7 +79,7 @@ The last layer, the association layer, consists of a fully connected RBM trained
 
 \section{Conversion} \label{c:conversionimpl}
 
-To simulate the converted DBNs, we use the PyNN framework with Nest as spiking network simulator \cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}.
+To simulate the converted DBNs, we use the PyNN framework with Nest as spiking network simulator \cite{10.3389/neuro.11.011.2008, Gewaltig:NEST}.
 To simulate the CNN and DBN, we use current and conductance based LIF neurons, respectively, see Chapter \ref{c:conversionappr} for more details.
 Each unit is injected with high frequency Possion distributed excitatory and inhibitory input spikes with the frequency $\lambda_{noise}= 5000 \text{Hz}$ and synaptic weights $w_{n+}$ and $w_{n-}$ respectively.
 A common choice in this thesis is $w_{n+} \approx - w_{n-} \approx 0.1$ for current-based LIF neurons and  $w_{n+} \approx - w_{n-} \approx 0.005$ for conductance-based LIF neurons.
@@ -100,7 +100,7 @@ with the size of the label layer being, due to the one-hot encoding of the label
 
 \section{eCD} \label{c:ecdimpl}
 
-The eCD learning was implemented in PyNN with Nest with shared synaptic weights and shared continuous STDP weight updates as well as in the Brian simulator with individual STDP weight updates and weight synchronization at discrete timesteps \cite{10.3389/neuro.11.011.2008}\cite{Gewaltig:NEST}\cite{10.3389/neuro.11.005.2008}. 
+The eCD learning was implemented in PyNN with Nest with shared synaptic weights and shared continuous STDP weight updates as well as in the Brian simulator with individual STDP weight updates and weight synchronization at discrete timesteps \cite{10.3389/neuro.11.011.2008, Gewaltig:NEST, 10.3389/neuro.11.005.2008}. 
 As shown in \ref{fig:ecdnestconv} due to self-facilitation leading to a weight "explosion" when using convolutional shared weight updates, we chose Brian for most of our experiments.
 
 As neuron type LIF neurons with high frequency input noise were chosen.

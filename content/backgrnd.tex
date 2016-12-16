@@ -4,7 +4,7 @@ In this chapter some foundations of spiking deep belief networks are presented, 
 
 \section{Probabilistic Graphical Models} \label{c:pgms}
 
-Probabilistic graphical models (PGMs) or structured probabilistic models can be used to describe, formalize, and model neural learning architectures \cite{Goodfellow-et-al-2016-Book}\cite{Petrovici2016}.
+Probabilistic graphical models (PGMs) or structured probabilistic models can be used to describe, formalize, and model neural learning architectures \cite{Goodfellow-et-al-2016-Book, Petrovici2016}.
 They can capture the basic probabilistic structure of data, which makes a significant number of data-related task feasible, such as \cite{Goodfellow-et-al-2016-Book}:
 \begin{itemize}
 
@@ -22,7 +22,7 @@ PGMs facilitate the process of modeling the probability distribution by using gr
 A node in the graph represents an RV, and an edge a direct interaction between two RVs.
 This allows a less complex description of the probability density with basic factors over interacting RVs instead of modelling the probability density over all RVs. 
 
-How to build a PGM and set the parameters for a given problem is still an active research topic \cite{Ghahramani2002}\cite{Zhou2007}.
+How to build a PGM and set the parameters for a given problem is still an active research topic \cite{Ghahramani2002, Zhou2007}.
 There exist different approaches such as the SGS algorithm \cite{Zhou2007} or EM algorithms \cite{Ghahramani2002}, but in the following we use Boltzmann machines and the contrastive divergence algorithm to build up and determine the parameters in a PGM (see Chapter \ref{c:bms}).
 
 PGMs can be divided into two basic categories, models with directed graphs and models with undirected graphs.
@@ -30,7 +30,7 @@ PGMs can be divided into two basic categories, models with directed graphs and m
 
 \subsection{Bayesian Networks} \label{c:bayesnet}
 
-Bayesian networks or belief networks are directed acyclic graphs, in which random variables are represented by nodes and their causal dependencies are represented by (directed) edges \cite{Faltin2007}\cite{Goodfellow-et-al-2016-Book}. 
+Bayesian networks or belief networks are directed acyclic graphs, in which random variables are represented by nodes and their causal dependencies are represented by (directed) edges \cite{Faltin2007, Goodfellow-et-al-2016-Book}. 
 It poses a way to depict a probability distribution factorized by repeatedly applying the Bayes rule.
 
 A connection from an RV $x_i$ to an RV $x_j$ represents a conditional probability distribution from $x_j$ dependent on $x_i$, and $x_i$ is called the parent of its child $x_j$:
@@ -93,7 +93,7 @@ Thus, a Bayesian network can be seen as a tool to apply and simplify the Bayes r
 
 \subsection{Markov Random Fields} \label{c:markovnet}
 
-In contrast to Bayesian networks, Markov random fields (MRFs) are undirected graphical models, in which random variables are also represented by nodes, but edges in this case indicate conditional dependencies \cite{Goodfellow-et-al-2016-Book}\cite{murphy2012machine}.
+In contrast to Bayesian networks, Markov random fields (MRFs) are undirected graphical models, in which random variables are also represented by nodes, but edges in this case indicate conditional dependencies \cite{Goodfellow-et-al-2016-Book, murphy2012machine}.
 If two nodes $x_i$ and $x_j$ are connected by an edge, they are called each others neighbours.
 Given all of their neighbours, two unconnected nodes $x_k$ and $x_m$ are independent of each other.
 Thus, an MRF can be seen as a model of the joint probabilities of RVs (see Fig. \ref{fig:markovnet1}).
@@ -140,7 +140,7 @@ But depending on the concrete problem, smaller clique sizes may be useful as wel
 One convenient way to model the clique potentials is to use an energy function $E(z_k)$ \cite{Goodfellow-et-al-2016-Book}: 
 
 \[
-\phi(z_k) = exp(- E(z_k))
+\phi(z_k) = exp(- E(z_k)).
 \]
 
 Models with exponentials over energy functions are called energy-base models (EBMs).
@@ -153,7 +153,7 @@ A probability distribution given by an EBM is also called Boltzmann distribution
 
 \subsection{Sampling} \label{c:sampling}
 
-Often, calculating the exact probability distribution or marginal distributions is a computational inefficient or untraceable problem \cite{Goodfellow-et-al-2016-Book}\cite{Petrovici2016}.
+Often, calculating the exact probability distribution or marginal distributions is a computational inefficient or untraceable problem \cite{Goodfellow-et-al-2016-Book, Petrovici2016}.
 Sampling is a probabilistic solution to this problem, as it allows to approximate the target distribution nearly arbitrarily exact, and also turns calculating marginal probabilities into a by-product.  
 An exemplary sampling of a Gaussian distribution is given in Figure \ref{fig:Sampling}.
 
@@ -204,7 +204,7 @@ To distinguish those, we refer to models working at discrete time steps as \text
 \subsection{Natural Neural Networks} \label{c:natural}
 \subsubsection{Brain} \label{c:brain}
 
-The human brain is the main organ of the human central nervous system and with a weigh of about 1.2 - 1.4 kg (2\% of the total body weight) and a power consumption of around 20 Watts (20\% of the total human power consumption) it is assumed to be mainly responsible for what is commonly referred to as human intelligence \cite{Byrne1997}\cite{gerstner2014neuronal}.  
+The human brain is the main organ of the human central nervous system and with a weigh of about 1.2 - 1.4 kg (2\% of the total body weight) and a power consumption of around 20 Watts (20\% of the total human power consumption) it is assumed to be mainly responsible for what is commonly referred to as human intelligence \cite{Byrne1997, gerstner2014neuronal}.  
 
 \begin{figure}
 	\centering
@@ -224,7 +224,7 @@ The resulting complex neural network with roughly $10^{15}$ neural connections i
 
 \subsubsection{Neuron} \label{c:natneuron}
 
-Neurons are the main information processing unit in the brain \cite{Byrne1997}\cite{gerstner2014neuronal}. 
+Neurons are the main information processing unit in the brain \cite{Byrne1997, gerstner2014neuronal}. 
 Information is primarily processed through chemical and electrical signals.
 
 A neuron, which is a specialized kind of a (biological) cell, is separated from its surroundings by a cell membrane.   
@@ -257,7 +257,7 @@ Probably due to their more diverse form of signal exchange, almost exclusively a
 
 \subsubsection{Learning} \label{c:natlearning}
 
-The exact mechanisms behind learning in the brain are still mostly unknown \cite{Byrne1997}\cite{gerstner2014neuronal}\cite{Markram2012}.
+The exact mechanisms behind learning in the brain are still mostly unknown \cite{Byrne1997, gerstner2014neuronal, Markram2012}.
 Neural plasticity is often considered to be one of the methods behind learning. 
 It describes the ability of the brain to change and reorganize the structure of brain, build new and alter connections.  
 
@@ -315,13 +315,13 @@ Be $\textbf{x} \in \mathbb{R}^n$ the input of dimension $n$ and $\textbf{w}\in \
 \sum x_i w_i = \textbf{x}^\intercal \textbf{w}.
 \] 
 
-If the sum exceeds a threshold $b$, often referred to as the bias, the perceptron "fires" and the output $y$ is set to $1$ whereas otherwise it is set to $0$.
+If the sum exceeds a threshold $b$, often referred to as the bias, the perceptron "fires" and the output $y$ is set to $1$ whereas otherwise it is set to $0$:
 
 \[
 	f = 
 		\begin{cases}
 			1, \text{  if  } \textbf{x}^\intercal \textbf{w} + b > 0  \\
-			0, \text{  if  } \textbf{x}^\intercal \textbf{w} + b \le 0
+			0, \text{  if  } \textbf{x}^\intercal \textbf{w} + b \le 0 .
 		\end{cases}	
 \]
 
@@ -332,7 +332,7 @@ This allows us to handle the bias as a simple synaptic weight, and thus we cease
 	f = 
 		\begin{cases}
 			1, \text{  if  } \textbf{x}'^\intercal \textbf{w}'> 0  \\
-			0, \text{  if  } \textbf{x}'^\intercal \textbf{w}' \le 0
+			0, \text{  if  } \textbf{x}'^\intercal \textbf{w}' \le 0 .
 		\end{cases}	
 \]
 
@@ -390,7 +390,7 @@ Thus the learning algorithm can be described as follows:
 
 \subsubsection{Mutlilayer-Perceptron} \label{c:mlp}
 
-While a perceptron models a single neuron, a multilayer perceptron, consisting of stacked perceptrons, can be seen as an extension of the model to neural networks and thus overcomes the perceptrons disadvantage to only discriminate linearly \cite{Goodfellow-et-al-2016-Book}\cite{rumelhart1985learning}. 
+While a perceptron models a single neuron, a multilayer perceptron, consisting of stacked perceptrons, can be seen as an extension of the model to neural networks and thus overcomes the perceptrons disadvantage to only discriminate linearly \cite{Goodfellow-et-al-2016-Book, rumelhart1985learning}. 
 
 \begin{figure}
 	\centering
@@ -419,7 +419,7 @@ A layer is defined by:
 
 The output $\textbf{y}$ of the layer is calculated as:
 \[
-\textbf{y} = \varphi(x^\intercal W)
+\textbf{y} = \varphi(x^\intercal W).
 \]
 
 Each element $y_i \in \textbf{y}$ can be interpreted as the output of a perceptron given the input $\textbf{x}$ and the synaptic weights $w_i \in W = (w_1, ... , w_n)$.
@@ -445,7 +445,7 @@ Different activation functions have been proposed, which also have proven to per
 	\item Softmax-function: $\varphi_{softmax}(x_i) = \frac{e^{x_i}}{\sum_k e^{x_k}}$ ,
 	\item Sign-function: $\varphi_{sign}(x_i) = \begin{cases} 1, & \text{if  } x_i > 0 \\ -1, & \text{if  } x_i \le 0  \end{cases}$ ,
 	\item Tanh-function: $tanh(x_i) = \frac{e^{x_i} - e^{-x_i}}{e^{x_i} + e^{-x_i}}$ ,
-	\item ReLU-function $\varphi_{ReLU}(x_i) = max(0, x_i)$ ,
+	\item ReLU-function $\varphi_{ReLU}(x_i) = max(0, x_i)$ .
 \end{itemize}
 
 A visualization of those functions is given in Figure \ref{fig:activations}.
@@ -472,8 +472,8 @@ Hereby, it is important to note that the main error function is often primarily 
 To compare the outputs $\tilde{\textbf{y}}$ of the network with parameters $\theta$ to the correct data-labels $\textbf{y}$ some of the most used error function or cost function $E(\textbf{y},\tilde{\textbf{y}} | \theta)$ are:.
 
 \begin{itemize}
-	\item Mean squared error: $MSE = \frac{1}{N} \sum_{i=1}^N (\tilde{\textbf{y}}_i - \textbf{y}_i)^2 $
-	\item Cross entropy: $CE = - \frac{1}{N} \sum_{i=1}^N [ \textbf{y}_i \log \tilde{\textbf{y}}_i + (1 - \textbf{y}_i) \log (1 - \tilde{\textbf{y}}_i)]$
+	\item Mean squared error: $MSE = \frac{1}{N} \sum_{i=1}^N (\tilde{\textbf{y}}_i - \textbf{y}_i)^2 $ ,
+	\item Cross entropy: $CE = - \frac{1}{N} \sum_{i=1}^N [ \textbf{y}_i \log \tilde{\textbf{y}}_i + (1 - \textbf{y}_i) \log (1 - \tilde{\textbf{y}}_i)]$ .
 \end{itemize}
 
 \paragraph{Backpropagation} \label{c:backprop}
@@ -485,7 +485,7 @@ Different optimization algorithms can be used to achieve this objective.
 However, the most common class of algorithms use the gradient of the error function with respect to the weights in order to determine the contributions of the weights to the error and thus, reduce the error and reach a minimal point.
 For gradient descent the gradient for the parameters are calculated and, by following the negative gradient direction, the weights are updated.
 
-Since MLPs have a clearly defined structure, using the chain rule of calculus the gradient descent update rule can be simplified to an iterative procedure called backpropagation (backprop)  \cite{Goodfellow-et-al-2016-Book}\cite{rumelhart1985learning}.
+Since MLPs have a clearly defined structure, using the chain rule of calculus the gradient descent update rule can be simplified to an iterative procedure called backpropagation (backprop)  \cite{Goodfellow-et-al-2016-Book, rumelhart1985learning}.
 
 We define the output $y_j$ of neuron $j$ as
 \[
@@ -524,7 +524,7 @@ We define
 \[
 \delta_l = \frac{\partial E}{\partial net_l} = \frac{\partial E}{\partial y_l} \frac{\partial y_l}{\partial net_l} =
 \begin{cases}
-E'(y_l) \varphi'(net_l), & \text{  if } j \text{ is an output neuron} \\
+E'(y_l) \varphi'(net_l), & \text{  if } j \text{ is an output neuron,} \\
 (\sum_{k \in K} \delta_k w_{lk}) \varphi'(net_l), & \text{  if } j \text{ is not an output neuron.}
 \end{cases}
 \]
@@ -533,7 +533,7 @@ This all concludes to
 \[
 \frac{\partial E}{\partial w_{ij}} = 
 \begin{cases}
-E'(y_j) \varphi'(net_j) w_{ij}, & \text{  if } j \text{ is an output neuron} \\
+E'(y_j) \varphi'(net_j) w_{ij}, & \text{  if } j \text{ is an output neuron,} \\
 (\sum_{l \in L} \delta_l w_{jl}) \varphi'(net_j) w_{ij}, & \text{  if } j \text{ is not an output neuron.}
 \end{cases}
 \]
@@ -548,7 +548,7 @@ with a learning rate $\mu$.
 
 Convolutional neural networks (CNN) exploit spacial relations and the compositional structure of the input data to regularize the complexity of the neural network by putting further constrains on the architecture of those networks.
 This facilitates training and allows greater generalization on fewer training samples.
-It is implemented by having solely partially connected layers with shared connection weights instead of fully connected networks \cite{Goodfellow-et-al-2016-Book}\cite{lecun1989backpropagation}.    
+It is implemented by having solely partially connected layers with shared connection weights instead of fully connected networks \cite{Goodfellow-et-al-2016-Book, lecun1989backpropagation}.    
 
 \paragraph{Convolution} \label{c:convolution}
 
@@ -633,7 +633,7 @@ Recent state-of-the-art systems have mostly reached the common consensus, of cho
 \paragraph{Architecture} \label{c:cnnarch}
 
 The most common architectures for CNNs are built up from stacks of alternating convolutional and pooling layers. 
-After those layers, fully connected layers are used as a classifier to assign labels to the extracted features \cite{NIPS2012_4824}\cite{simonyan2014very}\cite{szegedy2015going}.
+After those layers, fully connected layers are used as a classifier to assign labels to the extracted features \cite{NIPS2012_4824, simonyan2014very, szegedy2015going}.
 A sample architecture is given in Figure \ref{fig:convarcitecuture}.
 
 \begin{figure}[h!]
@@ -670,7 +670,7 @@ which results in applying the sum of each individual weight in a group of "tied"
 \subsubsection{Hopfield Nets} \label{c:hopnets}
 
 While CNNs have been wildly successful on image and speech recognition tasks, due to the pure forward nature of their connections, they still lack some biological plausibility since there are more feedback than feed-forward connections in the visual cortex \cite{sillito2006always}.
-Hopfield nets try to overcome some of those issues by using recurrent connections and binary units \cite{Goodfellow-et-al-2016-Book}\cite{hopfield1982neural} (see Fig. \ref{fig:hopfiled} for a sample network with 7 units).
+Hopfield nets try to overcome some of those issues by using recurrent connections and binary units \cite{Goodfellow-et-al-2016-Book, hopfield1982neural} (see Fig. \ref{fig:hopfiled} for a sample network with 7 units).
 
 \paragraph{Model} \label{c:hopmodel}
 
@@ -723,7 +723,7 @@ Hopfield nets can be trained as associative memory, where each stored pattern co
 
 The training rule for associative memory is a local Hebbian rule, i.e. for an update it only uses information of neurons on either side of a connection:
 \[
-w_{ij} = \frac{1}{n} \sum_{patterns} s_{i} s_{j}
+w_{ij} = \frac{1}{n} \sum_{patterns} s_{i} s_{j} .
 \]
 
 Such Hopfield nets can consequently perform pattern completion by reaching a low energy state.
@@ -733,7 +733,7 @@ However, they can also end up in a spurious state, an attractor state i.e. a loc
 \subsubsection{Boltzmann Machines} \label{c:bms}
 
 Boltzmann machines try to improve Hopfield nets by replacing the deterministic update rule with a stochastic one.
-This allows a more stochastic exploration of the network states due to probabilistic escaping of minima states \cite{ackley1985learning}\cite{Goodfellow-et-al-2016-Book}.
+This allows a more stochastic exploration of the network states due to probabilistic escaping of minima states \cite{ackley1985learning, Goodfellow-et-al-2016-Book}.
 
 \paragraph{Model} \label{c:bmmodel}
 
@@ -747,7 +747,7 @@ This allows the interpretation of a Boltzmann machine as an energy-based model w
 In other words, a Boltzmann machine is an energy based model with the probability distribution defined by the energy.
 Thus, each state $\textbf{z}$ can be assigned an energy which directly indicates the probability of the state $P(\textbf{z}) \propto -E(\textbf{z})$:
 \[
-P(\textbf{z}) = - \frac{1}{Z} \exp^{-E(\textbf{z})} 
+P(\textbf{z}) = - \frac{1}{Z} \exp^{-E(\textbf{z})} .
 \]
 
 A unit is updated probabilistically given the states of its neighbour units:
@@ -769,14 +769,14 @@ Running a certain number of consecutive update steps probabilistically drives th
 \end{figure}
 
 In contrast to Hopfield nets where each unit of the network is represented by an element a data sample, in Boltzmann machines latent variables are introduced to increase the capacity of the network.
-The units are thus divided into observable, visible units and unobservable hidden units (compare Fig \ref{fig:bm}).
+The units are thus divided into observable, visible units and unobservable hidden units (compare Fig. \ref{fig:bm}).
 With hidden units a Boltzmann machine can universally approximate arbitrary probability mass functions over discrete variables.
 
 
 \paragraph{Learning Rule} \label{c:cd}
 
 The goal for training a Boltzmann machine is to get a probability distribution similar to the distribution, which generated the training data, the so-called data distribution.
-Thus, the objective for a Boltzmann machine is to assign a high probability to its training data (while assigning data not drawn from the data distribution a low probability) \cite{ackley1985learning}\cite{Bengio2009}\cite{hinton2002training}\cite{Woodford2002} .
+Thus, the objective for a Boltzmann machine is to assign a high probability to its training data (while assigning data not drawn from the data distribution a low probability) \cite{ackley1985learning, Bengio2009, hinton2002training, Woodford2002}.
 By applying gradient descent, the weights of the Boltzmann machine are modified towards a configuration, which assigns training samples $\textbf{x}$ a high probability:
 \[
 w_{ij} = w_{ij} - \mu \Delta w_{ij},
@@ -827,7 +827,7 @@ Thus, a Boltzmann machine with two bipartite layers is called restricted Boltzma
 
 Sampling the hidden units $\textbf{h}$ given the visible units $\textbf{v}$ is called a \textit{upward pass} and sampling the visible units $\textbf{v}$ given the hidden units $\textbf{h}$ is called a \textit{downward pass}.
 
-In this case the probability of data sample $\textbf{x}$ can be expressed using the free energy $F(\textbf{v})$ over its visible activations $\textbf{v}$ \cite{Fischer2014}\cite{hinton2010practical}:
+In this case the probability of data sample $\textbf{x}$ can be expressed using the free energy $F(\textbf{v})$ over its visible activations $\textbf{v}$ \cite{Fischer2014, hinton2010practical}:
 \[
 p(\textbf{x}) =  p(\textbf{v}) = \sum_{\textbf{h}} \exp^{-E(\textbf{v},\textbf{h})} = \exp^{-F(\textbf{v})},
 \]
@@ -854,7 +854,7 @@ Thus, given a data sample $\textbf{x}$ an CD-k update is computed as follows:
 \begin{enumerate}
 \item Perform one upward pass given $\textbf{v}_0=\textbf{x}$ to get $\textbf{h}_0$.
 \item Perform k alternating downward and upward passes to get $\textbf{v}_k$ and $\textbf{h}_k$.
-\item Update $w_{ij} = w_{ij} + ( (s_i s_j)_0 - (s_i s_j)_k ) $ 
+\item Update $w_{ij} = w_{ij} + ( (s_i s_j)_0 - (s_i s_j)_k ) $ .
 \end{enumerate} 
 
 \begin{figure}
@@ -874,7 +874,7 @@ An intuition why it sometimes shows better performance could be that the previou
 
 \subsubsection{Deep Belief Networks} \label{c:dbns}
 
-A deep belief network (DBN) is a generative graphical model, or alternatively a type of deep neural network, composed of multiple layers of latent variables (hidden units) with connections between consecutive layers, but with no connections within layers \cite{Goodfellow-et-al-2016-Book}\cite{hinton2009deep}\cite{hinton2006fast}.
+A deep belief network (DBN) is a generative graphical model, or alternatively a type of deep neural network, composed of multiple layers of latent variables (hidden units) with connections between consecutive layers, but with no connections within layers \cite{Goodfellow-et-al-2016-Book, hinton2009deep, hinton2006fast}.
 
 A deep belief network can be built up by stacking up RBMs.
 This does not only enable unsupervised training of a deep belief net, but also improves the conditional distribution of the bottom RBM (each time an RBM is added, it improves the prior over the hidden units with a better and more complex prior).
@@ -928,7 +928,7 @@ If a "pseudo" threshold is exceeded usually a spike is emitted and the neuron is
 
 \paragraph{LIF} \label{c:lif}
 
-The leaky integrate and fire (LIF) neuron is a neuron model, which phenomenological describes the membrane potential at the soma \cite{abbott1999lapicque}\cite{gerstner2014neuronal}\cite{Petrovici2016}. 
+The leaky integrate and fire (LIF) neuron is a neuron model, which phenomenological describes the membrane potential at the soma \cite{abbott1999lapicque, gerstner2014neuronal, Petrovici2016}. 
 It is one of the simplest and consequently computationally most efficient, most important and popular spiking neuron models.  
 
 \begin{figure}
@@ -985,7 +985,7 @@ Due to its simplifications the LIF model can not capture some natural observed b
 
 \paragraph{Hodgkin-Huxley} \label{c:hodghux}
 
-The Hodgkin-Huxley model tries to improve some of the limitations of the LIF model by explicitly modelling different ion channels \cite{gerstner2014neuronal}\cite{Hodgkin1952}. 
+The Hodgkin-Huxley model tries to improve some of the limitations of the LIF model by explicitly modelling different ion channels \cite{gerstner2014neuronal, Hodgkin1952}. 
 
 The first model, as described by Hodgkin and Huxley, introduced three different ion channels, namely sodium, potassium and a leak current of $\text{CL}^{-}$ ions, which they discovered in their experiments on the axon of a squid.
 Each channel is modelled as a resistor with a battery (see Fig. \ref{fig:hogdehux}).
@@ -1110,7 +1110,7 @@ Besides the synaptic models, the kernel function $\epsilon$ probably has the mos
 The kernel describes the explicit shape of the post synaptic potential over time and thus the influence it has on the membrane potential.
 Several different kernel functions have been proposed, whereof some of the most important are:
 \begin{itemize}
-\item Rectangular-shaped: \[\epsilon(t) \propto  \begin{cases} 1, & \text{ if } t_{s} < t \le t_{s} + t_{ref} \\ 0, & \text{ otherwise } \end{cases} \] .
+\item Rectangular-shaped: \[\epsilon(t) \propto  \begin{cases} 1, & \text{ if } t_{s} < t \le t_{s} + t_{ref} \\ 0, & \text{ otherwise .} \end{cases} \] 
 \item Exponential-shaped: $\epsilon(t) \propto t \exp(- \frac{t}{\tau_syn})$ .
 \item Alpha-shaped: $\epsilon(t) \propto \exp(- \frac{t}{\tau_syn})$ .
 \end{itemize}
@@ -1154,7 +1154,7 @@ Spike time dependent plasticity (STDP), inspired by research on single neurons w
 Experiments indicated an increase of the synaptic weight if a post-synaptic spike occurred in strong temporal vicinity after a pre-synaptic spike and a decrease of the synaptic weight if a post-synaptic spike occurred in strong temporal vicinity before a pre-synaptic spike.
 The further apart the spike times of the different neurons were, the weaker was the effect on the spike (see Fig. \ref{fig:stdp}).
 
-Given the spike times of the pre- and post-synaptic neurons $t^{pre}$ and $t^{post}$, this leads to the following update rules \cite{gerstner2014neuronal}\cite{Sjostrom2010}
+Given the spike times of the pre- and post-synaptic neurons $t^{pre}$ and $t^{post}$, this leads to the following update rules \cite{gerstner2014neuronal, Sjostrom2010}
 \[
 \Delta w_{ij} = \sum_{f=1}^N \sum_{n=1}^N W(t^{post}_n - t^{pre}_f),
 \]

@@ -260,7 +260,7 @@ The second RBM has 15 filters of size $20 \times 10 \times 10$.
 The third RBM, which can also be seen as the association layer of the DBN, is fully connected and uses the output of the second RBM as well as the labels as input data.  
 Each RBM is trained for $5$ epochs with CD-$2$ over the whole dataset with a learning rate of $0.1$ and a weight decay of $0.0003$.
 
-The resulting features of the first layer are visualized in Fig \ref{fig:rbmw}.
+The resulting features of the first layer are visualized in Fig. \ref{fig:rbmw}.
 
 \begin{figure}[h!]
 	\centering
@@ -281,7 +281,7 @@ The input rate of the images are converted to Poisson spike-trains with a maxima
 Each input sample is simulated for $500 \text{ms}$, but we inspect how the simulated timespan affects the output later on.
 Since it can take approximately one minute real time to simulation $500 \text{ms}$ of such a network, we evaluate all approaches on the same randomly drawn subset of the test set consisting of $100$ samples.
 
-A visual inspection of the activations can be seen in Fig \ref{fig:convacts}. 
+A visual inspection of the activations can be seen in Figure \ref{fig:convacts}. 
 It is quite apparent that all approaches capture the basic activation characteristics. 
 While the conversion as a DBN is able to simulate the activation probabilities more closely to the original DBN, the spiking CNN shows a more deterministic behaviour replicating only the essential activation structure.
 To quantify those differences we calculate the Kullback-Leibler divergence between the activation, which indicates the similarity of two distributions (the lower the value, the more similar are the distributions), as seen in Table \ref{tab:kldiv}.
@@ -877,7 +877,7 @@ One disadvantage of convolutions is the increased runtime, which we inspect in t
 
 We also evaluate how the simulation time for one time step changes as the network complexity increases.
 A network on the $10 \times 10$ pixel stripe dataset is run for 1 learning step, which simulates a time of $168$ms, and the runtime is measured.
-As we increase the number of hidden units, the runtime increases more or less linearly (see Fig \ref{fig:simtime}).
+As we increase the number of hidden units, the runtime increases more or less linearly (see Fig. \ref{fig:simtime}).
 
 \begin{figure}[h!]
 	\centering
@@ -890,7 +890,7 @@ After inspecting some mechanisms and properties of the eCD algorithm, we next lo
 
 \subsubsection{Performance on the stripe dataset} \label{c:stripeexp}
 
-The DBN consists of two layers with the first layer consisting of a convolutional RBM with $20$ filters of size $7 \times 7$ and the second layer being fully connected with $20$ hidden units (see Fig \ref{fig:dbnstrarch} for the abstract architecture).
+The DBN consists of two layers with the first layer consisting of a convolutional RBM with $20$ filters of size $7 \times 7$ and the second layer being fully connected with $20$ hidden units (see Fig. \ref{fig:dbnstrarch} for the abstract architecture).
 The first layer is trained with $1000$ samples without labels.
 The weights of the first layer are then keep fixed and the second layer is trained over $500$ samples with their corresponding labels.
 The development of the of the weights in the first layer can be seen in Figure \ref{fig:stripesdbnw}.
@@ -1027,9 +1027,9 @@ For the Poker-DVS dataset, a DBN with two layers, a convolutional and an associa
 The convolutional RBM is defined by $10$ filters of size $14 \times 14$.
 The association RBM layer has 10 hidden units (see Fig. \ref{fig:pokerdbnarch} for the architecture).
 Each layer is trained with $200$ samples drawn randomly from the training set.
-The resulting filters can be seen in Fig \ref{fig:pokerw}.
-To evaluate the extracted features, we show a reconstruction and completion of the input data (see Fig \ref{fig:pokerrecon} - \ref{fig:pokercompl}) and determine the classification performance. 
-The trained DBN reaches a peak performance of $94 \%$ on the training set (see Fig \ref{fig:poker_err}).
+The resulting filters can be seen in Figure \ref{fig:pokerw}.
+To evaluate the extracted features, we show a reconstruction and completion of the input data (see Fig. \ref{fig:pokerrecon} - \ref{fig:pokercompl}) and determine the classification performance. 
+The trained DBN reaches a peak performance of $94 \%$ on the training set (see Fig. \ref{fig:poker_err}).
 
 
 \begin{figure}[h!]
@@ -1260,7 +1260,7 @@ The first layer of the DBN is trained unsupervised on $100$ samples from the str
 The artificial DBN is trained with a batch size of one to get a similar learning behaviour as the spiking DBN. 
 The learning rates are chose to show similar weight alterations in each step and to show best classification performance after being presented with 500 data samples.
 
-The resulting convolutional filters are visualized in Fig \ref{fig:convvsnoconv}. 
+The resulting convolutional filters are visualized in Fig. \ref{fig:convvsnoconv}. 
 
  \begin{figure}[h!]
 	\centering

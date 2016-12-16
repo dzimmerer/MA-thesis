@@ -5,17 +5,17 @@ We further show recent approaches for sampling and implementing Boltzmann machin
 
 \section{Convolutional RBM} \label{c:convrbm}
 
-The convolutional RBM (cRBM) was invented more or less at the same time by Desjardins et al., Lee et al. and Norouzi et al. in 2008/2009 \cite{desjardins2008empirical}\cite{lee2009convolutional}\cite{norouzi2009stacks}. 
+The convolutional RBM (cRBM) was invented more or less at the same time by Desjardins et al., Lee et al. and Norouzi et al. in 2008/2009 \cite{desjardins2008empirical, lee2009convolutional, norouzi2009stacks}. 
 In similarity to CNNs it can be seen as the adaptation of an energy-based models to compositional data.
 Describing images in terms of spatially local features needs fewer parameters, generalizes better and offers re-usability as identical local features can be extracted from different locations of an image.
 Modelled after CNNs and unlike a normal RBM, the visible and hidden layer in the cRBM are connected in a convolutional manner (as described in Chapter \ref{c:cnns}) instead of being fully connected.
 
 
-Propagating information up can be seen as the convolution with a filter matrix $W$ (see Fig \ref{fig:convrbmsub1}): 
+Propagating information up can be seen as the convolution with a filter matrix $W$ (see Fig. \ref{fig:convrbmsub1}): 
 \[
 P(\textbf{h} | \textbf{v}) = \sigma((W * \textbf{v}) + \textbf{b}_{h}).
 \]
-The down propagation utilizes the flipped kernel $\tilde{W}$  (see Fig \ref{fig:convrbmsub2} \& \ref{fig:convrbmsub3} ):
+The down propagation utilizes the flipped kernel $\tilde{W}$  (see Fig. \ref{fig:convrbmsub2} \& \ref{fig:convrbmsub3} ):
 \[
 P(\textbf{v}| \textbf{h}) = \sigma((\tilde{W} * \textbf{h}) + b_v).
 \]
@@ -85,7 +85,7 @@ Thus Lee et al. proposed a softmax based probabilistic max pooling to introduce 
 P(h^k_{ij} | \textbf{v}) = \frac{\exp(I(h^k_{ij}))}{1 + \sum_{(i',j') \in B} \exp(I(h^k_{i'j'}))},
 \]
 where $I(h^k_{ij})$ is the activation of the hidden unit before applying the sigmoid function ( $I(h^k_{ij})=(W * \textbf{v}) + \textbf{b}_{h}$ ) and $B$ is a partition block containing the unit $h^k_{ij}$. 
-Such an architecture is visualized in Fig \ref{fig:probmaxpool}.
+Such an architecture is visualized in Figure \ref{fig:probmaxpool}.
 This drives the activity in a block to be sparse and likely only one or none unit a block will be active.
 
 \begin{figure}[h!]
@@ -98,7 +98,7 @@ This drives the activity in a block to be sparse and likely only one or none uni
 
 \section{Sampling in SNNs} \label{c:snnsampling}
 
-Indicated by stochastic neural transitions found in the brain in experimental studies, a new way of information encoding in the brain as representations of probability distributions and probabilistic interference has been suggested \cite{griffiths2008bayesian}\cite{lee2003hierarchical}\cite{yang2007probabilistic}.
+Indicated by stochastic neural transitions found in the brain in experimental studies, a new way of information encoding in the brain as representations of probability distributions and probabilistic interference has been suggested \cite{griffiths2008bayesian, lee2003hierarchical, yang2007probabilistic}.
 
 
 A first framework, which proposed how spiking neurons can perform MCMC sampling, was introduced by Buesing \cite{Buesing2011}.
@@ -109,8 +109,8 @@ Since the probability of two neurons spiking at the same time is basically zero,
 \[
 z_k(t) = 
 \begin{cases}
-1, &  \text{if k has fired in the time intervall } (t - \tau , t ] \\
-0, &  \text{if k has not fired in the time intervall } (t - \tau , t ] 
+1, &  \text{if k has fired in the time intervall } (t - \tau , t ], \\
+0, &  \text{if k has not fired in the time intervall } (t - \tau , t ],
 \end{cases}
 \] 
 where $z_k$ is the state of neuron $k$ and set to $1$ for the "firing" state and $0$ for the "not firing" state (see Fig. \ref{fig:snnsamp1}). 
@@ -213,14 +213,14 @@ After the RBM with the Siegert activation function is trained, the weights can b
 \\
 \\
 There also have been several approaches to transform a CNN to an SNN.  
-Cao et al. and Diehl et al. propose certain constraints on the CNN architecture to show reasonable performance in the converted SNN \cite{Cao2014}\cite{Diehl2015}:
+Cao et al. and Diehl et al. propose certain constraints on the CNN architecture to show reasonable performance in the converted SNN \cite{Cao2014, Diehl2015}:
 \begin{itemize}
 \item The CNN is only fed positive data since SNNs can't represent negative pre-synaptic spikes. 
 \item The ReLU activation function is used in the CNN, which closely matches the input-output mapping of LIF neurons without a refractory period ( $t_{ref}=0$ ) and is always positive.
 \item The bias terms are eliminated.
 \item Instead of max pooling, average pooling is used, since it has a simple spiking counterpart (see \cite{Cao2014}).
 \end{itemize}
-After the CNN is trained with the back propagation algorithm, the weights are transferred to an SNN with an equivalent architecture using LIF neurons without a refractory period (see Fig \ref{fig:csnnconv} for an adapted CNN the equivalent SNN architecture). 
+After the CNN is trained with the back propagation algorithm, the weights are transferred to an SNN with an equivalent architecture using LIF neurons without a refractory period (see Fig. \ref{fig:csnnconv} for an adapted CNN the equivalent SNN architecture). 
 In addition, before applying the final weights, Diehl et al. use a model- and data-based weight normalization procedure to further fine-tune the synaptic weights \cite{Diehl2015}. 
 
 \begin{figure}
