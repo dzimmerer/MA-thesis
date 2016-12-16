@@ -80,7 +80,7 @@ This can be achieved by using the CD algorithm with a few adaptations due to the
 where $W_{\text{group}}$ is a group of weights tied to the same value.
 
 In contrast to CNNs, due to their local learning rule, RBMs can not be explicitly trained to perform max pooling operations.
-Thus Lee et al. proposed an softmax based probabilistic max pooling to introduce local sparseness in the hidden layer activations, on top of which a pooling layer can be stacked \cite{lee2009convolutional}:
+Thus Lee et al. proposed a softmax based probabilistic max pooling to introduce local sparseness in the hidden layer activations, on top of which a pooling layer can be stacked \cite{lee2009convolutional}:
 \[
 P(h^k_{ij} | \textbf{v}) = \frac{\exp(I(h^k_{ij}))}{1 + \sum_{(i',j') \in B} \exp(I(h^k_{i'j'}))},
 \]
@@ -127,7 +127,7 @@ Thus, for a given time step $t$ the state of the network $\textbf{z}(t) = (z_1(t
 	\label{fig:snnsamp1}
 \end{figure}
 
-To get a process with Markovian properties $p(z_t| (z_0, ..., z_{t-1})) = p(z_t| z_{t-1}) $, a auxiliary counter variable $\xi \in \mathbb{N}$ is introduced which discretizes the time a neuron has left to stay in the "firing" state into time slices
+To get a process with Markovian properties $p(z_t| (z_0, ..., z_{t-1})) = p(z_t| z_{t-1}) $, an auxiliary counter variable $\xi \in \mathbb{N}$ is introduced which discretizes the time a neuron has left to stay in the "firing" state into time slices
 \[
 z_k(t) = 1 \iff \xi_k(t) \ge 1
 \]
@@ -156,7 +156,7 @@ p(\xi_t | \xi_{t-1}) =
   		\caption{}
   		\label{fig:snnsamp2sub1}
 	\end{subfigure}
-    \caption[The artificial counter state of a neuron in a discrete time.]{The artificial counter state $\xi$ of a neuron in a discrete time. In (a) the red state represent an active state $z_i = 1$. After a spike $\xi$ is set to the refractory period $\tau$. In each time step the refractory period counter $\xi$ is reduced by 1 until the neuron is inactive and can spike again. In (b) a exemplary membrane potential with the corresponding states of a neuron is given \cite{Buesing2011}.}
+    \caption[The artificial counter state of a neuron in a discrete time.]{The artificial counter state $\xi$ of a neuron in a discrete time. In (a) the red state represent an active state $z_i = 1$. After a spike $\xi$ is set to the refractory period $\tau$. In each time step the refractory period counter $\xi$ is reduced by 1 until the neuron is inactive and can spike again. In (b) an exemplary membrane potential with the corresponding states of a neuron is given \cite{Buesing2011}.}
 	\label{fig:snnsamp2}
 \end{figure}
 
@@ -197,7 +197,7 @@ By scaling the weights the LIF neurons can be used to perform neural sampling si
 \begin{figure}
 	\centering
     	\includegraphics[width=0.4\textwidth]{imgs/snn_sample5.png} 
-    \caption[Input output transfer function of a neuron in a high conductance state.]{Input output transfer function of a neuron in a high conductance state. The output rate is normalized by $\frac{1}{\tau_{ref}}$ to get a output probability. The transfer function is identical to shifted sigmoid function $\sigma$  \cite{Petrovici2016}.}
+    \caption[Input output transfer function of a neuron in a high conductance state.]{Input output transfer function of a neuron in a high conductance state. The output rate is normalized by $\frac{1}{\tau_{ref}}$ to get an output probability. The transfer function is identical to shifted sigmoid function $\sigma$  \cite{Petrovici2016}.}
 	\label{fig:snnsamp4}
 \end{figure}
 

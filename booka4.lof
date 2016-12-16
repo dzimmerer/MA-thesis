@@ -51,7 +51,7 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Samples from the Poker-DVS dataset.}}{56}{figure.caption.100}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Pen samples from the Ball-Can-Pen-DVS dataset.}}{57}{figure.caption.101}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Visualized $16 \times 16$ filters of the first layer convolutional RBM of a DBN trained on the $28 \times 28$ pixel MNIST dataset.\relax }}{59}{figure.caption.102}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Activations in the features maps in a artificial convolutional DBN and the converted spiking network architectures. \relax }}{61}{figure.caption.106}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Activations in the features maps in an artificial convolutional DBN and the converted spiking network architectures. \relax }}{61}{figure.caption.106}
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Misclassifications of the converted spiking DBNs on MNIST.}}{61}{figure.caption.107}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Positive phase and negative phase of a diagonal stripe with 4 filters.}}{62}{figure.caption.110}
 \contentsline {figure}{\numberline {6.9}{\ignorespaces Weight change during training.}}{62}{figure.caption.111}

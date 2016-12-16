@@ -2,7 +2,7 @@
 
 In this section after describing the general convolutional architecture in spiking neural network in order to find the best performing spiking convolutional DBN, we discuss two different approaches to build these.
 
-The first one is the more classical one, in which a in discrete time trained DBN is transferred to spiking neural networks.
+The first one is the more classical one, in which an in discrete time trained DBN is transferred to spiking neural networks.
 The second approach trains the RBMs event based with STDP directly as spiking neural networks. 
 
 In Chapter \ref{c:expres}, we will then evaluate and compare the performance of both approaches.
@@ -185,7 +185,7 @@ Adding high frequency Poisson noise results in a sigmoid shaped input-rate outpu
   		\caption{Comparison between an HCS CUBA LIF neuron sampling and the true distribution in an RBM.}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption[Properties of a current based LIF neuron in a high conductance state.]{Properties of a current based LIF neuron put into a simulated high conductance state by high frequency input noise and a artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).}
+	\caption[Properties of a current based LIF neuron in a high conductance state.]{Properties of a current based LIF neuron put into a simulated high conductance state by high frequency input noise and an artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).}
 	\label{fig:cubahcs}
 \end{figure}
 The DBN conversion is similar to the COBA case, but instead of COBA LIF neurons the adapted CUBA LIF neurons are used (see Fig. \ref{fig:converted2}).
@@ -256,12 +256,12 @@ w_{shared}(t) = \frac{1}{2} (w_i(t) + w_j(t) ) = \frac{1}{2} (w_{shared}(t-1) + 
 \end{split}
 \]
 
-This results in a update rule similar to the convolutional RBM update rule as presented in Chapter \ref{c:convrbm}.
+This results in an update rule similar to the convolutional RBM update rule as presented in Chapter \ref{c:convrbm}.
 Thus we can simply take the mean of the weight changes and apply it to all the weights, which is equivalent to just taking the average of the new individual weights. 
 
 \paragraph{Lateral inhibition} \label{c:latinhib}
-In addition we introduce fixed negative connections between neuron in the hidden layers (which is more biologically plausible \cite{King2013}, see a simplified sample in Fig. \ref{fig:bminhib}).
-This removes one advantage of RBMs since the hidden layers are no longer independent, which makes it harder to sample from the true distributions, but since the network continuously performs sampling steps, the approximation has shown to be sufficient, if the weights are not too strong and prevent changes of different modes (see Chapter \ref{c:latinhibexp} and Fig. \ref{fig:dbnmixing} ).
+In addition we introduce fixed negative connections between neurons in the hidden layers (which is more biologically plausible \cite{King2013}, see a simplified sample in Fig. \ref{fig:bminhib}).
+This removes one advantage of RBMs since the hidden units are no longer independent, which makes it harder to sample from the true distributions, but since the network continuously performs sampling steps, the approximation has shown to be sufficient, if the weights are not too strong and prevent changes of different modes (see Chapter \ref{c:latinhibexp} and Fig. \ref{fig:dbnmixing} ).
 
 \begin{figure}
 	\centering
@@ -271,7 +271,7 @@ This removes one advantage of RBMs since the hidden layers are no longer indepen
 \end{figure}
 
 
-Connecting neurons to neurons on a similar positions in other feature maps appears to make the features more discriminative and less correlated.
+Connecting neurons to neurons on a similar position in other feature maps appears to make the features more discriminative and less correlated.
 This also poses some similarities to adding a negative structured bias to the hidden units, which has shown to result in better features \cite{DBLP:journals/corr/KheradpishehGTM16}\cite{LeCun}\cite{NorouziM2009}.
 
 An intuitive interpretation is that if one feature reacts to a certain input it will be highly active and prevent the others from being active as well and thus prevent them from learning the same features.  
@@ -283,7 +283,7 @@ To build up a spiking DBN, we train the convolutional BMs layer-wise and forward
 Either replacing the symmetric bidirectional synapses with forward only synapses or keeping them bidirected did not show any significant differences (see Fig. \ref{fig:spikingdbnarch} ). 
 To be exact the spiking DBN with bidirectional synapses in the bottom RBMs is a mixture between a deep belief network and a deep Boltzmann machine, since the single Boltzmann machines are still bidirectional connected and only the hidden layer activations are forwarded in a directed manner to the next Boltzmann machines (see Fig. \ref{fig:spikedbn}).
 
-Due to some top-down influences, when stacking a new BM  on the trained BM directly, the hidden distribution gets distorted and unfit input for the new BM to be trained on. 
+Due to some top-down influences, when stacking a new BM on the trained BM directly, the hidden distribution gets distorted and unfit input for the new BM to be trained on. 
 To solve this in our case, we use forward connections from the hidden layer of the bottom BM to the visible layer of a new two layered top BM. 
 An approach to predict the influences of the top RBM in advance like Salakhutdinovs DBMs by doubling the weights or joint training may sound promising and could be an area for further research \cite{salakhutdinov2009deep}.
 

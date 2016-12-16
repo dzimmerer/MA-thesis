@@ -40,7 +40,7 @@ p(x_j | x_i) .
 \]
 
 
-If a path from node $x_n$ to $x_k$ exists, then $x_n$ is called an ancestor of $x_k$, and $x_k$ an descendant of $x_n$. 
+If a path from node $x_n$ to $x_k$ exists, then $x_n$ is called an ancestor of $x_k$, and $x_k$ a descendant of $x_n$. 
 
 In addition to the graph structure, which is often called the "qualitative" part of the models, the "quantitative" part has to be determined as well.
 The quantitative parameters are described by the local conditional probability distribution at each node given its parents.
@@ -94,7 +94,7 @@ Thus, a Bayesian network can be seen as a tool to apply and simplify the Bayes r
 \subsection{Markov Random Fields} \label{c:markovnet}
 
 In contrast to Bayesian networks, Markov random fields (MRFs) are undirected graphical models, in which random variables are also represented by nodes, but edges in this case indicate conditional dependencies \cite{Goodfellow-et-al-2016-Book}\cite{murphy2012machine}.
-If two nodes $x_i$ and $x_j$ are connected by a edge, they are called each others neighbours.
+If two nodes $x_i$ and $x_j$ are connected by an edge, they are called each others neighbours.
 Given all of their neighbours, two unconnected nodes $x_k$ and $x_m$ are independent of each other.
 Thus, an MRF can be seen as a model of the joint probabilities of RVs (see Fig. \ref{fig:markovnet1}).
 
@@ -232,7 +232,7 @@ Due to ion concentration differences between the interior and the exterior of th
 Ion channels, often voltage gated, in the cell membrane allow positively and negatively charged ions to flow from the inside to the outside and from the outside to the inside of the cell.
 This can lead to an increase (de-polarization) or decrease (hyper-polarization) of the membrane potential.
 The ion flow is primarily determined by the charge difference at the membrane (electrochemical potential), the ion concentration differences (diffusion potential) and ion pumps actively pumping ions across the membrane.
-The membrane of a neuron at rest, with an equal influx and outflow of ions neutralizing each other, has usually a equilibrium potential of -65 mV. 
+The membrane of a neuron at rest, with an equal influx and outflow of ions neutralizing each other, has usually an equilibrium potential of -65 mV. 
 
 Each neuron can be divided into three, functional distinct, parts: the dendrites, the soma and the synapses (see Fig. \ref{fig:neuron}).
 
@@ -264,7 +264,7 @@ It describes the ability of the brain to change and reorganize the structure of 
 \paragraph{Synaptic Plasticity} \label{c:synplasiticity}
 specifies the changes to the synaptic strength, which is often associated with task learning and memory (in contrast to learning in brain, which is the general mechanism of altering the information processing in the brain, task learning describes the actual learning and remembering of a task). 
 
-Synaptic plasticity builds on the principle that temporally and locally correlated neural activity  can lead to synaptic changes.
+Synaptic plasticity builds on the principle that temporally and locally correlated neural activity can lead to synaptic changes.
 It is often further divided into \textbf{short-term plasticity}, which acts on a time scale of milliseconds to minutes, and \textbf{long-term plasticity} lasting minutes or more.
 
 
@@ -655,7 +655,7 @@ By applying the chain rule this can be rewritten as
 \[
 \frac{\partial E}{\partial w_{ij}^{mpq}} = \sum_{m'} \sum_ {q'}  \sum_{p'} \delta_i^{m' p' q'}  \varphi(y_{i-1}^{m'-m, p'-p, q'-q}) = \delta_i^{m p q}  * \varphi(y_{i-1}^{-m, -p, -q}).
 \] 
-Another more intuitive update rule is given by defining the contribution to the error of an single weight as
+Another more intuitive update rule is given by defining the contribution to the error of a single weight as
 \[
 \frac{\partial E}{\partial y_i^{m' p' q'}}  \frac{\partial y_i^{m' p' q'}}{\partial w_{ij}^{mpq}}  = \Delta w_{ij}^{m' p' q'}.
 \] 
@@ -676,7 +676,7 @@ Hopfield nets try to overcome some of those issues by using recurrent connection
 
 Hopfield nets use binary units, meaning each unit can be either "firing" (having value 1) or "not firing" (having value -1). 
 
-A Hopfield net  is fully connected with recurrent connections with symmetric weights but has no self connections:
+A Hopfield net is fully connected with recurrent connections with symmetric weights but has no self connections:
 \[
 \begin{split}
 w_{ii} = 0 , \\
@@ -684,7 +684,7 @@ w_{ij} = w_{ji} .
 \end{split}
 \]
 
-The activation of a unit is similar to perceptron with a sign activation function and only depends on its adjacent units. It is calculated using the following rule:
+The activation of an unit is similar to perceptron with a sign activation function and only depends on its adjacent units. It is calculated using the following rule:
 \[
 	s_i = 
 		\begin{cases}
@@ -868,7 +868,8 @@ In Figure \ref{fig:cd} the sampling steps are visualized by unrolling the RBM as
 
 \paragraph{Persistent CD} \label{c:pcd}
 
-(pCD), proposed by Tieleman, does not initialize the Boltzmann machine each time a new sample is drawn, but uses the activations of previous runs instead \cite{tieleman2008training}. An intuition why it sometimes shows better performance could be that the previous activations are already closer to an energetic minimum, so that fewer steps are required to get an good estimate of the model distribution. 
+(pCD), proposed by Tieleman, does not initialize the Boltzmann machine each time a new sample is drawn, but uses the activations of previous runs instead \cite{tieleman2008training}. 
+An intuition why it sometimes shows better performance could be that the previous activations are already closer to an energetic minimum, so that fewer steps are required to get a good estimate of the model distribution. 
 
 
 \subsubsection{Deep Belief Networks} \label{c:dbns}
@@ -993,7 +994,7 @@ The Hodgkin-Huxley model with three ion channels can be described by the followi
 C_m \frac{\partial u}{\partial t} = g_{Na} m^3 h (E_{Na} - u(t)) + g_K n^4 (E_K - u(t)) + g_l (E_l - u(t)) + I,
 \]
 
-where the variables $h$, $m$, $n$  are described by :
+where the variables $h$, $m$, $n$ are described by :
 \[
 \begin{split}
 	\frac{\partial h}{\partial t} &= \alpha_h u(t) (1-h) - \beta_h u(t) * h , \\
@@ -1025,7 +1026,7 @@ One way to introduce activity into a spiking neural network is to use a Poisson 
 A Poisson spike generator produces stochastic firing according to a Poisson point process.
 The firing rate $\lambda$ or rate function $\lambda(t)$ determines the dynamics of the homogeneous or inhomogeneous Poisson process respectively and thus of the spike times.   
 
-The probability of a emitted spike in an time interval $\delta t$ is given by: 
+The probability of an emitted spike in a time interval $\delta t$ is given by: 
 \[
 P_{spike}({t , t+ \delta t}) = \lambda(t) \delta t,
 \]

@@ -73,7 +73,7 @@ After training one RBM the entire dataset is converted by performing one upwards
 \end{algorithm}
 
 Up to this point no label information is used to train any RBM, thus the learned features are trained purely unsupervised.
-The last layer, the association layer, consists of a fully connected RBM trained on input data comprised of the converted data set concatenated with a one-hot encoding of the label.
+The last layer, the association layer, consists of a fully connected RBM trained on input data comprised of the converted data set concatenated with an one-hot encoding of the label.
 
 
 
@@ -109,10 +109,10 @@ Each input element $x_i \in \textbf{x}$ of a data sample $\textbf{x}$ gets trans
 Each RBM consist of a visible and hidden layer. 
 The visible layer consist of one neuron population with $n = |\textbf{x}|$ neurons representing the input, the data population. 
 If needed a second neuron population representing the label input $\textbf{y}$, the label population, can be added to the visible units.
-The hidden layer is an neuron population of the size  $ k = \textit{number of filters} \times (\textit{input height} - \textit{filter height} + 1) \times (\textit{input width} - \textit{filter width} + 1)$.
+The hidden layer is a neuron population of the size  $ k = \textit{number of filters} \times (\textit{input height} - \textit{filter height} + 1) \times (\textit{input width} - \textit{filter width} + 1)$.
 
 The data population is sparsely connected to the hidden layer with synchronized weights implementing the convolution, while the label population is fully connected to the hidden layer.
-In the hidden layer we connect a neuron to other neurons in a square around same position in different feature maps with a inhibitory synapse with a fixed negative weight.
+In the hidden layer we connect a neuron to other neurons in a square around same position in different feature maps with an inhibitory synapse with a fixed negative weight.
 
 The training of the spiking RBM is performed with the adapted eCD algorithm (see \ref{c:ecdappr}).
 The RBM is trained on one data sample for $t_{sample} = n \times t_{ref}$ cycles, which can, considering the different training phases, be further divided into $t_{sample} = t_{burn-in} + t_{learn} + t_{burn-in} + t_{learn} + t_{flush} = t_{pos} + t_{neg} + t_{flush}$ (with $t_{pos} = t_{neg} = t_{burn-in} + t_{learn}$ ), as visualized in Figure \ref{fig:ecd5}. 
