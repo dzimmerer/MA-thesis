@@ -62,7 +62,7 @@ Samples of the dataset are given in Figure \ref{fig:mnist}.
 \subsection{Poker-DVS} \label{c:pokerdvs}
 
 Another dataset used in this thesis is the Poker DVS dataset \cite{serrano2013128}.
-The Dataset consists of 131 poker pip symbols extracted from 3 separate DVS recordings, while quickly browsing poker cards.
+The dataset consists of 131 poker pip symbols extracted from 3 separate DVS recordings, while quickly browsing poker cards.
 From the $128 \times 128$ recorded image, a $32 \times 32$ pixel patch, containing the symbol is extracted.
 As a compromise between computational and classification performance, we down sample the patches to a size of $16 \times 16$ pixels and only consider spikes in the first $8 ms$, due to the constraint learning time per sample.
 The resulting dataset is visualized in Figure \ref{fig:pokerdvs} by integrating all events of a sample and then normalizing them by the maximal number of events per pixel.
@@ -283,7 +283,7 @@ Since it can take approximately one minute real time to simulation $500 \text{ms
 
 A visual inspection of the activations can be seen in Fig \ref{fig:convacts}. 
 It is quite apparent that all approaches capture the basic activation characteristics. 
-While the conversion as an DBN is able to simulate the activation probabilities more closely to the original DBN, the spiking CNN shows a more deterministic behaviour replicating only the essential activation structure.
+While the conversion as a DBN is able to simulate the activation probabilities more closely to the original DBN, the spiking CNN shows a more deterministic behaviour replicating only the essential activation structure.
 To quantify those differences we calculate the Kullback-Leibler divergence between the activation, which indicates the similarity of two distributions (the lower the value, the more similar are the distributions), as seen in Table \ref{tab:kldiv}.
 
 

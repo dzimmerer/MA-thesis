@@ -38,7 +38,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Receptive fields over 4 neurons.}}{43}{figure.caption.86}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces A common structure of a deep belief network.}}{44}{figure.caption.87}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Different converted structures of a CNN and a DBN.}}{45}{figure.caption.88}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Different converted structures of an CNN and an DBN.}}{45}{figure.caption.88}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Properties of a conductance based LIF neuron in a high conductance state.}}{46}{figure.caption.91}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Properties of a current based LIF neuron in a high conductance state.}}{47}{figure.caption.93}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces The five phases for a data sample in the adapted eCD algorithm. \relax }}{48}{figure.caption.94}

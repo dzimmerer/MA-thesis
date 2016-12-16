@@ -209,7 +209,7 @@ The results of Petrovici and Buesing allow a quite simple transformation of a Bo
 O'Connor uses a different approach, where instead of approximating sigmoid units by LIF neurons, he uses the Siegert neuron, a rate base approximation of LIF neurons with Poisson input, in order to implement units in the artificial RBM which activate similarly to LIF neurons \cite{OConnor2013}. 
 Such a trained net can be directly transferred to an SNN.
 For a neuron its firing rate can be approximated by the Siegert transformation and can be normalized by the maximal firing rate to get an activation probability, which can be adapted by the units of the RBM. 
-After the RBM with the Siegert activation function is trained, the weights can be simply adapted to a SNN with LIF neurons described by the Siegert approximation.
+After the RBM with the Siegert activation function is trained, the weights can be simply adapted to an SNN with LIF neurons described by the Siegert approximation.
 \\
 \\
 There also have been several approaches to transform a CNN to an SNN.  
@@ -220,7 +220,7 @@ Cao et al. and Diehl et al. propose certain constraints on the CNN architecture 
 \item The bias terms are eliminated.
 \item Instead of max pooling, average pooling is used, since it has a simple spiking counterpart (see \cite{Cao2014}).
 \end{itemize}
-After the CNN is trained with the back propagation algorithm, the weights are transferred to a SNN with an equivalent architecture using LIF neurons without a refractory period (see Fig \ref{fig:csnnconv} for an adapted CNN the equivalent SNN architecture). 
+After the CNN is trained with the back propagation algorithm, the weights are transferred to an SNN with an equivalent architecture using LIF neurons without a refractory period (see Fig \ref{fig:csnnconv} for an adapted CNN the equivalent SNN architecture). 
 In addition, before applying the final weights, Diehl et al. use a model- and data-based weight normalization procedure to further fine-tune the synaptic weights \cite{Diehl2015}. 
 
 \begin{figure}
@@ -249,7 +249,7 @@ They use multiple identical binary stochastic input units for the each element i
 
 The approaches described next make use of the synaptic sampling described in the previous Chapter \ref{c:snnsampling}.
 
-One approach is the evtCD by Neil et al., which works in continuous time with spiking networks and a STDP variant \cite{Diehl2015}.
+One approach is the evtCD by Neil et al., which works in continuous time with spiking networks and an STDP variant \cite{Diehl2015}.
 He simulates the positive and negative phase of the CD by unrolling the RBM with shared weights (as seen in Fig. \ref{fig:evtCD} where the RBM is unrolled to simulate CD-1 updates). 
 But this approach only allows a fixed number of CD steps and is, due to the weight synchronization, not very plausible.
 

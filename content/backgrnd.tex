@@ -587,15 +587,15 @@ Due to this similarity, the terms convolution and cross correlation are often us
 \paragraph{Convolution Layers} \label{c:convlayers}
 
 In neural networks convolution is implemented in the so-called convolution layer, where the convolution operation with a learnable kernel matrix $K$ is applied. 
-An input given as an 3D tensor $Y$ be composed of $m$ 2D feature maps. Each feature map has the dimension $s \times t$. 
+An input given as a 3D tensor $Y$ be composed of $m$ 2D feature maps. Each feature map has the dimension $s \times t$. 
 In the input layer, $m$ is for example the number of color channels (three in case of an RGB image), and $s$ is the width and $t$ the height of the input image. 
 A discrete convolution with a $(M , P , Q)$ filter matrix $K_j$ at position $(x,y)$ is then defined as : 
 \[
 y_{i}^{jxy} = \sigma(\sum_M \sum_{p=-\frac{P}{2}}^{\frac{P}{2}} \sum_{q=-\frac{Q}{2}}^{\frac{Q}{2}} w_{ij}^{mpq} y_{(i-1)}^{m(x+p)(y+q)}) .
 \]
-where $w_{ij}^{mpq}$ is the value at position $(m,p,q)$ of the $j$th Kernel matrix $K_j$ in the $i$th layer and $y_{i}^{jxy}$ is the entry in the $j$th 2D-feature map in the $i$th layer at position $(x, y)$.\\
-In a typical CNN the weights $w_{ij}^{mpq}$ of all Kernel matrices $K_j$ in all layers $i$ are the free parameters that can be learned. 
-Other so called hyper-parameters, which can be determined, are the number $j$ of Kernel matrices for each layer $i$, their stride size defining the shift of a filter at each step, and therefore the output dimension of the layer.
+where $w_{ij}^{mpq}$ is the value at position $(m,p,q)$ of the $j$th kernel matrix $K_j$ in the $i$th layer and $y_{i}^{jxy}$ is the entry in the $j$th 2D-feature map in the $i$th layer at position $(x, y)$.\\
+In a typical CNN the weights $w_{ij}^{mpq}$ of all kernel matrices $K_j$ in all layers $i$ are the free parameters that can be learned. 
+Other so called hyper-parameters, which can be determined, are the number $j$ of kernel matrices for each layer $i$, their stride size defining the shift of a filter at each step, and therefore the output dimension of the layer.
 Recent state-of-the-art systems have mostly reached the common consensus, of choosing a stride of $1$, which we have adapted throughout this thesis \cite{simonyan2014very}.
 
 
@@ -860,7 +860,7 @@ Thus, given a data sample $\textbf{x}$ an CD-k update is computed as follows:
 \begin{figure}
 	\centering
     	\includegraphics[width=0.8\textwidth]{imgs/cd.png} 
-    \caption[A temporal unrolling of the contrastive divergence algorithm.]{A temporal unrolling of the contrastive divergence algorithm with $k$ sampling step. The hidden units and the visible units are alternatingly sampled conditioned on the current state of the other \cite{cdImg}.}
+    \caption[A temporal unrolling of the contrastive divergence algorithm.]{A temporal unrolling of the contrastive divergence algorithm with $k$ sampling steps. The hidden units and the visible units are alternately sampled conditioned on the current state of the other \cite{cdImg}.}
 	\label{fig:cd}
 \end{figure}
 
@@ -882,7 +882,7 @@ In a deep belief net the two top layers form an RBM with symmetric weights while
 
 \paragraph{Training} \label{c:dbntraining}
 
-Training of a DBN can be split up into greedily training RBMs in a cascade of stacked up RBMs (as illustrated in Fig. \ref{fig:dbn}).
+Training of an DBN can be split up into greedily training RBMs in a cascade of stacked up RBMs (as illustrated in Fig. \ref{fig:dbn}).
 The training procedure can be formalized as:  
 \begin{enumerate}
 \item Train a new top RBM given the transformed data from the bottom layers.

@@ -46,7 +46,7 @@ By using more neurons with different sets of shared weights over the same recept
 
 The conversion approach can be roughly described in two steps:
 \begin{enumerate}
-\item Train artificial RBMs to build up an DBN.
+\item Train artificial RBMs to build up a DBN.
 \item Convert the DBN to a spiking neural network.
 \end{enumerate}
 
@@ -96,7 +96,7 @@ We present three different variations of the conversion.
   		\caption{Structure of a spiking DBN with LIF neurons.}
   		\label{fig:converted2}
   	\end{subfigure}
-	\caption[Different converted structures of a CNN and a DBN.]{Different converted structures of a CNN and a DBN. The CNN is converted to a spiking network by simply using simple LIF neurons (white) (a). In the DBN (b) the LIF neurons are put in a high conductance state (black) by inserting high frequency Poisson noise. The weights are scaled accordingly to fit the activations of the neurons.}
+	\caption[Different converted structures of an CNN and an DBN.]{Different converted structures of a CNN and a DBN. The CNN is converted to a spiking network by simply using simple LIF neurons (white) (a). In the DBN (b) the LIF neurons are put in a high conductance state (black) by inserting high frequency Poisson noise. The weights are scaled accordingly to fit the activations of the neurons.}
 	\label{fig:converted}
 \end{figure}
 
@@ -133,19 +133,19 @@ The PSPs are chosen to have an alpha shape instead of a rectangular shape, which
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/coba_lif_act.png}
-  		\caption{Firing of a HCS COBA LIF neuron.}
+  		\caption{Firing of an HCS COBA LIF neuron.}
   		\label{fig:cobahcs1}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/coba_lif_sigmoid.png}
-  		\caption{Input output transfer function of a HCS COBA LIF neuron.}
+  		\caption{Input output transfer function of an HCS COBA LIF neuron.}
   		\label{fig:cobahcs2}
 	\end{subfigure}
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/coba_lif_bm2.png}
-  		\caption{omparison between a HCS COBA LIF neuron sampling and the true distribution in a RBM.}
+  		\caption{omparison between an HCS COBA LIF neuron sampling and the true distribution in an RBM.}
   		\label{fig:cobahcs3}
 	\end{subfigure}
 	\caption[Properties of a conductance based LIF neuron in a high conductance state.]{Properties of a conductance based LIF neuron put into a high conductance state with high frequency input noise. The neuron fires with a probability of $0.5$ given no additional input (a). With input the input output transfer function approximates a sigmoid function (b). A network with such neurons is able to sample in a Boltzmann distribution similar to original distribution (c). }
@@ -161,7 +161,7 @@ Consequently, the DBN simply performs ancestral sampling with the data sample as
 \paragraph{Conversion with current-based LIF neurons} \label{c:convascuba}
 
 To reduce the computational expenses of the COBA models, they can be replaced by less computational complex CUBA models.
-The model parameters as chose to simulate a HCS state.
+The model parameters as chose to simulate an HCS state.
 Therefore, the membrane time constant is reduced and the membrane conductance is increased and a static input current is inserted.  
 Adding high frequency Poisson noise results in a sigmoid shaped input-rate output-rate transfer function (see Fig. \ref{fig:cubahcs}).
 
@@ -170,19 +170,19 @@ Adding high frequency Poisson noise results in a sigmoid shaped input-rate outpu
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/cuba_lif_act.png}
-  		\caption{Firing of a HCS CUBA LIF neuron.}
+  		\caption{Firing of an HCS CUBA LIF neuron.}
   		\label{fig:sub1}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/cuba_lif_sigmoid.png}
-  		\caption{Input output transfer function of a HCS CUBA LIF neuron.}
+  		\caption{Input output transfer function of an HCS CUBA LIF neuron.}
   		\label{fig:sub2}
 	\end{subfigure}
 	\begin{subfigure}[t]{.5\textwidth}
   		\centering
   		\includegraphics[width=.8\linewidth]{imgs/cuba_lif_bm.png}
-  		\caption{Comparison between a HCS CUBA LIF neuron sampling and the true distribution in a RBM.}
+  		\caption{Comparison between an HCS CUBA LIF neuron sampling and the true distribution in an RBM.}
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption[Properties of a current based LIF neuron in a high conductance state.]{Properties of a current based LIF neuron put into a simulated high conductance state by high frequency input noise and a artificial high membrane conductance. The neuron also fires with a probability of $0.5$ given no additional input (a) and with input the input output transfer function approximates a sigmoid function (b). A network with such neurons can also to sample in a Boltzmann distribution similar to original distribution (c).}
@@ -241,7 +241,7 @@ We extent the model by a 5th phase between two data samples, where the network i
 
 We implement convolutions with local receptive fields and shared weights between synapses through weight synchronization.
 Since each synaptic weight has its local STDP based update rule (eCD), we have to find a way to synchronize weights between synapses of the same feature map.
-To keep the shared weights the same, we perform a STDP weight synchronization step at discrete time steps, since updating all weights after a single update did not show any promising results, due to some self-reinforcement and resulting weight "explosion" (see \ref{fig:ecdnestconv} for further insight).
+To keep the shared weights the same, we perform an STDP weight synchronization step at discrete time steps, since updating all weights after a single update did not show any promising results, due to some self-reinforcement and resulting weight "explosion" (see \ref{fig:ecdnestconv} for further insight).
 Thus the synchronization at a time step for weight shared weights $w_i$ , $w_j$ can be illustrated by the following rule:  
 \[
 \begin{split}
