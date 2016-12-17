@@ -220,12 +220,12 @@ The original recorded events and the scaled events are visualized in Figure \ref
 
 \section{Experiments} \label{c:exps}
 
-We focus in our experiments primarily on the stripe dataset, due to time and computational constrains, which will be explained first.
+We focus in our experiments primarily on the stripe dataset, due to time and computational constraints, which will be explained first.
 Then we will look at and compare the performance of the converted models.
 Afterwards, to get better insight into the eCD algorithm, we will evaluating our models on the stripe dataset and then look at the performance on other datasets for comparison and generalization.
 In the end we will compare those two approaches.
 
-\subsection{Computational Constrains} \label{c:compconstr}
+\subsection{Computational Constraints} \label{c:compconstr}
 
 Most of the experiments were executed on a quad-core processor with 3.2 GHz, 16 GB RAM and a NVidia GTX 650.
 
@@ -245,7 +245,7 @@ For example a CNN over $5 \times 5 = 25$ dimensional input data with a $4 \times
 For a spiking network, in addition to modelling the $25$ dimensional input data and the $4$ feature maps as time dynamic neurons, now $(2 \times 2) \times (4 \times 4) = 64$ synapses and their dynamics have to be modelled.
 This number increases quadratically as the filter size is reduced or the number of filters is increased.
 
-Due to these constrains, the experiments primarily focus on smaller datasets and are not performed on current state-of-the-art image recognition datasets. 
+Due to these constraints, the experiments primarily focus on smaller datasets and are not performed on current state-of-the-art image recognition datasets. 
 Specialized neuromorphic hardware, e.g., SpiNNaker or Spikey as discussed in the "Future Work" Chapter \ref{c:neuhard}, could speed up the computations and allow the evaluation of more complex datasets.  
 In addition, most spiking neural network frameworks have, in contrast to most artificial neural network frameworks, which are optimized for machine learning and speed, their main focus on biological imitation and plausibility.
 

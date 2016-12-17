@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  17 DEC 2016 08:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  17 DEC 2016 11:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2524,23 +2524,23 @@ File: imgs/psp_kernel.png Graphic file (type png)
 
 <use imgs/psp_kernel.png>
 Package pdftex.def Info: imgs/psp_kernel.png used on input line 1122.
-(pdftex.def)             Requested size: 256.46152pt x 202.825pt.
+(pdftex.def)             Requested size: 170.97pt x 135.20604pt.
 
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [31 <./imgs/psp_kernel.png>]
-<imgs/stdp_curves.jpg, id=857, 213.6783pt x 189.1065pt>
+<imgs/stdp_curves.jpg, id=858, 213.6783pt x 189.1065pt>
 File: imgs/stdp_curves.jpg Graphic file (type jpg)
 
 <use imgs/stdp_curves.jpg>
 Package pdftex.def Info: imgs/stdp_curves.jpg used on input line 1192.
 (pdftex.def)             Requested size: 256.46152pt x 226.99014pt.
-
+)
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[32])
+[32]
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
@@ -3931,7 +3931,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `booka4.out' has not changed.
-(rerunfilecheck)             Checksum: B8D7B1957E996904D5A39BD3C8D0093D;3668.
+(rerunfilecheck)             Checksum: 9CC9ED3466A36425324996DC20D464BE;3669.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3941,7 +3941,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
 Here is how much of TeX's memory you used:
  25402 strings out of 493105
  452025 string characters out of 6137071
- 562532 words of memory out of 5000000
+ 561534 words of memory out of 5000000
  27623 multiletter control sequences out of 15000+600000
  118466 words of font info for 171 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3961,7 +3961,7 @@ bol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on booka4.pdf (109 pages, 9405678 bytes).
+Output written on booka4.pdf (109 pages, 9405561 bytes).
 PDF statistics:
  1894 PDF objects out of 2073 (max. 8388607)
  1482 compressed objects within 15 object streams

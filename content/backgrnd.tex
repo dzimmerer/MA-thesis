@@ -79,7 +79,7 @@ p(x_i | x_{\setminus i}) = p(x_i | parents(x_i) ),
 where $x_{\setminus i} = \textbf{z} \setminus x_i$ and $\textbf{z} = (x_1, ... , x_n)$ is the state of the model.
 
 
-A Bayesian network contains a simple conditional independence assertion, i.e. each variable is, given its parents, independent on all non descendants:
+A Bayesian network contains a simple conditional independence assertion, i.e. each variable is, given its parents, independent of all non descendants:
 
 \[
 p(\textbf{z}) = \prod_{x_i \in \textbf{z}} p(x_i | x_{\setminus i}) = \prod_{x_i \in \textbf{z}} p(x_i | parents(x_i) ) .
@@ -124,7 +124,7 @@ The clique potential for each state always has to be greater or equal to zero, b
   		\caption{Cliques in a Markov network}
   		\label{fig:markovnet2}
 	\end{subfigure}
-	\caption[A Markov network with 5 nodes.]{(a) A Markov network with 5 nodes. The white node is dependent on all connected nodes (blue nodes). Given the blue nodes the white node is independent on any other node in the network. Given the white node all the blue nodes are independent of each other. (b) Two cliques in a Markov network. The blue clique is maximal, since no vertex can be added, which is fully connected to all others in the blue clique. The green one is not maximal, since the node $x_3$ could be added \cite{bishop2013pattern}.}
+	\caption[A Markov network with 5 nodes.]{(a) A Markov network with 5 nodes. The white node is dependent on all connected nodes (blue nodes). Given the blue nodes the white node is independent of any other node in the network. Given the white node all the blue nodes are independent of each other. (b) Two cliques in a Markov network. The blue clique is maximal, since no vertex can be added, which is fully connected to all others in the blue clique. The green one is not maximal, since the node $x_3$ could be added \cite{bishop2013pattern}.}
 	\label{fig:markovnet}
 \end{figure}
 
@@ -467,7 +467,7 @@ This is very similar to the different neuron models for spiking neural networks 
 In machine learning, in order to validate the quality of a model an error function or cost function is used.
 The error function provides a quantification of the performance of the model on a given task.
 Thus, the primary goal of a learning algorithm is to reduce the error on its task.
-Hereby, it is important to note that the main error function is often primarily task dependent and rather independent on the learning algorithm used.  
+Hereby, it is important to note that the main error function is often primarily task dependent and rather independent of the learning algorithm used.  
 
 To compare the outputs $\tilde{\textbf{y}}$ of the network with parameters $\theta$ to the correct data-labels $\textbf{y}$ some of the most used error function or cost function $E(\textbf{y},\tilde{\textbf{y}} | \theta)$ are:
 
@@ -544,15 +544,15 @@ w_{ij} = w_{ij} - \mu \Delta w_{ij} = w_{ij} - \mu \frac{\partial E}{\partial w_
 \]
 with a learning rate $\mu$.
 
-\subsubsection{Convolutinal Neural Networks} \label{c:cnns}
+\subsubsection{Convolutional Neural Networks} \label{c:cnns}
 
-Convolutional neural networks (CNN) exploit spacial relations and the compositional structure of the input data to regularize the complexity of the neural network by putting further constrains on the architecture of those networks.
+Convolutional neural networks (CNN) exploit spacial relations and the compositional structure of the input data to regularize the complexity of the neural network by putting further constraints on the architecture of those networks.
 This facilitates training and allows greater generalization on fewer training samples.
 It is implemented by having solely partially connected layers with shared connection weights instead of fully connected networks \cite{Goodfellow-et-al-2016-Book, lecun1989backpropagation}.    
 
 \paragraph{Convolution} \label{c:convolution}
 
-As the name suggests, CNNs perform a convolution operation \cite{Goodfellow-et-al-2016-Book}. The one dimensional convolution operation is defined as
+As the name implies, CNNs perform a convolution operation \cite{Goodfellow-et-al-2016-Book}. The one dimensional convolution operation is defined as
 \[
 c(t) = (a * b)(t) = \int_{- \infty}^{\infty} a(x)b(t-x) dx.
 \]
@@ -566,7 +566,7 @@ Whereas convolution is originally defined over the one-dimensional temporal dime
 \[
 C(i,j) = \sum_m^M \sum_n^N I(m,n) K(i - m, j -n).
 \]
-In this case, the kernel matrix $K \in \mathbb{R}^{M \times N} $ as well as the feature map $C$ also spans multiple dimensions.
+In this case, the kernel matrix $K \in \mathbb{R}^{M \times N} $ as well as the feature map $C$ also span multiple dimensions.
 A more intuitive way to rewrite this equation can be achieved by using the commutative nature of the convolution operation
 \[
 C(i,j) = \sum_m^M \sum_n^N I(i - m,j - n) K(m, n).
@@ -587,7 +587,7 @@ Due to this similarity, the terms convolution and cross correlation are often us
 \paragraph{Convolution Layers} \label{c:convlayers}
 
 In neural networks convolution is implemented in the so-called convolution layer, where the convolution operation with a learnable kernel matrix $K$ is applied. 
-An input given as a 3D tensor $Y$ be composed of $m$ 2D feature maps. Each feature map has the dimension $s \times t$. 
+An input given as a 3D tensor $Y$ is composed of $m$ 2D feature maps. Each feature map has the dimension $s \times t$. 
 In the input layer, $m$ is for example the number of color channels (three in case of an RGB image), and $s$ is the width and $t$ the height of the input image. 
 A discrete convolution with a $(M , P , Q)$ filter matrix $K_j$ at position $(x,y)$ is then defined as : 
 \[
@@ -769,7 +769,7 @@ Running a certain number of consecutive update steps probabilistically drives th
 \end{figure}
 
 In contrast to Hopfield nets where each unit of the network is represented by an element a data sample, in Boltzmann machines latent variables are introduced to increase the capacity of the network.
-The units are thus divided into observable, visible units and unobservable hidden units (compare Fig. \ref{fig:bm}).
+The units are thus divided into observable visible units and unobservable hidden units (compare Fig. \ref{fig:bm}).
 With hidden units a Boltzmann machine can universally approximate arbitrary probability mass functions over discrete variables.
 
 
@@ -783,7 +783,7 @@ w_{ij} = w_{ij} - \mu \Delta w_{ij},
 \]
 where
 \[
-\Delta w_{ij} = \frac{\partial P(\textbf{x})}{\partial w_ij}.
+\Delta w_{ij} = \frac{\partial P(\textbf{x})}{\partial w_{ij}}.
 \]
 
 By using the logarithm of the probability function, $\frac{\partial P(\textbf{x})}{\partial w_{ij}}$ can be rewritten as
@@ -798,7 +798,7 @@ The derivation of the partition function $Z$ by $w_{ij}$ can be restated as
 
 Thus the update rule is now given as
 \[
-\frac{\partial \log P(\textbf{x})}{\partial w_ij} =  \Big \langle \frac{\partial \log E(\textbf{x})}{\partial w_{ij}} \Big \rangle_{\text{model}} - \Big \langle \frac{\partial \log E(\textbf{x})}{\partial w_{ij}} \Big \rangle_{\text{data}}.
+\frac{\partial \log P(\textbf{x})}{\partial w_{ij}} =  \Big \langle \frac{\partial \log E(\textbf{x})}{\partial w_{ij}} \Big \rangle_{\text{model}} - \Big \langle \frac{\partial \log E(\textbf{x})}{\partial w_{ij}} \Big \rangle_{\text{data}}.
 \]
 The derivation of $\log E$ after a weight $w_{ij}$
 \[
@@ -810,7 +810,7 @@ gives the quite simple update rule called contrastive divergence (CD)
 w_{ij}= w_{ij} + \mu ( \langle s_i s_j \rangle_{\text{data}} - \langle s_i s_j \rangle_{\text{model}} ) ,
 \]
 where $\langle s_i s_j \rangle_{\text{data}}$ are the expected activations from the data distribution and  $ \langle s_i s_j \rangle_{\text{model}}$ are the expected activations from the model distribution.
-The most common way to get the data and model distribution is to perform consecutive Gibbs update steps until an equilibrium distribution is reached with either training data clamped or no data clamped to visible units.
+The most common way to get the data and model distribution is to perform consecutive Gibbs update steps with either training data or no data clamped to visible units until an equilibrium distribution is reached.
 
 Here $\langle s_i s_j \rangle_{\text{data}}$ is referred to as the positive phase and $ \langle s_i s_j \rangle_{\text{model}}$ as negative phase.
 A simple interpretation of the update rule is a shift of the weights away from the model distribution towards the data distribution.
@@ -822,7 +822,7 @@ To get those samples, the Boltzmann machine has to reach an equilibrium distribu
 This can be computationally expensive and there is no guarantee to tell when the equilibrium distribution is reached.
 Thus, potentially infinite sampling steps have to be performed.
 
-To evade the problem, a simple solution is to make the hidden units independent on each other (and the visible units independent on each other), so that all hidden units can be sampled independently and in parallel to each other.
+To evade the problem, a simple solution is to make the hidden units independent of each other (and the visible units independent of each other), so that all hidden units can be sampled independently and in parallel to each other.
 Thus, a Boltzmann machine with two bipartite layers is called restricted Boltzmann machine (RBM) (see Fig. \ref{fig:rbm}) \cite{smolensky1986information}.
 
 Sampling the hidden units $\textbf{h}$ given the visible units $\textbf{v}$ is called a \textit{upward pass} and sampling the visible units $\textbf{v}$ given the hidden units $\textbf{h}$ is called a \textit{downward pass}.
@@ -1030,7 +1030,7 @@ The probability of an emitted spike in a time interval $\delta t$ is given by:
 \[
 P_{spike}({t , t+ \delta t}) = \lambda(t) \delta t,
 \]
-where the occurrence of a spike is independent on previous spikes. 
+where the occurrence of a spike is independent of previous spikes. 
 
 Since the spikes can be formalized as a Poisson process, the expected number of spikes for a time interval $\delta t$ is given by :
 \[
@@ -1046,8 +1046,8 @@ The behaviour of the synapses are described by modelling the synaptic input $f^{
 \[
 f^{syn}(t) = \sum_{\text{synapses } k } \sum_{\text{spikes } s} w_k \varepsilon(t - t_s),
 \]
-where $\varepsilon$ is a function describing the shape of the post synaptic potential (PSP).
-Different shapes will discussed in the paragraph \textit{Kernel functions} (\ref{c:pspkernel}).
+where $\varepsilon$ is a function describing the shape of the post synaptic potential (PSP) and $w_k$ a synaptic weight.
+Different shapes are discussed in the paragraph \textit{Kernel functions} (\ref{c:pspkernel}).
 
 \paragraph{Current-based synaptic interaction} \label{c:cuba}
 One synapse type models the input current of neuron $I^{syn}$ directly as the synaptic input $f^{syn}$. This is a logical implementation for LIF neurons since they directly model the potential at the soma and do not consider most of the membrane dynamics in the dendrites. 
@@ -1082,7 +1082,7 @@ with
 \]
 Such a state can be reached by a lot of incoming synaptic firing. e.g., high frequency Poisson noise from other neurons. 
 
-The HCS is especially interesting because the dynamics of the membrane potential can be described by a Gaussian process called Ornstein–Uhlenbeck process with a mean primarily determined by the effective synaptic input (with the noise) and the variance by the total membrane conductance (see Fig. \ref{fig:ornuhl}).
+The HCS is especially interesting because the dynamics of the membrane potential can be described by a Gaussian process called Ornstein–Uhlenbeck process where the mean is primarily determined by the effective synaptic input (with the noise) and the variance by the total membrane conductance (see Fig. \ref{fig:ornuhl}).
 In addition, Petrovici showed that in such a state the time the neuron needs to get from its resting potential to a value given by the Ornstein–Uhlenbeck process can be basically neglected (see Fig. \ref{fig:hcs}).
 This will show further application as a stochastically firing neuron model used for neural sampling  in Chapter \ref{c:snnsampling}.
 
@@ -1111,15 +1111,15 @@ The kernel describes the explicit shape of the post synaptic potential over time
 Several different kernel functions have been proposed, whereof some of the most important are:
 \begin{itemize}
 \item Rectangular-shaped: \[\epsilon(t) \propto  \begin{cases} 1, & \text{ if } t_{s} < t \le t_{s} + t_{ref} \\ 0, & \text{ otherwise .} \end{cases} \] 
-\item Exponential-shaped: $\epsilon(t) \propto t \exp(- \frac{t}{\tau_syn})$ .
-\item Alpha-shaped: $\epsilon(t) \propto \exp(- \frac{t}{\tau_syn})$ .
+\item Exponential-shaped: $\epsilon(t) \propto t \exp(- \frac{t}{\tau_{syn}})$ .
+\item Alpha-shaped: $\epsilon(t) \propto \exp(- \frac{t}{\tau_{syn}})$ .
 \end{itemize}
 
 These are also visualized in Figure \ref{fig:pspkernels}.
 
 \begin{figure}
 	\centering
-    	\includegraphics[width=0.6\textwidth]{imgs/psp_kernel.png} 
+    	\includegraphics[width=0.4\textwidth]{imgs/psp_kernel.png} 
     \caption[PSP kernels.]{Three different PSP kernels. The green one has an alpha-shape, the blue one is exponential shaped and the red one is rectangular \cite{Petrovici2016}. }
     % Petrovici
 	\label{fig:pspkernels}
@@ -1143,7 +1143,7 @@ In this thesis we use temporal or rate encoded input data, which is represented 
 Learning in the brain describes the generalized term how information in the brain is stored (in contrast to task learning, memory adaptation is also considered learning).
 
 Most models of learning algorithms in spiking neural networks build on changes in the synaptic strength between neurons to store information \cite{gerstner2014neuronal}.
-To consider these changes as learning, they have to span over minutes to days or more, which is described by long-term plasticity, e.g., by LTP (long-term potentiation), LTD (long-term depression) or STDP (see Fig. \ref{fig:stdp}).
+To consider these changes as learning, they have to span over minutes to days or more, which is described by long-term plasticity, e.g., by LTP (long-term potentiation), LTD (long-term depression) or STDP (spike time dependent plasticity) (see Fig. \ref{fig:stdp}).
  
 The most commonly used models are inspired by the research and discoveries of Hebb and the previously discussed Hebbian principle (Chapter \ref{c:hebb}).
 
@@ -1162,8 +1162,8 @@ with a common choice for the STDP function $W$
 \[
 W(x) =
 \begin{cases}
-A_+ \exp(\frac{-x}{\tau_+}) \quad \quad &\text{for  } x > 0,  \\
--A_- \exp(\frac{x}{\tau_-}) \quad \quad &\text{for  } x < 0,
+A_+ \exp(\frac{-|x|}{\tau_+}) \quad \quad &\text{for  } x > 0,  \\
+-A_- \exp(\frac{-|x|}{\tau_-}) \quad \quad &\text{for  } x < 0,
 \end{cases}
 \]
 given the time constants $\tau_+$ and $\tau_-$ and the weight depend parameters $A_+$ and $A_-$.
@@ -1173,7 +1173,7 @@ given the time constants $\tau_+$ and $\tau_-$ and the weight depend parameters 
  
 Long-term potentiation (LTP) can be interpreted as an STDP variant with only the positive part of the STDP function
 \[
-W(x) =  A_+ \exp(\frac{-x}{\tau_+}).
+W(x) =  A_+ \exp(\frac{-|x|}{\tau_+}).
 \]
 
 This leads to a purely positive increment of weights (see Fig. \ref{fig:stdp}).
@@ -1182,7 +1182,7 @@ This leads to a purely positive increment of weights (see Fig. \ref{fig:stdp}).
 
 Long-term depression (LTD) can be seen as the negative counterpart to LTP, with an STDP function
 \[
-W(x) =  -A_- \exp(\frac{x}{\tau_-}).
+W(x) =  -A_- \exp(\frac{-|x|}{\tau_-}).
 \]
 
 This leads to a purely negative decrement of weights (see Fig. \ref{fig:stdp}).
