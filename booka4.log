@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  16 DEC 2016 15:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  17 DEC 2016 08:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1833,9 +1833,6 @@ LaTeX Warning: Label `sub@fig:sub2' multiply defined.
 
 LaTeX Warning: Label `fig:ecdnestconv' multiply defined.
 
-
-LaTeX Warning: Label `fig:ecdnestwnot' multiply defined.
-
 ))
 \openout1 = `booka4.aux'.
 
@@ -2275,19 +2272,16 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [5 <./imgs/markovnet1.png> <./imgs/markovnet2.png>]
-<imgs/sampling.png, id=478, 812.03375pt x 576.1525pt>
+<imgs/sampling.png, id=478, 516.93124pt x 312.16624pt>
 File: imgs/sampling.png Graphic file (type png)
  <use imgs/sampling.png>
 Package pdftex.def Info: imgs/sampling.png used on input line 167.
-(pdftex.def)             Requested size: 170.97pt x 121.30328pt.
+(pdftex.def)             Requested size: 256.46152pt x 154.87762pt.
 
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [6 <./imgs/sampling.png>]
-Underfull \vbox (badness 1460) has occurred while \output is active []
-
-
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
@@ -2568,7 +2562,7 @@ File: imgs/crbm_padding1.png Graphic file (type png)
 
 <use imgs/crbm_padding1.png>
 Package pdftex.def Info: imgs/crbm_padding1.png used on input line 54.
-(pdftex.def)             Requested size: 102.58499pt x 108.76036pt.
+(pdftex.def)             Requested size: 76.93922pt x 81.57027pt.
 
 <imgs/kernel_flip.png, id=887, 285.065pt x 138.116pt>
 File: imgs/kernel_flip.png Graphic file (type png)
@@ -2599,20 +2593,20 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 [36 <./imgs/crbm_padding1.png> <./imgs/kernel_flip.png> <./imgs/crbm_padding2.p
 ng> <./imgs/prob_max_pool.png>]
-<imgs/snn_sample1.png, id=927, 387.33472pt x 249.2069pt>
+<imgs/snn_sample1.png, id=926, 387.33472pt x 249.2069pt>
 File: imgs/snn_sample1.png Graphic file (type png)
 
 <use imgs/snn_sample1.png>
 Package pdftex.def Info: imgs/snn_sample1.png used on input line 125.
 (pdftex.def)             Requested size: 170.97pt x 110.0012pt.
 
-<imgs/snn_sample2.png, id=931, 328.8691pt x 340.58276pt>
+<imgs/snn_sample2.png, id=930, 328.8691pt x 340.58276pt>
 File: imgs/snn_sample2.png Graphic file (type png)
 
 <use imgs/snn_sample2.png>
 Package pdftex.def Info: imgs/snn_sample2.png used on input line 149.
 (pdftex.def)             Requested size: 150.0272pt x 155.37074pt.
- <imgs/sampl_bsp.png, id=932, 490.633pt x 297.11pt>
+ <imgs/sampl_bsp.png, id=931, 490.633pt x 297.11pt>
 File: imgs/sampl_bsp.png Graphic file (type png)
 
 <use imgs/sampl_bsp.png>
@@ -2623,21 +2617,21 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [37 <./imgs/snn_sample1.png>]
-<imgs/snn_sample3.png, id=945, 433.62pt x 209.583pt>
+<imgs/snn_sample3.png, id=944, 433.62pt x 209.583pt>
 File: imgs/snn_sample3.png Graphic file (type png)
 
 <use imgs/snn_sample3.png>
 Package pdftex.def Info: imgs/snn_sample3.png used on input line 182.
 (pdftex.def)             Requested size: 170.97325pt x 82.63885pt.
 
-<imgs/snn_sample4.png, id=946, 433.62pt x 209.33379pt>
+<imgs/snn_sample4.png, id=945, 433.62pt x 209.33379pt>
 File: imgs/snn_sample4.png Graphic file (type png)
 
 <use imgs/snn_sample4.png>
 Package pdftex.def Info: imgs/snn_sample4.png used on input line 188.
 (pdftex.def)             Requested size: 170.97325pt x 82.54059pt.
 
-<imgs/snn_sample5.png, id=949, 332.92921pt x 214.31793pt>
+<imgs/snn_sample5.png, id=948, 332.92921pt x 214.31793pt>
 File: imgs/snn_sample5.png Graphic file (type png)
 
 <use imgs/snn_sample5.png>
@@ -2654,22 +2648,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 206--217
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [38 <./imgs/snn_sample2.png> <./imgs/sampl_bsp.png> <./imgs/snn_sample3.png> <.
 /imgs/snn_sample4.png>]
-<imgs/cnn_snn_conv1.jpg, id=967, 769.7973pt x 208.5031pt>
+<imgs/cnn_snn_conv1.jpg, id=966, 769.7973pt x 208.5031pt>
 File: imgs/cnn_snn_conv1.jpg Graphic file (type jpg)
 
 <use imgs/cnn_snn_conv1.jpg>
 Package pdftex.def Info: imgs/cnn_snn_conv1.jpg used on input line 230.
 (pdftex.def)             Requested size: 331.68854pt x 89.8391pt.
 
-<imgs/cnn_snn_conv2.jpg, id=968, 771.42134pt x 241.73068pt>
+<imgs/cnn_snn_conv2.jpg, id=967, 771.42134pt x 241.73068pt>
 File: imgs/cnn_snn_conv2.jpg Graphic file (type jpg)
 
 <use imgs/cnn_snn_conv2.jpg>
@@ -2680,7 +2671,7 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [39 <./imgs/snn_sample5.png>]
-<imgs/evtCD.png, id=983, 453.10854pt x 202.68828pt>
+<imgs/evtCD.png, id=982, 453.10854pt x 202.68828pt>
 File: imgs/evtCD.png Graphic file (type png)
  <use imgs/evtCD.png>
 Package pdftex.def Info: imgs/evtCD.png used on input line 258.
@@ -2702,10 +2693,14 @@ File: imgs/eCD11.png Graphic file (type png)
 Package pdftex.def Info: imgs/eCD11.png used on input line 306.
 (pdftex.def)             Requested size: 128.23076pt x 128.2353pt.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[41 <./imgs/eCD2.png>])
+[41 <./imgs/eCD2.png>]
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
@@ -2714,14 +2709,14 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
  (./content/appro.tex
 Chapter 4.
-<imgs/recpt_field1.png, id=1020, 159.797pt x 134.101pt>
+<imgs/recpt_field1.png, id=1019, 159.797pt x 134.101pt>
 File: imgs/recpt_field1.png Graphic file (type png)
 
 <use imgs/recpt_field1.png>
 Package pdftex.def Info: imgs/recpt_field1.png used on input line 28.
 (pdftex.def)             Requested size: 85.485pt x 71.74025pt.
 
-<imgs/recpt_field2.png, id=1021, 150.964pt x 134.904pt>
+<imgs/recpt_field2.png, id=1020, 150.964pt x 134.904pt>
 File: imgs/recpt_field2.png Graphic file (type png)
 
 <use imgs/recpt_field2.png>
@@ -2736,20 +2731,20 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
  <./imgs/recpt_field1.png> <./imgs/recpt_field2.png>]
-<imgs/dbn_mnist.png, id=1034, 284.06125pt x 224.84pt>
+<imgs/dbn_mnist.png, id=1033, 284.06125pt x 224.84pt>
 File: imgs/dbn_mnist.png Graphic file (type png)
  <use imgs/dbn_mnist.png>
 Package pdftex.def Info: imgs/dbn_mnist.png used on input line 73.
 (pdftex.def)             Requested size: 170.97pt x 135.33044pt.
 
-<imgs/convert_cnn.png, id=1038, 199.144pt x 221.628pt>
+<imgs/convert_cnn.png, id=1037, 199.144pt x 221.628pt>
 File: imgs/convert_cnn.png Graphic file (type png)
 
 <use imgs/convert_cnn.png>
 Package pdftex.def Info: imgs/convert_cnn.png used on input line 89.
 (pdftex.def)             Requested size: 115.40508pt x 128.43611pt.
 
-<imgs/convert_dbn.png, id=1039, 296.307pt x 221.628pt>
+<imgs/convert_dbn.png, id=1038, 296.307pt x 221.628pt>
 File: imgs/convert_dbn.png Graphic file (type png)
 
 <use imgs/convert_dbn.png>
@@ -2764,42 +2759,42 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [45 <./imgs/convert_cnn.png> <./imgs/convert_dbn.png>]
-<imgs/coba_lif_act.png, id=1072, 578.16pt x 433.62pt>
+<imgs/coba_lif_act.png, id=1071, 578.16pt x 433.62pt>
 File: imgs/coba_lif_act.png Graphic file (type png)
 
 <use imgs/coba_lif_act.png>
 Package pdftex.def Info: imgs/coba_lif_act.png used on input line 135.
 (pdftex.def)             Requested size: 170.97325pt x 128.22777pt.
 
-<imgs/coba_lif_sigmoid.png, id=1073, 646.415pt x 433.62pt>
+<imgs/coba_lif_sigmoid.png, id=1072, 646.415pt x 433.62pt>
 File: imgs/coba_lif_sigmoid.png Graphic file (type png)
 
 <use imgs/coba_lif_sigmoid.png>
 Package pdftex.def Info: imgs/coba_lif_sigmoid.png used on input line 141.
 (pdftex.def)             Requested size: 170.97325pt x 114.6904pt.
 
-<imgs/coba_lif_bm2.png, id=1074, 578.16pt x 433.62pt>
+<imgs/coba_lif_bm2.png, id=1073, 578.16pt x 433.62pt>
 File: imgs/coba_lif_bm2.png Graphic file (type png)
 
 <use imgs/coba_lif_bm2.png>
 Package pdftex.def Info: imgs/coba_lif_bm2.png used on input line 147.
 (pdftex.def)             Requested size: 170.97325pt x 128.22777pt.
 
-<imgs/cuba_lif_act.png, id=1077, 578.16pt x 433.62pt>
+<imgs/cuba_lif_act.png, id=1076, 578.16pt x 433.62pt>
 File: imgs/cuba_lif_act.png Graphic file (type png)
 
 <use imgs/cuba_lif_act.png>
 Package pdftex.def Info: imgs/cuba_lif_act.png used on input line 172.
 (pdftex.def)             Requested size: 170.97325pt x 128.22777pt.
 
-<imgs/cuba_lif_sigmoid.png, id=1078, 643.203pt x 433.62pt>
+<imgs/cuba_lif_sigmoid.png, id=1077, 643.203pt x 433.62pt>
 File: imgs/cuba_lif_sigmoid.png Graphic file (type png)
 
 <use imgs/cuba_lif_sigmoid.png>
 Package pdftex.def Info: imgs/cuba_lif_sigmoid.png used on input line 178.
 (pdftex.def)             Requested size: 170.97325pt x 115.25941pt.
 
-<imgs/cuba_lif_bm.png, id=1079, 1731.268pt x 900.163pt>
+<imgs/cuba_lif_bm.png, id=1078, 1731.268pt x 900.163pt>
 File: imgs/cuba_lif_bm.png Graphic file (type png)
 
 <use imgs/cuba_lif_bm.png>
@@ -2815,7 +2810,7 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [47 <./imgs/cuba_lif_act.png> <./imgs/cuba_lif_sigmoid.png> <./imgs/cuba_lif_bm
-.png>] <imgs/eCD_5phases.png, id=1101, 476.982pt x 420.772pt>
+.png>] <imgs/eCD_5phases.png, id=1100, 476.982pt x 420.772pt>
 File: imgs/eCD_5phases.png Graphic file (type png)
 
 <use imgs/eCD_5phases.png>
@@ -2826,7 +2821,7 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [48 <./imgs/eCD_5phases.png>]
-<imgs/lateral_inhib.png, id=1119, 303.1325pt x 282.05376pt>
+<imgs/lateral_inhib.png, id=1118, 303.1325pt x 282.05376pt>
 File: imgs/lateral_inhib.png Graphic file (type png)
 
 <use imgs/lateral_inhib.png>
@@ -2837,7 +2832,7 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [49 <./imgs/lateral_inhib.png>]
-<imgs/spike_dbm.png, id=1139, 231.264pt x 331.639pt>
+<imgs/spike_dbm.png, id=1138, 231.264pt x 331.639pt>
 File: imgs/spike_dbm.png Graphic file (type png)
  <use imgs/spike_dbm.png>
 Package pdftex.def Info: imgs/spike_dbm.png used on input line 292.
@@ -2883,25 +2878,25 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
  (./content/exp.tex
 Chapter 6.
-<imgs/stripes31.png, id=1188, 578.16pt x 433.62pt>
+<imgs/stripes31.png, id=1187, 578.16pt x 433.62pt>
 File: imgs/stripes31.png Graphic file (type png)
  <use imgs/stripes31.png>
 Package pdftex.def Info: imgs/stripes31.png used on input line 21.
 (pdftex.def)             Requested size: 178.02849pt x 133.52097pt.
 
-<imgs/stripes41.png, id=1189, 578.16pt x 433.62pt>
+<imgs/stripes41.png, id=1188, 578.16pt x 433.62pt>
 File: imgs/stripes41.png Graphic file (type png)
  <use imgs/stripes41.png>
 Package pdftex.def Info: imgs/stripes41.png used on input line 27.
 (pdftex.def)             Requested size: 178.02849pt x 133.52097pt.
 
-<imgs/stripes21.png, id=1190, 578.16pt x 433.62pt>
+<imgs/stripes21.png, id=1189, 578.16pt x 433.62pt>
 File: imgs/stripes21.png Graphic file (type png)
  <use imgs/stripes21.png>
 Package pdftex.def Info: imgs/stripes21.png used on input line 33.
 (pdftex.def)             Requested size: 178.02849pt x 133.52097pt.
 
-<imgs/stripes11.png, id=1191, 578.16pt x 433.62pt>
+<imgs/stripes11.png, id=1190, 578.16pt x 433.62pt>
 File: imgs/stripes11.png Graphic file (type png)
  <use imgs/stripes11.png>
 Package pdftex.def Info: imgs/stripes11.png used on input line 39.
@@ -2915,13 +2910,13 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
  <./imgs/stripes31.png> <./imgs/stripes41.png> <./imgs/stripes21.png> <./imgs/s
-tripes11.png>] <imgs/mnist.png, id=1204, 42.1575pt x 31.61812pt>
+tripes11.png>] <imgs/mnist.png, id=1203, 42.1575pt x 31.61812pt>
 File: imgs/mnist.png Graphic file (type png)
 
 <use imgs/mnist.png>
 Package pdftex.def Info: imgs/mnist.png used on input line 56.
 (pdftex.def)             Requested size: 213.71576pt x 160.29059pt.
- <imgs/poker_ds.png, id=1209, 722.7pt x 542.025pt>
+ <imgs/poker_ds.png, id=1208, 722.7pt x 542.025pt>
 File: imgs/poker_ds.png Graphic file (type png)
 
 <use imgs/poker_ds.png>
@@ -2932,7 +2927,7 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [56 <./imgs/mnist.png> <./imgs/poker_ds.png>]
-<imgs/bcp/ds1.png, id=1222, 549.73921pt x 682.82689pt>
+<imgs/bcp/ds1.png, id=1221, 549.73921pt x 682.82689pt>
 File: imgs/bcp/ds1.png Graphic file (type png)
  <use imgs/bcp/ds1.png>
 Package pdftex.def Info: imgs/bcp/ds1.png used on input line 91.
@@ -2948,7 +2943,7 @@ Underfull \vbox (badness 1226) has occurred while \output is active []
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[58] <imgs/weights_rbm.png, id=1236, 578.16pt x 433.62pt>
+[58] <imgs/weights_rbm.png, id=1235, 578.16pt x 433.62pt>
 File: imgs/weights_rbm.png Graphic file (type png)
 
 <use imgs/weights_rbm.png>
@@ -2967,7 +2962,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 307.
 
-<imgs/convert/compl4.png, id=1248, 1043.097pt x 787.743pt>
+<imgs/convert/compl4.png, id=1247, 1043.097pt x 787.743pt>
 File: imgs/convert/compl4.png Graphic file (type png)
 
 <use imgs/convert/compl4.png>
@@ -2977,28 +2972,28 @@ Package pdftex.def Info: imgs/convert/compl4.png used on input line 439.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imgs/convert/err/err1.png, id=1249, 722.7pt x 542.025pt>
+<imgs/convert/err/err1.png, id=1248, 722.7pt x 542.025pt>
 File: imgs/convert/err/err1.png Graphic file (type png)
 
 <use imgs/convert/err/err1.png>
 Package pdftex.def Info: imgs/convert/err/err1.png used on input line 448.
 (pdftex.def)             Requested size: 61.55217pt x 46.15836pt.
 
-<imgs/convert/err/err2.png, id=1250, 722.7pt x 542.025pt>
+<imgs/convert/err/err2.png, id=1249, 722.7pt x 542.025pt>
 File: imgs/convert/err/err2.png Graphic file (type png)
 
 <use imgs/convert/err/err2.png>
 Package pdftex.def Info: imgs/convert/err/err2.png used on input line 453.
 (pdftex.def)             Requested size: 61.55217pt x 46.15836pt.
 
-<imgs/convert/err/err4.png, id=1251, 722.7pt x 542.025pt>
+<imgs/convert/err/err4.png, id=1250, 722.7pt x 542.025pt>
 File: imgs/convert/err/err4.png Graphic file (type png)
 
 <use imgs/convert/err/err4.png>
 Package pdftex.def Info: imgs/convert/err/err4.png used on input line 458.
 (pdftex.def)             Requested size: 61.55217pt x 46.15836pt.
 
-<imgs/convert/err/err3.png, id=1252, 722.7pt x 542.025pt>
+<imgs/convert/err/err3.png, id=1251, 722.7pt x 542.025pt>
 File: imgs/convert/err/err3.png Graphic file (type png)
 
 <use imgs/convert/err/err3.png>
@@ -3029,7 +3024,7 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 653.
 
-<imgs/inspect/compl.png, id=1268, 774.092pt x 566.918pt>
+<imgs/inspect/compl.png, id=1267, 774.092pt x 566.918pt>
 File: imgs/inspect/compl.png Graphic file (type png)
 
 <use imgs/inspect/compl.png>
@@ -3039,7 +3034,7 @@ Package pdftex.def Info: imgs/inspect/compl.png used on input line 718.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imgs/inspect/wdiff.png, id=1269, 578.16pt x 433.62pt>
+<imgs/inspect/wdiff.png, id=1268, 578.16pt x 433.62pt>
 File: imgs/inspect/wdiff.png Graphic file (type png)
 
 <use imgs/inspect/wdiff.png>
@@ -3066,77 +3061,77 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [62 <./imgs/inspect/compl.png> <./imgs/inspect/wdiff.png>]
-<imgs/reconst/00001.png, id=1286, 722.7pt x 542.025pt>
+<imgs/reconst/00001.png, id=1285, 722.7pt x 542.025pt>
 File: imgs/reconst/00001.png Graphic file (type png)
 
 <use imgs/reconst/00001.png>
 Package pdftex.def Info: imgs/reconst/00001.png used on input line 743.
 (pdftex.def)             Requested size: 85.48662pt x 64.11388pt.
 
-<imgs/reconst/00003.png, id=1287, 722.7pt x 542.025pt>
+<imgs/reconst/00003.png, id=1286, 722.7pt x 542.025pt>
 File: imgs/reconst/00003.png Graphic file (type png)
 
 <use imgs/reconst/00003.png>
 Package pdftex.def Info: imgs/reconst/00003.png used on input line 748.
 (pdftex.def)             Requested size: 85.48662pt x 64.11388pt.
 
-<imgs/reconst/00005.png, id=1288, 722.7pt x 542.025pt>
+<imgs/reconst/00005.png, id=1287, 722.7pt x 542.025pt>
 File: imgs/reconst/00005.png Graphic file (type png)
 
 <use imgs/reconst/00005.png>
 Package pdftex.def Info: imgs/reconst/00005.png used on input line 753.
 (pdftex.def)             Requested size: 85.48662pt x 64.11388pt.
 
-<imgs/reconst/00007.png, id=1289, 722.7pt x 542.025pt>
+<imgs/reconst/00007.png, id=1288, 722.7pt x 542.025pt>
 File: imgs/reconst/00007.png Graphic file (type png)
 
 <use imgs/reconst/00007.png>
 Package pdftex.def Info: imgs/reconst/00007.png used on input line 758.
 (pdftex.def)             Requested size: 85.48662pt x 64.11388pt.
 
-<imgs/reconst/00002.png, id=1290, 722.7pt x 542.025pt>
+<imgs/reconst/00002.png, id=1289, 722.7pt x 542.025pt>
 File: imgs/reconst/00002.png Graphic file (type png)
 
 <use imgs/reconst/00002.png>
 Package pdftex.def Info: imgs/reconst/00002.png used on input line 765.
 (pdftex.def)             Requested size: 85.48662pt x 64.11388pt.
 
-<imgs/reconst/00004.png, id=1291, 722.7pt x 542.025pt>
+<imgs/reconst/00004.png, id=1290, 722.7pt x 542.025pt>
 File: imgs/reconst/00004.png Graphic file (type png)
 
 <use imgs/reconst/00004.png>
 Package pdftex.def Info: imgs/reconst/00004.png used on input line 770.
 (pdftex.def)             Requested size: 85.48662pt x 64.11388pt.
 
-<imgs/reconst/00006.png, id=1292, 722.7pt x 542.025pt>
+<imgs/reconst/00006.png, id=1291, 722.7pt x 542.025pt>
 File: imgs/reconst/00006.png Graphic file (type png)
 
 <use imgs/reconst/00006.png>
 Package pdftex.def Info: imgs/reconst/00006.png used on input line 775.
 (pdftex.def)             Requested size: 85.48662pt x 64.11388pt.
 
-<imgs/reconst/00008.png, id=1293, 722.7pt x 542.025pt>
+<imgs/reconst/00008.png, id=1292, 722.7pt x 542.025pt>
 File: imgs/reconst/00008.png Graphic file (type png)
 
 <use imgs/reconst/00008.png>
 Package pdftex.def Info: imgs/reconst/00008.png used on input line 780.
 (pdftex.def)             Requested size: 85.48662pt x 64.11388pt.
 
-<imgs/reconst/00030_h.png, id=1295, 578.16pt x 433.62pt>
+<imgs/reconst/00030_h.png, id=1294, 578.16pt x 433.62pt>
 File: imgs/reconst/00030_h.png Graphic file (type png)
 
 <use imgs/reconst/00030_h.png>
 Package pdftex.def Info: imgs/reconst/00030_h.png used on input line 793.
 (pdftex.def)             Requested size: 123.10225pt x 92.32663pt.
 
-<imgs/reconst/00975_h.png, id=1296, 578.16pt x 433.62pt>
+<imgs/reconst/00975_h.png, id=1295, 578.16pt x 433.62pt>
 File: imgs/reconst/00975_h.png Graphic file (type png)
 
 <use imgs/reconst/00975_h.png>
 Package pdftex.def Info: imgs/reconst/00975_h.png used on input line 799.
 (pdftex.def)             Requested size: 123.10225pt x 92.32663pt.
 
-<imgs/reconst/hact.png, id=1297, 578.16pt x 433.62pt>
+<imgs/reconst/hact.png, id=1296, 578.16pt x 433.62pt>
 File: imgs/reconst/hact.png Graphic file (type png)
 
 <use imgs/reconst/hact.png>
@@ -3155,26 +3150,26 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 .png> <./imgs/reconst/00007.png> <./imgs/reconst/00002.png> <./imgs/reconst/000
 04.png> <./imgs/reconst/00006.png> <./imgs/reconst/00008.png> <./imgs/reconst/0
 0030_h.png> <./imgs/reconst/00975_h.png> <./imgs/reconst/hact.png>]
-<imgs/inhib/02129.png, id=1309, 578.16pt x 433.62pt>
+<imgs/inhib/02129.png, id=1308, 578.16pt x 433.62pt>
 File: imgs/inhib/02129.png Graphic file (type png)
 
 <use imgs/inhib/02129.png>
 Package pdftex.def Info: imgs/inhib/02129.png used on input line 825.
 (pdftex.def)             Requested size: 173.1074pt x 129.82895pt.
 
-<imgs/inhib/03023.png, id=1310, 578.16pt x 433.62pt>
+<imgs/inhib/03023.png, id=1309, 578.16pt x 433.62pt>
 File: imgs/inhib/03023.png Graphic file (type png)
 
 <use imgs/inhib/03023.png>
 Package pdftex.def Info: imgs/inhib/03023.png used on input line 831.
 (pdftex.def)             Requested size: 173.1074pt x 129.82895pt.
- <imgs/cvsnc/wc.png, id=1312, 578.16pt x 240.9pt>
+ <imgs/cvsnc/wc.png, id=1311, 578.16pt x 240.9pt>
 File: imgs/cvsnc/wc.png Graphic file (type png)
 
 <use imgs/cvsnc/wc.png>
 Package pdftex.def Info: imgs/cvsnc/wc.png used on input line 856.
 (pdftex.def)             Requested size: 173.1074pt x 72.1272pt.
- <imgs/cvsnc/wnc.png, id=1313, 578.16pt x 240.9pt>
+ <imgs/cvsnc/wnc.png, id=1312, 578.16pt x 240.9pt>
 File: imgs/cvsnc/wnc.png Graphic file (type png)
 
 <use imgs/cvsnc/wnc.png>
@@ -3185,13 +3180,13 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
 [64 <./imgs/inhib/02129.png> <./imgs/inhib/03023.png> <./imgs/cvsnc/wc.png> <./
-imgs/cvsnc/wnc.png>] <imgs/runtime-1.png, id=1326, 896.34875pt x 542.025pt>
+imgs/cvsnc/wnc.png>] <imgs/runtime-1.png, id=1325, 896.34875pt x 542.025pt>
 File: imgs/runtime-1.png Graphic file (type png)
 
 <use imgs/runtime-1.png>
 Package pdftex.def Info: imgs/runtime-1.png used on input line 884.
 (pdftex.def)             Requested size: 277.82788pt x 168.00119pt.
- <imgs/dbn_stripe1.png, id=1331, 284.262pt x 224.84pt>
+ <imgs/dbn_stripe1.png, id=1330, 284.262pt x 224.84pt>
 File: imgs/dbn_stripe1.png Graphic file (type png)
 
 <use imgs/dbn_stripe1.png>
@@ -3201,31 +3196,31 @@ Package pdftex.def Info: imgs/dbn_stripe1.png used on input line 902.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imgs/7x7/w1.png, id=1332, 578.16pt x 433.62pt>
+<imgs/7x7/w1.png, id=1331, 578.16pt x 433.62pt>
 File: imgs/7x7/w1.png Graphic file (type png)
  <use imgs/7x7/w1.png>
 Package pdftex.def Info: imgs/7x7/w1.png used on input line 912.
 (pdftex.def)             Requested size: 145.32553pt x 108.99359pt.
 
-<imgs/7x7/w2.png, id=1333, 578.16pt x 433.62pt>
+<imgs/7x7/w2.png, id=1332, 578.16pt x 433.62pt>
 File: imgs/7x7/w2.png Graphic file (type png)
  <use imgs/7x7/w2.png>
 Package pdftex.def Info: imgs/7x7/w2.png used on input line 918.
 (pdftex.def)             Requested size: 145.32553pt x 108.99359pt.
 
-<imgs/7x7/w3.png, id=1334, 578.16pt x 433.62pt>
+<imgs/7x7/w3.png, id=1333, 578.16pt x 433.62pt>
 File: imgs/7x7/w3.png Graphic file (type png)
  <use imgs/7x7/w3.png>
 Package pdftex.def Info: imgs/7x7/w3.png used on input line 924.
 (pdftex.def)             Requested size: 145.32553pt x 108.99359pt.
 
-<imgs/7x7/w4.png, id=1335, 578.16pt x 433.62pt>
+<imgs/7x7/w4.png, id=1334, 578.16pt x 433.62pt>
 File: imgs/7x7/w4.png Graphic file (type png)
  <use imgs/7x7/w4.png>
 Package pdftex.def Info: imgs/7x7/w4.png used on input line 930.
 (pdftex.def)             Requested size: 145.32553pt x 108.99359pt.
 
-<imgs/7x7/w5.png, id=1336, 578.16pt x 433.62pt>
+<imgs/7x7/w5.png, id=1335, 578.16pt x 433.62pt>
 File: imgs/7x7/w5.png Graphic file (type png)
  <use imgs/7x7/w5.png>
 Package pdftex.def Info: imgs/7x7/w5.png used on input line 936.
@@ -3234,28 +3229,28 @@ Package pdftex.def Info: imgs/7x7/w5.png used on input line 936.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imgs/7x7/00006_v.png, id=1337, 578.16pt x 433.62pt>
+<imgs/7x7/00006_v.png, id=1336, 578.16pt x 433.62pt>
 File: imgs/7x7/00006_v.png Graphic file (type png)
 
 <use imgs/7x7/00006_v.png>
 Package pdftex.def Info: imgs/7x7/00006_v.png used on input line 950.
 (pdftex.def)             Requested size: 173.1074pt x 129.82895pt.
 
-<imgs/7x7/01992_v.png, id=1338, 578.16pt x 433.62pt>
+<imgs/7x7/01992_v.png, id=1337, 578.16pt x 433.62pt>
 File: imgs/7x7/01992_v.png Graphic file (type png)
 
 <use imgs/7x7/01992_v.png>
 Package pdftex.def Info: imgs/7x7/01992_v.png used on input line 956.
 (pdftex.def)             Requested size: 173.1074pt x 129.82895pt.
 
-<imgs/7x7/00006_h.png, id=1339, 578.16pt x 433.62pt>
+<imgs/7x7/00006_h.png, id=1338, 578.16pt x 433.62pt>
 File: imgs/7x7/00006_h.png Graphic file (type png)
 
 <use imgs/7x7/00006_h.png>
 Package pdftex.def Info: imgs/7x7/00006_h.png used on input line 963.
 (pdftex.def)             Requested size: 173.1074pt x 129.82895pt.
 
-<imgs/7x7/01992_h.png, id=1340, 578.16pt x 433.62pt>
+<imgs/7x7/01992_h.png, id=1339, 578.16pt x 433.62pt>
 File: imgs/7x7/01992_h.png Graphic file (type png)
 
 <use imgs/7x7/01992_h.png>
@@ -3265,28 +3260,28 @@ Package pdftex.def Info: imgs/7x7/01992_h.png used on input line 969.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imgs/7x7/20076_v.png, id=1341, 578.16pt x 433.62pt>
+<imgs/7x7/20076_v.png, id=1340, 578.16pt x 433.62pt>
 File: imgs/7x7/20076_v.png Graphic file (type png)
 
 <use imgs/7x7/20076_v.png>
 Package pdftex.def Info: imgs/7x7/20076_v.png used on input line 981.
 (pdftex.def)             Requested size: 123.10225pt x 92.32663pt.
 
-<imgs/7x7/20946_v.png, id=1342, 578.16pt x 433.62pt>
+<imgs/7x7/20946_v.png, id=1341, 578.16pt x 433.62pt>
 File: imgs/7x7/20946_v.png Graphic file (type png)
 
 <use imgs/7x7/20946_v.png>
 Package pdftex.def Info: imgs/7x7/20946_v.png used on input line 987.
 (pdftex.def)             Requested size: 123.10225pt x 92.32663pt.
 
-<imgs/7x7/20076_c.png, id=1343, 578.16pt x 433.62pt>
+<imgs/7x7/20076_c.png, id=1342, 578.16pt x 433.62pt>
 File: imgs/7x7/20076_c.png Graphic file (type png)
 
 <use imgs/7x7/20076_c.png>
 Package pdftex.def Info: imgs/7x7/20076_c.png used on input line 994.
 (pdftex.def)             Requested size: 123.10225pt x 92.32663pt.
 
-<imgs/7x7/20946_c.png, id=1344, 578.16pt x 433.62pt>
+<imgs/7x7/20946_c.png, id=1343, 578.16pt x 433.62pt>
 File: imgs/7x7/20946_c.png Graphic file (type png)
 
 <use imgs/7x7/20946_c.png>
@@ -3297,14 +3292,14 @@ Underfull \hbox (badness 1546) in paragraph at lines 1001--1001
 [][][]|\T1/ptm/m/n/10 La-bel layer ac-ti-va-tions af-ter
  []
 
-<imgs/7x7/20076_h.png, id=1345, 578.16pt x 433.62pt>
+<imgs/7x7/20076_h.png, id=1344, 578.16pt x 433.62pt>
 File: imgs/7x7/20076_h.png Graphic file (type png)
 
 <use imgs/7x7/20076_h.png>
 Package pdftex.def Info: imgs/7x7/20076_h.png used on input line 1007.
 (pdftex.def)             Requested size: 123.10225pt x 92.32663pt.
 
-<imgs/7x7/20946_h.png, id=1346, 578.16pt x 433.62pt>
+<imgs/7x7/20946_h.png, id=1345, 578.16pt x 433.62pt>
 File: imgs/7x7/20946_h.png Graphic file (type png)
 
 <use imgs/7x7/20946_h.png>
@@ -3334,27 +3329,27 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 [68 <./imgs/7x7/20076_v.png> <./imgs/7x7/20946_v.png> <./imgs/7x7/20076_c.png> 
 <./imgs/7x7/20946_c.png> <./imgs/7x7/20076_h.png> <./imgs/7x7/20946_h.png>]
-<imgs/poker/dbn_poker1.png, id=1393, 283.459pt x 224.84pt>
+<imgs/poker/dbn_poker1.png, id=1392, 283.459pt x 224.84pt>
 File: imgs/poker/dbn_poker1.png Graphic file (type png)
 
 <use imgs/poker/dbn_poker1.png>
 Package pdftex.def Info: imgs/poker/dbn_poker1.png used on input line 1037.
 (pdftex.def)             Requested size: 213.71576pt x 169.52158pt.
 
-<imgs/poker/acc.png, id=1394, 578.16pt x 433.62pt>
+<imgs/poker/acc.png, id=1393, 578.16pt x 433.62pt>
 File: imgs/poker/acc.png Graphic file (type png)
  <use imgs/poker/acc.png>
 Package pdftex.def Info: imgs/poker/acc.png used on input line 1047.
 (pdftex.def)             Requested size: 173.1074pt x 129.82895pt.
 
-<imgs/poker/recon_err.png, id=1395, 578.16pt x 433.62pt>
+<imgs/poker/recon_err.png, id=1394, 578.16pt x 433.62pt>
 File: imgs/poker/recon_err.png Graphic file (type png)
 
 <use imgs/poker/recon_err.png>
 Package pdftex.def Info: imgs/poker/recon_err.png used on input line 1053.
 (pdftex.def)             Requested size: 173.1074pt x 129.82895pt.
 
-<imgs/poker/w2.png, id=1396, 469.755pt x 286.9119pt>
+<imgs/poker/w2.png, id=1395, 469.755pt x 286.9119pt>
 File: imgs/poker/w2.png Graphic file (type png)
  <use imgs/poker/w2.png>
 Package pdftex.def Info: imgs/poker/w2.png used on input line 1064.
@@ -3363,56 +3358,56 @@ Package pdftex.def Info: imgs/poker/w2.png used on input line 1064.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imgs/poker/recon_img5.png, id=1397, 722.7pt x 542.025pt>
+<imgs/poker/recon_img5.png, id=1396, 722.7pt x 542.025pt>
 File: imgs/poker/recon_img5.png Graphic file (type png)
 
 <use imgs/poker/recon_img5.png>
 Package pdftex.def Info: imgs/poker/recon_img5.png used on input line 1074.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/recon_img3.png, id=1398, 722.7pt x 542.025pt>
+<imgs/poker/recon_img3.png, id=1397, 722.7pt x 542.025pt>
 File: imgs/poker/recon_img3.png Graphic file (type png)
 
 <use imgs/poker/recon_img3.png>
 Package pdftex.def Info: imgs/poker/recon_img3.png used on input line 1079.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/recon_img1.png, id=1399, 722.7pt x 542.025pt>
+<imgs/poker/recon_img1.png, id=1398, 722.7pt x 542.025pt>
 File: imgs/poker/recon_img1.png Graphic file (type png)
 
 <use imgs/poker/recon_img1.png>
 Package pdftex.def Info: imgs/poker/recon_img1.png used on input line 1084.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/recon_img7.png, id=1400, 722.7pt x 542.025pt>
+<imgs/poker/recon_img7.png, id=1399, 722.7pt x 542.025pt>
 File: imgs/poker/recon_img7.png Graphic file (type png)
 
 <use imgs/poker/recon_img7.png>
 Package pdftex.def Info: imgs/poker/recon_img7.png used on input line 1089.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/recon_img6.png, id=1401, 722.7pt x 542.025pt>
+<imgs/poker/recon_img6.png, id=1400, 722.7pt x 542.025pt>
 File: imgs/poker/recon_img6.png Graphic file (type png)
 
 <use imgs/poker/recon_img6.png>
 Package pdftex.def Info: imgs/poker/recon_img6.png used on input line 1096.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/recon_img4.png, id=1402, 722.7pt x 542.025pt>
+<imgs/poker/recon_img4.png, id=1401, 722.7pt x 542.025pt>
 File: imgs/poker/recon_img4.png Graphic file (type png)
 
 <use imgs/poker/recon_img4.png>
 Package pdftex.def Info: imgs/poker/recon_img4.png used on input line 1101.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/recon_img2.png, id=1403, 722.7pt x 542.025pt>
+<imgs/poker/recon_img2.png, id=1402, 722.7pt x 542.025pt>
 File: imgs/poker/recon_img2.png Graphic file (type png)
 
 <use imgs/poker/recon_img2.png>
 Package pdftex.def Info: imgs/poker/recon_img2.png used on input line 1106.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/recon_img8.png, id=1404, 722.7pt x 542.025pt>
+<imgs/poker/recon_img8.png, id=1403, 722.7pt x 542.025pt>
 File: imgs/poker/recon_img8.png Graphic file (type png)
 
 <use imgs/poker/recon_img8.png>
@@ -3422,56 +3417,56 @@ Package pdftex.def Info: imgs/poker/recon_img8.png used on input line 1111.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imgs/poker/compl11.png, id=1405, 722.7pt x 542.025pt>
+<imgs/poker/compl11.png, id=1404, 722.7pt x 542.025pt>
 File: imgs/poker/compl11.png Graphic file (type png)
 
 <use imgs/poker/compl11.png>
 Package pdftex.def Info: imgs/poker/compl11.png used on input line 1124.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl21.png, id=1406, 722.7pt x 542.025pt>
+<imgs/poker/compl21.png, id=1405, 722.7pt x 542.025pt>
 File: imgs/poker/compl21.png Graphic file (type png)
 
 <use imgs/poker/compl21.png>
 Package pdftex.def Info: imgs/poker/compl21.png used on input line 1129.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl31.png, id=1407, 722.7pt x 542.025pt>
+<imgs/poker/compl31.png, id=1406, 722.7pt x 542.025pt>
 File: imgs/poker/compl31.png Graphic file (type png)
 
 <use imgs/poker/compl31.png>
 Package pdftex.def Info: imgs/poker/compl31.png used on input line 1134.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl41.png, id=1408, 722.7pt x 542.025pt>
+<imgs/poker/compl41.png, id=1407, 722.7pt x 542.025pt>
 File: imgs/poker/compl41.png Graphic file (type png)
 
 <use imgs/poker/compl41.png>
 Package pdftex.def Info: imgs/poker/compl41.png used on input line 1139.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl12.png, id=1409, 722.7pt x 542.025pt>
+<imgs/poker/compl12.png, id=1408, 722.7pt x 542.025pt>
 File: imgs/poker/compl12.png Graphic file (type png)
 
 <use imgs/poker/compl12.png>
 Package pdftex.def Info: imgs/poker/compl12.png used on input line 1146.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl22.png, id=1410, 722.7pt x 542.025pt>
+<imgs/poker/compl22.png, id=1409, 722.7pt x 542.025pt>
 File: imgs/poker/compl22.png Graphic file (type png)
 
 <use imgs/poker/compl22.png>
 Package pdftex.def Info: imgs/poker/compl22.png used on input line 1151.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl32.png, id=1411, 722.7pt x 542.025pt>
+<imgs/poker/compl32.png, id=1410, 722.7pt x 542.025pt>
 File: imgs/poker/compl32.png Graphic file (type png)
 
 <use imgs/poker/compl32.png>
 Package pdftex.def Info: imgs/poker/compl32.png used on input line 1156.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl42.png, id=1412, 722.7pt x 542.025pt>
+<imgs/poker/compl42.png, id=1411, 722.7pt x 542.025pt>
 File: imgs/poker/compl42.png Graphic file (type png)
 
 <use imgs/poker/compl42.png>
@@ -3481,56 +3476,56 @@ Package pdftex.def Info: imgs/poker/compl42.png used on input line 1161.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imgs/poker/compl13.png, id=1413, 722.7pt x 542.025pt>
+<imgs/poker/compl13.png, id=1412, 722.7pt x 542.025pt>
 File: imgs/poker/compl13.png Graphic file (type png)
 
 <use imgs/poker/compl13.png>
 Package pdftex.def Info: imgs/poker/compl13.png used on input line 1173.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl23.png, id=1414, 722.7pt x 542.025pt>
+<imgs/poker/compl23.png, id=1413, 722.7pt x 542.025pt>
 File: imgs/poker/compl23.png Graphic file (type png)
 
 <use imgs/poker/compl23.png>
 Package pdftex.def Info: imgs/poker/compl23.png used on input line 1178.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl33.png, id=1415, 722.7pt x 542.025pt>
+<imgs/poker/compl33.png, id=1414, 722.7pt x 542.025pt>
 File: imgs/poker/compl33.png Graphic file (type png)
 
 <use imgs/poker/compl33.png>
 Package pdftex.def Info: imgs/poker/compl33.png used on input line 1183.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl43.png, id=1416, 722.7pt x 542.025pt>
+<imgs/poker/compl43.png, id=1415, 722.7pt x 542.025pt>
 File: imgs/poker/compl43.png Graphic file (type png)
 
 <use imgs/poker/compl43.png>
 Package pdftex.def Info: imgs/poker/compl43.png used on input line 1188.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl14.png, id=1417, 722.7pt x 542.025pt>
+<imgs/poker/compl14.png, id=1416, 722.7pt x 542.025pt>
 File: imgs/poker/compl14.png Graphic file (type png)
 
 <use imgs/poker/compl14.png>
 Package pdftex.def Info: imgs/poker/compl14.png used on input line 1195.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl24.png, id=1418, 722.7pt x 542.025pt>
+<imgs/poker/compl24.png, id=1417, 722.7pt x 542.025pt>
 File: imgs/poker/compl24.png Graphic file (type png)
 
 <use imgs/poker/compl24.png>
 Package pdftex.def Info: imgs/poker/compl24.png used on input line 1200.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl34.png, id=1419, 722.7pt x 542.025pt>
+<imgs/poker/compl34.png, id=1418, 722.7pt x 542.025pt>
 File: imgs/poker/compl34.png Graphic file (type png)
 
 <use imgs/poker/compl34.png>
 Package pdftex.def Info: imgs/poker/compl34.png used on input line 1205.
 (pdftex.def)             Requested size: 64.11537pt x 48.0854pt.
 
-<imgs/poker/compl44.png, id=1420, 722.7pt x 542.025pt>
+<imgs/poker/compl44.png, id=1419, 722.7pt x 542.025pt>
 File: imgs/poker/compl44.png Graphic file (type png)
 
 <use imgs/poker/compl44.png>
@@ -3564,31 +3559,31 @@ ng> <./imgs/poker/compl31.png> <./imgs/poker/compl41.png> <./imgs/poker/compl12
 42.png> <./imgs/poker/compl13.png> <./imgs/poker/compl23.png> <./imgs/poker/com
 pl33.png> <./imgs/poker/compl43.png> <./imgs/poker/compl14.png> <./imgs/poker/c
 ompl24.png> <./imgs/poker/compl34.png> <./imgs/poker/compl44.png>]
-<imgs/bcp/dbn_bcp1.png, id=1443, 283.459pt x 224.84pt>
+<imgs/bcp/dbn_bcp1.png, id=1442, 283.459pt x 224.84pt>
 File: imgs/bcp/dbn_bcp1.png Graphic file (type png)
 
 <use imgs/bcp/dbn_bcp1.png>
 Package pdftex.def Info: imgs/bcp/dbn_bcp1.png used on input line 1231.
 (pdftex.def)             Requested size: 129.94173pt x 103.07085pt.
- <imgs/bcp/w.png, id=1444, 578.16pt x 433.62pt>
+ <imgs/bcp/w.png, id=1443, 578.16pt x 433.62pt>
 File: imgs/bcp/w.png Graphic file (type png)
 
 <use imgs/bcp/w.png>
 Package pdftex.def Info: imgs/bcp/w.png used on input line 1237.
 (pdftex.def)             Requested size: 129.94173pt x 97.45442pt.
- <imgs/bcp/acc.png, id=1445, 722.7pt x 542.025pt>
+ <imgs/bcp/acc.png, id=1444, 722.7pt x 542.025pt>
 File: imgs/bcp/acc.png Graphic file (type png)
 
 <use imgs/bcp/acc.png>
 Package pdftex.def Info: imgs/bcp/acc.png used on input line 1243.
 (pdftex.def)             Requested size: 129.94173pt x 97.45276pt.
- <imgs/vs/w_rbm.png, id=1447, 578.16pt x 433.62pt>
+ <imgs/vs/w_rbm.png, id=1446, 578.16pt x 433.62pt>
 File: imgs/vs/w_rbm.png Graphic file (type png)
 
 <use imgs/vs/w_rbm.png>
 Package pdftex.def Info: imgs/vs/w_rbm.png used on input line 1269.
 (pdftex.def)             Requested size: 173.1074pt x 129.82895pt.
- <imgs/vs/w_spike.png, id=1448, 578.16pt x 433.62pt>
+ <imgs/vs/w_spike.png, id=1447, 578.16pt x 433.62pt>
 File: imgs/vs/w_spike.png Graphic file (type png)
 
 <use imgs/vs/w_spike.png>
@@ -3654,34 +3649,34 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 
-[77] <imgs/app/inhib_no.png, id=1510, 578.16pt x 433.62pt>
+[77] <imgs/app/inhib_no.png, id=1509, 578.16pt x 433.62pt>
 File: imgs/app/inhib_no.png Graphic file (type png)
 
 <use imgs/app/inhib_no.png>
 Package pdftex.def Info: imgs/app/inhib_no.png used on input line 64.
 (pdftex.def)             Requested size: 211.57834pt x 158.68352pt.
 
-<imgs/app/inhib_small.png, id=1511, 578.16pt x 433.62pt>
+<imgs/app/inhib_small.png, id=1510, 578.16pt x 433.62pt>
 File: imgs/app/inhib_small.png Graphic file (type png)
 
 <use imgs/app/inhib_small.png>
 Package pdftex.def Info: imgs/app/inhib_small.png used on input line 71.
 (pdftex.def)             Requested size: 211.57834pt x 158.68352pt.
 
-<imgs/app/inhib_big.png, id=1512, 578.16pt x 433.62pt>
+<imgs/app/inhib_big.png, id=1511, 578.16pt x 433.62pt>
 File: imgs/app/inhib_big.png Graphic file (type png)
 
 <use imgs/app/inhib_big.png>
 Package pdftex.def Info: imgs/app/inhib_big.png used on input line 78.
 (pdftex.def)             Requested size: 211.57834pt x 158.68352pt.
 
-<imgs/spike_dbn.png, id=1513, 231.264pt x 331.639pt>
+<imgs/spike_dbn.png, id=1512, 231.264pt x 331.639pt>
 File: imgs/spike_dbn.png Graphic file (type png)
  <use imgs/spike_dbn.png>
 Package pdftex.def Info: imgs/spike_dbn.png used on input line 92.
 (pdftex.def)             Requested size: 83.77623pt x 120.13889pt.
 
-<imgs/app/DBN_sp.png, id=1514, 578.16pt x 433.62pt>
+<imgs/app/DBN_sp.png, id=1513, 578.16pt x 433.62pt>
 File: imgs/app/DBN_sp.png Graphic file (type png)
  <use imgs/app/DBN_sp.png>
 Package pdftex.def Info: imgs/app/DBN_sp.png used on input line 98.
@@ -3691,21 +3686,21 @@ File: imgs/spike_dbm.png Graphic file (type png)
 <use imgs/spike_dbm.png>
 Package pdftex.def Info: imgs/spike_dbm.png used on input line 105.
 (pdftex.def)             Requested size: 83.77623pt x 120.13889pt.
- <imgs/app/DBM_sp.png, id=1515, 578.16pt x 433.62pt>
+ <imgs/app/DBM_sp.png, id=1514, 578.16pt x 433.62pt>
 File: imgs/app/DBM_sp.png Graphic file (type png)
 
 <use imgs/app/DBM_sp.png>
 Package pdftex.def Info: imgs/app/DBM_sp.png used on input line 111.
 (pdftex.def)             Requested size: 188.49812pt x 141.36813pt.
 
-<imgs/app/dbn_np_arch.png, id=1516, 230.461pt x 236.082pt>
+<imgs/app/dbn_np_arch.png, id=1515, 230.461pt x 236.082pt>
 File: imgs/app/dbn_np_arch.png Graphic file (type png)
 
 <use imgs/app/dbn_np_arch.png>
 Package pdftex.def Info: imgs/app/dbn_np_arch.png used on input line 118.
 (pdftex.def)             Requested size: 104.7219pt x 107.27698pt.
 
-<imgs/app/DBN_np_sp.png, id=1517, 578.16pt x 433.62pt>
+<imgs/app/DBN_np_sp.png, id=1516, 578.16pt x 433.62pt>
 File: imgs/app/DBN_np_sp.png Graphic file (type png)
 
 <use imgs/app/DBN_np_sp.png>
@@ -3728,14 +3723,14 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 
 [79 <./imgs/spike_dbn.png> <./imgs/app/DBN_sp.png> <./imgs/app/DBM_sp.png> <./i
 mgs/app/dbn_np_arch.png> <./imgs/app/DBN_np_sp.png>]
-<imgs/app/nest/ws.png, id=1537, 578.16pt x 433.62pt>
+<imgs/app/nest/ws.png, id=1536, 578.16pt x 433.62pt>
 File: imgs/app/nest/ws.png Graphic file (type png)
 
 <use imgs/app/nest/ws.png>
 Package pdftex.def Info: imgs/app/nest/ws.png used on input line 146.
 (pdftex.def)             Requested size: 188.49812pt x 141.36813pt.
 
-<imgs/app/nest/w_hist_normal.png, id=1538, 722.7pt x 542.025pt>
+<imgs/app/nest/w_hist_normal.png, id=1537, 722.7pt x 542.025pt>
 File: imgs/app/nest/w_hist_normal.png Graphic file (type png)
 
 <use imgs/app/nest/w_hist_normal.png>
@@ -3743,7 +3738,7 @@ Package pdftex.def Info: imgs/app/nest/w_hist_normal.png used on input line 152
 .
 (pdftex.def)             Requested size: 188.49812pt x 141.36978pt.
 
-<imgs/app/nest/w_hist_conv1.png, id=1540, 578.16pt x 433.62pt>
+<imgs/app/nest/w_hist_conv1.png, id=1539, 578.16pt x 433.62pt>
 File: imgs/app/nest/w_hist_conv1.png Graphic file (type png)
 
 <use imgs/app/nest/w_hist_conv1.png>
@@ -3751,7 +3746,7 @@ Package pdftex.def Info: imgs/app/nest/w_hist_conv1.png used on input line 168.
 
 (pdftex.def)             Requested size: 92.32668pt x 69.24167pt.
 
-<imgs/app/nest/w_hist_conv2.png, id=1541, 722.7pt x 542.025pt>
+<imgs/app/nest/w_hist_conv2.png, id=1540, 722.7pt x 542.025pt>
 File: imgs/app/nest/w_hist_conv2.png Graphic file (type png)
 
 <use imgs/app/nest/w_hist_conv2.png>
@@ -3759,7 +3754,7 @@ Package pdftex.def Info: imgs/app/nest/w_hist_conv2.png used on input line 174.
 
 (pdftex.def)             Requested size: 92.32668pt x 69.24167pt.
 
-<imgs/app/nest/w_hist_conv3.png, id=1542, 722.7pt x 542.025pt>
+<imgs/app/nest/w_hist_conv3.png, id=1541, 722.7pt x 542.025pt>
 File: imgs/app/nest/w_hist_conv3.png Graphic file (type png)
 
 <use imgs/app/nest/w_hist_conv3.png>
@@ -3767,7 +3762,7 @@ Package pdftex.def Info: imgs/app/nest/w_hist_conv3.png used on input line 180.
 
 (pdftex.def)             Requested size: 92.32668pt x 69.24167pt.
 
-<imgs/app/nest/w_hist_conv4.png, id=1543, 722.7pt x 542.025pt>
+<imgs/app/nest/w_hist_conv4.png, id=1542, 722.7pt x 542.025pt>
 File: imgs/app/nest/w_hist_conv4.png Graphic file (type png)
 
 <use imgs/app/nest/w_hist_conv4.png>
@@ -3775,7 +3770,7 @@ Package pdftex.def Info: imgs/app/nest/w_hist_conv4.png used on input line 186.
 
 (pdftex.def)             Requested size: 92.32668pt x 69.24167pt.
 
-<imgs/app/nest/spikes_conv.png, id=1545, 722.7pt x 542.025pt>
+<imgs/app/nest/spikes_conv.png, id=1544, 722.7pt x 542.025pt>
 File: imgs/app/nest/spikes_conv.png Graphic file (type png)
 
 <use imgs/app/nest/spikes_conv.png>
@@ -3785,7 +3780,7 @@ Package pdftex.def Info: imgs/app/nest/spikes_conv.png used on input line 198.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<imgs/app/nest/w_not.png, id=1547, 578.16pt x 433.62pt>
+<imgs/app/nest/w_not.png, id=1546, 578.16pt x 433.62pt>
 File: imgs/app/nest/w_not.png Graphic file (type png)
 
 <use imgs/app/nest/w_not.png>
@@ -3798,7 +3793,7 @@ Overfull \vbox (2.9671pt too high) has occurred while \output is active []
 [80 <./imgs/app/nest/ws.png> <./imgs/app/nest/w_hist_normal.png> <./imgs/app/ne
 st/w_hist_conv1.png> <./imgs/app/nest/w_hist_conv2.png> <./imgs/app/nest/w_hist
 _conv3.png> <./imgs/app/nest/w_hist_conv4.png>]
-<imgs/app/nest/w_hist_conv_lr.png, id=1558, 722.7pt x 542.025pt>
+<imgs/app/nest/w_hist_conv_lr.png, id=1557, 722.7pt x 542.025pt>
 File: imgs/app/nest/w_hist_conv_lr.png Graphic file (type png)
 
 <use imgs/app/nest/w_hist_conv_lr.png>
@@ -3944,10 +3939,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 119.
  ) 
 Here is how much of TeX's memory you used:
- 25400 strings out of 493105
- 451989 string characters out of 6137071
- 561550 words of memory out of 5000000
- 27621 multiletter control sequences out of 15000+600000
+ 25402 strings out of 493105
+ 452025 string characters out of 6137071
+ 562532 words of memory out of 5000000
+ 27623 multiletter control sequences out of 15000+600000
  118466 words of font info for 171 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,15n,106p,801b,902s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3966,9 +3961,9 @@ bol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on booka4.pdf (109 pages, 9434832 bytes).
+Output written on booka4.pdf (109 pages, 9405678 bytes).
 PDF statistics:
- 1895 PDF objects out of 2073 (max. 8388607)
+ 1894 PDF objects out of 2073 (max. 8388607)
  1482 compressed objects within 15 object streams
  459 named destinations out of 1000 (max. 500000)
  1235 words of extra memory for PDF output out of 10000 (max. 10000000)

@@ -28,7 +28,7 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces A Gibbs sampling step in a convolutional RBM.}}{36}{figure.caption.76}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces The RBM layer architecture with probabilistic max pooling \cite {lee2009convolutional}.\relax }}{36}{figure.caption.77}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces A spiking neural network as probabilistic model.}}{37}{figure.caption.78}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces The artificial counter state of a neuron in a discrete time.}}{38}{figure.caption.79}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The artificial counter state of a neuron in discrete time.}}{38}{figure.caption.79}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Comparison of the state probabilities of neural sampling with Gibbs sampling.}}{38}{figure.caption.80}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Input output transfer function of a neuron in a high conductance state.}}{39}{figure.caption.81}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces The proposed architectures to conversion between CNNs and SNNs \cite {Cao2014}. \relax }}{40}{figure.caption.82}

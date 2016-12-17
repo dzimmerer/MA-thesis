@@ -104,7 +104,7 @@ Excitatory reversal potential  & -0.0 mV 	               \\\hline
   		\centering
   		\includegraphics[width=.4\linewidth]{imgs/spike_dbm.png}
   		\label{fig:sub1}
-  		\caption{DBN with distinct RBM layers, with bidirectional weights.}
+  		\caption{DBN with distinct RBM layers with bidirectional weights.}
 	\end{subfigure}%
 	\begin{subfigure}[t]{.49\textwidth}
   		\centering
@@ -210,14 +210,14 @@ Thus, no learning happens and the weights become not very discriminative (compar
   	\label{fig:ecdnestwnot}
 \end{figure}
 
-Increasing the learning rate to increase the weights leads to a few strong positive weights, while the majority of the weights still become negative leading to no good results either (Fig. \ref{fig:ecdnestwnot}).
+Increasing the learning rate to increase the weights leads to a few strong positive weights, while the majority of the weights still become negative leading to no good results either (Fig. \ref{fig:ecdnestwnoth}).
 
 
 \begin{figure}[h!]
  	\centering
   	\includegraphics[width=.4\linewidth]{imgs/app/nest/w_hist_conv_lr.png}
   	\caption[Weight histogram for convolutional eCD with synchronous weight updates and an increased learning rate during the positive phase.]{Weight histogram for convolutional eCD with synchronous weight updates and an increased learning rate during the positive phase. This leads to a division of the weights into a few very positive weights and many negative weights. }
-  	\label{fig:ecdnestwnot}
+  	\label{fig:ecdnestwnoth}
 \end{figure}
 
 Further research on this topic could indicate whether a fine-tuned learning rate or a dynamic learning rate decay or adaptation could be a sound remedy to this problem. 
