@@ -80,7 +80,7 @@ The resulting dataset is visualized in Figure \ref{fig:pokerdvs} by integrating 
 
 For this thesis we recorded a dataset of three different object categories with a Dynamic Vision Sensor (DVS), the Ball-Can-Pen-DVS (BCP-DVS) dataset.
 Motivated by different types of grasps, balls, cans and pens were chosen.   
-To generate the dataset, images of these objects were flashed for 200$ms$ at different positions on an LED-display and recorded with an DVS.
+To generate the dataset, images of these objects were flashed for 200$ms$ at different positions on an LED-display and recorded with a DVS.
 The recordings were further divided into 100$ms$ samples, which results in $90$ samples for each class. 
 Similar to the Poker-DVS dataset, the $128 \times 128$ pixel samples were scaled to a size of $16 \times 16$ pixels. 
 
@@ -89,9 +89,7 @@ The original recorded events and the scaled events are visualized in Figure \ref
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.80\textwidth]{imgs/bcp/ds1.png} 
-	\caption[Pen samples from the Ball-Can-Pen-DVS dataset.]{ Recorded and down sampled samples from the Ball-Can-	Pen-DVS dataset visualized by  integrating all events of a sample and then normalizing them by the maximal number of events per pixel. Each first row shows the original sized DVS samples with the corresponding scaled samples in the second row.
-	In the top rows are samples of different Balls, in the middle rows are samples of Cans and in the bottom rows are samples of Pens presented.	
-	}
+	\caption[Pen samples from the Ball-Can-Pen-DVS dataset.]{ Recorded and down sampled samples from the Ball-Can-Pen-DVS dataset visualized by integrating all events of a sample and then normalizing them by the maximal number of events per pixel. Each first row shows the original sized DVS samples with the corresponding scaled samples in the second row. In the top rows are samples of different Balls, in the middle rows are samples of Cans and in the bottom rows are samples of Pens presented.}
 	\label{fig:bcpdvsp}
 \end{figure} 
  
@@ -220,10 +218,10 @@ The original recorded events and the scaled events are visualized in Figure \ref
 
 \section{Experiments} \label{c:exps}
 
-We focus in our experiments primarily on the stripe dataset, due to time and computational constraints, which will be explained first.
-Then we will look at and compare the performance of the converted models.
-Afterwards, to get better insight into the eCD algorithm, we will evaluating our models on the stripe dataset and then look at the performance on other datasets for comparison and generalization.
-In the end we will compare those two approaches.
+We focus our experiments primarily on the stripe dataset, due to time and computational constraints, which are explained first.
+We then look at and compare the performance of the converted models.
+Afterwards, to get better insight into the eCD algorithm, we evaluate our models on the stripe dataset and then look at the performance on other datasets for comparison and generalization.
+In the end we compare those two approaches.
 
 \subsection{Computational Constraints} \label{c:compconstr}
 
@@ -277,7 +275,7 @@ An intentionally simple DBN structure was chosen due to the computational effort
 \subsubsection{Conversion comparison} \label{c:conversioncomp}
 
 For the comparison of the conversion methods, we convert the RBM to the different spiking architectures, as described in Chapter \ref{c:conversionappr}. 
-The input rate of the images are converted to Poisson spike-trains with a maximal frequency of $\lambda = 100 \text{Hz}$ .
+The input values of the images are converted to Poisson spike-trains with a maximal frequency of $\lambda = 100 \text{Hz}$ .
 Each input sample is simulated for $500 \text{ms}$, but we inspect how the simulated timespan affects the output later on.
 Since it can take approximately one minute real time to simulation $500 \text{ms}$ of such a network, we evaluate all approaches on the same randomly drawn subset of the test set consisting of $100$ samples.
 
@@ -619,7 +617,7 @@ The performance on the partial dataset can be seen in Table \ref{tab:convperf}.
 It is apparent that all approaches show a similar performance. Interestingly the spiking DBN sometimes shows better performance than the RBM.
 Most misclassifications can from a human perspective be categorized as "reasonable" mistakes (as seen in Fig. \ref{fig:mismnisthum}) and hint, that further fine-tuning of the DBN could resolve some misclassifications.
 
-Another factor is the simulated runtime for each sample. 
+Another important factor is the simulated runtime for each sample. 
 It is quite apparent from Table \ref{tab:pervovert} that a longer classification time benefits the performance.
 
 
@@ -639,7 +637,7 @@ Simulated time		 				& Classification Accuracy    & Runtime & Classification Acc
 \end{tabularx}
 \end{table}
 
-In contrast to this approach in which the network is trained in discrete timesteps, next we look at the performance on networks trained in continuous time.  
+In contrast to this approach in which the network is trained in discrete timesteps, next we look at the performance of networks trained in continuous time.  
 
 \subsection{eCD} \label{c:ecdexp}
 
@@ -648,7 +646,7 @@ It is apparent that in the positive phase a sample from the data distribution is
 As the training progresses and the model distribution approximates the data distribution more closely the weight updates become smaller (see Fig. \ref{fig:ecdwdiff}). 
 The eCD-parameters chosen for most of our experiments are given in Table \ref{tab:ecdrunparam}.
 
-This indicates some learning and we further inspect the capability of this algorithm to learn the data distribution.
+All this indicates some learning and we further inspect the capability of this algorithm to learn the data distribution.
 
 \begin{table}[]
 \caption{eCD-parameters for most experiments.}
@@ -868,7 +866,7 @@ The resulting weights are visualized in Fig. \ref{fig:wwoconwconv}.
 \end{figure}
 
 
-This suggests that the DBN with convolution is able to capture the structure of the data better with the same number of free parameters. 
+This indicates that the DBN with convolution is able to capture the structure of the data better with the same number of free parameters. 
 This is also apparent in the final classification results.
 While the DBN without convolutions reaches its top performance of $60 \%$ after 500 samples, the convolutional DBN reaches its top performance of $100 \%$ already after being presented with 300 samples.
 One disadvantage of convolutions is the increased runtime, which we inspect in the next section.
@@ -893,7 +891,7 @@ After inspecting some mechanisms and properties of the eCD algorithm, we next lo
 The DBN consists of two layers with the first layer consisting of a convolutional RBM with $20$ filters of size $7 \times 7$ and the second layer being fully connected with $20$ hidden units (see Fig. \ref{fig:dbnstrarch} for the abstract architecture).
 The first layer is trained with $1000$ samples without labels.
 The weights of the first layer are then keep fixed and the second layer is trained over $500$ samples with their corresponding labels.
-The development of the of the weights in the first layer can be seen in Figure \ref{fig:stripesdbnw}.
+The development of the weights in the first layer can be seen in Figure \ref{fig:stripesdbnw}.
 Another indicator of the training progress is given by the spikes as seen in Figure \ref{fig:stripesspl1} \& \ref{fig:stripesspl2}.
 The resulting spiking DBN show shows a performance of $100 \%$ classification accuracy on the test set. 
 
@@ -1273,7 +1271,7 @@ The resulting convolutional filters are visualized in Fig. \ref{fig:convvsnoconv
 	\begin{subfigure}[t]{.45\textwidth}
   		\centering
   		\includegraphics[width=.9\linewidth]{imgs/vs/w_spike.png}
-  		\caption{Weights of the spinking DBN.}
+  		\caption{Weights of the spiking DBN.}
   		\label{fig:sub2}
 	\end{subfigure}
 	\caption[Convolutional filters of the first layers of the artificial and spiking convolutional DBNs.]{Convolutional filters of the first layers of the artificial and spiking convolutional DBNs after 100 training samples. The weights of the spiking DBN appear to be more discriminative.}

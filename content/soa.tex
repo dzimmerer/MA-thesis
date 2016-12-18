@@ -6,7 +6,7 @@ We further show recent approaches for sampling and implementing Boltzmann machin
 \section{Convolutional RBM} \label{c:convrbm}
 
 The convolutional RBM (cRBM) was invented more or less at the same time by Desjardins et al., Lee et al. and Norouzi et al. in 2008/2009 \cite{desjardins2008empirical, lee2009convolutional, norouzi2009stacks}. 
-In similarity to CNNs it can be seen as the adaptation of an energy-based models to compositional data.
+In similarity to CNNs it can be seen as the adaptation of an energy-based model to compositional data.
 Describing images in terms of spatially local features needs fewer parameters, generalizes better and offers re-usability as identical local features can be extracted from different locations of an image.
 Modelled after CNNs and unlike a normal RBM, the visible and hidden layer in the cRBM are connected in a convolutional manner (as described in Chapter \ref{c:cnns}) instead of being fully connected.
 
@@ -86,7 +86,7 @@ P(h^k_{ij} | \textbf{v}) = \frac{\exp(I(h^k_{ij}))}{1 + \sum_{(i',j') \in B} \ex
 \]
 where $I(h^k_{ij})$ is the activation of the hidden unit before applying the sigmoid function ( $I(h^k_{ij})=(W * \textbf{v}) + \textbf{b}_{h}$ ) and $B$ is a partition block containing the unit $h^k_{ij}$. 
 Such an architecture is visualized in Figure \ref{fig:probmaxpool}.
-This drives the activity in a block to be sparse and likely only one or none unit a block will be active.
+This drives the activity in a block to be sparse and likely only one or none unit in a block will be active.
 
 \begin{figure}[h!]
 	\centering
@@ -102,10 +102,10 @@ Indicated by stochastic neural transitions found in the brain in experimental st
 
 
 A first framework, which proposed how spiking neurons can perform MCMC sampling, was introduced by Buesing \cite{Buesing2011}.
-A simplification to discretize time into time slices can be introduced without interfering with the basic concept (see Buesing for the generalization to continuous time \cite{Buesing2011}).
+A simplification to discretize time into time slices can be introduced without interfering with the basic concept (see Buesing for a generalization to continuous time \cite{Buesing2011}).
 
-The neuron network can be considered as a network of RVs, where the state of a neuron is defined by its firing. 
-Since the probability of two neurons spiking at the same time is basically zero, after a neuron has fired it is set to the firing state for a time period $\tau$
+A neural network can be considered as a network of RVs, where the state of a neuron is defined by its firing. 
+Since the probability of two neurons spiking at the same time is basically zero, after a neuron has fired it is set to a firing state for a time period $\tau$
 \[
 z_k(t) = 
 \begin{cases}
@@ -127,11 +127,11 @@ Thus, for a given time step $t$ the state of the network $\textbf{z}(t) = (z_1(t
 	\label{fig:snnsamp1}
 \end{figure}
 
-To get a process with Markovian properties $p(z_t| (z_0, ..., z_{t-1})) = p(z_t| z_{t-1}) $, an auxiliary counter variable $\xi \in \mathbb{N}$ is introduced which discretizes the time a neuron has left to stay in the "firing" state into time slices
+To get a process with Markovian properties $p(\textbf{z}(t)| \textbf{z}(0), ..., \textbf{z}(t-1)) = p(\textbf{z}(t)| \textbf{z}(t-1)) $, an auxiliary counter variable $\xi \in \mathbb{N}$ is introduced which discretizes the time a neuron has left to stay in the "firing" state into time slices
 \[
 z_k(t) = 1 \iff \xi_k(t) \ge 1
 \]
-Thus $\xi$ can be seen as a counter, counting down from $\tau$ to $0$ in each time step after a neuron has fired (see Fig. \ref{fig:snnsamp2} for schematic overview and a sample implementation)
+Thus, $\xi$ can be seen as a counter, counting down from $\tau$ to $0$ in each time step after a neuron has fired (see Fig. \ref{fig:snnsamp2} for schematic overview and a sample implementation)
 \[
 p(\xi_t | \xi_{t-1}) = 
 \begin{cases}
@@ -167,7 +167,7 @@ Buesing proposes an abstract stochastic neuron model which activates with a prob
 \[
 P(\textit{"i fires at time t"}) \approx \sigma(\sum_j w_{ij} z_j(t) + b_i).
 \]
-With this model Buesing proved that spikes and the corresponding state updates in a such networks can be seen as MCMC sampling. Experiments show, as $t \rightarrow \infty$ , the network is in fact able to approximate a Boltzmann distribution.
+With this model Buesing proved that spikes and the corresponding state updates in such networks can be seen as MCMC sampling. Experiments show, as $t \rightarrow \infty$ , the network is in fact able to approximate a Boltzmann distribution.
 Replacing the rectangular PSP with a more biological plausible alpha shaped PSP deteriorates the performance a little, due to overshooting at the beginning and accumulation effects, but is still reasonable well (see Fig. \ref{fig:snnsamp3}).
 
 Petrovici improved the model by replacing the abstract stochastic neuron model by conductance bases LIF neurons, a more common and biologically inspired neuron model \cite{Petrovici2016}.
@@ -189,7 +189,7 @@ By scaling the weights the LIF neurons can be used to perform neural sampling si
   		\caption{}
   		\label{fig:sub2}
 	\end{subfigure}
-	\caption[Comparison of the state probabilities of neural sampling with Gibbs sampling.]{Comparison of the state probabilities of neural sampling with Gibbs sampling in a five state Boltzmann machine. In (a) a probabilistic neuron model with a rectangular PSP is used and no discrepancies can be detected given a long enough sampling period. In (b) a more biological plausible alpha shaped kernel is used, which leads to some differences \cite{Buesing2011}.}
+	\caption[Comparison of the state probabilities of neural sampling with Gibbs sampling.]{Comparison of the state probabilities of neural sampling with Gibbs sampling in a five state Boltzmann machine. In (a) a probabilistic neuron model with a rectangular PSP is used and no discrepancies can be detected given a long enough sampling period. In (b) a more biologically plausible alpha shaped kernel is used, which leads to minor differences \cite{Buesing2011}.}
 	\label{fig:snnsamp3}
 \end{figure}
 
@@ -220,7 +220,7 @@ Cao et al. and Diehl et al. propose certain constraints on the CNN architecture 
 \item The bias terms are eliminated.
 \item Instead of max pooling, average pooling is used, since it has a simple spiking counterpart (see \cite{Cao2014}).
 \end{itemize}
-After the CNN is trained with the back propagation algorithm, the weights are transferred to an SNN with an equivalent architecture using LIF neurons without a refractory period (see Fig. \ref{fig:csnnconv} for an adapted CNN the equivalent SNN architecture). 
+After the CNN is trained with the backpropagation algorithm, the weights are transferred to an SNN with an equivalent architecture using LIF neurons without a refractory period (see Fig. \ref{fig:csnnconv} for an adapted CNN and the equivalent SNN architecture). 
 In addition, before applying the final weights, Diehl et al. use a model- and data-based weight normalization procedure to further fine-tune the synaptic weights \cite{Diehl2015}. 
 
 \begin{figure}
@@ -244,13 +244,13 @@ In addition, before applying the final weights, Diehl et al. use a model- and da
 
 \section{Event-Driven CD} \label{c:ecd}
 
-Different approaches to train a rate-based or spiking RBM have been proposed, of which the first was probably by Teh et al.\cite{Teh2005}.
-They use multiple identical binary stochastic input units for the each element in a data sample to approximate a rate based input.
+Different approaches to train a rate-based or spiking RBM have been proposed, of which the first one was probably by Teh et al.\cite{Teh2005}.
+They use multiple identical binary stochastic input units for each element in a data sample to approximate a rate based input.
 
 The approaches described next make use of the synaptic sampling described in the previous Chapter \ref{c:snnsampling}.
 
 One approach is the evtCD by Neil et al., which works in continuous time with spiking networks and an STDP variant \cite{Diehl2015}.
-He simulates the positive and negative phase of the CD by unrolling the RBM with shared weights (as seen in Fig. \ref{fig:evtCD} where the RBM is unrolled to simulate CD-1 updates). 
+He simulates the positive and negative phase of the CD algorithm by unrolling the RBM with shared weights (as seen in Fig. \ref{fig:evtCD} where the RBM is unrolled to simulate CD-1 updates). 
 But this approach only allows a fixed number of CD steps and is, due to the weight synchronization, not very plausible.
 
 \begin{figure}
@@ -263,7 +263,7 @@ But this approach only allows a fixed number of CD steps and is, due to the weig
 A more sophisticated approach, called eCD, which also uses STDP was proposed by Neftci et al.\cite{Neftci2013}.
 They use bidirectional synapses between a visible and hidden layer of LIF neurons.
 They implement an adapted symmetric STDP variant, which, at a given time, only allows LTP or LDP to model the positive or negative phase of the CD algorithm respectively (see Figure \ref{fig:ecdcomp} for a comparison). 
-The symmetric learning rule for two neurons, given their spike train $v_i(t)$ and $h_j(t)$, can be expressed as:
+The symmetric learning rule for two neurons, given their spike trains $v_i(t)$ and $h_j(t)$, can be expressed as:
 \[
 \Delta w_{ij} = \mu g(t) STDP(v_i(t), h_j(t)),
 \]

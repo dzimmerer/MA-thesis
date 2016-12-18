@@ -63,7 +63,7 @@
 \contentsline {chapter}{\numberline {3}Related Work}{35}{chapter.3}
 \contentsline {section}{\numberline {3.1}Convolutional RBM}{35}{section.3.1}
 \contentsline {section}{\numberline {3.2}Sampling in SNNs}{36}{section.3.2}
-\contentsline {section}{\numberline {3.3}Artificial to Spiking Neural Network Conversion}{38}{section.3.3}
+\contentsline {section}{\numberline {3.3}Artificial to Spiking Neural Network Conversion}{39}{section.3.3}
 \contentsline {section}{\numberline {3.4}Event-Driven CD}{40}{section.3.4}
 \contentsline {chapter}{\numberline {4}Approach}{43}{chapter.4}
 \contentsline {section}{\numberline {4.1}Convolutional Architecture in Spiking Neural Networks}{43}{section.4.1}

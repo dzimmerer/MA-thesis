@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  13 DEC 2016 10:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.10)  17 DEC 2016 11:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -51,7 +51,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.3 I
-     n this section we present recent work related to convolutional RBMs whi...
+     n this section we present recent work related to convolutional RBMs, wh...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -114,6 +114,7 @@ Missing character: There is no R in font nullfont!
 Missing character: There is no B in font nullfont!
 Missing character: There is no M in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -429,8 +430,8 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.8 ...in 2008/2009 \cite{desjardins2008empirical}
-                                                  \cite{lee2009convolutional...
+l.8 ...l, lee2009convolutional, norouzi2009stacks}
+                                                  .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -441,14 +442,13 @@ and I'll forget about whatever was undefined.
 LaTeX Warning: Citation `desjardins2008empirical' on page  undefined on input l
 ine 8.
 
-Missing character: There is no ] in font nullfont!
-Missing character: There is no [ in font nullfont!
+Missing character: There is no , in font nullfont!
 \citation{lee2009convolutional}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.8 ...ns2008empirical}\cite{lee2009convolutional}
-                                                  \cite{norouzi2009stacks}.
+l.8 ...l, lee2009convolutional, norouzi2009stacks}
+                                                  .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -459,13 +459,12 @@ and I'll forget about whatever was undefined.
 LaTeX Warning: Citation `lee2009convolutional' on page  undefined on input line
  8.
 
-Missing character: There is no ] in font nullfont!
-Missing character: There is no [ in font nullfont!
+Missing character: There is no , in font nullfont!
 \citation{norouzi2009stacks}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.8 ...e2009convolutional}\cite{norouzi2009stacks}
+l.8 ...l, lee2009convolutional, norouzi2009stacks}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -916,8 +915,18 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 8--12
  []
 
 
-Overfull \hbox (16.29158pt too wide) in paragraph at lines 8--12
-[][][]
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 8--12
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 8--12
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 8--12
+[]
  []
 
 
@@ -1015,10 +1024,11 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no g in font nullfont!
+Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 <write> ...nce `fig:convrbmsub1' on page \thepage 
                                                   \space undefined\on@line .
-l.14 ... matrix $W$ (see Fig \ref{fig:convrbmsub1}
+l.14 ...matrix $W$ (see Fig. \ref{fig:convrbmsub1}
                                                   ):
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1103,10 +1113,11 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no g in font nullfont!
+Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 <write> ...nce `fig:convrbmsub2' on page \thepage 
                                                   \space undefined\on@line .
-l.18 ...\tilde{W}$  (see Fig \ref{fig:convrbmsub2}
+l.18 ...tilde{W}$  (see Fig. \ref{fig:convrbmsub2}
                                                    \& \ref{fig:convrbmsub3} ):
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1186,7 +1197,6 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -1320,7 +1330,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 
 ! Undefined control sequence.
 l.54   		\includegraphics
-                         [width=.8\linewidth]{imgs/crbm_padding1.png}
+                         [width=.6\linewidth]{imgs/crbm_padding1.png}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1335,11 +1345,11 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no . in font nullfont!
-Missing character: There is no 8 in font nullfont!
+Missing character: There is no 6 in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    ]
-l.54   		\includegraphics[width=.8\linewidth]
+l.54   		\includegraphics[width=.6\linewidth]
                                              {imgs/crbm_padding1.png}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1348,7 +1358,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
                    ]
-l.54   		\includegraphics[width=.8\linewidth]
+l.54   		\includegraphics[width=.6\linewidth]
                                              {imgs/crbm_padding1.png}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1370,13 +1380,13 @@ Missing character: There is no m in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.54 ...udegraphics[width=.8\linewidth]{imgs/crbm_
+l.54 ...udegraphics[width=.6\linewidth]{imgs/crbm_
                                                   padding1.png}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.54 ...idth=.8\linewidth]{imgs/crbm_padding1.png}
+l.54 ...idth=.6\linewidth]{imgs/crbm_padding1.png}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1392,7 +1402,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.55   		\caption
-                 {The upward pass in the convolutional RBM}
+                 {The upward pass.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1547,13 +1557,13 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.61   		\caption
-                 {The 180\textdegree  flipped of the kernel matrix}
+                 {The 180\textdegree flipped kernel.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
 l.61   		\caption{The 180\textdegree
-                                      flipped of the kernel matrix}
+                                     flipped kernel.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1709,7 +1719,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.67   		\caption
-                 {The downward pass in the convolutional RBM}
+                 {The downward pass.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1909,6 +1919,9 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no A in font nullfont!
 Missing character: There is no f in font nullfont!
@@ -1949,13 +1962,16 @@ Missing character: There is no 8 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 ! Undefined control sequence.
 l.70 ...he kernel matrix is flipped 180\textdegree
-                                                   . In the downward pass th...
+                                                    (b). In the downward pas...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+Missing character: There is no ( in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no ) in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no I in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -2066,12 +2082,15 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no ) in font nullfont!
 Missing character: There is no [ in font nullfont!
 \citation{convImg}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.70 ...the new visible activations \cite{convImg}
+l.70 ...new visible activations (c) \cite{convImg}
                                                   .}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2098,17 +2117,17 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (240.17348pt too wide) in paragraph at lines 52--73
+Overfull \hbox (132.4184pt too wide) in paragraph at lines 52--73
 []\OML/cmm/m/it/10 adding\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :png[][]$
  []
 
 
-Overfull \hbox (186.23404pt too wide) in paragraph at lines 52--73
+Overfull \hbox (132.53647pt too wide) in paragraph at lines 52--73
 []\OML/cmm/m/it/10 lip:png[][]$
  []
 
 
-Overfull \hbox (252.90034pt too wide) in paragraph at lines 52--73
+Overfull \hbox (145.14526pt too wide) in paragraph at lines 52--73
 []\OML/cmm/m/it/10 adding\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :png[][]$
  []
 
@@ -2599,7 +2618,6 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no f in font nullfont!
@@ -2903,10 +2921,13 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <write> ...nce `fig:probmaxpool' on page \thepage 
                                                   \space undefined\on@line .
-l.88 ...is visualized in Fig \ref{fig:probmaxpool}
+l.88 ...visualized in Figure \ref{fig:probmaxpool}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3471,8 +3492,8 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.101 ...en suggested \cite{griffiths2008bayesian}
-                                                  \cite{lee2003hierarchical}...
+l.101 ...e2003hierarchical, yang2007probabilistic}
+                                                  .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3483,14 +3504,13 @@ and I'll forget about whatever was undefined.
 LaTeX Warning: Citation `griffiths2008bayesian' on page  undefined on input lin
 e 101.
 
-Missing character: There is no ] in font nullfont!
-Missing character: There is no [ in font nullfont!
+Missing character: There is no , in font nullfont!
 \citation{lee2003hierarchical}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.101 ...hs2008bayesian}\cite{lee2003hierarchical}
-                                                  \cite{yang2007probabilistic}.
+l.101 ...e2003hierarchical, yang2007probabilistic}
+                                                  .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3501,13 +3521,12 @@ and I'll forget about whatever was undefined.
 LaTeX Warning: Citation `lee2003hierarchical' on page  undefined on input line 
 101.
 
-Missing character: There is no ] in font nullfont!
-Missing character: There is no [ in font nullfont!
+Missing character: There is no , in font nullfont!
 \citation{yang2007probabilistic}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.101 ...hierarchical}\cite{yang2007probabilistic}
+l.101 ...e2003hierarchical, yang2007probabilistic}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3527,8 +3546,18 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 101--102
  []
 
 
-Overfull \hbox (16.29158pt too wide) in paragraph at lines 101--102
-[][][] 
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 101--102
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 101--102
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 101--102
+[] 
  []
 
 
@@ -3539,7 +3568,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.104 A
-        first framework which proposed how spiking neurons can perform MCMC ...
+        first framework, which proposed how spiking neurons can perform MCMC...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -3559,6 +3588,7 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no k in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -3611,6 +3641,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -4028,9 +4059,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no r in font nullfont!
@@ -4068,7 +4097,7 @@ Overfull \hbox (5.50348pt too wide) in paragraph at lines 107--109
 
 ! Misplaced alignment tab character &.
 l.112 1, &
-            \text{if k has fired in the time intervall } (t - \tau , t ] \\
+            \text{if k has fired in the time intervall } (t - \tau , t ], \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -4078,7 +4107,7 @@ might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
 l.112 1, &  \text
-                 {if k has fired in the time intervall } (t - \tau , t ] \\
+                 {if k has fired in the time intervall } (t - \tau , t ], \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4087,7 +4116,7 @@ and I'll forget about whatever was undefined.
 
 ! Misplaced alignment tab character &.
 l.113 0, &
-            \text{if k has not fired in the time intervall } (t - \tau , t ]
+            \text{if k has not fired in the time intervall } (t - \tau , t ],
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -4097,7 +4126,7 @@ might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
 l.113 0, &  \text
-                 {if k has not fired in the time intervall } (t - \tau , t ]
+                 {if k has not fired in the time intervall } (t - \tau , t ],
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4105,12 +4134,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (415.4286pt too wide) detected at line 115
+Overfull \hbox (422.6508pt too wide) detected at line 115
 \OML/cmm/m/it/10 z[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = [] \
 OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \O
-ML/cmm/m/it/10 ^^\; t\OT1/cmr/m/n/10 ][] 0\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 
-(\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 ^^\; t\OT1/cmr/m/n/10
- ]
+ML/cmm/m/it/10 ^^\; t\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; [] \OT1/cmr/m/n/10 0\O
+ML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@ \OM
+L/cmm/m/it/10 ^^\; t\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ;
  []
 
 Missing character: There is no w in font nullfont!
@@ -4809,6 +4838,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no [ in font nullfont!
 \citation{Petrovici2016}
 ! Undefined control sequence.
@@ -4880,7 +4910,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.130 T
-       o get a process with Markovian properties $p(z_t| (z_0, ..., z_{t-1})...
+       o get a process with Markovian properties $p(\textbf{z}(t)| (\textbf{...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -4923,6 +4953,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no x in font nullfont!
@@ -5049,15 +5080,26 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 130--131
  []
 
 
-Overfull \hbox (86.85779pt too wide) in paragraph at lines 130--131
-\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z[]\OMS/cmsy/m/n/10 j\OT1/c
-mr/m/n/10 (\OML/cmm/m/it/10 z[]; :::; z[]\OT1/cmr/m/n/10 )) =
+Overfull \hbox (87.58682pt too wide) in paragraph at lines 130--131
+\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ([](\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OMS/c
+msy/m/n/10 j\OT1/cmr/m/n/10 ([](0)\OML/cmm/m/it/10 ; :::; []\OT1/cmr/m/n/10 (\O
+ML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@
  []
 
 
-Overfull \hbox (42.16566pt too wide) in paragraph at lines 130--131
-\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 z[]\OMS/cmsy/m/n/10 j\OML/c
-mm/m/it/10 z[]\OT1/cmr/m/n/10 )$
+Overfull \hbox (27.22223pt too wide) in paragraph at lines 130--131
+\OT1/cmr/m/n/10 1))) =
+ []
+
+
+Overfull \hbox (48.58684pt too wide) in paragraph at lines 130--131
+\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ([](\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OMS/c
+msy/m/n/10 j[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (12.77782pt too wide) in paragraph at lines 130--131
+\OT1/cmr/m/n/10 1))$
  []
 
 
@@ -5698,7 +5740,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.159     \caption
-                  [The artificial counter state of a neuron in a discrete ti...
+                  [The artificial counter state of a neuron in discrete time...
 
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -5740,7 +5782,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -5791,7 +5832,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
@@ -5981,6 +6021,7 @@ Missing character: There is no ( in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no x in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -7154,7 +7195,6 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -8115,7 +8155,7 @@ Missing character: There is no 1 in font nullfont!
 <inserted text> 
                 $
 l.200 ...te is normalized by $\frac{1}{\tau_{ref}}
-                                                  $ to get a output probabil...
+                                                  $ to get an output probabi...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
@@ -8123,7 +8163,7 @@ you left one out. Proceed, with fingers crossed.
 \frac #1#2->{\begingroup #1\endgroup \over #2}
                                               
 l.200 ...te is normalized by $\frac{1}{\tau_{ref}}
-                                                  $ to get a output probabil...
+                                                  $ to get an output probabi...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -8136,6 +8176,7 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -9122,6 +9163,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no N in font nullfont!
@@ -9346,8 +9388,8 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.216 ...mance in the converted SNN \cite{Cao2014}
-                                                  \cite{Diehl2015}:
+l.216 ...e converted SNN \cite{Cao2014, Diehl2015}
+                                                  :
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -9357,13 +9399,12 @@ and I'll forget about whatever was undefined.
 
 LaTeX Warning: Citation `Cao2014' on page  undefined on input line 216.
 
-Missing character: There is no ] in font nullfont!
-Missing character: There is no [ in font nullfont!
+Missing character: There is no , in font nullfont!
 \citation{Diehl2015}
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.216 ...verted SNN \cite{Cao2014}\cite{Diehl2015}
+l.216 ...e converted SNN \cite{Cao2014, Diehl2015}
                                                   :
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9392,8 +9433,13 @@ Overfull \hbox (5.43053pt too wide) in paragraph at lines 206--217
  []
 
 
-Overfull \hbox (10.86105pt too wide) in paragraph at lines 206--217
-[][] 
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 206--217
+[]
+ []
+
+
+Overfull \hbox (5.43053pt too wide) in paragraph at lines 206--217
+[] 
  []
 
 Missing character: There is no T in font nullfont!
@@ -9831,6 +9877,7 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no N in font nullfont!
@@ -9908,10 +9955,11 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no F in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no g in font nullfont!
+Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 <write> ...erence `fig:csnnconv' on page \thepage 
                                                   \space undefined\on@line .
-l.223 ...actory period (see Fig \ref{fig:csnnconv}
+l.223 ...ctory period (see Fig. \ref{fig:csnnconv}
                                                    for an adapted CNN the eq...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10963,16 +11011,16 @@ Missing character: There is no C in font nullfont!
 Missing character: There is no D in font nullfont!
 Missing character: There is no b in font nullfont!
 Missing character: There is no y in font nullfont!
-Missing character: There is no D in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
 Missing character: There is no N in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -11022,6 +11070,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
 Missing character: There is no S in font nullfont!
 Missing character: There is no T in font nullfont!
 Missing character: There is no D in font nullfont!
@@ -11038,7 +11087,7 @@ Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
 <write> ...: Citation `\@citeb ' on page \thepage 
                                                   \space undefined\on@line .
-l.252 ...works and a STDP variant \cite{Diehl2015}
+l.252 ...orks and an STDP variant \cite{Diehl2015}
                                                   .
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11133,6 +11182,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no ( in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
@@ -11145,7 +11195,7 @@ Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
 <write> ...Reference `fig:evtCD' on page \thepage 
                                                   \space undefined\on@line .
-l.253 ...d weights (a seen in Fig. \ref{fig:evtCD}
+l.253 ... weights (as seen in Fig. \ref{fig:evtCD}
                                                    where the RBM is unrolled...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -11778,6 +11828,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
+Missing character: There is no , in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no i in font nullfont!
@@ -12021,6 +12072,238 @@ Overfull \hbox (21.36406pt too wide) in paragraph at lines 263--267
  []
 
 
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.267 \[
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1
+! Undefined control sequence.
+<write> \newlabel{c:relwork}{{}{\thepage 
+                                         }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{c:relwork}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{c:convrbm}{{}{\thepage 
+                                         }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{c:convrbm}{{}{}}
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+! Undefined control sequence.
+<write> \newlabel{fig:convrbmsub1}{{}{\thepage 
+                                               }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:convrbmsub1}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:convrbmsub2}{{}{\thepage 
+                                               }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:convrbmsub2}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:convrbmsub3}{{}{\thepage 
+                                               }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:convrbmsub3}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:convrbm}{{}{\thepage 
+                                           }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:convrbm}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:probmaxpool}{{}{\thepage 
+                                               }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:probmaxpool}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{c:snnsampling}{{}{\thepage 
+                                             }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{c:snnsampling}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:snnsamp1}{{}{\thepage 
+                                            }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:snnsamp1}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:snnsamp2sub1}{{}{\thepage 
+                                                }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:snnsamp2sub1}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:snnsamp2sub1}{{}{\thepage 
+                                                }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:snnsamp2sub1}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:snnsamp2}{{}{\thepage 
+                                            }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:snnsamp2}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:sub1}{{}{\thepage 
+                                        }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:sub1}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:sub2}{{}{\thepage 
+                                        }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:sub2}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:snnsamp3}{{}{\thepage 
+                                            }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:snnsamp3}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:snnsamp4}{{}{\thepage 
+                                            }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:snnsamp4}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{c:nnconversion}{{}{\thepage 
+                                              }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{c:nnconversion}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:sub1}{{}{\thepage 
+                                        }}
+l.267 \[
+        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:sub1}{{}{}}
+]
 Overfull \hbox (144.64789pt too wide) detected at line 269
 \OT1/cmr/m/n/10 ^^A\OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^Vg
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 STDP\OT1/c
@@ -12292,287 +12575,6 @@ OML/cmm/m/it/10 v[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )\OML/cmm
 /m/it/10 ds:[] 
  []
 
-
-! LaTeX Error: The font size command \normalsize is not defined:
-               there is probably something wrong with the class file.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.277 \]
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1
-! Undefined control sequence.
-<write> \newlabel{c:relwork}{{}{\thepage 
-                                         }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{c:relwork}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{c:convrbm}{{}{\thepage 
-                                         }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{c:convrbm}{{}{}}
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-! Undefined control sequence.
-<write> \newlabel{fig:convrbmsub1}{{}{\thepage 
-                                               }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:convrbmsub1}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:convrbmsub2}{{}{\thepage 
-                                               }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:convrbmsub2}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:convrbmsub3}{{}{\thepage 
-                                               }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:convrbmsub3}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:convrbm}{{}{\thepage 
-                                           }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:convrbm}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:probmaxpool}{{}{\thepage 
-                                               }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:probmaxpool}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{c:snnsampling}{{}{\thepage 
-                                             }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{c:snnsampling}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:snnsamp1}{{}{\thepage 
-                                            }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:snnsamp1}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:snnsamp2sub1}{{}{\thepage 
-                                                }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:snnsamp2sub1}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:snnsamp2sub1}{{}{\thepage 
-                                                }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:snnsamp2sub1}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:snnsamp2}{{}{\thepage 
-                                            }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:snnsamp2}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:sub1}{{}{\thepage 
-                                        }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:sub1}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:sub2}{{}{\thepage 
-                                        }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:sub2}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:snnsamp3}{{}{\thepage 
-                                            }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:snnsamp3}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:snnsamp4}{{}{\thepage 
-                                            }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:snnsamp4}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{c:nnconversion}{{}{\thepage 
-                                              }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{c:nnconversion}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:sub1}{{}{\thepage 
-                                        }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:sub1}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:sub2}{{}{\thepage 
-                                        }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:sub2}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:csnnconv}{{}{\thepage 
-                                            }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:csnnconv}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{c:ecd}{{}{\thepage 
-                                     }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{c:ecd}{{}{}}
-! Undefined control sequence.
-<write> \newlabel{fig:evtCD}{{}{\thepage 
-                                         }}
-l.277 \]
-        
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-\newlabel{fig:evtCD}{{}{}}
-]
 Missing character: There is no I in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -13444,6 +13446,7 @@ Missing character: There is no m in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -13936,9 +13939,9 @@ or  <return>  to continue without it.
 Here is how much of TeX's memory you used:
  57 strings out of 493105
  769 string characters out of 6137071
- 63508 words of memory out of 5000000
+ 62508 words of memory out of 5000000
  3618 multiletter control sequences out of 15000+600000
  4294 words of font info for 16 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 20i,6n,26p,515b,111s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 20i,6n,26p,512b,117s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

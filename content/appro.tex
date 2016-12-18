@@ -1,11 +1,11 @@
 \chapter{Approach} \label{c:approach}
 
-In this section after describing the general convolutional architecture in spiking neural network in order to find the best performing spiking convolutional DBN, we discuss two different approaches to build these.
+In this section after describing the general convolutional architecture in spiking neural networks in order to find the best performing spiking convolutional DBN, we discuss two different approaches to build these.
 
-The first one is the more classical one, in which an in discrete time trained DBN is transferred to spiking neural networks.
+The first one is the more classical one, in which an in discrete time trained DBN is transferred to a spiking neural network.
 The second approach trains the RBMs event based with STDP directly as spiking neural networks. 
 
-In Chapter \ref{c:expres}, we will then evaluate and compare the performance of both approaches.
+In Chapter \ref{c:expres}, we then evaluate and compare the performance of both approaches.
 
 \section{Convolutional Architecture in Spiking Neural Networks} \label{c:spikingconvarch}
 
@@ -14,7 +14,7 @@ Each population has a similar three dimensional topology as in artificial CNNs w
 
 Groups of neurons in the bottom layer in close vicinity, a so-called receptive fields, are each synaptically connected to the same top layer neuron (see Fig. \ref{fig:receptfields1}).
 Different receptive fields have the same shape and size $n$ and share the same synaptic weights (given the top layer neurons belong to the same feature map).
-Adjacent receptive fields are overlapping by one neuron and the output neurons have the same topology as their input regions. 
+Adjacent receptive fields can overlap by several neurons and the output neurons have the same topology as their input regions. 
 
 A receptive field covers a partial region of the input data and the synaptic weights from the bottom layer neurons to the top layer neuron can the be seen as a convolution over the partial input data.
 Since the weights of the receptive field can be shared, the neural activity in the top layer can be seen as a convolution over the input data with a filter of the size of a receptive field.
@@ -44,7 +44,7 @@ By using more neurons with different sets of shared weights over the same recept
 
 \section{Conversion} \label{c:convappro}
 
-The conversion approach can be roughly described in two steps:
+The conversion approach can be roughly divided into two steps:
 \begin{enumerate}
 \item Train artificial RBMs to build up a DBN.
 \item Convert the DBN to a spiking neural network.
@@ -56,7 +56,7 @@ The conversion approach can be roughly described in two steps:
 To train a convolutional DBN we proceed similar to Hinton et al. and Lee et al. \cite{hinton2006fast, lee2009convolutional}.
 
 At first the convolutional RBMs are trained greedily with CD, as described in Chapter \ref{c:convrbm}, for a certain number of iterations on data batches of batch-size $b$.
-After an RBM is trained, we convert the dataset $X$ by sampling of the hidden layer of the RBM (one forward-pass step) into a new dataset $X'$:
+After an RBM is trained, we convert the dataset $X$ into a new dataset $X'$ by sampling of the hidden layer of the RBM (one forward-pass step):
 \[
 p(x') = \sigma(W * x) .
 \]
@@ -65,8 +65,8 @@ On this converted dataset the next convolutional RBM is trained greedily.
 
 Evaluating feature qualities is still an active research topic.
 To get a measurement of our feature quality, we use labelled data and train a classifier on top of the extracted features.
-To stay in a biological plausible domain, we train a fully connected RBM on the top level features combined with the label of the data samples in order to associate the features with the correct labels.
-This architecture is similar to the architecture of Hinton \cite{hinton2006fast} (see Fig. \ref{fig:dbnmnist}).
+To stay in a biologically plausible domain, we train a fully connected RBM on the top level features combined with the label of the data samples in order to associate the features with the correct labels.
+This architecture is similar to the architecture proposed by Hinton \cite{hinton2006fast} (see Fig. \ref{fig:dbnmnist}).
 
 \begin{figure}
 	\centering
@@ -108,7 +108,7 @@ While this allows classification, it removes the generative capabilities of the 
 
 For the conversion, we proceed similar to Cao et al. and Diehl et al. \cite{Cao2014, Diehl2015}.
 They use average pooling and ReLU functions to get a similar architecture as SNNs.
-In contrast, we don't use any pooling, since for RBM there is no simple way to integrate average pooling (used by Cao et al. and Diehl et al. in their trained CNNs), and for spiking CNNs there is no simple way to integrate probabilistic max pooling, which is to our knowledge currently the only into the training integrated pooling thought of for RBMs.
+In contrast, we don't use any pooling, since for RBMs there is no simple way to integrate average pooling (used by Cao et al. and Diehl et al. in their trained CNNs), and for spiking CNNs there is no simple way to integrate probabilistic max pooling, which is to our knowledge currently the only into the training integrated pooling thought of for RBMs.
 We also use the sigmoid function, since RBMs are commonly trained with sigmoid activations (but some approaches propose ReLU for RBMs as well \cite{Nair2010}).
 Furthermore the input-rate output-rate transfer function of rate based LIF neurons with a refractory period matches the sigmoid function more closely.
 
@@ -126,7 +126,7 @@ For the COBA neurons, we choose a biological plausible neuron model (see paramet
 The high membrane conductance, an increased Gaussian distributed mean membrane potential and thus a firing probability of $0.5$, is achieved by using high frequency Poisson generated inhibitory and excitatory spikes to get the neuron to a high conductance state (HCS) (see Fig. \ref{fig:cobahcs1}). 
 This neuron model has an input-rate output-rate transfer function which approximates a sigmoid function (see Fig. \ref{fig:cobahcs2}).
 
-The PSPs are chosen to have an alpha shape instead of a rectangular shape, which as described in Chapter \ref{c:snnsampling} may introduce some discrepancies when performing sampling compared with Gibbs sampling, but is more biologically plausible (see Fig. \ref{fig:cobahcs3}).
+The PSPs are chosen to have an alpha shape instead of a rectangular shape, which as described in Chapter \ref{c:snnsampling} may introduce some discrepancies when performing sampling compared to Gibbs sampling, but is more biologically plausible (see Fig. \ref{fig:cobahcs3}).
 
 \begin{figure}
 	\centering
@@ -201,16 +201,16 @@ This rule can be reformulated as an iterative rule as follows:
 \item A visible unit $v$ spikes: 
 \[
 \begin{split}
-A_v &= A_v \exp(\frac{\Delta t}{\tau}) + a_{\delta} ,\\
-A_h &= A_h \exp(\frac{\Delta t}{\tau}) ,\\
+A_v &= A_v \exp(\frac{-\Delta t}{\tau}) + a_{\delta} ,\\
+A_h &= A_h \exp(\frac{-\Delta t}{\tau}) ,\\
 \delta w &= \mu g(t)  A_v  ,\\
 \end{split}
 \]
 \item A hidden unit $h$ spikes: 
 \[
 \begin{split}
-A_h &= A_h \exp(\frac{\Delta t}{\tau}) + a_{\delta} ,\\
-A_v &= A_v \exp(\frac{\Delta t}{\tau}) ,\\
+A_h &= A_h \exp(\frac{-\Delta t}{\tau}) + a_{\delta} ,\\
+A_v &= A_v \exp(\frac{-\Delta t}{\tau}) ,\\
 \delta w &= \mu  g(t) A_h  ,\\
 \end{split}
 \]
@@ -242,7 +242,7 @@ We extent the model by a 5th phase between two data samples, where the network i
 We implement convolutions with local receptive fields and shared weights between synapses through weight synchronization.
 Since each synaptic weight has its local STDP based update rule (eCD), we have to find a way to synchronize weights between synapses of the same feature map.
 To keep the shared weights the same, we perform an STDP weight synchronization step at discrete time steps, since updating all weights after a single update did not show any promising results, due to some self-reinforcement and resulting weight "explosion" (see \ref{fig:ecdnestconv} for further insight).
-Thus the synchronization at a time step for weight shared weights $w_i$ , $w_j$ can be illustrated by the following rule:  
+Thus the weight synchronization at a time step for shared weights $w_i$ , $w_j$ can be illustrated by the following rule:  
 \[
 \begin{split}
 w_i(t) = w_{shared}(t-1) + \delta w_i, \\ 
@@ -260,7 +260,7 @@ This results in an update rule similar to the convolutional RBM update rule as p
 Thus we can simply take the mean of the weight changes and apply it to all the weights, which is equivalent to just taking the average of the new individual weights. 
 
 \paragraph{Lateral inhibition} \label{c:latinhib}
-In addition we introduce fixed negative connections between neurons in the hidden layers (which is more biologically plausible \cite{King2013}, see a simplified sample in Fig. \ref{fig:bminhib}).
+In addition, we introduce fixed negative connections between neurons in the hidden layers (which is more biologically plausible \cite{King2013}, see a simplified sample in Fig. \ref{fig:bminhib}).
 This removes one advantage of RBMs since the hidden units are no longer independent, which makes it harder to sample from the true distributions, but since the network continuously performs sampling steps, the approximation has shown to be sufficient, if the weights are not too strong and prevent changes of different modes (see Chapter \ref{c:latinhibexp} and Fig. \ref{fig:dbnmixing} ).
 
 \begin{figure}

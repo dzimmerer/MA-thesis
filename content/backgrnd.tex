@@ -413,20 +413,20 @@ A layer is defined by:
 \begin{enumerate}
 	\item The input dimension $n$,
 	\item The output dimension $m$ (which can be seen as the number of individual perceptrons in the layer),
-	\item The weight matrix $W \in \mathbb{R}^{m\times n} $ defining the weights between the synaptic connections,
+	\item The weight matrix $W \in \mathbb{R}^{n\times m} $ defining the weights between the synaptic connections,
 	\item The activation function $\varphi : \mathbb{R}^m \rightarrow \mathbb{R}^m $.
 \end{enumerate}
 
 The output $\textbf{y}$ of the layer is calculated as:
 \[
-\textbf{y} = \varphi(W x).
+\textbf{y} = \varphi(x W).
 \]
 
-Each element $y_i \in \textbf{y}$ can be interpreted as the output of a perceptron given the input $\textbf{x}$ and the synaptic weights $w_i \in W = (w_1, ... , w_n)$.
+Each element $y_i \in \textbf{y}$ can be interpreted as the output of a perceptron given the input $\textbf{x}$ and the synaptic weights $w_i \in W = (w_1, ... , w_m)$.
 
 By using the output of a previous layer $l$ as input for a next layer $l+1$, several layers can be stacked up: 
 \[
-\textbf{y}^{l+1} = \varphi ( W^{l+1} (\textbf{y}^{l})) ,
+\textbf{y}^{l+1} = \varphi ( \textbf{y}^{l} W^{l+1} ) ,
 \]
 where the superscript index represents the layer number. 
 
@@ -1129,7 +1129,7 @@ These are also visualized in Figure \ref{fig:pspkernels}.
 
 Spikes are the primary way of information transmission in the brain.
 In neural networks this information can be encoded in different ways.
-We will present three encoding mechanisms, which were observed in the brain, rate coding, temporal coding and population coding \cite{Meftah2013}.
+We present three encoding mechanisms, which were observed in the brain, rate coding, temporal coding and population coding \cite{Meftah2013}.
 
 In the \textit{rate coding} scheme the information is purely contained in the firing rate of a neuron.
 In contrast to rate coding, in \textit{temporal coding} the information is additionally transmitted via the different points in time at which the spikes are transmitted. 

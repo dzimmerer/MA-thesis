@@ -88,7 +88,7 @@ A common choice in this thesis is $w_{n+} \approx - w_{n-} \approx 0.1$ for curr
 A unit in the DBN is represented by a neuron, a layer by a neuron population.
 For the connections static synapses with the scaled original weights were used. 
 
-The input is transformed to a Poisson distributed spike trains, where the rate of the Poisson process $\lambda_{data}$ is proportional to the original data value (e.g., the image intensities). 
+The input is transformed to Poisson distributed spike trains, where the rate of the Poisson process $\lambda_{data}$ is proportional to the original data value (e.g., the image intensities). 
 The input is directly fed into the bottom layer neurons with a high fixed weight $w_{in}$ to reliably generate equal spikes in the bottom layer.    
 
 For each data sample the network is simulated for a runtime of $t$. 
@@ -104,7 +104,7 @@ The eCD learning was implemented in PyNN with Nest with shared synaptic weights 
 As shown in \ref{fig:ecdnestconv} due to self-facilitation leading to a weight "explosion" when using convolutional shared weight updates, we chose Brian for most of our experiments.
 
 As neuron type LIF neurons with high frequency input noise were chosen.
-Each input element $x_i \in \textbf{x}$ of a data sample $\textbf{x}$ gets transformed to Poisson distributed spikes train, with the rate $\lambda$ proportional to the input value $\lambda \propto x_i$. 
+Each input element $x_i \in \textbf{x}$ of a data sample $\textbf{x}$ gets transformed to a Poisson distributed spike train, with the rate $\lambda$ proportional to the input value $\lambda \propto x_i$. 
 
 Each RBM consist of a visible and hidden layer. 
 The visible layer consist of one neuron population with $n = |\textbf{x}|$ neurons representing the input, the data population. 
@@ -119,7 +119,7 @@ The RBM is trained on one data sample for $t_{sample} = n \times t_{ref}$ cycles
 As a result we receive the following training procedure:
 \begin{itemize}
 
-\item $t \in [0, t_{burn-in}]$ : In the first phase ("Data burn-in phase"), the visible layer is induced with a strong negative current and the data input is fed as spikes with a high synaptic weight, so that the visible layer only spikes in accordance to the input data and is unaffected from any spikes in the top layer.
+\item $t \in [0, t_{burn-in}]$ : In the first phase ("Data burn-in phase"), the visible layer is induced with a strong negative current and the data input is given as spikes with a high synaptic weight, so that the visible layer only spikes in accordance to the input data and is unaffected from any spikes in the top layer.
 The STDP learning flag is set to $g=0$, so no learning is allowed.
 
 \item $t \in (t_{burn-in} , \; t_{burn-in} + t_{learn}]$ : In the second phase ("Data distribution phase"), now the STDP learning flag is set to $g=1$ so positive learning is allowed.
@@ -137,7 +137,7 @@ This will unlearn the model distribution.
 
 
 The weight synchronization is set at discrete time points, after $n$ training samples.
-This is performed by taking the mean over all the weights, which are to be the shared.
+This is executed by taking the mean over all the weights, which are to be the shared.
 In addition a small weight decay is introduced:
 \[
 W_{new} = \text{mean}(\textbf{W}_{group}) - \upsilon * \text{mean}(\textbf{W}_{group}) , 
@@ -146,8 +146,8 @@ where $\upsilon$ is the weight decay rate and $\textbf{W}_{group} = (W_0 ,... W_
 \\
 Each RBM is trained on $m$ data samples.
 \\
-After an RBM is trained, the next RBM will be trained on top of the previous RBM.
-Therefore, the a connection with a strong synaptic weight is established from the hidden layer of the previous RBM to the visible layer of the new RBM.
+After an RBM is trained, the next RBM is trained on top of the previous RBM.
+Therefore, a connection with a strong synaptic weight is established from the hidden layer of the previous RBM to the visible layer of the new RBM.
 The original input data is still fed to the bottom RBM while the activations of hidden layer in previous RBM act as training data for the top RBM.
 
 
