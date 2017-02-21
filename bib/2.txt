@@ -1,6 +1,0 @@
-@article{levine2016learning,
-  title={Learning Hand-Eye Coordination for Robotic Grasping with Deep Learning and Large-Scale Data Collection},
-  author={Levine, Sergey and Pastor, Peter and Krizhevsky, Alex and Quillen, Deirdre},
-  journal={arXiv preprint arXiv:1603.02199},
-  year={2016}
-}
