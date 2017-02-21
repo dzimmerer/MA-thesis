@@ -1,0 +1,30 @@
+
+\abstract
+
+Extracting high level features in data automatically can benefit various tasks such as classification and prediction. 
+Deep belief networks allow to build feature extractors in an unsupervised manner. 
+Utilizing a convolutional multilayered architecture can further improve the quality of the features on compositional data and allow a more abstract representation. 
+Most architectures perform operations in discrete time steps and do not utilize a continuous information processing similar to the brain, which could lead to faster response times and a lower power consumption. 
+In this thesis we propose different biologically inspired architectures to build and train a spiking deep belief network with a convolutional architecture. 
+Two different training algorithms are presented.
+The first approach trains the network in discrete time steps and the resulting network is afterwards transformed into a spiking neural network.
+The second approach trains a spiking network directly with an adapted spike time dependent plasticity learning rule and weight synchronization.
+Both algorithms are evaluated on different discrete and event-based datasets.
+On the different datasets the algorithms are able to discriminate classes with high accuracy without any modification of the learning rules, thus indicating an adaptive feature extraction algorithm.
+By comparing both approaches it becomes apparent that by introducing lateral inhibitory connections the directly trained algorithm is able to extract more discriminative features.
+ 
+\chapter*{Zusammenfassung}
+
+Die automatische Extraktion von "High-Level Features" unterstützt und erleichtert Aufgaben wie Klassifikation und Prädiktion.
+Mit Hilfe von Deep Belief Networks können solche Feature Extraktoren unüberwacht gelernt werden.
+Durch eine vielschichtige Convolutional Architektur kann die Feature Qualität auf kompositionellen Daten weiter verbessert werden und eine abstraktere Repräsentation ermöglicht werden.
+Die meisten Architekturen arbeiten, im Gegensatz zum Gehirn, in diskreten Zeitschritten und nutzen keine kontinuierliche Informationsverarbeitung, was zu schnel-leren Verarbeitungszeiten und einer niedrigeren Leistungsaufnahme führen könnte.
+In dieser Arbeit werden verschiedene biologisch motivierte Architekturen vorgestellt, die es ermöglichen ein Convolutional Spiking Deep Belief Network aufzubauen und zu trainieren.
+Es werden zwei verschiedene Ansätze präsentiert.
+Der erste Ansatz trainiert ein Netzwerk in diskreten Zeitschritten und wandelt danach das trainierte Netzwerk in ein Spiking Netzwerk um.
+Der zweite Ansatz trainiert direkt ein Spiking Netzwerk mit einer angepassten Version der "Spike-Time dependent plasticity" Lern-Regel mit Parameter-Synchronization.
+Die Ansätze werden auf verschiedenen diskreten und Event-basierten Datensätzen evaluiert.
+Beide Ansätze erreichen auf den verschiedenen Datensätzen eine hohe Klassifikationsgenauigkeit ohne die zugrunde liegende Lern-Regel zu verändern, was auf einen adaptionsfähigen Feature-Extraktions Algorithmus schließen lässt.
+Der Vergleich der beiden Ansätze legt nahe, dass aufgrund von lateral-hemmenden Verbindungen der zweite Ansatz diskriminativere Features extrahieren kann. 
+
+        

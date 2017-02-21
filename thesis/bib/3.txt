@@ -1,0 +1,7 @@
+@inproceedings{chen2015deepdriving,
+  title={Deepdriving: Learning affordance for direct perception in autonomous driving},
+  author={Chen, Chenyi and Seff, Ari and Kornhauser, Alain and Xiao, Jianxiong},
+  booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+  pages={2722--2730},
+  year={2015}
+}
